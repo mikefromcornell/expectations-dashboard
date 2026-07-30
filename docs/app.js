@@ -339,7 +339,7 @@ function renderPort() {
   const unset = D.filter(r => !r.weight_pct).length;
   const St = [
     ['Portfolio return (1y)', pret === null ? '—' : pret.toFixed(1) + '%', 'Weighted annualised'],
-    ['Sharpe ratio', sharpe === null ? '—' : `<span style="color:${sq(sharpe)}">${sharpe.toFixed(2)}</span>`, `(${pret === null ? '—' : pret.toFixed(1)}% − ${RF}% rf) ÷ ${wvol === null ? '—' : wvol.toFixed(1)}% vol`],
+    ['Sharpe ratio', sharpe === null ? '—' : `<span style="color:${sq(sharpe)}">${sharpe.toFixed(2)}</span>`, `(${pret === null ? '—' : pret.toFixed(1)}% − ${RF}% rf) ÷ ${wvol === null ? '—' : wvol.toFixed(1)}% vol<br><span style="color:#5f708f">rf: ${esc(PORT.risk_free_source || 'n/a')}</span>`],
     ['Sortino ratio', sortino === null ? '—' : `<span style="color:${sq(sortino)}">${sortino.toFixed(2)}</span>`, `Excess return ÷ ${pdd === null ? '—' : pdd.toFixed(1)}% downside dev`],
     ['Portfolio beta', beta === null ? '—' : beta.toFixed(2), beta === null ? '' : beta > 1.1 ? 'More volatile than SPY' : beta < .9 ? 'Less volatile than SPY' : 'Roughly market-like'],
     ['Weighted 30d vol', wvol === null ? '—' : wvol.toFixed(1) + '%', 'Σ(wᵢ·σᵢ) — ignores correlation'],
@@ -430,7 +430,7 @@ function saveKey() {
   maubInit();
 }
 function clearKey() { localStorage.removeItem(LSK); $('gkey').value = ''; maubInit(); }
-function maubCache(sym, val) {
+function maubCache(sym, val, model) {
   const k = 'ed_maub_' + sym;
   if (val === undefined) {
     try {
@@ -439,7 +439,7 @@ function maubCache(sym, val) {
     } catch (e) { }
     return null;
   }
-  localStorage.setItem(k, JSON.stringify({ t: Date.now(), text: val, sym }));
+  localStorage.setItem(k, JSON.stringify({ t: Date.now(), text: val, sym, model }));
 }
 function buildPrompt(r) {
   return `You are applying Michael Mauboussin's expectations investing framework.
@@ -465,19 +465,27 @@ async function analyse(force) {
   const key = localStorage.getItem(LSK);
   if (!key) { $('mout').innerHTML = '<div class="hint" style="color:#fca5a5">No API key saved. Paste a free Google AI Studio key above, or use “Copy prompt” to run it manually.</div>'; return; }
   $('mout').innerHTML = '<div class="hint">Calling Gemini…</div>';
-  try {
-    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${encodeURIComponent(key)}`, {
-      method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ contents: [{ parts: [{ text: buildPrompt(r) }] }] }),
-    });
-    if (!res.ok) throw new Error('HTTP ' + res.status + ' — ' + (await res.text()).slice(0, 200));
-    const j = await res.json();
-    const text = (((j.candidates || [])[0] || {}).content || {}).parts?.[0]?.text || 'No content returned.';
-    maubCache(sym, text);
-    showMaub({ sym, text, t: Date.now() });
-  } catch (e) {
-    $('mout').innerHTML = `<div class="hint" style="color:#fca5a5">Request failed: ${esc(e.message)}<br><br>Free-tier limits are ~15 requests/minute. Use “Copy prompt” as a fallback.</div>`;
+  // Model names churn and individual models hit quota independently, so try a
+  // chain rather than pinning one. gemini-flash-latest always maps to the
+  // current Flash release and was the one verified working on this key.
+  const MODELS = ['gemini-flash-latest', 'gemini-2.5-flash', 'gemini-3-flash-preview', 'gemini-2.0-flash'];
+  let lastErr = '';
+  for (const model of MODELS) {
+    try {
+      const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(key)}`, {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ contents: [{ parts: [{ text: buildPrompt(r) }] }] }),
+      });
+      const j = await res.json();
+      if (j.error) { lastErr = `${model}: ${j.error.status} — ${j.error.message}`; continue; }
+      const text = (((j.candidates || [])[0] || {}).content || {}).parts?.[0]?.text;
+      if (!text) { lastErr = `${model}: empty response`; continue; }
+      maubCache(sym, text, model);
+      return showMaub({ sym, text, t: Date.now(), model });
+    } catch (e) { lastErr = `${model}: ${e.message}`; }
   }
+  $('mout').innerHTML = `<div class="hint" style="color:#fca5a5">All models failed.<br>Last error: ${esc(lastErr)}<br><br>
+    Free tier is ~15 requests/minute and quota is per-model. Wait a moment, or use “Copy prompt” to run it manually.</div>`;
 }
 function showMaub(o) {
   const html = esc(o.text)
@@ -485,7 +493,7 @@ function showMaub(o) {
     .replace(/\*\*(.+?)\*\*/g, '<b>$1</b>')
     .replace(/\n/g, '<br>');
   $('mout').innerHTML = `<div style="font-size:10.5px;color:#5f708f;text-transform:uppercase;letter-spacing:.6px;margin-bottom:11px">
-      gemini-2.5-flash · ${new Date(o.t).toLocaleString()} · cached 24h</div>
+      ${esc(o.model || 'gemini')} · ${new Date(o.t).toLocaleString()} · cached 24h</div>
     <div style="line-height:1.72;font-size:13px">${html}</div>
     <div style="border-top:1px solid #1e2942;margin-top:12px;padding-top:11px;font-size:11.5px;color:#5f708f">
       ⚠️ LLM-generated from public market data. Not verified, not advice. It can be confidently wrong — treat it as a prompt for your own thinking.</div>`;

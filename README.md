@@ -5,6 +5,11 @@ A free, self-hosted equity dashboard built around the **expectations investing**
 
 **Live site:** https://mikefromcornell.github.io/expectations-dashboard/
 
+**Current config:** 74 tickers at **equal weight** (1.3514% each, summing to exactly 100%).
+Fair values are **not set** — the Expectations Gap column and the 35%-weighted gap component of the
+Expectations Score are inactive until you add them to `config/expectations.yaml`. An automatic
+`20 × LTM EPS` rule is scaffolded there behind `auto_fair_value.enabled` (currently `false`).
+
 Static site on GitHub Pages, data refreshed by GitHub Actions. **No server, no database, $0/month.**
 
 ---

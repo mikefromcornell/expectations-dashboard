@@ -73,6 +73,7 @@ class TickerResult:
     # expectations
     weight_pct: float | None = None
     fair_value: float | None = None
+    fair_value_source: str | None = None
     gap_pct: float | None = None
 
     # scoring

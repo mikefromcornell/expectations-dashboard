@@ -14,17 +14,39 @@ FRED_DGS3MO = "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS3MO"
 DEFAULT_RF = 4.3
 
 
+TREASURY_XML = (
+    "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/"
+    "xml?data=daily_treasury_bill_rates&field_tdr_date_value={year}"
+)
+
+
 def risk_free_rate() -> tuple[float, str]:
-    """3-month T-bill from FRED. Free, keyless CSV."""
+    """3-month T-bill. FRED first, Treasury.gov as fallback.
+
+    FRED's CSV endpoint is slow to first byte (observed >60s), so it gets a
+    generous timeout rather than the default.
+    """
     try:
-        txt = get_text(FRED_DGS3MO)
+        # curl-first: python-requests stalls on FRED (observed >60s read timeout)
+        # while curl returns the same CSV in ~0.15s.
+        txt = get_text(FRED_DGS3MO, timeout=30, tries=2, prefer_curl=True)
         rows = [l.split(",") for l in txt.strip().splitlines()[1:]]
         for r in reversed(rows):
-            if len(r) >= 2 and r[1] not in (".", "", None):
+            if len(r) >= 2 and r[1].strip() not in (".", "", None):
                 return float(r[1]), f"FRED DGS3MO as of {r[0]}"
     except Exception:
         pass
-    return DEFAULT_RF, "fallback default (FRED unavailable)"
+    try:
+        from datetime import date as _date
+        import re as _re
+
+        xml = get_text(TREASURY_XML.format(year=_date.today().year), timeout=60, tries=2)
+        vals = _re.findall(r"<d:ROUND_B1_CLOSE_13WK_2>([\d.]+)</d:ROUND_B1_CLOSE_13WK_2>", xml)
+        if vals:
+            return float(vals[-1]), "US Treasury 13-week bill (daily rates)"
+    except Exception:
+        pass
+    return DEFAULT_RF, "fallback default (FRED and Treasury.gov unavailable)"
 
 
 def compute(results: list[TickerResult]) -> dict:

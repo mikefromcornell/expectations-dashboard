@@ -145,7 +145,7 @@
     <div style="font-size:12.5px;color:var(--dim);line-height:1.65">
       Paste a free Google AI Studio key <b>once</b>. It is stored in your browser's <code>localStorage</code> —
       never committed, never in the repo, never sent anywhere except Google. Analysis is generated live and cached
-      24h per ticker. Free tier is ~1,500 requests/day on Flash, no credit card.
+      24h per ticker. Free tier is ~1,500 requests/day on Flash, no credit card. The app tries <code>gemini-flash-latest</code> first and falls back through other Flash models if one is quota-limited.
       <span style="color:#fcd34d">The key is per-device, and Google may use free-tier inputs to improve their models —
       only public market data is sent, never your weights or positions.</span>
     </div>

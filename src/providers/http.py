@@ -130,13 +130,16 @@ def get_json(
     raise FetchError(f"{url} failed after {tries} tries: {last}")
 
 
-def get_text(url: str, *, headers: dict | None = None, tries: int = 3, timeout: int = 20) -> str:
+def get_text(url: str, *, headers: dict | None = None, tries: int = 3, timeout: int = 20,
+             prefer_curl: bool = False) -> str:
+    """prefer_curl flips the transport order for hosts that stall python-requests
+    but serve curl instantly (FRED is one)."""
     h = {"User-Agent": BROWSER_UA}
     if headers:
         h.update(headers)
     last: Exception | None = None
     for attempt in range(tries):
-        use_curl = attempt % 2 == 1
+        use_curl = (attempt % 2 == 0) if prefer_curl else (attempt % 2 == 1)
         try:
             if use_curl:
                 code, body = _curl_get(url, h, timeout)

@@ -16,7 +16,8 @@ import sys
 import time
 from datetime import datetime, timezone
 
-from .config import DATA, load_buffett, load_expectations, load_scoring, load_watchlist
+from .config import (DATA, load_auto_fv, load_buffett, load_expectations, load_scoring,
+                     load_watchlist)
 from .metrics.buffett import apply_buffett, portfolio_observations
 from .metrics.portfolio import compute as compute_portfolio
 from .metrics.scoring import apply_score, rating
@@ -72,6 +73,7 @@ def build(stage: str = "all", limit: int | None = None) -> int:
     if stage != "all" and prev:
         print(f"  merging onto {len(prev)} previously built tickers")
     scoring, buff_cfg, expectations = load_scoring(), load_buffett(), load_expectations()
+    auto_fv = load_auto_fv()
     print(f"» {len(wl)} tickers · stage={stage}")
 
     results: list[TickerResult] = []
@@ -210,9 +212,24 @@ def build(stage: str = "all", limit: int | None = None) -> int:
             if d:
                 r.superinv, r.superinv_detail = d["action"], d["detail"]
 
-        # ---- expectations (user-entered in v1) ----
+        # ---- expectations ----
+        # Precedence: explicit per-ticker fair_value  >  auto rule  >  none.
         exp = expectations.get(t.symbol) or {}
         r.fair_value = exp.get("fair_value", t.fair_value)
+        r.fair_value_source = "manual" if r.fair_value else None
+
+        if r.fair_value is None and auto_fv.get("enabled") and t.type != "etf" \
+                and not t.suppress_fundamentals:
+            # fair value = target P/E x LTM EPS.
+            # EPS is not published directly by the provider, so derive it from
+            # price / P/E — algebraically identical and uses data we already have.
+            target_pe = float(auto_fv.get("target_pe", 20))
+            if r.pe_ltm and r.pe_ltm > 0 and r.price:
+                eps = r.price / r.pe_ltm
+                if eps > 0:
+                    r.fair_value = round(target_pe * eps, 2)
+                    r.fair_value_source = f"auto: {target_pe:g}× LTM EPS ${eps:,.2f}"
+
         if r.fair_value and r.price:
             r.gap_pct = (r.fair_value - r.price) / r.price * 100
 

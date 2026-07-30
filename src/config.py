@@ -110,8 +110,16 @@ def load_watchlist() -> list[Ticker]:
     return out
 
 
+def load_auto_fv() -> dict:
+    """Automatic fair-value rule. Manual entries in expectations.yaml always win."""
+    raw = _load_yaml(EXPECTATIONS_PATH, {}) or {}
+    d = raw.get("auto_fair_value") or {}
+    return {"enabled": bool(d.get("enabled", False)), "target_pe": d.get("target_pe", 20)}
+
+
 def load_expectations() -> dict:
-    return _load_yaml(EXPECTATIONS_PATH, {}) or {}
+    raw = _load_yaml(EXPECTATIONS_PATH, {}) or {}
+    return {k: v for k, v in raw.items() if k != "auto_fair_value"}
 
 
 def load_scoring() -> dict:
