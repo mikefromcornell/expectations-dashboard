@@ -1,0 +1,241 @@
+# ════════════════════════════════════════════════════════════════
+#  WATCHLIST — single source of truth for the Expectations Dashboard
+# ════════════════════════════════════════════════════════════════
+#  Add a ticker:  python -m src.watchlist add NVDA
+#  Bulk import:   python -m src.watchlist import file.csv
+#  Remove:        python -m src.watchlist remove SOFI   (archives, never deletes)
+#  Validate:      python -m src.watchlist validate
+#  Or use the '+ Add Ticker' button in the dashboard header.
+#
+#  Only `symbol` is required. All other fields are optional and can be
+#  filled in later. See PRD.md §5.5.
+#
+#  NEVER add cost basis or share counts - this repo is PUBLIC (PRD §8.1).
+# ════════════════════════════════════════════════════════════════
+
+tickers:
+  - symbol: AMZN
+    name: "AMAZON COM INC"
+    type: equity
+  - symbol: CPRI
+    name: "Capri Holdings Ltd"
+    type: equity
+  - symbol: GEMI
+    name: "Gemini Space Station, Inc."
+    type: equity
+  - symbol: SRRK
+    name: "Scholar Rock Holding Corp"
+    type: equity
+  - symbol: ADBE
+    name: "ADOBE INC."
+    type: equity
+  - symbol: XBI
+    name: "SPDR S&P Biotech ETF"
+    type: etf
+  - symbol: AVGO
+    name: "Broadcom Inc."
+    type: equity
+  - symbol: GOOGL
+    name: "Alphabet Inc."
+    type: equity
+  - symbol: VIRT
+    name: "Virtu Financial, Inc."
+    type: equity
+  - symbol: CPRT
+    name: "COPART INC"
+    type: equity
+  - symbol: GPC
+    name: "GENUINE PARTS CO"
+    type: equity
+  - symbol: STNG
+    name: "Scorpio Tankers Inc."
+    type: equity
+  - symbol: AVDV
+    name: "Avantis International Small Cap Value ETF"
+    type: etf
+  - symbol: AVUV
+    name: "Avantis U.S. Small Cap Value ETF"
+    type: etf
+  - symbol: VXUS
+    name: "Vanguard Total International Stock ETF"
+    type: etf
+  - symbol: BRK-B
+    name: "BERKSHIRE HATHAWAY INC"
+    type: equity
+    # normalized from input "BRK.B"
+  - symbol: QQQ
+    name: "Invesco QQQ Trust"
+    type: etf
+  - symbol: BCI
+    name: "abrdn Bloomberg All Commodity Strategy K-1 Free ETF"
+    type: etf
+  - symbol: FICO
+    name: "FAIR ISAAC CORP"
+    type: equity
+  - symbol: LHX
+    name: "L3HARRIS TECHNOLOGIES, INC. /DE/"
+    type: equity
+  - symbol: CROX
+    name: "Crocs, Inc."
+    type: equity
+  - symbol: EFX
+    name: "EQUIFAX INC"
+    type: equity
+  - symbol: ODFL
+    name: "OLD DOMINION FREIGHT LINE, INC."
+    type: equity
+  - symbol: BRO
+    name: "BROWN & BROWN, INC."
+    type: equity
+  - symbol: ZETA
+    name: "Zeta Global Holdings Corp."
+    type: equity
+  - symbol: CRM
+    name: "Salesforce, Inc."
+    type: equity
+  - symbol: FISV
+    name: "FISERV INC"
+    type: equity
+  - symbol: CLH
+    name: "CLEAN HARBORS INC"
+    type: equity
+  - symbol: UBER
+    name: "Uber Technologies, Inc"
+    type: equity
+  - symbol: ALLE
+    name: "Allegion plc"
+    type: equity
+  - symbol: PFE
+    name: "PFIZER INC"
+    type: equity
+  - symbol: COST
+    name: "COSTCO WHOLESALE CORP /NEW"
+    type: equity
+  - symbol: AAPL
+    name: "Apple Inc."
+    type: equity
+  - symbol: LAMR
+    name: "LAMAR ADVERTISING CO/NEW"
+    type: equity
+  - symbol: NVO
+    name: "Novo Nordisk A/S ADR"
+    type: adr
+  - symbol: HEI
+    name: "HEICO CORP"
+    type: equity
+  - symbol: COP
+    name: "CONOCOPHILLIPS"
+    type: equity
+  - symbol: XOM
+    name: "ExxonMobil Holdings Corp"
+    type: equity
+  - symbol: MIR
+    name: "Mirion Technologies, Inc."
+    type: equity
+  - symbol: DASH
+    name: "DoorDash, Inc."
+    type: equity
+  - symbol: ZM
+    name: "Zoom Communications, Inc."
+    type: equity
+  - symbol: CVX
+    name: "CHEVRON CORP"
+    type: equity
+  - symbol: CARR
+    name: "CARRIER GLOBAL Corp"
+    type: equity
+  - symbol: BABA
+    name: "Alibaba Group Holding Ltd ADR"
+    type: adr
+  - symbol: ELV
+    name: "Elevance Health, Inc."
+    type: equity
+  - symbol: TECH
+    name: "BIO-TECHNE Corp"
+    type: equity
+  - symbol: FNMA
+    name: "FEDERAL NATIONAL MORTGAGE ASSOCIATION FANNIE MAE"
+    type: equity
+  - symbol: FMCC
+    name: "FEDERAL HOME LOAN MORTGAGE CORP"
+    type: equity
+  - symbol: UNH
+    name: "UNITEDHEALTH GROUP INC"
+    type: equity
+  - symbol: MA
+    name: "Mastercard Inc"
+    type: equity
+  - symbol: JETS
+    name: "U.S. Global Jets ETF"
+    type: etf
+  - symbol: PGY
+    name: "Pagaya Technologies Ltd."
+    type: equity
+  - symbol: AVEX
+    name: "AEVEX Corp."
+    type: equity
+    # normalized from input "NYSE:AVEX"
+  - symbol: SMEGF
+    name: "Siemens Energy AG ADR"
+    type: adr
+  - symbol: ASML
+    name: "ASML Holding NV"
+    type: adr
+  - symbol: TSM
+    name: "Taiwan Semiconductor Manufacturing Co Ltd ADR"
+    type: adr
+    # normalized from input "NYSE:TSM"
+  - symbol: INTC
+    name: "INTEL CORP"
+    type: equity
+  - symbol: AMD
+    name: "ADVANCED MICRO DEVICES INC"
+    type: equity
+  - symbol: MSFT
+    name: "MICROSOFT CORP"
+    type: equity
+  - symbol: MRAAY
+    name: "Murata Manufacturing Co Ltd ADR"
+    type: adr
+  - symbol: ETN
+    name: "Eaton Corp plc"
+    type: equity
+  - symbol: BLSH
+    name: "Bullish"
+    type: equity
+  - symbol: SLV
+    name: "iShares Silver Trust"
+    type: etf
+  - symbol: IDYA
+    name: "IDEAYA Biosciences, Inc."
+    type: equity
+  - symbol: EVVTY
+    name: "Evolution AB ADR"
+    type: adr
+  - symbol: VUG
+    name: "Vanguard Growth ETF"
+    type: etf
+  - symbol: FBTC
+    name: "Fidelity Wise Origin Bitcoin Fund"
+    type: etf
+  - symbol: VTI
+    name: "Vanguard Total Stock Market ETF"
+    type: etf
+  - symbol: FIGR
+    name: "Figure Technology Solutions, Inc."
+    type: equity
+  - symbol: MELI
+    name: "MERCADOLIBRE INC"
+    type: equity
+  - symbol: IBM
+    name: "INTERNATIONAL BUSINESS MACHINES CORP"
+    type: equity
+  - symbol: JD
+    name: "JD.com Inc ADR"
+    type: adr
+  - symbol: V
+    name: "VISA INC."
+    type: equity
+  - symbol: SPGI
+    name: "S&P Global Inc."
+    type: equity

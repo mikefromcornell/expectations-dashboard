@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expectations Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="hwrap">
+    <h1>Expectations Dashboard <span>· mikefromcornell</span></h1>
+    <div class="freshness" id="freshness"></div>
+    <button class="btn" onclick="openAdd()">+ Add Ticker</button>
+  </div>
+  <nav>
+    <a class="on" onclick="tab('dash',this)">Dashboard</a>
+    <a onclick="tab('etf',this)">Funds &amp; ETFs</a>
+    <a onclick="tab('port',this)">Portfolio</a>
+    <a onclick="tab('buff',this)">Buffett Lens</a>
+    <a onclick="tab('maub',this)">Mauboussin Lens</a>
+    <a onclick="tab('disc',this)">Discovery</a>
+  </nav>
+</header>
+
+<!-- ============ DASHBOARD ============ -->
+<div id="dash" class="page on" style="padding:0">
+  <div class="tools">
+    <input type="search" id="q" placeholder="Filter ticker or name…" oninput="render()">
+    <select id="sector" onchange="render()"></select>
+    <span class="chip" id="c-near" onclick="tgl('near')">Near 52-wk low</span>
+    <span class="chip" id="c-earn" onclick="tgl('earn')">Earnings ≤7d</span>
+    <span class="chip" id="c-sig" onclick="tgl('sig')">Has signals</span>
+    <span class="chip" id="c-gap" onclick="tgl('gap')">Fair value set</span>
+    <span class="count" id="count"></span>
+  </div>
+  <div class="tblwrap">
+    <table>
+      <thead><tr>
+        <th onclick="sort('symbol',this)">Ticker</th>
+        <th class="num" onclick="sort('weight_pct',this)">Weight</th>
+        <th class="num" onclick="sort('price',this)">Price</th>
+        <th class="num" onclick="sort('change_pct',this)">Day</th>
+        <th class="num" onclick="sort('pct_from_high',this)">% from High</th>
+        <th class="num" onclick="sort('pct_from_low',this)">% from Low</th>
+        <th>52-wk Range</th>
+        <th onclick="sort('earnings_days',this)">Earnings</th>
+        <th class="num sorted" onclick="sort('score',this)">Score ▾</th>
+        <th class="num" onclick="sort('pe_ltm',this)">P/E LTM</th>
+        <th class="num" onclick="sort('pe_fwd',this)">P/E Fwd</th>
+        <th class="num" onclick="sort('ev_ebitda',this)">EV/EBITDA</th>
+        <th class="num" onclick="sort('roic',this)">ROIC</th>
+        <th class="num" onclick="sort('gap_pct',this)">Exp. Gap</th>
+        <th>Signals</th>
+      </tr></thead>
+      <tbody id="tb"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ============ ETF ============ -->
+<div id="etf" class="page" style="padding:0">
+  <div class="tools"><span style="font-size:12.5px;color:var(--dim)">
+    Funds have no earnings, insiders, P/E, ROIC or reverse-DCF — so they get only the columns that apply, and are excluded from Expectations Score ranking.
+  </span></div>
+  <div class="tblwrap">
+    <table style="min-width:820px">
+      <thead><tr><th>Fund</th><th class="num">Weight</th><th class="num">Price</th><th class="num">Day</th>
+        <th class="num">% from High</th><th class="num">% from Low</th><th>52-wk Range</th></tr></thead>
+      <tbody id="tbe"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ============ PORTFOLIO ============ -->
+<div id="port" class="page">
+  <div class="card" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+    <b style="font-size:13px">Position sizing</b>
+    <span id="wsum" class="wsum"></span>
+    <span style="font-size:12px;color:var(--dim)">Edit the <b>Weight</b> column on the Dashboard or Funds tab. Values are % of portfolio.</span>
+    <button class="btn ghost" style="margin-left:auto" onclick="normalize()">Normalise to 100%</button>
+    <button class="btn" onclick="saveWeights()">Save to watchlist.yaml →</button>
+  </div>
+  <div class="grid2">
+    <div class="card"><h2>🥧 Allocation by position <em>top 15 + other</em></h2>
+      <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap;justify-content:center">
+        <svg id="pie" width="252" height="252" viewBox="0 0 252 252"></svg>
+        <div style="flex:1;min-width:190px"><div class="legend" id="pieleg"></div></div>
+      </div></div>
+    <div class="card"><h2>🏭 Allocation by sector</h2>
+      <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap;justify-content:center">
+        <svg id="pie2" width="252" height="252" viewBox="0 0 252 252"></svg>
+        <div style="flex:1;min-width:190px"><div class="legend" id="pieleg2"></div></div>
+      </div></div>
+  </div>
+  <div class="card"><h2>📐 Risk &amp; concentration <em>weighted by your position sizes</em></h2>
+    <div class="statgrid" id="stats"></div>
+    <div style="margin-top:16px">
+      <div style="font-size:11.5px;color:var(--dim2);text-transform:uppercase;letter-spacing:.5px;font-weight:700">Asset type split</div>
+      <div class="bar" id="typebar"></div>
+      <div class="legend" id="typeleg" style="grid-template-columns:repeat(auto-fill,minmax(190px,1fr))"></div>
+    </div>
+    <div class="hint" style="margin-top:15px">
+      <b style="color:var(--txt)">How these are computed —</b>
+      <b>Beta</b> from 5 years of daily returns vs. SPY. <b>30-day volatility</b> is annualised stdev of daily returns.
+      <b>Sharpe</b> = (portfolio return − risk-free) ÷ total volatility; <b>Sortino</b> uses downside deviation only, so it
+      doesn't penalise upside — generally the more useful of the two for a long-only book. Risk-free rate is the 3-month
+      T-bill (<code>DGS3MO</code>) from FRED, free and keyless.
+      <br><br>
+      <span style="color:#fcd34d">⚠️ Weighted volatility is Σ(wᵢ·σᵢ) and ignores correlation, so it overstates true portfolio
+      risk — meaning these Sharpe and Sortino figures are <b>conservative and your real ratios are likely better</b>.</span>
+      The covariance-matrix fix is free (we already pull 5 years of history) and is the top v1.1 item.
+    </div>
+  </div>
+  <div class="card"><h2>⚠️ Concentration flags <em>rules-based</em></h2><div id="flags"></div></div>
+</div>
+
+<!-- ============ BUFFETT ============ -->
+<div id="buff" class="page">
+  <div class="card" style="border-color:#3f2d0e;background:#1a1509">
+    <h2 style="color:#fcd34d">⚠️ What this tab is — and what it is not</h2>
+    <div style="font-size:12.5px;color:var(--dim);line-height:1.65">
+      This applies <b style="color:var(--txt)">Buffett's publicly stated, written criteria</b> — durable moat, high returns on
+      capital, low leverage, consistent cash generation, circle of competence, margin of safety — as a
+      <b style="color:var(--txt)">deterministic checklist</b>. It is <b style="color:#fca5a5">not</b> a prediction of what
+      Buffett would do, not affiliated with Berkshire, and not investment advice. No LLM is involved, which keeps it free,
+      reproducible and auditable — and means it never invents a rationale.
+      Thresholds are editable in <code>config/buffett.yaml</code>.
+    </div>
+  </div>
+  <div class="card"><h2>📋 Portfolio-level observations <em>rules-based</em></h2><div id="bobs"></div></div>
+  <div class="card"><h2>✅ Seven-test checklist <em>click a row for the full breakdown</em></h2>
+    <div class="tblwrap"><table style="min-width:820px"><thead><tr>
+      <th>Ticker</th><th>Moat</th><th class="num">ROIC</th><th class="num">D/E</th><th class="num">FCF margin</th>
+      <th>Stability</th><th>Circle</th><th>Margin of safety</th><th class="num">Passes</th>
+    </tr></thead><tbody id="tbb"></tbody></table></div>
+  </div>
+</div>
+
+<!-- ============ MAUBOUSSIN ============ -->
+<div id="maub" class="page">
+  <div class="card" style="border-color:#14532d;background:#0a1a10">
+    <h2 style="color:#86efac">🧠 Mauboussin Lens — on-demand, rendered when you open this tab</h2>
+    <div style="font-size:12.5px;color:var(--dim);line-height:1.65">
+      Paste a free Google AI Studio key <b>once</b>. It is stored in your browser's <code>localStorage</code> —
+      never committed, never in the repo, never sent anywhere except Google. Analysis is generated live and cached
+      24h per ticker. Free tier is ~1,500 requests/day on Flash, no credit card.
+      <span style="color:#fcd34d">The key is per-device, and Google may use free-tier inputs to improve their models —
+      only public market data is sent, never your weights or positions.</span>
+    </div>
+    <div style="margin-top:14px;display:flex;gap:9px;align-items:center;flex-wrap:wrap">
+      <input class="inp" id="gkey" style="flex:1;min-width:230px" type="password" placeholder="Paste Gemini API key" onchange="saveKey()">
+      <span id="gstate"></span>
+      <button class="btn ghost" onclick="clearKey()">Clear key</button>
+    </div>
+    <div class="hint" style="margin-top:9px">Get a free key at <b>aistudio.google.com/apikey</b> — Google account only, no card.</div>
+  </div>
+  <div class="card">
+    <h2>Analysis <em>cached 24h per ticker</em></h2>
+    <div style="display:flex;gap:9px;margin-bottom:13px;flex-wrap:wrap">
+      <select class="inp" style="width:auto;max-width:320px" id="msym" onchange="analyse(false)"></select>
+      <button class="btn" onclick="analyse(true)">↻ Analyse</button>
+      <button class="btn ghost" onclick="copyPrompt()">📋 Copy prompt &amp; open AI Studio</button>
+    </div>
+    <div style="background:var(--panel2);border:1px solid var(--line);border-radius:9px;padding:17px" id="mout"></div>
+  </div>
+</div>
+
+<!-- ============ DISCOVERY ============ -->
+<div id="disc" class="page">
+  <div class="card">
+    <h2>💼 Conviction clusters <em>≥3 tracked managers buying the same name</em></h2>
+    <div class="hint" id="dfetch" style="margin-bottom:10px"></div>
+    <div class="tblwrap"><table style="min-width:640px"><thead><tr>
+      <th>Ticker</th><th>Conviction</th><th>Managers</th><th></th></tr></thead>
+      <tbody id="dclusters"></tbody></table></div>
+  </div>
+  <div class="card">
+    <h2>📈 Recent superinvestor activity <em>Dataroma · refreshed every 72h</em></h2>
+    <div class="tblwrap"><table style="min-width:760px"><thead><tr>
+      <th>Ticker</th><th>Manager</th><th>Action</th><th>Period</th><th>Detail</th></tr></thead>
+      <tbody id="drecent"></tbody></table></div>
+  </div>
+  <div class="card">
+    <h2>🗣 r/wallstreetbets <em>sentiment context — not a signal</em></h2>
+    <div style="display:flex;gap:9px;flex-wrap:wrap">
+      <a class="badge" style="text-decoration:none;padding:9px 14px;font-size:12.5px" target="_blank" rel="noopener"
+         href="https://www.reddit.com/r/wallstreetbets/comments/1vap9dz/daily_discussion_thread_for_july_30_2026/">💬 Daily Discussion Thread ↗</a>
+      <a class="badge" style="text-decoration:none;padding:9px 14px;font-size:12.5px" target="_blank" rel="noopener"
+         href="https://www.reddit.com/r/wallstreetbets/top/?screen_view_count=1&ext-referrer=SEO">🔥 Top posts ↗</a>
+    </div>
+    <div class="hint" style="margin-top:11px">
+      Mention counts require Reddit's OAuth API (free, non-commercial). Add <code>REDDIT_CLIENT_ID</code> and
+      <code>REDDIT_CLIENT_SECRET</code> as repo secrets to enable the daily summary — unauthenticated <code>.json</code>
+      has returned 403 from datacenter IPs since May 2026. Deliberately excluded from the Expectations Score and alerts.
+    </div>
+  </div>
+  <div class="card">
+    <h2>🔗 Research &amp; manual follow <em>login-walled or no free data source</em></h2>
+    <div style="display:flex;gap:9px;flex-wrap:wrap">
+      <a class="badge" style="text-decoration:none;padding:9px 14px;font-size:12.5px" target="_blank" rel="noopener" href="https://investors.valueline.com/users/account/barcode">📊 Value Line · library barcode ↗</a>
+      <a class="badge" style="text-decoration:none;padding:9px 14px;font-size:12.5px" target="_blank" rel="noopener" href="https://x.com/PCM_bio">𝕏 @PCM_bio ↗</a>
+      <a class="badge" style="text-decoration:none;padding:9px 14px;font-size:12.5px" target="_blank" rel="noopener" href="https://dashboard.m1.com/share?token=39d17ae6-4a4a-3fc4-bb15-d86abe3fbb67">📊 Joseph Carlson · M1 ↗</a>
+      <a class="badge" style="text-decoration:none;padding:9px 14px;font-size:12.5px" target="_blank" rel="noopener" href="https://x.com/michaeljburry">𝕏 @michaeljburry ↗</a>
+    </div>
+    <div class="hint" style="margin-top:11px">
+      Excluded from automation: <b>Value Line</b> (redirects to an authenticated account page — nothing scrapeable),
+      <b>PCM_bio</b> (X API ~$100/mo), <b>Joseph Carlson</b> (M1 is a JS app needing headless Chromium),
+      <b>Michael Burry</b> (Scion deregistered from the SEC on 10 Nov 2025 — no 13Fs exist to read).
+      Ideas you spot manually go in <code>config/manual_ideas.yaml</code>.
+    </div>
+  </div>
+</div>
+
+<!-- ============ DRAWER / MODAL ============ -->
+<div class="scrim" id="scrim" onclick="closeD()"></div>
+<div class="drawer" id="drawer">
+  <div class="dhead" style="display:flex;justify-content:space-between;align-items:flex-start">
+    <div><div class="sym" id="dsym" style="font-size:22px"></div><div class="nm" id="dname" style="max-width:none;font-size:12px"></div></div>
+    <button class="x" onclick="closeD()">×</button>
+  </div>
+  <div class="dbody" id="dbody"></div>
+</div>
+
+<div class="modal" id="addm">
+  <div class="mhead"><b>Add ticker to watchlist</b><button class="x" onclick="closeAdd()">×</button></div>
+  <div class="mbody">
+    <label>Symbol</label>
+    <input class="inp" id="asym" placeholder="e.g. NVDA" oninput="lookup()" autocomplete="off">
+    <div class="hint" id="alk">Validated against the quote provider before commit.</div>
+    <div class="row2">
+      <div><label>Fair value (optional)</label><input class="inp" id="afv" placeholder="165.00"></div>
+      <div><label>Tags (optional)</label><input class="inp" id="atags" placeholder="core, compounder"></div>
+    </div>
+    <div class="row2">
+      <div><label>Alert low (optional)</label><input class="inp" id="alo" placeholder="120"></div>
+      <div><label>Alert high (optional)</label><input class="inp" id="ahi" placeholder="260"></div>
+    </div>
+    <label>Notes (optional)</label>
+    <input class="inp" id="anotes" placeholder="Short thesis note">
+    <div class="hint" style="margin-top:14px;padding:11px;background:#0e1428;border:1px solid var(--line);border-radius:8px">
+      <b style="color:var(--txt)">How this persists →</b> a static site has no backend, so submitting opens a
+      <b style="color:var(--blu)">pre-filled GitHub issue</b> containing the exact YAML block for
+      <code>config/watchlist.yaml</code>. Git-tracked, versioned, survives cache clears and device changes.
+      <div style="margin-top:7px;color:var(--dim2)">⚠️ Never add cost basis or share counts — this repo is public.</div>
+    </div>
+    <div style="display:flex;gap:9px;margin-top:16px">
+      <button class="btn" style="flex:1" onclick="submitAdd()">Open pre-filled issue →</button>
+      <button class="btn ghost" onclick="closeAdd()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  Static site · data refreshed by GitHub Actions · quotes delayed ~15 min.
+  Sources: Yahoo / StockAnalysis / Nasdaq (quotes &amp; fundamentals), SEC EDGAR (Form 4), House &amp; Senate Stock Watcher,
+  Dataroma (72h), FRED (risk-free rate). ROIC computed in-repo. Not investment advice.
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

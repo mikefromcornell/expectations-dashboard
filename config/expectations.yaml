@@ -1,0 +1,13 @@
+# Your expectations inputs, per ticker. Everything here is optional.
+#
+# v1: you enter these by hand. The Expectations Gap column, the gap component
+# of the Expectations Score, and the Buffett margin-of-safety test all activate
+# once fair_value is set.
+#
+# v1.1 will back-solve market_implied_growth from price with a four-model
+# reverse DCF and populate these same fields — no migration needed.
+#
+# AAPL:
+#   fair_value: 290.00
+#   market_implied_growth: 0.11
+#   notes: "Services mix shift already priced in"

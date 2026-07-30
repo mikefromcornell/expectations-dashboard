@@ -1,0 +1,14 @@
+# Expectations Score weights (PRD §5.6). Must sum to 1.0.
+# Missing inputs are DROPPED and remaining weights re-normalised —
+# never silently substituted with a neutral 0.5.
+weights:
+  expectations_gap:     0.35   # your fair_value vs price — core of the framework
+  position_52wk:        0.20   # where price sits in the 52-week range
+  valuation_vs_history: 0.15   # LTM P/E vs its own history
+  roic_trend:           0.10   # returns on invested capital
+  insider_activity:     0.10   # SEC Form 4, trailing 90 days
+  superinvestor_flow:   0.10   # Dataroma adds vs trims
+
+thresholds:
+  attractive: 0.62
+  watch:      0.42
