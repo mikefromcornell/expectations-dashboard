@@ -1,40 +1,38 @@
-# Push to GitHub — copy-paste
+# Deploy — copy-paste, ~4 minutes
 
-Nothing has been pushed. Everything below runs on **your** machine, so no token ever leaves it.
+Everything is built, tested and committed locally. I could not create the repo for you: this sandbox
+has **no GitHub credentials** (`gh` CLI absent, `api.github.com/user` → 401), and a write token can't
+be delivered here safely. The commands below run on **your** machine, so no credential leaves it.
 
 ---
 
 ## 1. Create the repo and push
 
-Download/copy the `expectations-dashboard` folder from this workspace, then:
-
 ```bash
-cd expectations-dashboard
+cd expectations-dashboard        # the folder from this workspace
 
-git init -b main
-git add -A
-git commit -m "Expectations Dashboard v1"
-
-# Option A — GitHub CLI (creates the repo for you)
+# Option A — GitHub CLI (creates the repo and pushes in one step)
 gh repo create mikefromcornell/expectations-dashboard --public --source=. --remote=origin --push
 
-# Option B — no CLI: create an empty PUBLIC repo named
-#   expectations-dashboard
-# at https://github.com/new (no README, no .gitignore, no licence), then:
+# Option B — no CLI: create an empty PUBLIC repo named `expectations-dashboard`
+# at https://github.com/new  (no README, no .gitignore, no licence), then:
 git remote add origin https://github.com/mikefromcornell/expectations-dashboard.git
+git branch -M main
 git push -u origin main
 ```
 
-> A `.git` folder already exists in the workspace copy with one commit. If you'd rather start clean:
-> `rm -rf .git` before the `git init` above.
+Git history is already initialised with 4 clean commits. Nothing else to prepare.
 
 ---
 
-## 2. Turn on Pages
+## 2. Enable Pages
 
 **Settings → Pages → Source: `GitHub Actions`**
 
-Site lands at `https://mikefromcornell.github.io/expectations-dashboard/`
+Site: `https://mikefromcornell.github.io/expectations-dashboard/`
+
+It ships with a full dataset already committed, so it renders the moment Pages finishes — no waiting
+for a build.
 
 ---
 
@@ -44,43 +42,70 @@ Site lands at `https://mikefromcornell.github.io/expectations-dashboard/`
 
 | Secret | Required? | Value |
 |---|---|---|
-| `EDGAR_USER_AGENT` | recommended | `MikeCornell your@realemail.com` — see warning below |
+| `EDGAR_USER_AGENT` | recommended | `MikeCornell your@realemail.com` — see warning |
 | `DISCORD_WEBHOOK_URL` | for alerts | Discord → Server Settings → Integrations → Webhooks → New → Copy URL |
-| `FINNHUB_API_KEY` | optional | free key at finnhub.io |
-| `REDDIT_CLIENT_ID` | optional | reddit.com/prefs/apps → create a **script** app |
-| `REDDIT_CLIENT_SECRET` | optional | same page |
+| `FINNHUB_API_KEY` | optional | free at finnhub.io — extra quote/earnings fallback |
+| `REDDIT_CLIENT_ID` + `REDDIT_CLIENT_SECRET` | optional | reddit.com/prefs/apps → create a **script** app |
 
-> ⚠️ **The SEC User-Agent format is strict.** Tested against the live API:
-> - `MikeCornell you@example.com` → **200 OK**
-> - `expectations-dashboard/1.0 (research; github.com/...)` → **403** (parentheses/slashes)
-> - anything `@users.noreply.github.com` → **403** (subdomain rejected)
->
-> Use a plain `Name realemail@domain.com`. Without it, insider data silently stops working.
+> ⚠️ **The SEC User-Agent format is strict.** Verified against the live API:
+> `MikeCornell you@example.com` → **200**; anything with parentheses or slashes → **403**;
+> any `@users.noreply.github.com` address → **403**. Without a valid one, insider data silently stops.
 
-**Never paste any of these into a chat, including to me.**
+**Do not add your Gemini key here** — see §5.
 
 ---
 
 ## 4. First run
 
-**Actions → Refresh data → Run workflow → stage: `all`**
+**Actions → Refresh data → Run workflow → stage `all`**
 
-Takes ~13 minutes for 74 tickers (deliberately throttled to stay polite to free providers).
-It commits `data/*.json` back to the repo, which triggers the Pages deploy.
-
-Then open the site. It ships with a working dataset already committed, so it renders immediately
-even before the first Actions run finishes.
+~13 minutes for 74 tickers (deliberately throttled to stay polite to free providers). It commits
+`data/*.json` back to the repo, which triggers the Pages deploy.
 
 ---
 
-## 5. Verify
+## 5. Your Gemini key — paste it into the app, not the repo
 
-- [ ] Dashboard lists 63 equities, Funds tab lists 11
+**The key you sent works.** I tested it live: `gemini-flash-latest` returned a valid completion.
+Two things you should know:
+
+- `gemini-2.5-flash` returns **404 – no longer available to new users**, and `gemini-2.0-flash` is
+  **quota-exhausted** on your account. I changed the app to try `gemini-flash-latest` first and fall
+  back through the other Flash models, so it works today and survives Google renaming things.
+- **I did not put the key in the repo, and you shouldn't either.** The repo is public — a committed
+  key is scraped within minutes. The Mauboussin tab is designed for exactly this: open it, paste the
+  key once, and it lives in your browser's `localStorage` on that device only.
+
+> Since the key was shared in this chat, **rotate it** at
+> [aistudio.google.com/apikey](https://aistudio.google.com/apikey) once you've pasted the new one in.
+> Deleting the old key takes one click.
+
+---
+
+## 6. Verify
+
+- [ ] Dashboard: 63 equities; Funds tab: 11
 - [ ] Header shows "Quotes delayed ~15 min" plus a timestamp
-- [ ] Clicking a row opens the drawer with the score breakdown
-- [ ] Portfolio tab: type a weight on the Dashboard, pies and Sharpe/Sortino populate
-- [ ] Discovery tab shows 18 Dataroma conviction clusters
-- [ ] Discord receives a message after the first run *(alerts fire on the schedule)*
+- [ ] Clicking a row opens the drawer with the full score breakdown
+- [ ] Portfolio tab: **Total 100.00%**, 74 positions, beta 1.13, Sharpe 0.18, Sortino 0.27
+- [ ] Discovery: 18 Dataroma conviction clusters
+- [ ] Mauboussin: paste key → pick a ticker → Analyse returns text
+
+---
+
+## Current configuration
+
+**Equal weight** — all 74 tickers at 1.3514% (last one 1.3478% to make it sum to exactly 100.00%).
+
+**Fair values: empty**, as you asked. This means the Expectations Gap column is blank and the
+35%-weighted gap component of the Expectations Score is inactive, so every score shows `*` (scored on
+5 of 6 inputs). The scores are still valid — weights re-normalise across available inputs rather than
+defaulting to a neutral value.
+
+A `20 × LTM EPS` rule is scaffolded and ready in `config/expectations.yaml` behind
+`auto_fair_value.enabled: false`. Flip it to `true` and rebuild to switch it on for all 55 tickers
+with a positive P/E. Worth knowing before you do: a flat 20× applies the same multiple to a 90%-ROIC
+compounder and a cyclical, so it's a screen that says "look here", not a target price.
 
 ---
 
@@ -89,32 +114,18 @@ even before the first Actions run finishes.
 ```bash
 pip install -r requirements.txt
 
-python -m src.build --stage all          # full rebuild (~13 min)
-python -m src.build --stage quotes       # prices only (~2 min)
-python -m src.alerts.engine alerts --dry # preview alerts, no Discord post
-python -m src.alerts.engine daily --dry  # preview the 10am summary
-python -m pytest tests/ -q               # 7 smoke tests, no network
+python -m src.build --stage all           # full rebuild (~13 min)
+python -m src.build --stage quotes        # prices only (~2 min)
+python -m src.alerts.engine alerts --dry  # preview alerts, no Discord post
+python -m src.alerts.engine daily --dry   # preview the 10am summary
+python -m pytest tests/ -q                # 7 smoke tests, no network
 
-python -m http.server 8000 --directory docs   # then open localhost:8000
+python -m http.server 8000 --directory docs   # open localhost:8000
 ```
-
-Ticker management:
 
 ```bash
-python -m src.watchlist add NVDA
-python -m src.watchlist import myfile.csv
-python -m src.watchlist remove SOFI
-python -m src.watchlist validate
-python -m src.watchlist weights
+python -m src.watchlist add NVDA          # validates before committing
+python -m src.watchlist import file.csv   # bulk; strips cost basis
+python -m src.watchlist remove SOFI       # archives, never deletes
+python -m src.watchlist weights           # show current sizing
 ```
-
----
-
-## First things worth doing
-
-1. **Set fair values** in `config/expectations.yaml`. Right now 0 of 63 equities have one, so the
-   35%-weighted gap component is inactive and every score shows `*` (partial). This is the single
-   highest-impact thing you can do — it switches on the core of the framework.
-2. **Set position weights** — either in the Weight column or `config/watchlist.yaml`. Until then the
-   Portfolio tab has nothing to compute.
-3. **Add your Gemini key** in the Mauboussin tab (free, aistudio.google.com/apikey).
