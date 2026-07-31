@@ -1,19 +1,19 @@
 {
- "total_weight": 4.05,
- "positions": 3,
+ "total_weight": 100.0,
+ "positions": 74,
  "unset": 0,
- "beta": 0.918,
- "wvol": 56.62,
- "ret1y": -29.02,
- "downdev": 36.06,
+ "beta": 0.249,
+ "wvol": 42.19,
+ "ret1y": 15.01,
+ "downdev": 27.32,
  "risk_free": 4.3,
  "risk_free_source": "fallback default (FRED and Treasury.gov unavailable)",
- "sharpe": -0.589,
- "sortino": -0.924,
- "top5": 4.05,
- "top10": 4.05,
- "hhi": 5.5,
- "effective_positions": 1825.2,
+ "sharpe": 0.254,
+ "sortino": 0.392,
+ "top5": 6.76,
+ "top10": 13.51,
+ "hhi": 135.1,
+ "effective_positions": 74.0,
  "largest": {
   "symbol": "AMZN",
   "weight": 1.35
@@ -30,28 +30,116 @@
   {
    "k": "GEMI",
    "v": 1.351
+  },
+  {
+   "k": "SRRK",
+   "v": 1.351
+  },
+  {
+   "k": "ADBE",
+   "v": 1.351
+  },
+  {
+   "k": "XBI",
+   "v": 1.351
+  },
+  {
+   "k": "AVGO",
+   "v": 1.351
+  },
+  {
+   "k": "GOOGL",
+   "v": 1.351
+  },
+  {
+   "k": "VIRT",
+   "v": 1.351
+  },
+  {
+   "k": "CPRT",
+   "v": 1.351
+  },
+  {
+   "k": "GPC",
+   "v": 1.351
+  },
+  {
+   "k": "STNG",
+   "v": 1.351
+  },
+  {
+   "k": "AVDV",
+   "v": 1.351
+  },
+  {
+   "k": "AVUV",
+   "v": 1.351
+  },
+  {
+   "k": "VXUS",
+   "v": 1.351
+  },
+  {
+   "k": "Other (59)",
+   "v": 79.729
   }
  ],
  "by_sector": [
   {
    "k": "Consumer Discretionary",
-   "v": 2.703
+   "v": 21.622
+  },
+  {
+   "k": "Technology",
+   "v": 20.271
+  },
+  {
+   "k": "Funds & ETFs",
+   "v": 14.865
   },
   {
    "k": "Finance",
+   "v": 10.808
+  },
+  {
+   "k": "Health Care",
+   "v": 9.46
+  },
+  {
+   "k": "Unknown",
+   "v": 9.46
+  },
+  {
+   "k": "Industrials",
+   "v": 8.108
+  },
+  {
+   "k": "Energy",
+   "v": 4.054
+  },
+  {
+   "k": "Real Estate",
    "v": 1.351
   }
  ],
  "by_type": [
   {
    "k": "Equity",
-   "v": 4.054
+   "v": 74.323
+  },
+  {
+   "k": "ETF",
+   "v": 14.865
+  },
+  {
+   "k": "ADR",
+   "v": 10.811
   }
  ],
  "flags": [
   {
-   "tone": "warn",
-   "text": "Weights total 4.05%, not 100%. Use 'Normalise' or edit watchlist.yaml."
+   "tone": "bad",
+   "text": "Semiconductor exposure 9.5% across ASML/TSM/AMD/INTC/AVGO \u2014 and Situational Awareness discloses large put positions against exactly these names. Not a reason to sell; a reason to know the correlation."
   }
  ],
  "methodology": "Weighted volatility is Sigma(w_i*sigma_i) and ignores correlation, so it overstates portfolio risk. Sharpe and Sortino derived from it are therefore conservative \u2014 your true ratios are likely better. Covariance-matrix version is a v1.1 item."
