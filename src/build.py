@@ -108,6 +108,10 @@ def build(stage: str = "all", limit: int | None = None) -> int:
             print(f"  EDGAR registry: {len(cik_map):,} tickers")
         except Exception as exc:  # noqa: BLE001
             print(f"  ! EDGAR registry failed: {str(exc)[:80]}")
+        if not cik_map:
+            print("  !! EDGAR registry EMPTY — insider data and TTM history will be "
+                  "skipped for every ticker. Check the EDGAR_USER_AGENT secret; SEC "
+                  "requires the plain form 'Name you@domain.com'.")
 
     dataroma_acts: dict = {}
     pol: dict = {}

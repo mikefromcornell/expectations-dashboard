@@ -35,7 +35,8 @@ NEW_LISTING_MONTHS = 12
 #   "expectations-dashboard/1.0 (research; github.com/..)"  -> 403 (parens/slashes)
 #   "...@users.noreply.github.com"                          -> 403 (subdomain rejected)
 # Set the EDGAR_USER_AGENT secret to your own real address.
-EDGAR_UA = os.environ.get("EDGAR_USER_AGENT", "ExpectationsDashboard contact@example.com")
+EDGAR_UA = (os.environ.get("EDGAR_USER_AGENT") or "").strip() \
+    or "ExpectationsDashboard contact@example.com"
 BROWSER_UA = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
