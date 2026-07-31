@@ -109,26 +109,22 @@ function render() {
   });
   $('tb').innerHTML = rows.map(r => `<tr onclick="openD('${r.symbol}')">
     <td><div class="sym">${r.symbol}${flags(r)}</div><div class="nm">${esc(r.name)}</div></td>
-    <td class="num" onclick="event.stopPropagation()"><input class="wt" value="${r.weight_pct ?? ''}" placeholder="—" onchange="setW('${r.symbol}',this.value)"></td>
     <td class="num mono">${f(r.price)}</td>
     <td class="num mono">${pc(r.change_pct)}</td>
+    <td>${earnCell(r)}</td>
+    <td class="num mono"><b style="color:${scol(r.score)};font-size:13.5px">${r.score === null || r.score === undefined ? '<span class="dash">—</span>' : (r.score * 100).toFixed(0) + '%'}</b>${r.score_partial ? '<span class="star" title="scored on partial inputs">*</span>' : ''}</td>
     <td class="num mono dn">${r.pct_from_high === null || r.pct_from_high === undefined ? '<span class="dash">—</span>' : f(r.pct_from_high, 1) + '%'}</td>
     <td class="num mono up">${r.pct_from_low === null || r.pct_from_low === undefined ? '<span class="dash">—</span>' : '+' + f(r.pct_from_low, 1) + '%'}</td>
     <td>${rangeCell(r)}</td>
-    <td>${earnCell(r)}</td>
-    <td class="num mono"><b style="color:${scol(r.score)};font-size:13.5px">${r.score === null || r.score === undefined ? '<span class="dash">—</span>' : (r.score * 100).toFixed(0) + '%'}</b>${r.score_partial ? '<span class="star" title="scored on partial inputs">*</span>' : ''}</td>
     <td class="num mono">${f(r.pe_ltm, 1)}</td>
-    <td class="num mono">${f(r.pe_fwd, 1)}</td>
-    <td class="num mono">${f(r.ev_ebitda, 1)}</td>
+    <td class="num mono">${f(r.ps_ratio, 1)}</td>
     <td class="num mono">${r.roic === null || r.roic === undefined ? '<span class="dash">—</span>' : f(r.roic, 1) + '%'}</td>
-    <td class="num mono">${r.gap_pct === null || r.gap_pct === undefined ? '<span class="dash">—</span>' : `<span class="${r.gap_pct >= 0 ? 'up' : 'dn'}">${r.gap_pct >= 0 ? '+' : ''}${r.gap_pct.toFixed(1)}%</span>`}</td>
     <td>${sigCell(r)}</td></tr>`).join('');
   $('count').textContent = `${rows.length} of ${D.filter(r => r.type !== 'etf').length} equities · ${D.filter(r => r.type === 'etf').length} funds in separate tab`;
 }
 function renderETF() {
   $('tbe').innerHTML = D.filter(r => r.type === 'etf').map(r => `<tr>
     <td><div class="sym">${r.symbol}${flags(r)}</div><div class="nm">${esc(r.name)}</div></td>
-    <td class="num" onclick="event.stopPropagation()"><input class="wt" value="${r.weight_pct ?? ''}" placeholder="—" onchange="setW('${r.symbol}',this.value)"></td>
     <td class="num mono">${f(r.price)}</td><td class="num mono">${pc(r.change_pct)}</td>
     <td class="num mono dn">${r.pct_from_high === null ? '<span class="dash">—</span>' : f(r.pct_from_high, 1) + '%'}</td>
     <td class="num mono up">${r.pct_from_low === null ? '<span class="dash">—</span>' : '+' + f(r.pct_from_low, 1) + '%'}</td>
@@ -183,8 +179,9 @@ function openD(sym) {
   h += `<div class="sec"><h3>Valuation</h3>`;
   if (r.suppressed) h += `<div class="hint">Metrics suppressed — standard multiples are not meaningful for this security.</div>`;
   else h += `<div class="kv"><span>P/E (LTM)</span><b>${f(r.pe_ltm, 1)}</b></div>
-      <div class="kv"><span>P/E (forward)</span><b>${f(r.pe_fwd, 1)}</b></div>
+      <div class="kv"><span>Price / Sales</span><b>${f(r.ps_ratio, 1)}</b></div>
       <div class="kv"><span>EV/EBITDA</span><b>${f(r.ev_ebitda, 1)}</b></div>
+      <div class="kv"><span>Revenue (LTM)</span><b>${r.revenue ? '$' + (r.revenue / 1e9).toFixed(1) + 'B' : '—'}</b></div>
       <div class="kv"><span>Debt / equity</span><b>${f(r.debt_equity, 2)}</b></div>
       <div class="kv"><span>FCF margin</span><b>${r.fcf_margin === null ? '—' : f(r.fcf_margin, 1) + '%'}</b></div>
       <div class="kv"><span>ROIC <span style="color:#5f708f;font-size:11px">(computed in-repo)</span></span><b>${r.roic === null ? '—' : f(r.roic, 1) + '%'}</b></div>`;
@@ -262,11 +259,7 @@ function submitAdd() {
 
 /* ---------------- portfolio ---------------- */
 function wsum() { return D.reduce((a, r) => a + (+r.weight_pct || 0), 0); }
-function setW(sym, v) {
-  const r = D.find(x => x.symbol === sym); if (!r) return;
-  const n = parseFloat(v); r.weight_pct = isNaN(n) ? null : n;
-  render(); renderETF(); renderPort();
-}
+// Position weights are set in config/watchlist.yaml, not edited in the table.
 function normalize() {
   const t = wsum(); if (!t) return;
   D.forEach(r => { if (r.weight_pct) r.weight_pct = Math.round(r.weight_pct / t * 10000) / 100; });

@@ -39,19 +39,16 @@
     <table>
       <thead><tr>
         <th onclick="sort('symbol',this)">Ticker</th>
-        <th class="num" onclick="sort('weight_pct',this)">Weight</th>
         <th class="num" onclick="sort('price',this)">Price</th>
         <th class="num" onclick="sort('change_pct',this)">Day</th>
+        <th onclick="sort('earnings_days',this)">Earnings</th>
+        <th class="num sorted" onclick="sort('score',this)">Score ▾</th>
         <th class="num" onclick="sort('pct_from_high',this)">% from High</th>
         <th class="num" onclick="sort('pct_from_low',this)">% from Low</th>
         <th>52-wk Range</th>
-        <th onclick="sort('earnings_days',this)">Earnings</th>
-        <th class="num sorted" onclick="sort('score',this)">Score ▾</th>
-        <th class="num" onclick="sort('pe_ltm',this)">P/E LTM</th>
-        <th class="num" onclick="sort('pe_fwd',this)">P/E Fwd</th>
-        <th class="num" onclick="sort('ev_ebitda',this)">EV/EBITDA</th>
+        <th class="num" onclick="sort('pe_ltm',this)">P/E</th>
+        <th class="num" onclick="sort('ps_ratio',this)">P/S</th>
         <th class="num" onclick="sort('roic',this)">ROIC</th>
-        <th class="num" onclick="sort('gap_pct',this)">Exp. Gap</th>
         <th>Signals</th>
       </tr></thead>
       <tbody id="tb"></tbody>
@@ -65,8 +62,8 @@
     Funds have no earnings, insiders, P/E, ROIC or reverse-DCF — so they get only the columns that apply, and are excluded from Expectations Score ranking.
   </span></div>
   <div class="tblwrap">
-    <table style="min-width:820px">
-      <thead><tr><th>Fund</th><th class="num">Weight</th><th class="num">Price</th><th class="num">Day</th>
+    <table style="min-width:700px">
+      <thead><tr><th>Fund</th><th class="num">Price</th><th class="num">Day</th>
         <th class="num">% from High</th><th class="num">% from Low</th><th>52-wk Range</th></tr></thead>
       <tbody id="tbe"></tbody>
     </table>
@@ -78,7 +75,7 @@
   <div class="card" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
     <b style="font-size:13px">Position sizing</b>
     <span id="wsum" class="wsum"></span>
-    <span style="font-size:12px;color:var(--dim)">Edit the <b>Weight</b> column on the Dashboard or Funds tab. Values are % of portfolio.</span>
+    <span style="font-size:12px;color:var(--dim)">Weights come from <code>config/watchlist.yaml</code> — currently equal-weight across all 74. Edit them there, or use <code>python -m src.watchlist weights</code>.</span>
     <button class="btn ghost" style="margin-left:auto" onclick="normalize()">Normalise to 100%</button>
     <button class="btn" onclick="saveWeights()">Save to watchlist.yaml →</button>
   </div>

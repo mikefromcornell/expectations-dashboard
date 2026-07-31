@@ -56,7 +56,8 @@ def _load_previous() -> dict[str, dict]:
 
 # fields owned by each stage — used to carry values forward when a stage is skipped
 _FUND_FIELDS = (
-    "pe_ltm", "pe_fwd", "ev_ebitda", "roic", "roic_trend", "debt_equity", "fcf_margin",
+    "pe_ltm", "pe_fwd", "ev_ebitda", "ps_ratio", "revenue", "roic", "roic_trend",
+    "debt_equity", "fcf_margin",
     "market_cap", "sector", "earnings_date", "earnings_days", "earnings_confirmed",
 )
 _OWN_FIELDS = (
@@ -179,6 +180,7 @@ def build(stage: str = "all", limit: int | None = None) -> int:
                 r.add_error("fundamentals", e)
             r.pe_ltm, r.pe_fwd = f.get("pe_ltm"), f.get("pe_fwd")
             r.ev_ebitda, r.roic = f.get("ev_ebitda"), f.get("roic")
+            r.ps_ratio, r.revenue = f.get("ps_ratio"), f.get("revenue")
             r.debt_equity, r.fcf_margin = f.get("debt_equity"), f.get("fcf_margin")
             r.market_cap = f.get("market_cap")
             r.sector = r.sector or f.get("sector")

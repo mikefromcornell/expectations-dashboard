@@ -43,6 +43,8 @@ class TickerResult:
     pe_ltm: float | None = None
     pe_fwd: float | None = None
     ev_ebitda: float | None = None
+    ps_ratio: float | None = None
+    revenue: float | None = None
     roic: float | None = None
     roic_trend: str | None = None
     debt_equity: float | None = None

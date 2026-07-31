@@ -108,6 +108,10 @@ def fetch(sym: str, price: float | None = None, is_etf: bool = False) -> dict:
             )
 
     if revenue:
+        out["revenue"] = revenue
+        # Price/Sales = market cap / LTM revenue
+        if out.get("market_cap") and revenue > 0:
+            out["ps_ratio"] = out["market_cap"] / revenue
         fcf = (op_income + dep - capex) if op_income else None
         if fcf is not None:
             out["fcf_margin"] = fcf / revenue * 100.0
