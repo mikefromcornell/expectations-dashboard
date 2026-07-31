@@ -27,14 +27,17 @@ async function grab(name, fallback) {
 }
 
 async function boot() {
-  const [t, m, p, b, dc] = await Promise.all([
+  const [t, m, p, b, dc, hs] = await Promise.all([
     grab('tickers.json', []),
     grab('meta.json', {}),
     grab('portfolio.json', {}),
     grab('buffett.json', {}),
     grab('discovery.json', {}),
+    grab('history_index.json', {}),
   ]);
   D = t; META = m; PORT = p; BUFF = b; DISC = dc;
+  HIDX = new Set((hs && hs.tickers) || []);
+  HQ = (hs && hs.quarters) || {};
   if (!D.length) {
     $('freshness').innerHTML = '<span class="badge warn">No data yet — run the Refresh workflow</span>';
   }
@@ -90,6 +93,24 @@ function flags(r) {
   return o;
 }
 
+
+/* current multiple vs its own 2-year mean — the "is this rich or cheap
+   versus its own history" read, shown inline rather than as extra columns */
+function mean2y(cur, mean) {
+  if (mean === null || mean === undefined) return '';
+  if (cur === null || cur === undefined) return `<span class="m2y">${mean.toFixed(1)} avg</span>`;
+  const d = (cur / mean - 1) * 100;
+  const cls = d > 10 ? 'rich' : d < -10 ? 'cheap' : '';
+  return `<span class="m2y ${cls}" title="2-year mean ${mean.toFixed(2)} · current is ${d >= 0 ? '+' : ''}${d.toFixed(0)}% vs it">${mean.toFixed(1)} avg</span>`;
+}
+function targetCell(r) {
+  if (!r.analyst_target) return '<span class="dash">—</span>';
+  const up = r.analyst_upside;
+  const c = up === null || up === undefined ? '' : up >= 0 ? 'up' : 'dn';
+  return `<span title="${esc(r.analyst_detail || '')}">$${r.analyst_target.toFixed(2)}` +
+    (up === null || up === undefined ? '' : `<span class="m2y ${c}" style="color:${up >= 0 ? '#4ade80' : '#f87171'}">${up >= 0 ? '+' : ''}${up.toFixed(0)}%</span>`) + `</span>`;
+}
+
 function render() {
   const q = $('q').value.toLowerCase(), sec = $('sector').value;
   let rows = D.filter(r => r.type !== 'etf').filter(r => {
@@ -110,16 +131,16 @@ function render() {
   $('tb').innerHTML = rows.map(r => `<tr onclick="openD('${r.symbol}')">
     <td><div class="sym">${r.symbol}${flags(r)}</div><div class="nm">${esc(r.name)}</div></td>
     <td class="num mono">${f(r.price)}</td>
-    <td class="num mono">${pc(r.change_pct)}</td>
     <td>${earnCell(r)}</td>
-    <td class="num mono"><b style="color:${scol(r.score)};font-size:13.5px">${r.score === null || r.score === undefined ? '<span class="dash">—</span>' : (r.score * 100).toFixed(0) + '%'}</b>${r.score_partial ? '<span class="star" title="scored on partial inputs">*</span>' : ''}</td>
     <td class="num mono dn">${r.pct_from_high === null || r.pct_from_high === undefined ? '<span class="dash">—</span>' : f(r.pct_from_high, 1) + '%'}</td>
     <td class="num mono up">${r.pct_from_low === null || r.pct_from_low === undefined ? '<span class="dash">—</span>' : '+' + f(r.pct_from_low, 1) + '%'}</td>
     <td>${rangeCell(r)}</td>
-    <td class="num mono">${f(r.pe_ltm, 1)}</td>
-    <td class="num mono">${f(r.ps_ratio, 1)}</td>
+    <td class="num mono">${f(r.pe_ltm, 1)}${mean2y(r.pe_ltm, r.pe_mean_2y)}</td>
+    <td class="num mono">${f(r.ps_ratio, 1)}${mean2y(r.ps_ratio, r.ps_mean_2y)}</td>
     <td class="num mono">${r.roic === null || r.roic === undefined ? '<span class="dash">—</span>' : f(r.roic, 1) + '%'}</td>
-    <td>${sigCell(r)}</td></tr>`).join('');
+    <td class="num mono">${targetCell(r)}</td>
+    <td>${sigCell(r)}</td>
+    <td class="num mono"><b style="color:${scol(r.score)};font-size:13.5px">${r.score === null || r.score === undefined ? '<span class="dash">—</span>' : (r.score * 100).toFixed(0) + '%'}</b>${r.score_partial ? '<span class="star" title="scored on partial inputs">*</span>' : ''}</td></tr>`).join('');
   $('count').textContent = `${rows.length} of ${D.filter(r => r.type !== 'etf').length} equities · ${D.filter(r => r.type === 'etf').length} funds in separate tab`;
 }
 function renderETF() {
@@ -143,6 +164,141 @@ function tab(id, el) {
   document.querySelectorAll('nav a').forEach(a => a.classList.remove('on'));
   el.classList.add('on');
   if (id === 'maub') maubInit();
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────
+   Charts: is the price being driven by the multiple, or by the business?
+   Hand-written SVG — no chart library, keeps the page self-contained.
+   ───────────────────────────────────────────────────────────────────── */
+let HIST = {};      // per-ticker chart data, fetched on demand
+let HIDX = new Set(); // which tickers have history
+let HQ = {};        // quarters available per ticker
+
+function niceTicks(lo, hi, n) {
+  if (!(hi > lo)) return [lo];
+  const raw = (hi - lo) / n, mag = Math.pow(10, Math.floor(Math.log10(raw)));
+  const step = [1, 2, 2.5, 5, 10].map(m => m * mag).find(v => v >= raw) || mag * 10;
+  const out = []; for (let v = Math.ceil(lo / step) * step; v <= hi + 1e-9; v += step) out.push(v);
+  return out;
+}
+
+/* Dual-axis: fundamental (area, left) vs multiple (line, right).
+   The whole point is the divergence — business up while multiple down = de-rating. */
+function dualChart(series, multKey, fundKey, opts) {
+  const W = 520, H = 210, L = 44, R = 46, T = 12, B = 26;
+  const pts = series.filter(p => p[multKey] != null && p[fundKey] != null && p[multKey] > 0);
+  if (pts.length < 8) return '<div class="hint">Not enough history for this chart.</div>';
+  const iw = W - L - R, ih = H - T - B;
+  const mv = pts.map(p => p[multKey]), fv = pts.map(p => p[fundKey]);
+  const mlo = Math.min(...mv), mhi = Math.max(...mv);
+  const flo = Math.min(...fv), fhi = Math.max(...fv);
+  const mPad = (mhi - mlo) * 0.12 || 1, fPad = (fhi - flo) * 0.12 || 1;
+  const m0 = Math.max(0, mlo - mPad), m1 = mhi + mPad;
+  const f0 = Math.max(0, flo - fPad), f1 = fhi + fPad;
+  const x = i => L + (i / (pts.length - 1)) * iw;
+  const ym = v => T + ih - ((v - m0) / (m1 - m0)) * ih;
+  const yf = v => T + ih - ((v - f0) / (f1 - f0)) * ih;
+
+  const fundPath = pts.map((p, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)},${yf(p[fundKey]).toFixed(1)}`).join('');
+  const area = `${fundPath}L${x(pts.length - 1).toFixed(1)},${(T + ih)}L${L},${(T + ih)}Z`;
+  const multPath = pts.map((p, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)},${ym(p[multKey]).toFixed(1)}`).join('');
+  const mean = mv.reduce((a, b) => a + b, 0) / mv.length;
+
+  let g = '';
+  niceTicks(m0, m1, 4).forEach(v => {
+    g += `<line x1="${L}" y1="${ym(v).toFixed(1)}" x2="${W - R}" y2="${ym(v).toFixed(1)}" stroke="#1a2440" stroke-width="1"/>`;
+    g += `<text x="${W - R + 5}" y="${(ym(v) + 3).toFixed(1)}" fill="#5f708f" font-size="9">${v.toFixed(1)}x</text>`;
+  });
+  niceTicks(f0, f1, 4).forEach(v => {
+    g += `<text x="${L - 5}" y="${(yf(v) + 3).toFixed(1)}" fill="#5f708f" font-size="9" text-anchor="end">${opts.fmtFund(v)}</text>`;
+  });
+  const step = Math.max(1, Math.floor(pts.length / 5));
+  for (let i = 0; i < pts.length; i += step) {
+    g += `<text x="${x(i).toFixed(1)}" y="${H - 8}" fill="#5f708f" font-size="9" text-anchor="middle">${pts[i].t.slice(0, 7)}</text>`;
+  }
+  const last = pts[pts.length - 1];
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%" preserveAspectRatio="xMidYMid meet">
+    ${g}
+    <path d="${area}" fill="${opts.fundColor}" opacity=".16"/>
+    <path d="${fundPath}" fill="none" stroke="${opts.fundColor}" stroke-width="1.8"/>
+    <line x1="${L}" y1="${ym(mean).toFixed(1)}" x2="${W - R}" y2="${ym(mean).toFixed(1)}" stroke="${opts.multColor}" stroke-width="1" stroke-dasharray="4 3" opacity=".65"/>
+    <text x="${W - R - 3}" y="${(ym(mean) - 4).toFixed(1)}" fill="${opts.multColor}" font-size="9" text-anchor="end" opacity=".9">mean ${mean.toFixed(1)}x</text>
+    <path d="${multPath}" fill="none" stroke="${opts.multColor}" stroke-width="1.5"/>
+    <circle cx="${x(pts.length - 1).toFixed(1)}" cy="${ym(last[multKey]).toFixed(1)}" r="3" fill="${opts.multColor}"/>
+  </svg>
+  <div class="chartlegend">
+    <span><i style="background:${opts.fundColor}"></i>${opts.fundLabel} (left)</span>
+    <span><i style="background:${opts.multColor}"></i>${opts.multLabel} (right) — now <b style="color:${opts.multColor}">${last[multKey].toFixed(1)}x</b></span>
+  </div>`;
+}
+
+/* Price return factors exactly into multiple change x fundamental growth.
+   Stacked bars make it obvious which one did the work. */
+function decompChart(rows, mode) {
+  if (!rows || !rows.length) return '<div class="hint">Not enough history to decompose returns.</div>';
+  const mk = mode === 'pe' ? 'pe_change' : 'ps_change';
+  const gk = mode === 'pe' ? 'eps_growth' : 'sales_growth';
+  const gLabel = mode === 'pe' ? 'EPS growth' : 'Sales growth';
+  const mLabel = mode === 'pe' ? 'P/E change' : 'P/S change';
+  let out = '<div class="decomp">';
+  rows.forEach(r => {
+    if (r[mk] == null || r[gk] == null) return;
+    const mult = r[mk], fund = r[gk];
+    const am = Math.abs(mult), af = Math.abs(fund), tot = am + af || 1;
+    const pm = am / tot * 100, pf = af / tot * 100;
+    const cm = mult >= 0 ? '#60a5fa' : '#f87171';
+    const cf = fund >= 0 ? '#4ade80' : '#fb923c';
+    const driver = af > am ? gLabel.toLowerCase() : 'multiple change';
+    const dcol = af > am ? '#4ade80' : '#60a5fa';
+    out += `<div class="decomprow">
+      <div class="decomphead">
+        <b>${r.period}</b>
+        <span>price <b style="color:${r.price_return >= 0 ? '#22c55e' : '#ef4444'}">${r.price_return >= 0 ? '+' : ''}${r.price_return}%</b></span>
+      </div>
+      <div class="decompbar">
+        <i style="width:${pm.toFixed(1)}%;background:${cm}" title="${mLabel} ${mult >= 0 ? '+' : ''}${mult}%"></i>
+        <i style="width:${pf.toFixed(1)}%;background:${cf}" title="${gLabel} ${fund >= 0 ? '+' : ''}${fund}%"></i>
+      </div>
+      <div class="decompkey">
+        <span style="color:${cm}">${mLabel} ${mult >= 0 ? '+' : ''}${mult}%</span>
+        <span style="color:${cf}">${gLabel} ${fund >= 0 ? '+' : ''}${fund}%</span>
+        ${r.share_effect != null && Math.abs(r.share_effect) >= 1 ? `<span style="color:#a78bfa">share count ${r.share_effect >= 0 ? '+' : ''}${r.share_effect}%</span>` : ''}
+      </div>
+      <div class="verdict">Driven mainly by <b style="color:${dcol}">${driver}</b>.</div>
+    </div>`;
+  });
+  return out + '</div>';
+}
+
+async function loadHistory(sym) {
+  if (HIST[sym]) return HIST[sym];
+  for (const base of ['data/history/', '../data/history/']) {
+    try {
+      const r = await fetch(base + sym + '.json');
+      if (r.ok) { HIST[sym] = await r.json(); return HIST[sym]; }
+    } catch (e) { /* try next */ }
+  }
+  return null;
+}
+
+function multipleMode(sym, mode) {
+  const h = HIST[sym]; if (!h) return;
+  const box = document.getElementById('mchart');
+  const isPE = mode === 'pe';
+  box.innerHTML = dualChart(h.series, isPE ? 'pe' : 'ps', isPE ? 'eps' : 'rev', {
+    multKey: isPE ? 'pe' : 'ps',
+    multLabel: isPE ? 'P/E (TTM)' : 'P/S (TTM)',
+    fundLabel: isPE ? 'EPS (TTM)' : 'Revenue (TTM)',
+    multColor: isPE ? '#60a5fa' : '#a78bfa',
+    fundColor: isPE ? '#f59e0b' : '#fb923c',
+    fmtFund: v => isPE ? '$' + v.toFixed(1) : '$' + (v / 1e9).toFixed(0) + 'B',
+  });
+  document.getElementById('dchart').innerHTML = decompChart(h.summary.decomposition, mode);
+  ['btn-ps', 'btn-pe'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.toggle('on', id === 'btn-' + mode);
+  });
 }
 
 /* ---------------- drawer ---------------- */
@@ -176,15 +332,40 @@ function openD(sym) {
     h += `<div class="hint" style="margin-top:9px">Missing inputs are dropped and remaining weights re-normalised — never silently substituted with a neutral 0.5.</div></div>`;
   }
 
+  if (HIDX.has(r.symbol)) {
+    h += `<div class="sec"><h3>What is driving the price?</h3>
+      <div style="display:flex;gap:6px;margin-bottom:10px">
+        <span class="chip on" id="btn-ps" onclick="multipleMode('${r.symbol}','ps')">P/S vs Revenue</span>
+        <span class="chip" id="btn-pe" onclick="multipleMode('${r.symbol}','pe')">P/E vs EPS</span>
+      </div>
+      <div class="chartbox">
+        <div class="charttitle">Multiple vs. fundamental (TTM)</div>
+        <div class="chartsub">When the business line rises while the multiple falls, the market is de-rating a growing company — and vice versa.</div>
+        <div id="mchart"></div>
+      </div>
+      <div class="chartbox">
+        <div class="charttitle">Return decomposition</div>
+        <div class="chartsub">Price return = multiple change × fundamental growth. Bar width shows which contributed more.</div>
+        <div id="dchart"></div>
+      </div>
+      <div class="hint">Built from SEC XBRL quarterly filings (${HQ[r.symbol] || '—'} quarters) joined to daily closes, point-in-time: each date only uses data filed by then, so there is no look-ahead bias.</div>
+    </div>`;
+  }
+
   h += `<div class="sec"><h3>Valuation</h3>`;
   if (r.suppressed) h += `<div class="hint">Metrics suppressed — standard multiples are not meaningful for this security.</div>`;
   else h += `<div class="kv"><span>P/E (LTM)</span><b>${f(r.pe_ltm, 1)}</b></div>
+      <div class="kv"><span>P/E — 2-year mean</span><b>${f(r.pe_mean_2y, 1)}</b></div>
       <div class="kv"><span>Price / Sales</span><b>${f(r.ps_ratio, 1)}</b></div>
+      <div class="kv"><span>P/S — 2-year mean</span><b>${f(r.ps_mean_2y, 1)}</b></div>
       <div class="kv"><span>EV/EBITDA</span><b>${f(r.ev_ebitda, 1)}</b></div>
       <div class="kv"><span>Revenue (LTM)</span><b>${r.revenue ? '$' + (r.revenue / 1e9).toFixed(1) + 'B' : '—'}</b></div>
       <div class="kv"><span>Debt / equity</span><b>${f(r.debt_equity, 2)}</b></div>
       <div class="kv"><span>FCF margin</span><b>${r.fcf_margin === null ? '—' : f(r.fcf_margin, 1) + '%'}</b></div>
       <div class="kv"><span>ROIC <span style="color:#5f708f;font-size:11px">(computed in-repo)</span></span><b>${r.roic === null ? '—' : f(r.roic, 1) + '%'}</b></div>`;
+  if (r.roic_detail) h += `<div class="hint" style="margin-top:6px">${esc(r.roic_detail)}</div>`;
+  if (r.analyst_target) h += `<div class="kv" style="margin-top:8px"><span>Analyst consensus</span><b>$${r.analyst_target.toFixed(2)}${r.analyst_upside != null ? ` <span class="${r.analyst_upside >= 0 ? 'up' : 'dn'}">(${r.analyst_upside >= 0 ? '+' : ''}${r.analyst_upside.toFixed(1)}%)</span>` : ''}</b></div>
+    <div class="hint">${esc(r.analyst_detail || '')}</div>`;
   h += '</div>';
 
   h += `<div class="sec"><h3>Risk</h3>
@@ -228,6 +409,14 @@ function openD(sym) {
   }
   h += `</div></div>`;
   $('dbody').innerHTML = h;
+  if (HIDX.has(r.symbol)) {
+    const mc = $('mchart');
+    if (mc) mc.innerHTML = '<div class="hint">Loading history…</div>';
+    loadHistory(r.symbol).then(hh => {
+      if (!hh) { if ($('mchart')) $('mchart').innerHTML = '<div class="hint">History unavailable.</div>'; return; }
+      if ($('dsym').textContent === r.symbol) multipleMode(r.symbol, 'ps');
+    });
+  }
   $('drawer').classList.add('on'); $('scrim').classList.add('on');
 }
 function closeD() { $('drawer').classList.remove('on'); $('scrim').classList.remove('on'); $('addm').classList.remove('on'); }

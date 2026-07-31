@@ -41,6 +41,7 @@ class Quote:
     exchange: str | None = None
     source: str = "unknown"
     closes: list[float] | None = None  # daily closes for risk metrics
+    closes_dated: list[tuple[str, float]] | None = None  # (iso_date, close) for TTM history
     history_days: int = 0
 
 
@@ -57,9 +58,17 @@ def from_yahoo(sym: str, rng: str = "3y") -> Quote:
     r = res[0]
     m = r.get("meta", {})
     closes: list[float] = []
+    dated: list[tuple[str, float]] = []
     try:
         raw = r["indicators"]["quote"][0]["close"]
         closes = [c for c in raw if c is not None]
+        ts = r.get("timestamp") or []
+        if len(ts) == len(raw):
+            from datetime import datetime, timezone
+            dated = [
+                (datetime.fromtimestamp(t, timezone.utc).date().isoformat(), c)
+                for t, c in zip(ts, raw) if c is not None
+            ]
     except Exception:
         closes = []
     price = m.get("regularMarketPrice")
@@ -75,6 +84,7 @@ def from_yahoo(sym: str, rng: str = "3y") -> Quote:
         exchange=m.get("fullExchangeName"),
         source="yahoo",
         closes=closes,
+        closes_dated=dated or None,
         history_days=len(closes),
     )
 
@@ -96,6 +106,7 @@ def from_stockanalysis(sym: str, is_etf: bool = False, rng: str = "5Y") -> Quote
         raise FetchError("stockanalysis: no rows")
     rows = sorted(rows, key=lambda r: r.get("t", ""))
     closes = [float(r["c"]) for r in rows if r.get("c") is not None]
+    dated = [(r["t"], float(r["c"])) for r in rows if r.get("c") is not None and r.get("t")]
     if not closes:
         raise FetchError("stockanalysis: no closes")
     price = closes[-1]
@@ -110,6 +121,7 @@ def from_stockanalysis(sym: str, is_etf: bool = False, rng: str = "5Y") -> Quote
         low52=min(window),
         source="stockanalysis",
         closes=closes,
+        closes_dated=dated or None,
         history_days=len(closes),
     )
 

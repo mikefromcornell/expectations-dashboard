@@ -45,6 +45,11 @@ class TickerResult:
     ev_ebitda: float | None = None
     ps_ratio: float | None = None
     revenue: float | None = None
+    pe_mean_2y: float | None = None
+    ps_mean_2y: float | None = None
+    invested_capital: float | None = None
+    excess_cash: float | None = None
+    roic_detail: str | None = None
     roic: float | None = None
     roic_trend: str | None = None
     debt_equity: float | None = None
@@ -74,6 +79,13 @@ class TickerResult:
 
     # expectations
     weight_pct: float | None = None
+    analyst_target: float | None = None
+    analyst_upside: float | None = None
+    analyst_detail: str | None = None
+    analyst_low: float | None = None
+    analyst_high: float | None = None
+    decomposition: list[dict] = field(default_factory=list)
+    has_history: bool = False
     fair_value: float | None = None
     fair_value_source: str | None = None
     gap_pct: float | None = None

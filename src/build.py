@@ -23,8 +23,10 @@ from .metrics.portfolio import compute as compute_portfolio
 from .metrics.scoring import apply_score, rating
 from .models import TickerResult
 from .providers import fundamentals as fund
+from .providers import analysts as anl
 from .providers import earnings as earn
 from .providers import ownership as own
+from .providers import sec_facts as secf
 from .providers.quotes import (
     annualised_return, annualised_vol, beta_vs, downside_deviation, fetch_quote, from_yahoo,
 )
@@ -57,6 +59,9 @@ def _load_previous() -> dict[str, dict]:
 # fields owned by each stage — used to carry values forward when a stage is skipped
 _FUND_FIELDS = (
     "pe_ltm", "pe_fwd", "ev_ebitda", "ps_ratio", "revenue", "roic", "roic_trend",
+    "pe_mean_2y", "ps_mean_2y", "invested_capital", "excess_cash", "roic_detail",
+    "analyst_target", "analyst_upside", "analyst_detail", "analyst_low", "analyst_high",
+    "decomposition", "has_history",
     "debt_equity", "fcf_margin",
     "market_cap", "sector", "earnings_date", "earnings_days", "earnings_confirmed",
 )
@@ -78,6 +83,7 @@ def build(stage: str = "all", limit: int | None = None) -> int:
     print(f"» {len(wl)} tickers · stage={stage}")
 
     results: list[TickerResult] = []
+    history_out: dict = {}
     bench_closes: list[float] = []
     try:
         from .providers.quotes import fetch_quote as _fq
@@ -96,14 +102,16 @@ def build(stage: str = "all", limit: int | None = None) -> int:
             print(f"  ! earnings sweep failed: {str(exc)[:80]}")
 
     cik_map = {}
-    dataroma_acts: dict = {}
-    pol: dict = {}
-    if stage in ("all", "ownership"):
+    if stage in ("all", "fundamentals", "ownership"):
         try:
             cik_map = own.load_cik_map()
             print(f"  EDGAR registry: {len(cik_map):,} tickers")
         except Exception as exc:  # noqa: BLE001
             print(f"  ! EDGAR registry failed: {str(exc)[:80]}")
+
+    dataroma_acts: dict = {}
+    pol: dict = {}
+    if stage in ("all", "ownership"):
         try:
             payload, how = own.fetch_dataroma()
             dataroma_acts = payload.get("activity", {})
@@ -161,6 +169,7 @@ def build(stage: str = "all", limit: int | None = None) -> int:
                 r.pct_from_high = (q.price - q.high52) / q.high52 * 100
                 r.pct_from_low = (q.price - q.low52) / q.low52 * 100
                 r.pos52 = (q.price - q.low52) / (q.high52 - q.low52) * 100
+            closes_dated = getattr(q, "closes_dated", None)
             if q.closes:
                 r.new_listing = q.history_days < 252
                 r.vol30 = annualised_vol(q.closes)
@@ -181,6 +190,9 @@ def build(stage: str = "all", limit: int | None = None) -> int:
             r.pe_ltm, r.pe_fwd = f.get("pe_ltm"), f.get("pe_fwd")
             r.ev_ebitda, r.roic = f.get("ev_ebitda"), f.get("roic")
             r.ps_ratio, r.revenue = f.get("ps_ratio"), f.get("revenue")
+            r.invested_capital = f.get("invested_capital")
+            r.excess_cash = f.get("excess_cash")
+            r.roic_detail = f.get("roic_detail")
             r.debt_equity, r.fcf_margin = f.get("debt_equity"), f.get("fcf_margin")
             r.market_cap = f.get("market_cap")
             r.sector = r.sector or f.get("sector")
@@ -257,6 +269,37 @@ def build(stage: str = "all", limit: int | None = None) -> int:
                 r.stale = True
                 r.sources["quote"] = (old.get("sources") or {}).get("quote", "cached") + " (stale)"
 
+        # ---- analyst consensus ----
+        if stage in ("all", "fundamentals") and t.type != "etf":
+            try:
+                a = anl.fetch(t.quote_symbol)
+                r.analyst_target = a["target"]
+                r.analyst_low, r.analyst_high = a.get("low"), a.get("high")
+                r.analyst_detail = a["detail"]
+                if r.price:
+                    r.analyst_upside = (a["target"] - r.price) / r.price * 100
+            except Exception as exc:  # noqa: BLE001
+                r.add_error("analysts", exc)
+
+        # ---- TTM multiple history + return decomposition ----
+        if stage in ("all", "fundamentals") and t.type != "etf" and closes_dated:
+            cik = cik_map.get(t.symbol) or cik_map.get(t.symbol.replace("-", "."))
+            if cik:
+                try:
+                    hist = secf.build_history(cik, closes_dated)
+                    summ = secf.summarise(hist, years=2.0)
+                    r.pe_mean_2y = summ["pe_mean_2y"]
+                    r.ps_mean_2y = summ["ps_mean_2y"]
+                    r.decomposition = summ["decomposition"]
+                    r.has_history = True
+                    history_out[t.symbol] = {
+                        "series": secf.downsample(hist["series"]),
+                        "quarters": hist["quarters"],
+                        "summary": summ,
+                    }
+                except Exception as exc:  # noqa: BLE001
+                    r.add_error("history", exc)
+
         apply_score(r, scoring)
         apply_buffett(r, buff_cfg, t.tags)
         results.append(r)
@@ -290,6 +333,23 @@ def build(stage: str = "all", limit: int | None = None) -> int:
     _write("tickers.json", payload)
     _write("meta.json", meta)
     _write("portfolio.json", compute_portfolio(results))
+    if history_out:
+        # One file per ticker, fetched only when its drawer opens. A single
+        # combined history.json is ~2.8 MB, which is a poor thing to download
+        # on every page view for charts most visits never open.
+        hdir = DATA / "history"
+        hdir.mkdir(exist_ok=True)
+        for sym, payload in history_out.items():
+            (hdir / f"{sym}.json").write_text(json.dumps(payload, default=str))
+        _write("history_index.json", {
+            "generated": STAMP(),
+            "tickers": sorted(history_out),
+            "quarters": {k: v["quarters"] for k, v in history_out.items()},
+        })
+        print(f"  wrote data/history/*.json ({len(history_out)} files)")
+    elif stage != "all":
+        if (DATA / "history_index.json").exists():
+            print("  kept existing data/history/*.json")
     _write("buffett.json", {
         "observations": portfolio_observations(results),
         "generated": STAMP(),

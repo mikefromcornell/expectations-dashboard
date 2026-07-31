@@ -27,6 +27,7 @@ jobs:
       - run: |
           mkdir -p docs/data
           cp -r data/*.json docs/data/ 2>/dev/null || true
+          cp -r data/history docs/data/ 2>/dev/null || true
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -14,6 +14,9 @@ INFO = "https://api.nasdaq.com/api/quote/{sym}/info?assetclass={cls}"
 SUMMARY = "https://api.nasdaq.com/api/quote/{sym}/summary?assetclass={cls}"
 
 TAX_RATE = 0.21  # US statutory, used when effective rate is unavailable
+# Cash a business needs to operate, held back from the excess-cash deduction in
+# invested capital. 2% of revenue ~= 1-2 months of operating expenses.
+OPERATING_CASH_PCT = 0.02
 
 
 def _money(v) -> float | None:
@@ -95,16 +98,33 @@ def fetch(sym: str, price: float | None = None, is_etf: bool = False) -> dict:
     capex = abs((_first(cf, "Capital Expenditures") or 0) * K)
 
     # ---- ROIC = NOPAT / invested capital ----
+    #
+    # Invested capital nets out only EXCESS cash, not all cash. A business needs
+    # some cash to operate; subtracting the whole balance overstates ROIC for
+    # cash-rich companies (it was what produced AAPL ~89%).
+    #
+    #   operating cash = 2% of revenue   (proxy for ~1-2 months of opex)
+    #   excess cash    = max(0, cash + short-term investments - operating cash)
+    #   IC             = total debt + total equity - excess cash
     if op_income and equity:
         eff_tax = (tax / pretax) if (pretax and tax) else TAX_RATE
         eff_tax = min(max(eff_tax, 0.0), 0.5)
         nopat = op_income * (1 - eff_tax)
-        invested = total_debt + equity - cash - sti
+
+        operating_cash = revenue * OPERATING_CASH_PCT if revenue else 0.0
+        excess_cash = max(0.0, (cash + sti) - operating_cash)
+        invested = total_debt + equity - excess_cash
         if invested > 0:
             out["roic"] = nopat / invested * 100.0
+            out["operating_cash"] = operating_cash
+            out["excess_cash"] = excess_cash
+            out["invested_capital"] = invested
             out["roic_detail"] = (
-                f"NOPAT ${nopat/1e9:.2f}B (op income ${op_income/1e9:.2f}B × "
-                f"{1-eff_tax:.0%}) ÷ invested capital ${invested/1e9:.2f}B"
+                f"NOPAT ${nopat/1e9:.2f}B (op income ${op_income/1e9:.2f}B × {1-eff_tax:.0%} "
+                f"after tax) ÷ invested capital ${invested/1e9:.2f}B "
+                f"(debt ${total_debt/1e9:.2f}B + equity ${equity/1e9:.2f}B "
+                f"− excess cash ${excess_cash/1e9:.2f}B; operating cash held back at "
+                f"{OPERATING_CASH_PCT:.0%} of revenue = ${operating_cash/1e9:.2f}B)"
             )
 
     if revenue:

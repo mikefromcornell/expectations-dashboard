@@ -40,16 +40,16 @@
       <thead><tr>
         <th onclick="sort('symbol',this)">Ticker</th>
         <th class="num" onclick="sort('price',this)">Price</th>
-        <th class="num" onclick="sort('change_pct',this)">Day</th>
         <th onclick="sort('earnings_days',this)">Earnings</th>
-        <th class="num sorted" onclick="sort('score',this)">Score ▾</th>
         <th class="num" onclick="sort('pct_from_high',this)">% from High</th>
         <th class="num" onclick="sort('pct_from_low',this)">% from Low</th>
         <th>52-wk Range</th>
-        <th class="num" onclick="sort('pe_ltm',this)">P/E</th>
-        <th class="num" onclick="sort('ps_ratio',this)">P/S</th>
+        <th class="num" onclick="sort('pe_ltm',this)">P/E <span class="sub2y">2y avg</span></th>
+        <th class="num" onclick="sort('ps_ratio',this)">P/S <span class="sub2y">2y avg</span></th>
         <th class="num" onclick="sort('roic',this)">ROIC</th>
+        <th class="num" onclick="sort('analyst_upside',this)">Analyst Target</th>
         <th>Signals</th>
+        <th class="num sorted" onclick="sort('score',this)">Score ▾</th>
       </tr></thead>
       <tbody id="tb"></tbody>
     </table>
