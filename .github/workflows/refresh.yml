@@ -15,7 +15,8 @@ on:
         options: [all, quotes, fundamentals, ownership]
 
 concurrency:
-  group: refresh
+  # keyed by stage so a scheduled quotes run never cancels a manual full rebuild
+  group: refresh-${{ github.event.inputs.stage || (github.event.schedule == '0 5 * * *' && 'all' || 'quotes') }}
   cancel-in-progress: false
 
 permissions:
