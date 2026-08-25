@@ -599,24 +599,102 @@ function renderDisc() {
      <td class="d" style="font-size:11px">${esc(r.detail.slice(0, 90))}</td></tr>`).join('')
     || '<tr><td colspan="5" class="hint">Dataroma data not yet fetched.</td></tr>';
 
-  if (DISC.fetched) $('dfetch').textContent = 'Dataroma fetched ' + new Date(DISC.fetched).toLocaleString() + ' · ' + (DISC.how || '');
+  if (DISC.fetched) {
+    const age = (Date.now() - new Date(DISC.fetched).getTime()) / 3.6e6;
+    const per = DISC.latest_period ? `<b style="color:#a78bfa">${esc(DISC.latest_period)}</b> filings · ` : '';
+    const stale = age > 96
+      ? ` <span class="badge warn">⚠ ${Math.round(age / 24)}d old — 13F data may be a quarter behind</span>` : '';
+    $('dfetch').innerHTML = per + 'fetched ' + new Date(DISC.fetched).toLocaleString() +
+      ` (${age < 48 ? Math.round(age) + 'h' : Math.round(age / 24) + 'd'} ago)` + stale;
+  }
 }
 function quickAdd(sym) { $('asym').value = sym; lookup(); openAdd(); }
 
 /* ---------------- mauboussin (browser-key, on tab open) ---------------- */
 const LSK = 'ed_gemini_key';
+
+function currentSym() {
+  const v = ($('msym') && $('msym').value || '').trim().toUpperCase();
+  return v.replace(/[^A-Z0-9.\-]/g, '');
+}
+/* Tickers outside the watchlist have no row in D, so fetch just enough to
+   fill the prompt. Failure is non-fatal — the prompt still runs with n/a. */
+const ADHOC = {};
+async function adhocMetrics(sym) {
+  if (ADHOC[sym] !== undefined) return ADHOC[sym];
+  const out = { symbol: sym, name: sym };
+  try {
+    // Nasdaq/Yahoo block cross-origin browser calls, so there is no free way to
+    // price an arbitrary ticker from a static page. stockanalysis.com does send
+    // permissive CORS headers, so try it; if it fails the prompt still runs and
+    // the model is told the fields are genuinely unknown.
+    const res = await fetch(`https://stockanalysis.com/api/symbol/s/${sym.toLowerCase()}/history?range=1Y`);
+    if (res.ok) {
+      const j = await res.json();
+      const raw = j && j.data;
+      const rows = Array.isArray(raw) ? raw : (raw && raw.data) || [];
+      if (rows.length) {
+        const closes = rows.map(x => x.c).filter(v => v != null);
+        out.price = closes[0] != null && rows[0].t >= rows[rows.length - 1].t ? closes[0] : closes[closes.length - 1];
+        out.high52 = Math.max(...closes);
+        out.low52 = Math.min(...closes);
+        if (out.high52 > out.low52) out.pos52 = (out.price - out.low52) / (out.high52 - out.low52) * 100;
+      }
+    }
+  } catch (e) { /* offline or blocked — prompt still works with n/a */ }
+  ADHOC[sym] = out;
+  return out;
+}
+function onSymInput() {
+  const sym = currentSym(), note = $('msymnote');
+  if (!sym) { if (note) note.textContent = ''; return; }
+  const known = D.find(x => x.symbol === sym);
+  if (note) {
+    note.innerHTML = known
+      ? `<span style="color:#86efac">✓ ${esc(known.name)} — using dashboard metrics</span>`
+      : `<span style="color:#fcd34d">not in your watchlist — metrics fetched on demand</span>`;
+  }
+  if (known) syncPrompt(known);
+  else adhocMetrics(sym).then(syncPrompt);
+}
+let PROMPT_DIRTY = false;
+function syncPrompt(r) {
+  const box = $('mprompt'); if (!box) return;
+  if (PROMPT_DIRTY && box.value.trim()) return;   // don't clobber user edits
+  box.value = buildPrompt(r);
+}
+function resetPrompt() {
+  PROMPT_DIRTY = false;
+  const sym = currentSym();
+  const known = D.find(x => x.symbol === sym);
+  if (known) syncPrompt(known); else adhocMetrics(sym).then(syncPrompt);
+}
+function copyPromptText() {
+  const box = $('mprompt'); if (!box) return;
+  navigator.clipboard.writeText(box.value).then(() => {
+    const n = $('msymnote'); if (n) { const o = n.innerHTML; n.innerHTML = '<span style="color:#86efac">copied ✓</span>'; setTimeout(() => n.innerHTML = o, 1500); }
+  });
+}
+
 function maubInit() {
   const k = localStorage.getItem(LSK);
   $('gkey').value = k || '';
   $('gstate').innerHTML = k ? '<span class="badge" style="background:#052e16;border-color:#14532d;color:#86efac">✓ key saved locally</span>'
     : '<span class="badge warn">no key — analysis disabled</span>';
-  const sel = $('msym');
-  if (!sel.options.length) {
-    sel.innerHTML = D.filter(r => r.type !== 'etf' && r.price)
-      .map(r => `<option value="${r.symbol}">${r.symbol} — ${esc(r.name)}</option>`).join('');
+  const dl = $('msymlist');
+  if (dl && !dl.options.length) {
+    dl.innerHTML = D.filter(r => r.type !== 'etf')
+      .map(r => `<option value="${r.symbol}">${esc(r.name)}</option>`).join('');
   }
-  const cached = maubCache($('msym').value);
-  if (cached) showMaub(cached); else $('mout').innerHTML = '<div class="hint">Select a ticker and press Analyse. Results cache for 24h per ticker.</div>';
+  const box = $('msym');
+  if (box && !box.value) {
+    const first = D.find(r => r.type !== 'etf' && r.price);
+    if (first) box.value = first.symbol;
+  }
+  onSymInput();
+  const cached = maubCache(currentSym());
+  if (cached) showMaub(cached);
+  else $('mout').innerHTML = '<div class="hint">Type a ticker and press Analyse (or hit Enter). Results cache for 24h per ticker.</div>';
 }
 function saveKey() {
   const v = $('gkey').value.trim();
@@ -636,13 +714,22 @@ function maubCache(sym, val, model) {
   localStorage.setItem(k, JSON.stringify({ t: Date.now(), text: val, sym, model }));
 }
 function buildPrompt(r) {
+  const n = v => (v === null || v === undefined || v === '') ? 'n/a' : v;
+  const num = (v, d) => (v === null || v === undefined || v === '') ? 'n/a' : Number(v).toFixed(d);
+  const money = v => (v === null || v === undefined) ? 'n/a' : '$' + Number(v).toLocaleString();
+  const range = (r.low52 != null && r.high52 != null)
+    ? `${money(r.low52)}-${money(r.high52)}` + (r.pos52 != null ? ` (${r.pos52.toFixed(0)}th pct)` : '')
+    : 'n/a';
   return `You are applying Michael Mauboussin's expectations investing framework.
 
-TICKER: ${r.symbol} (${r.name})
-Price $${r.price} | 52-wk range $${r.low52 ?? 'n/a'}-${r.high52 ?? 'n/a'} (${r.pos52 === null ? 'n/a' : r.pos52.toFixed(0) + 'th pct'})
-LTM P/E ${r.pe_ltm ?? 'n/a'} | Fwd P/E ${r.pe_fwd ?? 'n/a'} | EV/EBITDA ${r.ev_ebitda ?? 'n/a'} | ROIC ${r.roic === null ? 'n/a' : r.roic.toFixed(1) + '%'}
-User's fair value: ${r.fair_value ? '$' + r.fair_value + ' (gap ' + r.gap_pct.toFixed(1) + '%)' : 'not set'}
-Next earnings: ${r.earnings_date || 'unknown'}
+TICKER: ${r.symbol} (${r.name || r.symbol})
+Price ${money(r.price)} | 52-wk range ${range}
+LTM P/E ${num(r.pe_ltm,1)} | P/S ${num(r.ps_ratio,2)} | EV/EBITDA ${num(r.ev_ebitda,1)} | ROIC ${r.roic == null ? 'n/a' : r.roic.toFixed(1) + '%'}
+2-year mean multiples: P/E ${num(r.pe_mean_2y,1)} | P/S ${num(r.ps_mean_2y,2)}
+User's fair value: ${r.fair_value ? money(r.fair_value) + (r.gap_pct != null ? ` (gap ${r.gap_pct.toFixed(1)}%)` : '') : 'not set'}
+Analyst consensus target: ${r.analyst_target ? money(r.analyst_target) : 'n/a'}
+Next earnings: ${n(r.earnings_date)}
+(Any field marked n/a is genuinely unavailable — reason about it rather than inventing a number.)
 
 Answer in four short sections with markdown headers:
 1. What expectations for sales growth, operating margin and incremental investment does the current price imply?
@@ -653,8 +740,10 @@ Answer in four short sections with markdown headers:
 Be concrete and quantitative. State uncertainty plainly. Do not give buy/sell advice.`;
 }
 async function analyse(force) {
-  const sym = $('msym').value, r = D.find(x => x.symbol === sym);
-  if (!r) return;
+  const sym = currentSym();
+  if (!sym) { $('mout').innerHTML = '<div class="hint">Enter a ticker first.</div>'; return; }
+  let r = D.find(x => x.symbol === sym);
+  if (!r) { $('mout').innerHTML = '<div class="hint">Fetching metrics for ' + esc(sym) + '…</div>'; r = await adhocMetrics(sym); }
   if (!force) { const c = maubCache(sym); if (c) return showMaub(c); }
   const key = localStorage.getItem(LSK);
   if (!key) { $('mout').innerHTML = '<div class="hint" style="color:#fca5a5">No API key saved. Paste a free Google AI Studio key above, or use “Copy prompt” to run it manually.</div>'; return; }
@@ -668,7 +757,7 @@ async function analyse(force) {
     try {
       const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(key)}`, {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ contents: [{ parts: [{ text: buildPrompt(r) }] }] }),
+        body: JSON.stringify({ contents: [{ parts: [{ text: promptText(r) }] }] }),
       });
       const j = await res.json();
       if (j.error) { lastErr = `${model}: ${j.error.status} — ${j.error.message}`; continue; }
@@ -692,12 +781,20 @@ function showMaub(o) {
     <div style="border-top:1px solid #1e2942;margin-top:12px;padding-top:11px;font-size:11.5px;color:#5f708f">
       ⚠️ LLM-generated from public market data. Not verified, not advice. It can be confidently wrong — treat it as a prompt for your own thinking.</div>`;
 }
-function copyPrompt() {
-  const r = D.find(x => x.symbol === $('msym').value); if (!r) return;
-  navigator.clipboard.writeText(buildPrompt(r)).then(() => {
+function promptText(r) {
+  const box = $('mprompt');
+  return (box && box.value.trim()) ? box.value : buildPrompt(r);
+}
+async function copyPrompt() {
+  const sym = currentSym(); if (!sym) return;
+  const r = D.find(x => x.symbol === sym) || await adhocMetrics(sym);
+  navigator.clipboard.writeText(promptText(r)).then(() => {
     window.open('https://aistudio.google.com/prompts/new_chat', '_blank');
   });
 }
 
+document.addEventListener('input', e => {
+  if (e.target && e.target.id === 'mprompt') PROMPT_DIRTY = true;
+});
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeD(); });
 boot();

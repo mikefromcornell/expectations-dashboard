@@ -155,12 +155,34 @@
   </div>
   <div class="card">
     <h2>Analysis <em>cached 24h per ticker</em></h2>
-    <div style="display:flex;gap:9px;margin-bottom:13px;flex-wrap:wrap">
-      <select class="inp" style="width:auto;max-width:320px" id="msym" onchange="analyse(false)"></select>
+    <div style="display:flex;gap:9px;margin-bottom:8px;flex-wrap:wrap;align-items:center">
+      <input class="inp" style="width:auto;min-width:220px" id="msym" list="msymlist"
+             placeholder="Type any ticker, e.g. NVDA" autocomplete="off"
+             oninput="onSymInput()" onkeydown="if(event.key==='Enter')analyse(true)">
+      <datalist id="msymlist"></datalist>
       <button class="btn" onclick="analyse(true)">↻ Analyse</button>
-      <button class="btn ghost" onclick="copyPrompt()">📋 Copy prompt &amp; open AI Studio</button>
+      <button class="btn ghost" onclick="copyPrompt()">📋 Copy prompt</button>
+      <span id="msymnote" class="hint" style="margin:0"></span>
+    </div>
+    <div class="hint" style="margin-bottom:13px">
+      Watchlist tickers autocomplete and use live metrics from this dashboard. Any other US ticker
+      works too — it is fetched on demand, and if we cannot price it the prompt still runs with
+      whatever is known.
     </div>
     <div style="background:var(--panel2);border:1px solid var(--line);border-radius:9px;padding:17px" id="mout"></div>
+  </div>
+
+  <div class="card">
+    <h2>📝 The prompt <em>exactly what gets sent — edit before running if you want</em></h2>
+    <div style="display:flex;gap:9px;margin-bottom:10px;flex-wrap:wrap;align-items:center">
+      <button class="btn ghost" onclick="copyPromptText()">📋 Copy</button>
+      <button class="btn ghost" onclick="resetPrompt()">↺ Reset to template</button>
+      <span class="hint" style="margin:0">Edits apply to the next Analyse. Template lives in
+        <code>config/prompts/mauboussin.md</code>.</span>
+    </div>
+    <textarea id="mprompt" class="inp" spellcheck="false"
+      style="width:100%;min-height:300px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+             font-size:11.5px;line-height:1.55;resize:vertical"></textarea>
   </div>
 </div>
 

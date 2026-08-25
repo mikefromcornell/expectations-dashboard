@@ -224,15 +224,27 @@ def _dataroma_state() -> Path:
 
 
 def fetch_dataroma(force: bool = False) -> tuple[dict, str]:
-    """Scrape the activity summary at most once per DATAROMA_HOURS."""
+    """Scrape the activity summary at most once per DATAROMA_HOURS.
+
+    Cache age comes from the `fetched` field inside the file, NOT from the
+    file's mtime: the state file is committed to the repo, and every CI
+    checkout rewrites mtime to "now". Using mtime meant the 72h timer never
+    expired on Actions, so the data silently froze on 2026-07-30 and kept
+    serving Q1 2026 holdings well after Dataroma had moved to Q2 2026.
+    """
     st = _dataroma_state()
     if st.exists() and not force:
-        age_h = (time.time() - st.stat().st_mtime) / 3600.0
-        if age_h < DATAROMA_HOURS:
-            try:
-                return json.loads(st.read_text()), f"cached {age_h:.0f}h ago"
-            except Exception:
-                pass
+        try:
+            cached = json.loads(st.read_text())
+            fetched = cached.get("fetched")
+            age_h = (
+                (datetime.utcnow() - datetime.fromisoformat(fetched)).total_seconds() / 3600.0
+                if fetched else 1e9
+            )
+            if age_h < DATAROMA_HOURS:
+                return cached, f"cached {age_h:.0f}h ago"
+        except Exception:
+            pass
     try:
         html = get_text(DATAROMA_ACTIVITY, headers={"Accept": "text/html"})
     except Exception as exc:  # noqa: BLE001
@@ -280,8 +292,18 @@ def fetch_dataroma(force: bool = False) -> tuple[dict, str]:
         ({"symbol": s, "n": len(m), "managers": sorted(m)} for s, m in buyers.items() if len(m) >= 3),
         key=lambda d: -d["n"],
     )
+    # Which quarter does this scrape actually represent? Managers file at
+    # different times, so take the most common period rather than the first.
+    period_counts: dict[str, int] = defaultdict(int)
+    for e in recent:
+        if e.get("period"):
+            period_counts[e["period"]] += 1
+    latest_period = max(period_counts, key=period_counts.get) if period_counts else None
+
     payload = {
         "fetched": datetime.utcnow().isoformat(),
+        "latest_period": latest_period,
+        "period_mix": dict(sorted(period_counts.items(), key=lambda kv: -kv[1])[:4]),
         "activity": acts,
         "recent": recent[:400],
         "clusters": clusters[:25],

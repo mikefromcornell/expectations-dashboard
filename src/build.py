@@ -122,13 +122,16 @@ def build(stage: str = "all", limit: int | None = None) -> int:
             _write("discovery.json", {
                 "generated": STAMP(),
                 "fetched": payload.get("fetched"),
+                "latest_period": payload.get("latest_period"),
+                "period_mix": payload.get("period_mix", {}),
                 "how": how,
                 "clusters": payload.get("clusters", []),
                 "recent": payload.get("recent", []),
                 "watchlist": sorted({t.symbol for t in wl}),
             })
             print(f"  Dataroma: {len(dataroma_acts)} names, "
-                  f"{len(payload.get('clusters', []))} clusters ({how})")
+                  f"{len(payload.get('clusters', []))} clusters, "
+                  f"period {payload.get('latest_period')} ({how})")
         except Exception as exc:  # noqa: BLE001
             print(f"  ! Dataroma failed: {str(exc)[:80]}")
         try:
