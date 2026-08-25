@@ -60,8 +60,17 @@ function renderFreshness() {
 
 /* ---------------- main table ---------------- */
 function earnCell(r) {
-  if (r.type === 'etf' || r.earnings_days === null || r.earnings_days === undefined)
-    return '<span class="p-na">n/a</span>';
+  // Funds genuinely have no earnings — leave them as n/a.
+  if (r.type === 'etf') return '<span class="p-na">n/a</span>';
+  // For companies where no free source published a date, offer a way out
+  // instead of a dead "n/a": link straight to Yahoo's earnings calendar.
+  // stopPropagation so clicking the link doesn't also open the row drawer.
+  if (r.earnings_days === null || r.earnings_days === undefined) {
+    return `<a class="earnlink" target="_blank" rel="noopener"
+      onclick="event.stopPropagation()"
+      title="No date published by our free sources — check Yahoo Finance"
+      href="https://finance.yahoo.com/calendar/earnings?symbol=${encodeURIComponent(r.symbol)}">check ↗</a>`;
+  }
   const d = r.earnings_days, e = r.earnings_confirmed ? '' : ' <span class="est">est.</span>';
   if (d >= 0 && d <= 3) return `<span class="pill p-imm">in ${d}d</span>${e}`;
   if (d >= 4 && d <= 10) return `<span class="pill p-app">in ${d}d</span>${e}`;
@@ -381,7 +390,10 @@ function openD(sym) {
   h += `</div>`;
 
   h += `<div class="sec"><h3>Earnings &amp; catalysts</h3>
-    <div class="kv"><span>Next earnings</span><b>${r.earnings_date || 'n/a'} ${r.earnings_date ? (r.earnings_confirmed ? '<span style="color:#22c55e;font-size:11px">confirmed</span>' : '<span style="color:#8fa0bf;font-size:11px">estimated</span>') : ''}</b></div>
+    <div class="kv"><span>Next earnings</span><b>${r.earnings_date
+      ? `${r.earnings_date} ${r.earnings_confirmed ? '<span style="color:#22c55e;font-size:11px">confirmed</span>' : '<span style="color:#8fa0bf;font-size:11px">estimated</span>'}`
+      : (r.type === 'etf' ? 'n/a'
+        : `<a class="earnlink" target="_blank" rel="noopener" href="https://finance.yahoo.com/calendar/earnings?symbol=${encodeURIComponent(r.symbol)}">check on Yahoo ↗</a>`)}</b></div>
     ${r.catalyst_date ? `<div class="kv"><span>Catalyst</span><b>${esc(r.catalyst_date)} — ${esc(r.catalyst_note || '')}</b></div>` : ''}</div>`;
 
   h += `<div class="sec"><h3>Ownership signals</h3>
