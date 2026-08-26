@@ -37,7 +37,7 @@
   "catalyst_date": null,
   "catalyst_note": null,
   "insider": "buy",
-  "insider_detail": "6 Form 4 filings in 90d (cluster) \u2014 latest 2026-08-19",
+  "insider_detail": "12 Form 4 filings in 90d (cluster) \u2014 latest 2026-08-25",
   "politician": null,
   "politician_detail": "No disclosures",
   "superinv": "add",
@@ -48,7 +48,41 @@
   "analyst_detail": "Consensus $333.00 (range $250.0\u2013$400.0) \u00b7 38 buy / 1 hold / 0 sell",
   "analyst_low": 250.0,
   "analyst_high": 400.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": 14.5,
+    "ps_change": -0.2,
+    "sales_growth": 15.8,
+    "pe_change": -44.0,
+    "eps_growth": 104.5,
+    "share_effect": -0.9
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": 95.9,
+    "ps_change": 42.8,
+    "sales_growth": 43.1,
+    "pe_change": -83.4,
+    "eps_growth": 1077.3,
+    "share_effect": -4.1
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": 57.5,
+    "ps_change": 1.4,
+    "sales_growth": 64.7,
+    "pe_change": -62.9,
+    "eps_growth": 323.8,
+    "share_effect": -5.7
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -93,7 +127,7 @@
     "key": "insider_activity",
     "label": "Insider activity",
     "score": 0.85,
-    "detail": "6 Form 4 filings in 90d (cluster) \u2014 latest 2026-08-19",
+    "detail": "12 Form 4 filings in 90d (cluster) \u2014 latest 2026-08-25",
     "weight": 0.1,
     "raw": {}
    },
@@ -158,10 +192,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/AMZN?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/AMZN?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/AMZN?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -214,7 +250,39 @@
   "analyst_detail": "Consensus $20.69 (range $16.0\u2013$27.0) \u00b7 5 buy / 7 hold / 0 sell",
   "analyst_low": 16.0,
   "analyst_high": 27.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": -37.6,
+    "ps_change": -36.6,
+    "sales_growth": -4.0,
+    "share_effect": 2.5
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": -74.4,
+    "ps_change": -59.9,
+    "sales_growth": -37.5,
+    "pe_change": -16.7,
+    "eps_growth": -69.3,
+    "share_effect": 2.1
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": -76.9,
+    "ps_change": -79.3,
+    "sales_growth": -16.3,
+    "pe_change": -72.0,
+    "eps_growth": -17.6,
+    "share_effect": 33.3
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -324,10 +392,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/CPRI?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/CPRI?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/CPRI?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -490,10 +560,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/GEMI?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/GEMI?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/GEMI?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -546,7 +618,35 @@
   "analyst_detail": "Consensus $62.70 (range $55.0\u2013$76.0) \u00b7 11 buy / 0 hold / 0 sell",
   "analyst_low": 55.0,
   "analyst_high": 76.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": 74.8,
+    "ps_change": 74.8,
+    "sales_growth": 0.0,
+    "share_effect": 0.0
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": 858.1,
+    "ps_change": 858.0,
+    "sales_growth": 0.0,
+    "share_effect": 0.0
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": 48.9,
+    "ps_change": -48.4,
+    "sales_growth": 195.3,
+    "share_effect": -2.3
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -656,10 +756,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/SRRK?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/SRRK?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/SRRK?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -712,7 +814,41 @@
   "analyst_detail": "Consensus $254.90 (range $187.5\u2013$385.0) \u00b7 9 buy / 16 hold / 4 sell",
   "analyst_low": 187.5,
   "analyst_high": 385.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": -24.6,
+    "ps_change": -36.5,
+    "sales_growth": 11.5,
+    "pe_change": -32.3,
+    "eps_growth": 11.4,
+    "share_effect": 6.5
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": -47.8,
+    "ps_change": -66.3,
+    "sales_growth": 36.0,
+    "pe_change": -68.5,
+    "eps_growth": 65.8,
+    "share_effect": 13.9
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": -58.0,
+    "ps_change": -79.7,
+    "sales_growth": 72.9,
+    "pe_change": -72.2,
+    "eps_growth": 51.2,
+    "share_effect": 19.7
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -822,11 +958,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ADBE?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ADBE?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/ADBE?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -950,7 +1088,41 @@
   "analyst_detail": "Consensus $506.29 (range $390.0\u2013$630.0) \u00b7 23 buy / 3 hold / 0 sell",
   "analyst_low": 390.0,
   "analyst_high": 630.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": 21.2,
+    "ps_change": -6.2,
+    "sales_growth": 30.6,
+    "pe_change": -49.1,
+    "eps_growth": 138.0,
+    "share_effect": -1.1
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": 318.8,
+    "ps_change": 125.8,
+    "sales_growth": 111.8,
+    "pe_change": 139.9,
+    "eps_growth": 74.6,
+    "share_effect": -12.4
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": 634.5,
+    "ps_change": 194.4,
+    "sales_growth": 183.5,
+    "pe_change": 58.2,
+    "eps_growth": 364.2,
+    "share_effect": -12.0
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -1060,11 +1232,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/AVGO?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/AVGO?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/AVGO?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "approaching"
   }
  },
  {
@@ -1116,7 +1290,30 @@
   "analyst_detail": "Consensus $422.22 (range $350.0\u2013$465.0) \u00b7 23 buy / 5 hold / 0 sell",
   "analyst_low": 350.0,
   "analyst_high": 465.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": 66.4,
+    "ps_change": 41.0,
+    "sales_growth": 19.1,
+    "pe_change": -20.5,
+    "eps_growth": 109.3,
+    "share_effect": -0.9
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": 167.1,
+    "ps_change": 70.3,
+    "sales_growth": 51.3,
+    "pe_change": -31.4,
+    "eps_growth": 289.6,
+    "share_effect": 3.7
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -1226,10 +1423,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/GOOGL?range=3y&interval=1d failed after 4 tries: HTTP 429 ra"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/GOOGL?range=3y&interval=1d failed after 4 tries: HTTP 429 ra",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/GOOGL?modules=defaultKeyStatistics,financialData,summaryProfil"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -1282,7 +1481,41 @@
   "analyst_detail": "Consensus $64.80 (range $57.0\u2013$72.0) \u00b7 2 buy / 2 hold / 1 sell",
   "analyst_low": 57.0,
   "analyst_high": 72.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": 53.8,
+    "ps_change": 31.5,
+    "sales_growth": 19.8,
+    "pe_change": 5.7,
+    "eps_growth": 45.4,
+    "share_effect": -2.4
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": 245.7,
+    "ps_change": 130.9,
+    "sales_growth": 38.1,
+    "pe_change": 13.3,
+    "eps_growth": 205.0,
+    "share_effect": 8.4
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": 154.8,
+    "ps_change": 68.3,
+    "sales_growth": 9.4,
+    "pe_change": 102.4,
+    "eps_growth": 25.8,
+    "share_effect": 38.4
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -1392,10 +1625,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/VIRT?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/VIRT?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/VIRT?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -1448,7 +1683,41 @@
   "analyst_detail": "Consensus $35.50 (range $26.0\u2013$45.0) \u00b7 2 buy / 3 hold / 1 sell",
   "analyst_low": 26.0,
   "analyst_high": 45.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": -31.1,
+    "ps_change": -34.7,
+    "sales_growth": 1.6,
+    "pe_change": -34.7,
+    "eps_growth": 5.4,
+    "share_effect": 3.9
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": -23.9,
+    "ps_change": -40.2,
+    "sales_growth": 24.0,
+    "pe_change": -44.6,
+    "eps_growth": 37.3,
+    "share_effect": 2.6
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": -6.7,
+    "ps_change": -52.2,
+    "sales_growth": 91.4,
+    "pe_change": -50.5,
+    "eps_growth": 88.3,
+    "share_effect": 2.0
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -1558,11 +1827,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/CPRT?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/CPRT?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/CPRT?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "approaching"
   }
  },
  {
@@ -1614,7 +1885,41 @@
   "analyst_detail": "Consensus $144.67 (range $122.0\u2013$170.0) \u00b7 4 buy / 3 hold / 0 sell",
   "analyst_low": 122.0,
   "analyst_high": 170.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": -0.9,
+    "ps_change": -6.7,
+    "sales_growth": 5.3,
+    "pe_change": 6.3,
+    "eps_growth": -6.8,
+    "share_effect": 0.9
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": -9.9,
+    "ps_change": -19.9,
+    "sales_growth": 9.9,
+    "pe_change": 30.9,
+    "eps_growth": -31.1,
+    "share_effect": 2.4
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": 12.4,
+    "ps_change": -24.2,
+    "sales_growth": 41.2,
+    "pe_change": -3.1,
+    "eps_growth": 16.0,
+    "share_effect": 5.0
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -1724,10 +2029,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/GPC?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/GPC?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/GPC?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -1890,10 +2197,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/STNG?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/STNG?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/STNG?modules=defaultKeyStatistics,financialData,summaryProfile",
+   "history: no us-gaap facts"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -2272,7 +2582,11 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/BRK-B?range=3y&interval=1d failed after 4 tries: HTTP 429 ra"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/BRK-B?range=3y&interval=1d failed after 4 tries: HTTP 429 ra",
+   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/BRK-B?modules=defaultKeyStatistics,financialData,summaryProfil",
+   "analysts: no consensus target",
+   "history: no overlapping price/fundamental data"
   ],
   "sources": {
    "quote": "stockanalysis",
@@ -2459,7 +2773,7 @@
   "catalyst_date": null,
   "catalyst_note": null,
   "insider": "buy",
-  "insider_detail": "4 Form 4 filings in 90d (cluster) \u2014 latest 2026-07-31",
+  "insider_detail": "6 Form 4 filings in 90d (cluster) \u2014 latest 2026-08-25",
   "politician": null,
   "politician_detail": "No disclosures",
   "superinv": "trim",
@@ -2470,7 +2784,41 @@
   "analyst_detail": "Consensus $1,526.42 (range $1200.0\u2013$1700.0) \u00b7 10 buy / 4 hold / 0 sell",
   "analyst_low": 1200.0,
   "analyst_high": 1700.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": -20.1,
+    "ps_change": -41.2,
+    "sales_growth": 25.5,
+    "pe_change": -45.4,
+    "eps_growth": 46.2,
+    "share_effect": 8.3
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": 33.5,
+    "ps_change": -27.0,
+    "sales_growth": 63.9,
+    "pe_change": -40.1,
+    "eps_growth": 122.9,
+    "share_effect": 11.6
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": 152.4,
+    "ps_change": 10.3,
+    "sales_growth": 78.0,
+    "pe_change": -14.8,
+    "eps_growth": 196.2,
+    "share_effect": 28.6
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -2515,7 +2863,7 @@
     "key": "insider_activity",
     "label": "Insider activity",
     "score": 0.85,
-    "detail": "4 Form 4 filings in 90d (cluster) \u2014 latest 2026-07-31",
+    "detail": "6 Form 4 filings in 90d (cluster) \u2014 latest 2026-08-25",
     "weight": 0.1,
     "raw": {}
    },
@@ -2580,10 +2928,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/FICO?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/FICO?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/FICO?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -2636,7 +2986,41 @@
   "analyst_detail": "Consensus $326.40 (range $269.0\u2013$405.0) \u00b7 3 buy / 3 hold / 0 sell",
   "analyst_low": 269.0,
   "analyst_high": 405.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": -5.1,
+    "ps_change": -10.1,
+    "sales_growth": 5.3,
+    "pe_change": -25.0,
+    "eps_growth": 26.5,
+    "share_effect": 0.2
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": 46.9,
+    "ps_change": -35.2,
+    "sales_growth": 123.1,
+    "pe_change": -38.9,
+    "eps_growth": 140.6,
+    "share_effect": 1.6
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": 11.8,
+    "ps_change": -52.8,
+    "sales_growth": 115.8,
+    "pe_change": -20.3,
+    "eps_growth": 40.3,
+    "share_effect": 9.8
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -2746,10 +3130,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/LHX?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/LHX?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/LHX?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -2802,7 +3188,35 @@
   "analyst_detail": "Consensus $140.10 (range $95.0\u2013$163.0) \u00b7 6 buy / 6 hold / 1 sell",
   "analyst_low": 95.0,
   "analyst_high": 163.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": 42.4,
+    "ps_change": 27.1,
+    "sales_growth": -0.3,
+    "share_effect": 12.4
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": 28.6,
+    "ps_change": -6.2,
+    "sales_growth": 8.7,
+    "share_effect": 26.1
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": -14.1,
+    "ps_change": -70.9,
+    "sales_growth": 126.6,
+    "share_effect": 30.3
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -2912,10 +3326,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/CROX?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/CROX?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/CROX?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -2968,7 +3384,41 @@
   "analyst_detail": "Consensus $211.21 (range $179.0\u2013$245.0) \u00b7 14 buy / 5 hold / 0 sell",
   "analyst_low": 179.0,
   "analyst_high": 245.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": -23.5,
+    "ps_change": -33.6,
+    "sales_growth": 9.9,
+    "pe_change": -35.0,
+    "eps_growth": 17.7,
+    "share_effect": 4.8
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": -3.1,
+    "ps_change": -24.8,
+    "sales_growth": 24.1,
+    "pe_change": -18.5,
+    "eps_growth": 19.0,
+    "share_effect": 3.8
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": -27.0,
+    "ps_change": -49.2,
+    "sales_growth": 38.8,
+    "pe_change": -28.3,
+    "eps_growth": 1.8,
+    "share_effect": 3.5
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -3078,10 +3528,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/EFX?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/EFX?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/EFX?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -3134,7 +3586,41 @@
   "analyst_detail": "Consensus $244.44 (range $220.0\u2013$280.0) \u00b7 8 buy / 8 hold / 0 sell",
   "analyst_low": 220.0,
   "analyst_high": 280.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": 27.6,
+    "ps_change": 26.6,
+    "sales_growth": -0.8,
+    "pe_change": 28.3,
+    "eps_growth": -0.6,
+    "share_effect": 1.6
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": -3.0,
+    "ps_change": -1.3,
+    "sales_growth": -6.9,
+    "pe_change": 8.3,
+    "eps_growth": -10.5,
+    "share_effect": 5.6
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": 38.7,
+    "ps_change": -4.2,
+    "sales_growth": 29.6,
+    "pe_change": -9.9,
+    "eps_growth": 54.0,
+    "share_effect": 11.7
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -3244,10 +3730,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ODFL?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ODFL?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/ODFL?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -3300,7 +3788,41 @@
   "analyst_detail": "Consensus $74.62 (range $60.0\u2013$86.0) \u00b7 4 buy / 11 hold / 1 sell",
   "analyst_low": 60.0,
   "analyst_high": 86.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": -24.2,
+    "ps_change": -32.5,
+    "sales_growth": 28.0,
+    "pe_change": -22.3,
+    "eps_growth": -2.4,
+    "share_effect": -12.3
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": 0.4,
+    "ps_change": -27.3,
+    "sales_growth": 64.6,
+    "pe_change": -25.2,
+    "eps_growth": 34.2,
+    "share_effect": -16.1
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": 27.3,
+    "ps_change": -32.1,
+    "sales_growth": 126.3,
+    "pe_change": -25.3,
+    "eps_growth": 70.4,
+    "share_effect": -17.2
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -3410,10 +3932,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/BRO?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/BRO?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/BRO?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -3466,7 +3990,35 @@
   "analyst_detail": "Consensus $31.31 (range $25.0\u2013$44.0) \u00b7 12 buy / 3 hold / 0 sell",
   "analyst_low": 25.0,
   "analyst_high": 44.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": 41.5,
+    "ps_change": 20.3,
+    "sales_growth": 38.9,
+    "share_effect": -15.3
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": 260.2,
+    "ps_change": 149.2,
+    "sales_growth": 139.9,
+    "share_effect": -39.7
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": 314.3,
+    "ps_change": 432.4,
+    "sales_growth": 289.9,
+    "share_effect": -80.0
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -3576,10 +4128,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ZETA?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ZETA?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/ZETA?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -3632,7 +4186,30 @@
   "analyst_detail": "Consensus $238.94 (range $160.0\u2013$400.0) \u00b7 25 buy / 9 hold / 2 sell",
   "analyst_low": 160.0,
   "analyst_high": 400.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-21",
+    "to": "2026-08-21",
+    "price_return": -15.7,
+    "ps_change": -31.1,
+    "sales_growth": 9.9,
+    "pe_change": -40.1,
+    "eps_growth": 40.7,
+    "share_effect": 11.3
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-22",
+    "to": "2026-08-21",
+    "price_return": 0.3,
+    "ps_change": -33.4,
+    "sales_growth": 32.8,
+    "pe_change": -94.1,
+    "eps_growth": 1611.9,
+    "share_effect": 13.4
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -3741,10 +4318,13 @@
   "thin": false,
   "alias": null,
   "stale": false,
-  "errors": [],
+  "errors": [
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/CRM?modules=defaultKeyStatistics,financialData,summaryProfile,"
+  ],
   "sources": {
    "quote": "yahoo",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "imminent"
   }
  },
  {
@@ -3796,7 +4376,41 @@
   "analyst_detail": "Consensus $60.17 (range $46.0\u2013$85.0) \u00b7 4 buy / 20 hold / 1 sell",
   "analyst_low": 46.0,
   "analyst_high": 85.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": -61.8,
+    "ps_change": -63.3,
+    "sales_growth": 0.6,
+    "pe_change": -59.2,
+    "eps_growth": -6.3,
+    "share_effect": 3.5
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": -56.8,
+    "ps_change": -67.8,
+    "sales_growth": 15.5,
+    "pe_change": -71.3,
+    "eps_growth": 50.5,
+    "share_effect": 16.2
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": -55.3,
+    "ps_change": -74.1,
+    "sales_growth": 36.8,
+    "pe_change": -86.6,
+    "eps_growth": 234.3,
+    "share_effect": 26.2
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -3906,10 +4520,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/FISV?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/FISV?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/FISV?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -3962,7 +4578,41 @@
   "analyst_detail": "Consensus $363.09 (range $325.0\u2013$390.0) \u00b7 7 buy / 3 hold / 0 sell",
   "analyst_low": 325.0,
   "analyst_high": 390.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": 26.3,
+    "ps_change": 25.9,
+    "sales_growth": -1.2,
+    "pe_change": 46.9,
+    "eps_growth": -14.0,
+    "share_effect": 1.5
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": 81.5,
+    "ps_change": 60.0,
+    "sales_growth": 10.4,
+    "pe_change": 126.9,
+    "eps_growth": -20.0,
+    "share_effect": 2.8
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": 205.3,
+    "ps_change": 58.8,
+    "sales_growth": 85.8,
+    "pe_change": 38.6,
+    "eps_growth": 120.3,
+    "share_effect": 3.5
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -4072,10 +4722,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/CLH?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/CLH?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/CLH?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -4128,7 +4780,37 @@
   "analyst_detail": "Consensus $104.39 (range $72.0\u2013$125.0) \u00b7 28 buy / 2 hold / 0 sell",
   "analyst_low": 72.0,
   "analyst_high": 125.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": -15.6,
+    "ps_change": -28.0,
+    "sales_growth": 13.1,
+    "pe_change": -3.3,
+    "eps_growth": -12.6,
+    "share_effect": 3.6
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": 82.8,
+    "ps_change": 16.1,
+    "sales_growth": 55.2,
+    "share_effect": 1.5
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": 97.8,
+    "ps_change": -55.2,
+    "sales_growth": 363.0,
+    "share_effect": -4.6
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -4238,10 +4920,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/UBER?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/UBER?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/UBER?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -4294,7 +4978,41 @@
   "analyst_detail": "Consensus $166.57 (range $155.0\u2013$182.0) \u00b7 2 buy / 5 hold / 0 sell",
   "analyst_low": 155.0,
   "analyst_high": 182.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": -5.6,
+    "ps_change": -14.4,
+    "sales_growth": 9.8,
+    "pe_change": -10.7,
+    "eps_growth": 5.7,
+    "share_effect": 0.4
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": 46.0,
+    "ps_change": 17.1,
+    "sales_growth": 21.4,
+    "pe_change": 5.0,
+    "eps_growth": 39.1,
+    "share_effect": 2.7
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": 14.5,
+    "ps_change": -29.9,
+    "sales_growth": 55.0,
+    "pe_change": -27.5,
+    "eps_growth": 58.0,
+    "share_effect": 5.4
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -4404,10 +5122,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ALLE?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ALLE?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/ALLE?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -4460,7 +5180,41 @@
   "analyst_detail": "Consensus $28.46 (range $25.0\u2013$35.75) \u00b7 8 buy / 12 hold / 1 sell",
   "analyst_low": 25.0,
   "analyst_high": 35.75,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": 13.6,
+    "ps_change": 10.8,
+    "sales_growth": 2.4,
+    "pe_change": 32.6,
+    "eps_growth": -14.3,
+    "share_effect": 0.1
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": -21.5,
+    "ps_change": 5.5,
+    "sales_growth": -25.7,
+    "pe_change": 132.5,
+    "eps_growth": -66.2,
+    "share_effect": 0.1
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": -39.7,
+    "ps_change": -46.7,
+    "sales_growth": 13.5,
+    "pe_change": 4.9,
+    "eps_growth": -42.5,
+    "share_effect": -0.3
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -4570,10 +5324,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/PFE?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/PFE?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/PFE?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -4626,7 +5382,41 @@
   "analyst_detail": "Consensus $1,101.44 (range $781.0\u2013$1315.0) \u00b7 13 buy / 7 hold / 1 sell",
   "analyst_low": 781.0,
   "analyst_high": 1315.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": 2.0,
+    "ps_change": -6.8,
+    "sales_growth": 9.3,
+    "pe_change": -10.2,
+    "eps_growth": 13.5,
+    "share_effect": 0.1
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": 79.8,
+    "ps_change": 43.4,
+    "sales_growth": 25.3,
+    "pe_change": 21.3,
+    "eps_growth": 48.2,
+    "share_effect": 0.1
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": 113.7,
+    "ps_change": 34.7,
+    "sales_growth": 58.7,
+    "pe_change": 9.8,
+    "eps_growth": 94.6,
+    "share_effect": -0.0
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -4736,11 +5526,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/COST?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/COST?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/COST?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -4792,7 +5584,41 @@
   "analyst_detail": "Consensus $336.63 (range $245.0\u2013$400.0) \u00b7 16 buy / 9 hold / 4 sell",
   "analyst_low": 245.0,
   "analyst_high": 400.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": 36.4,
+    "ps_change": 17.0,
+    "sales_growth": 14.7,
+    "pe_change": 14.0,
+    "eps_growth": 19.7,
+    "share_effect": 1.6
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": 73.5,
+    "ps_change": 33.0,
+    "sales_growth": 21.7,
+    "pe_change": 21.1,
+    "eps_growth": 43.2,
+    "share_effect": 7.2
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": 110.0,
+    "ps_change": 39.5,
+    "sales_growth": 32.0,
+    "pe_change": 28.0,
+    "eps_growth": 64.1,
+    "share_effect": 14.0
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -4902,10 +5728,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/AAPL?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/AAPL?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/AAPL?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -4958,7 +5786,41 @@
   "analyst_detail": "Consensus $162.20 (range $151.0\u2013$170.0) \u00b7 1 buy / 4 hold / 0 sell",
   "analyst_low": 151.0,
   "analyst_high": 170.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": 20.9,
+    "ps_change": 15.8,
+    "sales_growth": 4.3,
+    "pe_change": 25.1,
+    "eps_growth": -3.4,
+    "share_effect": 0.1
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": 70.1,
+    "ps_change": 50.8,
+    "sales_growth": 12.2,
+    "pe_change": 47.7,
+    "eps_growth": 15.2,
+    "share_effect": 0.5
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": 35.6,
+    "ps_change": -4.0,
+    "sales_growth": 41.6,
+    "pe_change": -19.8,
+    "eps_growth": 69.1,
+    "share_effect": -0.2
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -5068,10 +5930,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/LAMR?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/LAMR?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/LAMR?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -5234,10 +6098,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/NVO?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/NVO?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/NVO?modules=defaultKeyStatistics,financialData,summaryProfile,",
+   "history: no us-gaap facts"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -5290,7 +6157,41 @@
   "analyst_detail": "Consensus $398.54 (range $350.0\u2013$471.0) \u00b7 9 buy / 5 hold / 0 sell",
   "analyst_low": 350.0,
   "analyst_high": 471.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": 15.0,
+    "ps_change": -2.0,
+    "sales_growth": 17.8,
+    "pe_change": -11.1,
+    "eps_growth": 29.3,
+    "share_effect": -0.4
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": 111.0,
+    "ps_change": 8.1,
+    "sales_growth": 98.6,
+    "pe_change": 3.6,
+    "eps_growth": 103.7,
+    "share_effect": -1.7
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": 177.1,
+    "ps_change": 0.3,
+    "sales_growth": 182.8,
+    "pe_change": -3.5,
+    "eps_growth": 187.2,
+    "share_effect": -2.3
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -5400,10 +6301,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/HEI?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/HEI?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/HEI?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -5456,7 +6359,41 @@
   "analyst_detail": "Consensus $147.65 (range $126.0\u2013$189.0) \u00b7 16 buy / 2 hold / 0 sell",
   "analyst_low": 126.0,
   "analyst_high": 189.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": 34.3,
+    "ps_change": 15.8,
+    "sales_growth": 11.8,
+    "pe_change": 21.6,
+    "eps_growth": 10.5,
+    "share_effect": 3.7
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": 13.1,
+    "ps_change": 9.8,
+    "sales_growth": 3.4,
+    "pe_change": 71.6,
+    "eps_growth": -34.0,
+    "share_effect": -0.4
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": 139.1,
+    "ps_change": -17.8,
+    "sales_growth": 161.0,
+    "pe_change": -36.9,
+    "eps_growth": 279.2,
+    "share_effect": 11.4
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -5566,10 +6503,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/COP?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/COP?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/COP?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -5731,9 +6670,13 @@
   "thin": false,
   "alias": null,
   "stale": false,
-  "errors": [],
+  "errors": [
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/XOM?modules=defaultKeyStatistics,financialData,summaryProfile,",
+   "history: could not build TTM series"
+  ],
   "sources": {
    "quote": "yahoo",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -5786,7 +6729,26 @@
   "analyst_detail": "Consensus $24.43 (range $22.0\u2013$29.0) \u00b7 6 buy / 1 hold / 0 sell",
   "analyst_low": 22.0,
   "analyst_high": 29.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": -29.0,
+    "ps_change": -30.5,
+    "sales_growth": 15.7,
+    "share_effect": -11.7
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": 81.6,
+    "ps_change": 85.1,
+    "sales_growth": 35.5,
+    "share_effect": -27.6
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -5896,10 +6858,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/MIR?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/MIR?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/MIR?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -5952,7 +6916,28 @@
   "analyst_detail": "Consensus $253.74 (range $190.0\u2013$336.0) \u00b7 21 buy / 6 hold / 0 sell",
   "analyst_low": 190.0,
   "analyst_high": 336.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-15",
+    "to": "2026-08-17",
+    "price_return": -12.8,
+    "ps_change": -33.1,
+    "sales_growth": 30.6,
+    "pe_change": -53.8,
+    "eps_growth": 88.6,
+    "share_effect": -0.2
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-18",
+    "to": "2026-08-17",
+    "price_return": 177.9,
+    "ps_change": 54.3,
+    "sales_growth": 103.6,
+    "share_effect": -11.5
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -6061,9 +7046,12 @@
   "thin": false,
   "alias": null,
   "stale": false,
-  "errors": [],
+  "errors": [
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/DASH?modules=defaultKeyStatistics,financialData,summaryProfile"
+  ],
   "sources": {
    "quote": "yahoo",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -6116,7 +7104,41 @@
   "analyst_detail": "Consensus $118.00 (range $90.0\u2013$133.0) \u00b7 8 buy / 4 hold / 0 sell",
   "analyst_low": 90.0,
   "analyst_high": 133.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": 24.1,
+    "ps_change": 14.1,
+    "sales_growth": 4.4,
+    "pe_change": -35.4,
+    "eps_growth": 91.8,
+    "share_effect": 4.2
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": 49.1,
+    "ps_change": 32.6,
+    "sales_growth": 11.0,
+    "pe_change": -80.1,
+    "eps_growth": 649.6,
+    "share_effect": 1.3
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": -70.4,
+    "ps_change": -80.4,
+    "sales_growth": 48.2,
+    "pe_change": -84.6,
+    "eps_growth": 92.6,
+    "share_effect": 1.9
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -6226,10 +7248,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ZM?range=3y&interval=1d failed after 4 tries: HTTP 429 rate "
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ZM?range=3y&interval=1d failed after 4 tries: HTTP 429 rate ",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/ZM?modules=defaultKeyStatistics,financialData,summaryProfile,c"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -6282,7 +7306,39 @@
   "analyst_detail": "Consensus $216.50 (range $205.0\u2013$227.0) \u00b7 13 buy / 3 hold / 0 sell",
   "analyst_low": 205.0,
   "analyst_high": 227.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": 26.4,
+    "ps_change": 31.9,
+    "sales_growth": 9.7,
+    "pe_change": 6.2,
+    "eps_growth": 18.9,
+    "share_effect": -12.6
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": 25.6,
+    "ps_change": 43.5,
+    "sales_growth": -7.8,
+    "pe_change": 130.9,
+    "eps_growth": -45.6,
+    "share_effect": -5.1
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": 105.6,
+    "ps_change": 9.2,
+    "sales_growth": 93.5,
+    "share_effect": -2.7
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -6392,10 +7448,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/CVX?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/CVX?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/CVX?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -6448,7 +7506,41 @@
   "analyst_detail": "Consensus $78.43 (range $60.0\u2013$90.0) \u00b7 4 buy / 4 hold / 0 sell",
   "analyst_low": 60.0,
   "analyst_high": 90.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": -11.3,
+    "ps_change": -12.9,
+    "sales_growth": -0.9,
+    "pe_change": 95.7,
+    "eps_growth": -54.7,
+    "share_effect": 2.8
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": 6.4,
+    "ps_change": -3.6,
+    "sales_growth": 9.3,
+    "pe_change": 60.2,
+    "eps_growth": -33.6,
+    "share_effect": 1.0
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": 2.0,
+    "ps_change": -14.4,
+    "sales_growth": 12.7,
+    "pe_change": 45.4,
+    "eps_growth": -29.8,
+    "share_effect": 5.7
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -6558,10 +7650,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/CARR?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/CARR?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/CARR?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -6724,10 +7818,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/BABA?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/BABA?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/BABA?modules=defaultKeyStatistics,financialData,summaryProfile",
+   "history: missing quarterly revenue or net income"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -6780,7 +7877,41 @@
   "analyst_detail": "Consensus $445.63 (range $393.0\u2013$488.0) \u00b7 11 buy / 6 hold / 0 sell",
   "analyst_low": 393.0,
   "analyst_high": 488.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": 27.0,
+    "ps_change": 14.3,
+    "sales_growth": 7.2,
+    "pe_change": 44.1,
+    "eps_growth": -11.9,
+    "share_effect": 3.6
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": -11.9,
+    "ps_change": -33.9,
+    "sales_growth": 22.3,
+    "pe_change": -7.1,
+    "eps_growth": -5.1,
+    "share_effect": 9.0
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": 7.8,
+    "ps_change": -39.1,
+    "sales_growth": 55.7,
+    "pe_change": -34.8,
+    "eps_growth": 65.3,
+    "share_effect": 13.7
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -6890,10 +8021,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ELV?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ELV?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/ELV?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -6946,7 +8079,41 @@
   "analyst_detail": "Consensus $72.11 (range $65.0\u2013$73.0) \u00b7 0 buy / 10 hold / 0 sell",
   "analyst_low": 65.0,
   "analyst_high": 73.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": 27.5,
+    "ps_change": 25.9,
+    "sales_growth": 0.3,
+    "pe_change": 18.1,
+    "eps_growth": 8.0,
+    "share_effect": 1.0
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": -9.8,
+    "ps_change": -18.2,
+    "sales_growth": 7.5,
+    "pe_change": 58.7,
+    "eps_growth": -43.1,
+    "share_effect": 2.6
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": -41.3,
+    "ps_change": -60.2,
+    "sales_growth": 42.7,
+    "pe_change": -30.2,
+    "eps_growth": -16.0,
+    "share_effect": 3.4
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -7056,10 +8223,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/TECH?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/TECH?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/TECH?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -7112,7 +8281,41 @@
   "analyst_detail": null,
   "analyst_low": null,
   "analyst_high": null,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": 27.5,
+    "ps_change": 28.5,
+    "sales_growth": -0.3,
+    "pe_change": 36.4,
+    "eps_growth": -6.5,
+    "share_effect": -0.5
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": -9.8,
+    "ps_change": -8.9,
+    "sales_growth": -0.5,
+    "pe_change": -1.3,
+    "eps_growth": -8.6,
+    "share_effect": -0.5
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": -41.3,
+    "ps_change": -43.5,
+    "sales_growth": 3.9,
+    "pe_change": -15.6,
+    "eps_growth": -30.5,
+    "share_effect": -0.0
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -7226,7 +8429,10 @@
    "quote: stockanalysis: https://stockanalysis.com/api/symbol/s/fnma/history?range=5Y failed after 4 tries: HTTP 400 (curl)",
    "quote: stockanalysis_alt: https://stockanalysis.com/api/symbol/e/fnma/history?range=5Y failed after 4 tries: HTTP 400 (curl)",
    "quote: nasdaq: nasdaq: no data",
-   "quote: finnhub: finnhub: no API key configured"
+   "quote: finnhub: finnhub: no API key configured",
+   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/FNMA?modules=defaultKeyStatistics,financialData,summaryProfile",
+   "analysts: no consensus target"
   ],
   "sources": {
    "earnings_bucket": "na"
@@ -7281,7 +8487,41 @@
   "analyst_detail": null,
   "analyst_low": null,
   "analyst_high": null,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": 27.5,
+    "ps_change": 28.9,
+    "sales_growth": -1.1,
+    "pe_change": 27.4,
+    "eps_growth": 0.1,
+    "share_effect": 0.0
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": -9.8,
+    "ps_change": -19.8,
+    "sales_growth": 12.5,
+    "pe_change": -29.0,
+    "eps_growth": 27.0,
+    "share_effect": -0.0
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": -41.3,
+    "ps_change": -48.9,
+    "sales_growth": 14.7,
+    "pe_change": -43.3,
+    "eps_growth": 3.5,
+    "share_effect": 0.2
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -7395,7 +8635,10 @@
    "quote: stockanalysis: https://stockanalysis.com/api/symbol/s/fmcc/history?range=5Y failed after 4 tries: HTTP 400 (curl)",
    "quote: stockanalysis_alt: https://stockanalysis.com/api/symbol/e/fmcc/history?range=5Y failed after 4 tries: HTTP 400 (curl)",
    "quote: nasdaq: nasdaq: no data",
-   "quote: finnhub: finnhub: no API key configured"
+   "quote: finnhub: finnhub: no API key configured",
+   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/FMCC?modules=defaultKeyStatistics,financialData,summaryProfile",
+   "analysts: no consensus target"
   ],
   "sources": {
    "earnings_bucket": "na"
@@ -7450,7 +8693,41 @@
   "analyst_detail": "Consensus $481.67 (range $380.0\u2013$529.0) \u00b7 16 buy / 4 hold / 0 sell",
   "analyst_low": 380.0,
   "analyst_high": 529.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": 30.1,
+    "ps_change": 21.5,
+    "sales_growth": 6.6,
+    "pe_change": 47.7,
+    "eps_growth": -11.9,
+    "share_effect": 0.4
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": -18.9,
+    "ps_change": -39.7,
+    "sales_growth": 29.6,
+    "pe_change": -4.5,
+    "eps_growth": -15.1,
+    "share_effect": 3.8
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": -4.9,
+    "ps_change": -46.0,
+    "sales_growth": 66.9,
+    "pe_change": -2.5,
+    "eps_growth": -2.4,
+    "share_effect": 5.5
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -7560,10 +8837,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/UNH?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/UNH?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/UNH?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -7616,7 +8895,41 @@
   "analyst_detail": "Consensus $662.77 (range $550.0\u2013$740.0) \u00b7 22 buy / 2 hold / 0 sell",
   "analyst_low": 550.0,
   "analyst_high": 740.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": 1.0,
+    "ps_change": -15.2,
+    "sales_growth": 15.8,
+    "pe_change": -16.6,
+    "eps_growth": 21.2,
+    "share_effect": 2.9
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": 48.8,
+    "ps_change": 20.2,
+    "sales_growth": 15.1,
+    "pe_change": -13.1,
+    "eps_growth": 71.2,
+    "share_effect": 7.6
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": 69.9,
+    "ps_change": 8.2,
+    "sales_growth": 39.5,
+    "pe_change": -35.2,
+    "eps_growth": 162.1,
+    "share_effect": 12.6
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -7726,10 +9039,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/MA?range=3y&interval=1d failed after 4 tries: HTTP 429 rate "
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/MA?range=3y&interval=1d failed after 4 tries: HTTP 429 rate ",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/MA?modules=defaultKeyStatistics,financialData,summaryProfile,c"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -7854,7 +9169,17 @@
   "analyst_detail": "Consensus $28.83 (range $25.0\u2013$36.0) \u00b7 6 buy / 0 hold / 0 sell",
   "analyst_low": 25.0,
   "analyst_high": 36.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": -34.4,
+    "ps_change": -33.9,
+    "sales_growth": 21.1,
+    "share_effect": -18.0
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -7964,10 +9289,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/PGY?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/PGY?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/PGY?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -8130,7 +9457,10 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/AVEX?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/AVEX?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/AVEX?modules=defaultKeyStatistics,financialData,summaryProfile",
+   "history: could not build TTM series"
   ],
   "sources": {
    "quote": "stockanalysis",
@@ -8300,7 +9630,11 @@
    "quote: stockanalysis: https://stockanalysis.com/api/symbol/s/smegf/history?range=5Y failed after 4 tries: HTTP 400 (curl)",
    "quote: stockanalysis_alt: https://stockanalysis.com/api/symbol/e/smegf/history?range=5Y failed after 4 tries: HTTP 400 (curl)",
    "quote: nasdaq: nasdaq: no data",
-   "quote: finnhub: finnhub: no API key configured"
+   "quote: finnhub: finnhub: no API key configured",
+   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/SMEGF?modules=defaultKeyStatistics,financialData,summaryProfil",
+   "analysts: no consensus target",
+   "history: https://data.sec.gov/api/xbrl/companyfacts/CIK0001830056.json failed after 4 tries: HTTP 404 (curl)"
   ],
   "sources": {
    "earnings_bucket": "na"
@@ -8465,10 +9799,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ASML?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ASML?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/ASML?modules=defaultKeyStatistics,financialData,summaryProfile",
+   "history: missing quarterly revenue or net income"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -8630,10 +9967,14 @@
   "thin": false,
   "alias": null,
   "stale": false,
-  "errors": [],
+  "errors": [
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/TSM?modules=defaultKeyStatistics,financialData,summaryProfile,",
+   "history: no us-gaap facts"
+  ],
   "sources": {
    "quote": "yahoo",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -8685,7 +10026,35 @@
   "analyst_detail": "Consensus $116.84 (range $80.0\u2013$200.0) \u00b7 5 buy / 23 hold / 2 sell",
   "analyst_low": 80.0,
   "analyst_high": 200.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": 256.3,
+    "ps_change": 282.4,
+    "sales_growth": 8.9,
+    "share_effect": -14.4
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": 163.1,
+    "ps_change": 214.9,
+    "sales_growth": 1.6,
+    "share_effect": -17.8
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": 64.7,
+    "ps_change": 183.1,
+    "sales_growth": -27.3,
+    "share_effect": -20.0
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -8795,10 +10164,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/INTC?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/INTC?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/INTC?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -8851,7 +10222,41 @@
   "analyst_detail": "Consensus $647.19 (range $465.0\u2013$1250.0) \u00b7 26 buy / 6 hold / 0 sell",
   "analyst_low": 465.0,
   "analyst_high": 1250.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": 193.3,
+    "ps_change": 114.2,
+    "sales_growth": 39.4,
+    "pe_change": 34.8,
+    "eps_growth": 117.6,
+    "share_effect": -1.8
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": 368.6,
+    "ps_change": 181.7,
+    "sales_growth": 69.6,
+    "pe_change": -66.9,
+    "eps_growth": 1317.1,
+    "share_effect": -1.9
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": 346.7,
+    "ps_change": 107.2,
+    "sales_growth": 190.3,
+    "pe_change": 256.7,
+    "eps_growth": 25.2,
+    "share_effect": -25.7
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -8961,10 +10366,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/AMD?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/AMD?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/AMD?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -9017,7 +10424,41 @@
   "analyst_detail": "Consensus $564.49 (range $450.0\u2013$700.0) \u00b7 32 buy / 1 hold / 0 sell",
   "analyst_low": 450.0,
   "analyst_high": 700.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": -2.5,
+    "ps_change": -16.7,
+    "sales_growth": 16.8,
+    "pe_change": -24.1,
+    "eps_growth": 28.5,
+    "share_effect": 0.2
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": 52.2,
+    "ps_change": -0.2,
+    "sales_growth": 52.1,
+    "pe_change": -15.3,
+    "eps_growth": 79.9,
+    "share_effect": 0.3
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": 64.4,
+    "ps_change": -17.4,
+    "sales_growth": 95.0,
+    "pe_change": -27.1,
+    "eps_growth": 125.5,
+    "share_effect": 2.1
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -9127,10 +10568,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/MSFT?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/MSFT?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/MSFT?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -9297,7 +10740,10 @@
    "quote: stockanalysis: https://stockanalysis.com/api/symbol/s/mraay/history?range=5Y failed after 4 tries: HTTP 400 (curl)",
    "quote: stockanalysis_alt: https://stockanalysis.com/api/symbol/e/mraay/history?range=5Y failed after 4 tries: HTTP 400 (curl)",
    "quote: nasdaq: nasdaq: no data",
-   "quote: finnhub: finnhub: no API key configured"
+   "quote: finnhub: finnhub: no API key configured",
+   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/MRAAY?modules=defaultKeyStatistics,financialData,summaryProfil",
+   "analysts: no consensus target"
   ],
   "sources": {
    "earnings_bucket": "na"
@@ -9352,7 +10798,41 @@
   "analyst_detail": "Consensus $489.57 (range $392.0\u2013$534.0) \u00b7 9 buy / 1 hold / 0 sell",
   "analyst_low": 392.0,
   "analyst_high": 534.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": 18.3,
+    "ps_change": 2.5,
+    "sales_growth": 14.9,
+    "pe_change": 26.4,
+    "eps_growth": -6.4,
+    "share_effect": 0.4
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": 82.5,
+    "ps_change": 29.3,
+    "sales_growth": 37.1,
+    "pe_change": 24.9,
+    "eps_growth": 46.1,
+    "share_effect": 3.0
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": 141.6,
+    "ps_change": 42.9,
+    "sales_growth": 64.0,
+    "pe_change": -6.9,
+    "eps_growth": 159.5,
+    "share_effect": 3.1
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -9462,10 +10942,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ETN?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ETN?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/ETN?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -9628,10 +11110,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/BLSH?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/BLSH?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/BLSH?modules=defaultKeyStatistics,financialData,summaryProfile",
+   "history: no us-gaap facts"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -9756,7 +11241,26 @@
   "analyst_detail": "Consensus $51.55 (range $36.0\u2013$62.0) \u00b7 10 buy / 1 hold / 0 sell",
   "analyst_low": 36.0,
   "analyst_high": 62.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": 71.9,
+    "ps_change": 71.9,
+    "sales_growth": 0.0,
+    "share_effect": 0.0
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": 50.2,
+    "ps_change": 1244.6,
+    "sales_growth": -82.9,
+    "share_effect": -34.7
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -9866,10 +11370,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/IDYA?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/IDYA?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/IDYA?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -10036,7 +11542,10 @@
    "quote: stockanalysis: https://stockanalysis.com/api/symbol/s/evvty/history?range=5Y failed after 4 tries: HTTP 400 (curl)",
    "quote: stockanalysis_alt: https://stockanalysis.com/api/symbol/e/evvty/history?range=5Y failed after 4 tries: HTTP 400 (curl)",
    "quote: nasdaq: nasdaq: no data",
-   "quote: finnhub: finnhub: no API key configured"
+   "quote: finnhub: finnhub: no API key configured",
+   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/EVVTY?modules=defaultKeyStatistics,financialData,summaryProfil",
+   "analysts: no consensus target"
   ],
   "sources": {
    "earnings_bucket": "na"
@@ -10417,10 +11926,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/FIGR?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/FIGR?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/FIGR?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -10473,7 +11984,39 @@
   "analyst_detail": "Consensus $2,248.00 (range $1750.0\u2013$2600.0) \u00b7 8 buy / 3 hold / 0 sell",
   "analyst_low": 1750.0,
   "analyst_high": 2600.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": -17.1,
+    "ps_change": -40.3,
+    "sales_growth": 38.9,
+    "pe_change": -11.7,
+    "eps_growth": -6.1,
+    "share_effect": -0.0
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": 61.3,
+    "ps_change": -28.6,
+    "sales_growth": 123.8,
+    "pe_change": -33.8,
+    "eps_growth": 143.5,
+    "share_effect": 0.9
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": 8.8,
+    "ps_change": -73.6,
+    "sales_growth": 318.6,
+    "share_effect": -1.5
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -10583,10 +12126,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/MELI?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/MELI?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/MELI?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -10639,7 +12184,41 @@
   "analyst_detail": "Consensus $255.78 (range $190.0\u2013$350.0) \u00b7 12 buy / 5 hold / 1 sell",
   "analyst_low": 190.0,
   "analyst_high": 350.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": -2.2,
+    "ps_change": -7.8,
+    "sales_growth": 6.6,
+    "pe_change": -36.1,
+    "eps_growth": 53.1,
+    "share_effect": -0.5
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": 61.1,
+    "ps_change": 49.4,
+    "sales_growth": 11.8,
+    "pe_change": -83.9,
+    "eps_growth": 900.0,
+    "share_effect": -3.5
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": 68.7,
+    "ps_change": 69.1,
+    "sales_growth": 5.2,
+    "pe_change": 29.8,
+    "eps_growth": 30.0,
+    "share_effect": -5.2
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -10749,10 +12328,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/IBM?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/IBM?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/IBM?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -10915,10 +12496,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/JD?range=3y&interval=1d failed after 4 tries: HTTP 429 rate "
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/JD?range=3y&interval=1d failed after 4 tries: HTTP 429 rate ",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/JD?modules=defaultKeyStatistics,financialData,summaryProfile,c",
+   "history: missing quarterly revenue or net income"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -11081,10 +12665,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/V?range=3y&interval=1d failed after 4 tries: HTTP 429 rate l"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/V?range=3y&interval=1d failed after 4 tries: HTTP 429 rate l",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/V?modules=defaultKeyStatistics,financialData,summaryProfile,ca",
+   "history: no overlapping price/fundamental data"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -11137,7 +12724,41 @@
   "analyst_detail": "Consensus $523.38 (range $500.0\u2013$554.0) \u00b7 17 buy / 0 hold / 0 sell",
   "analyst_low": 500.0,
   "analyst_high": 554.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-25",
+    "to": "2026-08-25",
+    "price_return": -21.5,
+    "ps_change": -28.3,
+    "sales_growth": 6.4,
+    "pe_change": -33.2,
+    "eps_growth": 17.5,
+    "share_effect": 2.9
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-25",
+    "to": "2026-08-25",
+    "price_return": 11.5,
+    "ps_change": -19.4,
+    "sales_growth": 28.7,
+    "pe_change": -36.7,
+    "eps_growth": 76.2,
+    "share_effect": 7.5
+   },
+   {
+    "period": "5y",
+    "from": "2021-08-26",
+    "to": "2026-08-25",
+    "price_return": -1.0,
+    "ps_change": -38.7,
+    "sales_growth": 99.0,
+    "pe_change": -36.6,
+    "eps_growth": 56.2,
+    "share_effect": -18.8
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -11247,10 +12868,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/SPGI?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/SPGI?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/SPGI?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  }
