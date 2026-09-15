@@ -12,12 +12,12 @@
   "pct_from_low": 27.5416268423965,
   "pos52": 64.23794438577967,
   "currency": "USD",
-  "pe_ltm": 35.16679853561221,
+  "pe_ltm": 35.0378127232651,
   "pe_fwd": null,
-  "ev_ebitda": 18.34904201755975,
-  "ps_ratio": 3.8098951105849435,
+  "ev_ebitda": 18.28029667137397,
+  "ps_ratio": 3.7959210658535634,
   "revenue": 716924000000.0,
-  "pe_mean_2y": 39.28,
+  "pe_mean_2y": 39.19,
   "ps_mean_2y": 3.82,
   "invested_capital": 368022480000.0,
   "excess_cash": 108690520000.0,
@@ -26,13 +26,13 @@
   "roic_trend": null,
   "debt_equity": 0.1597022368725141,
   "fcf_margin": 1.9405125229452493,
-  "market_cap": 2731405242261.0,
+  "market_cap": 2721386914216.0,
   "beta": 1.4836943999604286,
   "vol30": 27.89450399348215,
   "downdev": 18.192362406124506,
   "ret1y": 10.258751902587516,
   "earnings_date": "2026-10-29",
-  "earnings_days": 45,
+  "earnings_days": 44,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -44,16 +44,50 @@
   "superinv_detail": "Christopher Davis - Davis Advisors (Q2 2026): Amazon.com Inc. \u00b7 Add 24.84% \u00b7 Change to portfolio: 0.87%",
   "weight_pct": 1.3514,
   "analyst_target": 334.28,
-  "analyst_upside": 30.181478308279463,
+  "analyst_upside": 31.845073755620408,
   "analyst_detail": "Consensus $334.28 (range $250.0\u2013$400.0) \u00b7 38 buy / 1 hold / 0 sell",
   "analyst_low": 250.0,
   "analyst_high": 400.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": 11.1,
+    "ps_change": -3.2,
+    "sales_growth": 15.8,
+    "pe_change": -45.7,
+    "eps_growth": 104.5,
+    "share_effect": -0.9
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": 80.6,
+    "ps_change": 31.7,
+    "sales_growth": 43.1,
+    "pe_change": -84.7,
+    "eps_growth": 1077.3,
+    "share_effect": -4.2
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": 45.9,
+    "ps_change": -6.1,
+    "sales_growth": 64.7,
+    "pe_change": -65.6,
+    "eps_growth": 323.8,
+    "share_effect": -5.7
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.5287,
+  "score": 0.5294,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -76,8 +110,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.3531714634378046,
-    "detail": "LTM P/E 35.2 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.3562425542079739,
+    "detail": "LTM P/E 35.0 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -158,11 +192,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/AMZN?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/AMZN?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/AMZN?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -178,12 +214,12 @@
   "pct_from_low": 11.408339889850506,
   "pos52": 9.69899665551839,
   "currency": "USD",
-  "pe_ltm": 11.605738218978102,
+  "pe_ltm": 11.746765773722627,
   "pe_fwd": null,
-  "ev_ebitda": 12.583237055555555,
-  "ps_ratio": 0.45768167415083477,
+  "ev_ebitda": 12.717409104166666,
+  "ps_ratio": 0.4632432098445596,
   "revenue": 3474000000.0,
-  "pe_mean_2y": 13.83,
+  "pe_mean_2y": 13.62,
   "ps_mean_2y": 0.63,
   "invested_capital": 371480000.0,
   "excess_cash": 65520000.0,
@@ -192,13 +228,13 @@
   "roic_trend": null,
   "debt_equity": 4.4625,
   "fcf_margin": 2.33160621761658,
-  "market_cap": 1589986136.0,
+  "market_cap": 1609306911.0,
   "beta": 1.5433419501359529,
   "vol30": 46.719366115615266,
   "downdev": 30.99374779132964,
   "ret1y": -35.16483516483516,
   "earnings_date": "2026-11-03",
-  "earnings_days": 50,
+  "earnings_days": 49,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -210,16 +246,48 @@
   "superinv_detail": "No Dataroma change",
   "weight_pct": 1.3514,
   "analyst_target": 20.75,
-  "analyst_upside": 49.38804895608351,
+  "analyst_upside": 46.53954802259887,
   "analyst_detail": "Consensus $20.75 (range $16.0\u2013$27.0) \u00b7 5 buy / 6 hold / 0 sell",
   "analyst_low": 16.0,
   "analyst_high": 27.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": -30.8,
+    "ps_change": -29.6,
+    "sales_growth": -4.0,
+    "share_effect": 2.4
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": -72.9,
+    "ps_change": -57.4,
+    "sales_growth": -37.5,
+    "pe_change": -11.5,
+    "eps_growth": -69.3,
+    "share_effect": 1.8
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": -72.7,
+    "ps_change": -75.5,
+    "sales_growth": -16.3,
+    "pe_change": -66.9,
+    "eps_growth": -17.6,
+    "share_effect": 33.1
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.7124,
+  "score": 0.7116,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -242,8 +310,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.9141490900243309,
-    "detail": "LTM P/E 11.6 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.9107912911018422,
+    "detail": "LTM P/E 11.7 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -324,11 +392,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/CPRI?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/CPRI?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/CPRI?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -347,10 +417,10 @@
   "pe_ltm": null,
   "pe_fwd": null,
   "ev_ebitda": null,
-  "ps_ratio": 5.280895915340816,
+  "ps_ratio": 5.708884197806624,
   "revenue": 109238000.0,
   "pe_mean_2y": null,
-  "ps_mean_2y": 5.19,
+  "ps_mean_2y": 5.18,
   "invested_capital": 634613760.0,
   "excess_cash": 365309240.0,
   "roic_detail": "NOPAT $-0.33B (op income $-0.42B \u00d7 79% after tax) \u00f7 invested capital $0.63B (debt $0.46B + equity $0.54B \u2212 excess cash $0.37B; operating cash held back at 2% of revenue = $0.00B)",
@@ -358,7 +428,7 @@
   "roic_trend": null,
   "debt_equity": 0.8487204944598824,
   "fcf_margin": -352.6858785404346,
-  "market_cap": 576874508.0,
+  "market_cap": 623627092.0,
   "beta": 3.292823714151199,
   "vol30": 89.25059075935687,
   "downdev": 54.91954953310979,
@@ -376,7 +446,7 @@
   "superinv_detail": "No Dataroma change",
   "weight_pct": 1.3514,
   "analyst_target": 5.15,
-  "analyst_upside": 15.470852017937228,
+  "analyst_upside": 7.0686070686070845,
   "analyst_detail": "Consensus $5.15 (range $3.2\u2013$7.0) \u00b7 3 buy / 3 hold / 2 sell",
   "analyst_low": 3.2,
   "analyst_high": 7.0,
@@ -490,10 +560,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/GEMI?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/GEMI?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/GEMI?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -502,13 +574,13 @@
   "name": "Scholar Rock Holding Corp",
   "type": "equity",
   "sector": "Health Care",
-  "price": 55.41,
-  "change_pct": -0.4670379019220498,
+  "price": 51.85,
+  "change_pct": -6.424833062624066,
   "high52": 60.04,
   "low52": 27.92,
-  "pct_from_high": -7.711525649566959,
-  "pct_from_low": 98.45988538681945,
-  "pos52": 85.58530510585304,
+  "pct_from_high": -13.640906062624914,
+  "pct_from_low": 85.70916905444126,
+  "pos52": 74.50186799501869,
   "currency": "USD",
   "pe_ltm": null,
   "pe_fwd": null,
@@ -516,7 +588,7 @@
   "ps_ratio": null,
   "revenue": null,
   "pe_mean_2y": null,
-  "ps_mean_2y": 60.85,
+  "ps_mean_2y": 61.17,
   "invested_capital": null,
   "excess_cash": null,
   "roic_detail": null,
@@ -524,11 +596,11 @@
   "roic_trend": null,
   "debt_equity": 0.40616649286319495,
   "fcf_margin": null,
-  "market_cap": 7361920297.0,
-  "beta": 0.16441550851283213,
-  "vol30": 47.96676575339317,
-  "downdev": 31.52656884806034,
-  "ret1y": 77.36875800256082,
+  "market_cap": 6318220430.0,
+  "beta": 1.043001277609113,
+  "vol30": 50.6679962120881,
+  "downdev": 31.919668485080592,
+  "ret1y": 62.84547738693469,
   "earnings_date": null,
   "earnings_days": null,
   "earnings_confirmed": false,
@@ -542,16 +614,44 @@
   "superinv_detail": "No Dataroma change",
   "weight_pct": 1.3514,
   "analyst_target": 63.8,
-  "analyst_upside": 15.14167117848764,
+  "analyst_upside": 23.047251687560262,
   "analyst_detail": "Consensus $63.80 (range $55.0\u2013$76.0) \u00b7 12 buy / 0 hold / 0 sell",
   "analyst_low": 55.0,
   "analyst_high": 76.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": 63.7,
+    "ps_change": 63.7,
+    "sales_growth": 0.0,
+    "share_effect": 0.0
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": 710.2,
+    "ps_change": 710.1,
+    "sales_growth": 0.0,
+    "share_effect": 0.0
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": 29.5,
+    "ps_change": -55.1,
+    "sales_growth": 195.3,
+    "share_effect": -2.3
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.4096,
+  "score": 0.465,
   "score_partial": true,
   "score_n": "3 of 6",
   "score_parts": [
@@ -566,8 +666,8 @@
    {
     "key": "position_52wk",
     "label": "52-week position",
-    "score": 0.14414694894146962,
-    "detail": "+98.5% above 52-wk low, -7.7% from high \u2014 86th percentile of range",
+    "score": 0.2549813200498131,
+    "detail": "+85.7% above 52-wk low, -13.6% from high \u2014 75th percentile of range",
     "weight": 0.2,
     "raw": {}
    },
@@ -656,10 +756,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/SRRK?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/SRRK?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/SRRK?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -668,21 +770,21 @@
   "name": "ADOBE INC.",
   "type": "equity",
   "sector": "Technology",
-  "price": 265.568,
-  "change_pct": 5.288030765571103,
+  "price": 265.6,
+  "change_pct": 5.300717599016784,
   "high52": 367.46,
   "low52": 193.41,
-  "pct_from_high": -27.728732379034454,
-  "pct_from_low": 37.30830877410681,
-  "pos52": 41.45820166618787,
+  "pct_from_high": -27.720023948184824,
+  "pct_from_low": 37.3248539372318,
+  "pos52": 41.47658718758979,
   "currency": "USD",
-  "pe_ltm": 14.388050490883591,
+  "pe_ltm": 14.593211781206172,
   "pe_fwd": null,
-  "ev_ebitda": 10.73097438051239,
-  "ps_ratio": 4.315991417392402,
+  "ev_ebitda": 10.884565308693826,
+  "ps_ratio": 4.377533762463713,
   "revenue": 23769000000.0,
-  "pe_mean_2y": 25.68,
-  "ps_mean_2y": 7.01,
+  "pe_mean_2y": 25.5,
+  "ps_mean_2y": 6.97,
   "invested_capital": 11713380000.0,
   "excess_cash": 6119620000.0,
   "roic_detail": "NOPAT $6.88B (op income $8.71B \u00d7 79% after tax) \u00f7 invested capital $11.71B (debt $6.21B + equity $11.62B \u2212 excess cash $6.12B; operating cash held back at 2% of revenue = $0.48B)",
@@ -690,34 +792,68 @@
   "roic_trend": null,
   "debt_equity": 0.5342854684676933,
   "fcf_margin": 39.31591568850183,
-  "market_cap": 102586800000.0,
-  "beta": 1.1997029918145001,
-  "vol30": 45.13214932114465,
+  "market_cap": 104049600000.0,
+  "beta": 1.199698748034989,
+  "vol30": 45.14409015133925,
   "downdev": 27.534417478483185,
-  "ret1y": -24.242476108971623,
+  "ret1y": -24.23334759663386,
   "earnings_date": null,
   "earnings_days": null,
   "earnings_confirmed": false,
   "catalyst_date": null,
   "catalyst_note": null,
   "insider": "buy",
-  "insider_detail": "14 Form 4 filings in 90d (cluster) \u2014 latest 2026-08-17",
+  "insider_detail": "12 Form 4 filings in 90d (cluster) \u2014 latest 2026-08-17",
   "politician": null,
   "politician_detail": "No disclosures",
   "superinv": "add",
   "superinv_detail": "Samantha McLemore - Patient Capital Management (Q2 2026): Adobe Inc. \u00b7 Add 21.48% \u00b7 Change to portfolio: 0.43%",
   "weight_pct": 1.3514,
   "analyst_target": 271.57,
-  "analyst_upside": 7.667604963723587,
+  "analyst_upside": 2.24774096385541,
   "analyst_detail": "Consensus $271.57 (range $195.0\u2013$385.0) \u00b7 8 buy / 11 hold / 3 sell",
   "analyst_low": 195.0,
   "analyst_high": 385.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": -24.0,
+    "ps_change": -36.0,
+    "sales_growth": 11.5,
+    "pe_change": -31.8,
+    "eps_growth": 11.4,
+    "share_effect": 6.5
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": -49.8,
+    "ps_change": -67.6,
+    "sales_growth": 36.0,
+    "pe_change": -69.7,
+    "eps_growth": 65.8,
+    "share_effect": 13.9
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": -59.8,
+    "ps_change": -80.5,
+    "sales_growth": 72.9,
+    "pe_change": -73.4,
+    "eps_growth": 51.2,
+    "share_effect": 19.2
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.7835,
+  "score": 0.7823,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -732,7 +868,7 @@
    {
     "key": "position_52wk",
     "label": "52-week position",
-    "score": 0.5854179833381213,
+    "score": 0.585234128124102,
     "detail": "+37.3% above 52-wk low, -27.7% from high \u2014 41th percentile of range",
     "weight": 0.2,
     "raw": {}
@@ -740,8 +876,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.8479035597408668,
-    "detail": "LTM P/E 14.4 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.8430187671141387,
+    "detail": "LTM P/E 14.6 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -757,7 +893,7 @@
     "key": "insider_activity",
     "label": "Insider activity",
     "score": 0.85,
-    "detail": "14 Form 4 filings in 90d (cluster) \u2014 latest 2026-08-17",
+    "detail": "12 Form 4 filings in 90d (cluster) \u2014 latest 2026-08-17",
     "weight": 0.1,
     "raw": {}
    },
@@ -822,10 +958,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ADBE?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ADBE?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/ADBE?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -834,13 +972,13 @@
   "name": "SPDR S&P Biotech ETF",
   "type": "etf",
   "sector": null,
-  "price": 156.2,
-  "change_pct": -0.39535773498278576,
+  "price": 157.6,
+  "change_pct": 0.8962868117797732,
   "high52": 169.55,
   "low52": 93.43,
-  "pct_from_high": -7.8737835446770985,
-  "pct_from_low": 67.18398801241568,
-  "pos52": 82.46190225959009,
+  "pct_from_high": -7.048068416396353,
+  "pct_from_low": 68.68243604837845,
+  "pos52": 84.30110352075668,
   "currency": "USD",
   "pe_ltm": null,
   "pe_fwd": null,
@@ -857,10 +995,10 @@
   "debt_equity": null,
   "fcf_margin": null,
   "market_cap": null,
-  "beta": -0.038905548252290485,
-  "vol30": 30.301560754174666,
+  "beta": 1.1285380557028684,
+  "vol30": 28.991713879841246,
   "downdev": 15.700344930166551,
-  "ret1y": 66.34717784877526,
+  "ret1y": 64.68129571577845,
   "earnings_date": null,
   "earnings_days": null,
   "earnings_confirmed": false,
@@ -914,13 +1052,13 @@
   "pct_from_low": 17.487474864524046,
   "pos52": 27.269345238095244,
   "currency": "USD",
-  "pe_ltm": 72.14134082993168,
+  "pe_ltm": 71.15239187347574,
   "pe_fwd": null,
-  "ev_ebitda": 50.126934470737616,
-  "ps_ratio": 26.11393003323055,
+  "ev_ebitda": 49.4593600065968,
+  "ps_ratio": 25.755947445740134,
   "revenue": 63887000000.0,
-  "pe_mean_2y": 133.92,
-  "ps_mean_2y": 24.49,
+  "pe_mean_2y": 134.13,
+  "ps_mean_2y": 24.52,
   "invested_capital": 131527740000.0,
   "excess_cash": 14900260000.0,
   "roic_detail": "NOPAT $20.13B (op income $25.48B \u00d7 79% after tax) \u00f7 invested capital $131.53B (debt $65.14B + equity $81.29B \u2212 excess cash $14.90B; operating cash held back at 2% of revenue = $1.28B)",
@@ -928,7 +1066,7 @@
   "roic_trend": null,
   "debt_equity": 0.8012596565467697,
   "fcf_margin": 52.64920875921549,
-  "market_cap": 1668340648033.0,
+  "market_cap": 1645470214466.0,
   "beta": 1.635842017789351,
   "vol30": 39.50589330474373,
   "downdev": 32.29312775798493,
@@ -946,11 +1084,45 @@
   "superinv_detail": "Chase Coleman - Tiger Global Management (Q2 2026): Broadcom Inc. \u00b7 Reduce -51.07% \u00b7 Change to portfolio: 2.88%",
   "weight_pct": 1.3514,
   "analyst_target": 519.21,
-  "analyst_upside": 43.4321390093649,
+  "analyst_upside": 50.617892782548154,
   "analyst_detail": "Consensus $519.21 (range $350.0\u2013$630.0) \u00b7 27 buy / 3 hold / 0 sell",
   "analyst_low": 350.0,
   "analyst_high": 630.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": -4.2,
+    "ps_change": -25.9,
+    "sales_growth": 30.6,
+    "pe_change": -59.8,
+    "eps_growth": 138.0,
+    "share_effect": -1.0
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": 304.7,
+    "ps_change": 123.2,
+    "sales_growth": 107.1,
+    "pe_change": 144.6,
+    "eps_growth": 65.5,
+    "share_effect": -12.4
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": 576.3,
+    "ps_change": 181.2,
+    "sales_growth": 173.3,
+    "pe_change": 81.1,
+    "eps_growth": 273.4,
+    "share_effect": -12.0
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -979,7 +1151,7 @@
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
     "score": 0.0,
-    "detail": "LTM P/E 72.1 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "detail": "LTM P/E 71.2 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -1060,10 +1232,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/AVGO?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/AVGO?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/AVGO?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -1080,13 +1254,13 @@
   "pct_from_low": 47.689901509067084,
   "pos52": 67.94339054501656,
   "currency": "USD",
-  "pe_ltm": 31.112150261027466,
+  "pe_ltm": 31.97917833093743,
   "pe_fwd": null,
-  "ev_ebitda": 26.84732412185783,
-  "ps_ratio": 10.207858533001023,
+  "ev_ebitda": 27.610401198601632,
+  "ps_ratio": 10.49232938466274,
   "revenue": 402836000000.0,
-  "pe_mean_2y": 25.83,
-  "ps_mean_2y": 8.41,
+  "pe_mean_2y": 25.84,
+  "ps_mean_2y": 8.43,
   "invested_capital": 343025720000.0,
   "excess_cash": 118786280000.0,
   "roic_detail": "NOPAT $101.94B (op income $129.04B \u00d7 79% after tax) \u00f7 invested capital $343.03B (debt $46.55B + equity $415.26B \u2212 excess cash $118.79B; operating cash held back at 2% of revenue = $8.06B)",
@@ -1094,13 +1268,13 @@
   "roic_trend": null,
   "debt_equity": 0.11208987032376916,
   "fcf_margin": 14.578637460405725,
-  "market_cap": 4112092900000.0,
+  "market_cap": 4226688000000.0,
   "beta": 1.2446657549084508,
   "vol30": 28.809940223732227,
   "downdev": 18.414174550321558,
   "ret1y": 45.35507758871739,
   "earnings_date": "2026-11-04",
-  "earnings_days": 51,
+  "earnings_days": 50,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -1112,16 +1286,39 @@
   "superinv_detail": "Daniel Loeb - Third Point (Q2 2026): Alphabet Inc. \u00b7 Add 485.71% \u00b7 Change to portfolio: 6.65%",
   "weight_pct": 1.3514,
   "analyst_target": 426.04,
-  "analyst_upside": 25.861152141802073,
+  "analyst_upside": 21.93823520993733,
   "analyst_detail": "Consensus $426.04 (range $379.0\u2013$465.0) \u00b7 23 buy / 4 hold / 0 sell",
   "analyst_low": 379.0,
   "analyst_high": 465.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": 45.1,
+    "ps_change": 22.9,
+    "sales_growth": 19.1,
+    "pe_change": -30.7,
+    "eps_growth": 109.3,
+    "share_effect": -0.9
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": 154.3,
+    "ps_change": 62.1,
+    "sales_growth": 51.3,
+    "pe_change": -34.7,
+    "eps_growth": 289.6,
+    "share_effect": 3.7
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.6086,
+  "score": 0.6038,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -1144,8 +1341,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.4497107080707746,
-    "detail": "LTM P/E 31.1 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.4290671825967278,
+    "detail": "LTM P/E 32.0 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -1226,11 +1423,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/GOOGL?range=3y&interval=1d failed after 4 tries: HTTP 429 ra"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/GOOGL?range=3y&interval=1d failed after 4 tries: HTTP 429 ra",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/GOOGL?modules=defaultKeyStatistics,financialData,summaryProfil"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -1246,13 +1445,13 @@
   "pct_from_low": 85.08338480543543,
   "pos52": 77.49648382559772,
   "currency": "USD",
-  "pe_ltm": 20.16710574748965,
+  "pe_ltm": 19.858932754862167,
   "pe_fwd": null,
-  "ev_ebitda": 8.893197552054094,
-  "ps_ratio": 3.312100912367615,
+  "ev_ebitda": 8.774208114148442,
+  "ps_ratio": 3.2614887887030384,
   "revenue": 2851811000.0,
-  "pe_mean_2y": 11.03,
-  "ps_mean_2y": 6.49,
+  "pe_mean_2y": 11.01,
+  "ps_mean_2y": 6.5,
   "invested_capital": 2981429220.0,
   "excess_cash": 2058333780.0,
   "roic_detail": "NOPAT $0.86B (op income $1.09B \u00d7 79% after tax) \u00f7 invested capital $2.98B (debt $3.46B + equity $1.58B \u2212 excess cash $2.06B; operating cash held back at 2% of revenue = $0.06B)",
@@ -1260,13 +1459,13 @@
   "roic_trend": null,
   "debt_equity": 2.185129171277632,
   "fcf_margin": 41.73540953450281,
-  "market_cap": 9445485815.0,
+  "market_cap": 9301149604.0,
   "beta": 0.5467172763309065,
   "vol30": 47.31834112755953,
   "downdev": 21.216695420262027,
   "ret1y": 61.62351672060411,
   "earnings_date": "2026-11-04",
-  "earnings_days": 51,
+  "earnings_days": 50,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -1278,16 +1477,50 @@
   "superinv_detail": "No Dataroma change",
   "weight_pct": 1.3514,
   "analyst_target": 64.8,
-  "analyst_upside": 6.4738744659875085,
+  "analyst_upside": 8.126147171700312,
   "analyst_detail": "Consensus $64.80 (range $57.0\u2013$72.0) \u00b7 2 buy / 2 hold / 1 sell",
   "analyst_low": 57.0,
   "analyst_high": 72.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": 63.6,
+    "ps_change": 39.8,
+    "sales_growth": 19.8,
+    "pe_change": 12.5,
+    "eps_growth": 45.4,
+    "share_effect": -2.3
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": 250.1,
+    "ps_change": 133.8,
+    "sales_growth": 38.1,
+    "pe_change": 14.7,
+    "eps_growth": 205.0,
+    "share_effect": 8.4
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": 148.0,
+    "ps_change": 63.8,
+    "sales_growth": 9.4,
+    "pe_change": 97.0,
+    "eps_growth": 25.8,
+    "share_effect": 38.4
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.5892,
+  "score": 0.5909,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -1310,8 +1543,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.7103070060121512,
-    "detail": "LTM P/E 20.2 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.7176444582175674,
+    "detail": "LTM P/E 19.9 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -1392,11 +1625,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/VIRT?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/VIRT?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/VIRT?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -1412,13 +1647,13 @@
   "pct_from_low": 16.78321678321678,
   "pos52": 21.479039095619402,
   "currency": "USD",
-  "pe_ltm": 17.956263763254057,
+  "pe_ltm": 18.82694277686417,
   "pe_fwd": null,
-  "ev_ebitda": 12.05909524219926,
-  "ps_ratio": 5.998802597957631,
+  "ev_ebitda": 12.76512092830601,
+  "ps_ratio": 6.2896777821103615,
   "revenue": 4646958000.0,
-  "pe_mean_2y": 29.73,
-  "ps_mean_2y": 9.81,
+  "pe_mean_2y": 29.68,
+  "ps_mean_2y": 9.79,
   "invested_capital": 4490902160.0,
   "excess_cash": 4696130840.0,
   "roic_detail": "NOPAT $1.34B (op income $1.70B \u00d7 79% after tax) \u00f7 invested capital $4.49B (debt $0.00B + equity $9.19B \u2212 excess cash $4.70B; operating cash held back at 2% of revenue = $0.09B)",
@@ -1426,7 +1661,7 @@
   "roic_trend": null,
   "debt_equity": 0.0,
   "fcf_margin": 28.954597825071797,
-  "market_cap": 27876183723.0,
+  "market_cap": 29227868487.0,
   "beta": 0.8914058240804489,
   "vol30": 43.868776026458406,
   "downdev": 21.471410103199755,
@@ -1444,16 +1679,50 @@
   "superinv_detail": "No Dataroma change",
   "weight_pct": 1.3514,
   "analyst_target": 38.17,
-  "analyst_upside": 27.445742904841413,
+  "analyst_upside": 20.29624960605106,
   "analyst_detail": "Consensus $38.17 (range $25.0\u2013$47.0) \u00b7 5 buy / 0 hold / 1 sell",
   "analyst_low": 25.0,
   "analyst_high": 47.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": -34.4,
+    "ps_change": -37.8,
+    "sales_growth": 1.6,
+    "pe_change": -37.8,
+    "eps_growth": 5.4,
+    "share_effect": 3.8
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": -27.7,
+    "ps_change": -43.2,
+    "sales_growth": 24.0,
+    "pe_change": -47.3,
+    "eps_growth": 37.3,
+    "share_effect": 2.7
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": -14.8,
+    "ps_change": -56.3,
+    "sales_growth": 91.4,
+    "pe_change": -54.8,
+    "eps_growth": 88.3,
+    "share_effect": 1.9
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.7784,
+  "score": 0.7736,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -1476,8 +1745,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.7629461008749034,
-    "detail": "LTM P/E 18.0 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.7422156481699007,
+    "detail": "LTM P/E 18.8 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -1558,10 +1827,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/CPRT?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/CPRT?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/CPRT?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -1578,12 +1849,12 @@
   "pct_from_low": 44.05753217259653,
   "pos52": 71.73798203909142,
   "currency": "USD",
-  "pe_ltm": 279.6078949579195,
+  "pe_ltm": 278.47901073621955,
   "pe_fwd": null,
-  "ev_ebitda": 15.184966599140306,
-  "ps_ratio": 0.758791590262789,
+  "ev_ebitda": 15.13529317449959,
+  "ps_ratio": 0.7557280578330801,
   "revenue": 24300141000.0,
-  "pe_mean_2y": 17.46,
+  "pe_mean_2y": 17.48,
   "ps_mean_2y": 0.72,
   "invested_capital": 9218742000.0,
   "excess_cash": 0.0,
@@ -1592,13 +1863,13 @@
   "roic_trend": null,
   "debt_equity": 1.0842778111011304,
   "fcf_margin": 4.233868437224294,
-  "market_cap": 18438742633.0,
+  "market_cap": 18364298363.0,
   "beta": 0.6905686256109818,
   "vol30": 23.1368828162032,
   "downdev": 22.97848565891573,
   "ret1y": -6.6960846116130845,
   "earnings_date": "2026-10-20",
-  "earnings_days": 36,
+  "earnings_days": 35,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -1610,11 +1881,45 @@
   "superinv_detail": "Seth Klarman - Baupost Group (Q2 2026): Genuine Parts \u00b7 Add 88.96% \u00b7 Change to portfolio: 2.89%",
   "weight_pct": 1.3514,
   "analyst_target": 144.67,
-  "analyst_upside": 8.22112507480549,
+  "analyst_upside": 8.602957735905697,
   "analyst_detail": "Consensus $144.67 (range $122.0\u2013$170.0) \u00b7 4 buy / 3 hold / 0 sell",
   "analyst_low": 122.0,
   "analyst_high": 170.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": -5.7,
+    "ps_change": -11.2,
+    "sales_growth": 5.3,
+    "pe_change": 1.2,
+    "eps_growth": -6.8,
+    "share_effect": 0.8
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": -10.5,
+    "ps_change": -20.4,
+    "sales_growth": 9.9,
+    "pe_change": 29.9,
+    "eps_growth": -31.1,
+    "share_effect": 2.3
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": 7.3,
+    "ps_change": -27.6,
+    "sales_growth": 41.2,
+    "pe_change": -7.5,
+    "eps_growth": 16.0,
+    "share_effect": 5.0
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -1643,7 +1948,7 @@
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
     "score": 0.0,
-    "detail": "LTM P/E 279.6 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "detail": "LTM P/E 278.5 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -1724,11 +2029,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/GPC?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/GPC?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/GPC?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -1744,10 +2051,10 @@
   "pct_from_low": 72.611593617451,
   "pos52": 96.8741579089194,
   "currency": "USD",
-  "pe_ltm": 12.76584555842134,
+  "pe_ltm": 12.848535641258001,
   "pe_fwd": null,
-  "ev_ebitda": 7.821099960187707,
-  "ps_ratio": 4.684582645685136,
+  "ev_ebitda": 7.873573914469925,
+  "ps_ratio": 4.7149267795894785,
   "revenue": 938222000.0,
   "pe_mean_2y": null,
   "ps_mean_2y": null,
@@ -1758,25 +2065,25 @@
   "roic_trend": null,
   "debt_equity": 0.18758467495134415,
   "fcf_margin": 57.82703880318304,
-  "market_cap": 4395178499.0,
+  "market_cap": 4423648033.0,
   "beta": 0.46663928371622265,
   "vol30": 28.563231860572902,
   "downdev": 19.37931198565416,
   "ret1y": 46.63692518874398,
   "earnings_date": "2026-10-29",
-  "earnings_days": 45,
+  "earnings_days": 44,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
   "insider": "buy",
-  "insider_detail": "3 Form 4 filings in 90d (cluster) \u2014 latest 2026-07-13",
+  "insider_detail": "4 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-14",
   "politician": null,
   "politician_detail": "No disclosures",
   "superinv": null,
   "superinv_detail": "No Dataroma change",
   "weight_pct": 1.3514,
   "analyst_target": 88.75,
-  "analyst_upside": 5.0047326076668295,
+  "analyst_upside": 3.8497542710039863,
   "analyst_detail": "Consensus $88.75 (range $76.0\u2013$102.0) \u00b7 2 buy / 1 hold / 1 sell",
   "analyst_low": 76.0,
   "analyst_high": 102.0,
@@ -1785,7 +2092,7 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.4612,
+  "score": 0.4607,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -1808,7 +2115,7 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.8865274867042539,
+    "score": 0.8845586752081428,
     "detail": "LTM P/E 12.8 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
@@ -1825,7 +2132,7 @@
     "key": "insider_activity",
     "label": "Insider activity",
     "score": 0.85,
-    "detail": "3 Form 4 filings in 90d (cluster) \u2014 latest 2026-07-13",
+    "detail": "4 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-14",
     "weight": 0.1,
     "raw": {}
    },
@@ -1890,11 +2197,14 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/STNG?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/STNG?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/STNG?modules=defaultKeyStatistics,financialData,summaryProfile",
+   "history: no us-gaap facts"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -2272,7 +2582,11 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/BRK-B?range=3y&interval=1d failed after 4 tries: HTTP 429 ra"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/BRK-B?range=3y&interval=1d failed after 4 tries: HTTP 429 ra",
+   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/BRK-B?modules=defaultKeyStatistics,financialData,summaryProfil",
+   "analysts: no consensus target",
+   "history: no overlapping price/fundamental data"
   ],
   "sources": {
    "quote": "stockanalysis",
@@ -2434,13 +2748,13 @@
   "pct_from_low": 8.578986740678902,
   "pos52": 8.266992624166823,
   "currency": "USD",
-  "pe_ltm": 33.12596310430619,
+  "pe_ltm": 33.09482283041847,
   "pe_fwd": null,
-  "ev_ebitda": 26.08836131653263,
-  "ps_ratio": 10.847694721249866,
+  "ev_ebitda": 26.066759131178696,
+  "ps_ratio": 10.837497276315016,
   "revenue": 1990869000.0,
-  "pe_mean_2y": 68.22,
-  "ps_mean_2y": 21.59,
+  "pe_mean_2y": 68.0,
+  "ps_mean_2y": 21.53,
   "invested_capital": 1215588380.0,
   "excess_cash": 94318620.0,
   "roic_detail": "NOPAT $0.73B (op income $0.92B \u00d7 79% after tax) \u00f7 invested capital $1.22B (debt $3.06B + equity $-1.75B \u2212 excess cash $0.09B; operating cash held back at 2% of revenue = $0.04B)",
@@ -2448,13 +2762,13 @@
   "roic_trend": null,
   "debt_equity": null,
   "fcf_margin": 46.757471234923045,
-  "market_cap": 21596339142.0,
+  "market_cap": 21576037365.0,
   "beta": 1.0662186700175886,
   "vol30": 68.7568461894599,
   "downdev": 48.0463804669946,
   "ret1y": -37.27138347447011,
   "earnings_date": "2026-11-04",
-  "earnings_days": 51,
+  "earnings_days": 50,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -2466,16 +2780,50 @@
   "superinv_detail": "Lindsell Train (Q2 2026): Fair Isaac Corp. \u00b7 Reduce -9.32% \u00b7 Change to portfolio: 1.06%",
   "weight_pct": 1.3514,
   "analyst_target": 1515.82,
-  "analyst_upside": 53.82944823876841,
+  "analyst_upside": 51.354967548676974,
   "analyst_detail": "Consensus $1,515.82 (range $1100.0\u2013$1700.0) \u00b7 9 buy / 4 hold / 0 sell",
   "analyst_low": 1100.0,
   "analyst_high": 1700.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": -35.1,
+    "ps_change": -52.3,
+    "sales_growth": 25.5,
+    "pe_change": -55.6,
+    "eps_growth": 46.2,
+    "share_effect": 8.4
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": 12.4,
+    "ps_change": -38.6,
+    "sales_growth": 63.9,
+    "pe_change": -49.6,
+    "eps_growth": 122.9,
+    "share_effect": 11.7
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": 127.4,
+    "ps_change": -0.7,
+    "sales_growth": 78.0,
+    "pe_change": -23.2,
+    "eps_growth": 196.2,
+    "share_effect": 28.7
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.698,
+  "score": 0.6982,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -2498,7 +2846,7 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.40176278323080505,
+    "score": 0.4025042183233697,
     "detail": "LTM P/E 33.1 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
@@ -2580,11 +2928,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/FICO?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/FICO?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/FICO?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -2600,13 +2950,13 @@
   "pct_from_low": 1.3806304471776554,
   "pos52": 2.5500225665713963,
   "currency": "USD",
-  "pe_ltm": 28.477154227895394,
+  "pe_ltm": 28.911964196762142,
   "pe_fwd": null,
-  "ev_ebitda": 16.529187069586083,
-  "ps_ratio": 2.0916674909672994,
+  "ev_ebitda": 16.738636622675465,
+  "ps_ratio": 2.1236045963869197,
   "revenue": 21865000000.0,
-  "pe_mean_2y": 32.01,
-  "ps_mean_2y": 1.63,
+  "pe_mean_2y": 31.99,
+  "ps_mean_2y": 1.62,
   "invested_capital": 29446300000.0,
   "excess_cash": 631700000.0,
   "roic_detail": "NOPAT $1.67B (op income $2.11B \u00d7 79% after tax) \u00f7 invested capital $29.45B (debt $10.44B + equity $19.64B \u2212 excess cash $0.63B; operating cash held back at 2% of revenue = $0.44B)",
@@ -2614,13 +2964,13 @@
   "roic_trend": null,
   "debt_equity": 0.5318563789152024,
   "fcf_margin": 13.308941230276696,
-  "market_cap": 45734309690.0,
+  "market_cap": 46432614500.0,
   "beta": 0.3987569758589288,
   "vol30": 22.914168850001452,
   "downdev": 19.10390769091603,
   "ret1y": -11.296012543206357,
   "earnings_date": "2026-10-29",
-  "earnings_days": 45,
+  "earnings_days": 44,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -2632,16 +2982,50 @@
   "superinv_detail": "No Dataroma change",
   "weight_pct": 1.3514,
   "analyst_target": 324.5,
-  "analyst_upside": 32.157693247536045,
+  "analyst_upside": 30.357931948740607,
   "analyst_detail": "Consensus $324.50 (range $269.0\u2013$405.0) \u00b7 3 buy / 5 hold / 0 sell",
   "analyst_low": 269.0,
   "analyst_high": 405.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": -10.8,
+    "ps_change": -15.5,
+    "sales_growth": 5.3,
+    "pe_change": -29.5,
+    "eps_growth": 26.5,
+    "share_effect": 0.2
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": 44.1,
+    "ps_change": -36.3,
+    "sales_growth": 123.1,
+    "pe_change": -40.1,
+    "eps_growth": 140.6,
+    "share_effect": 1.4
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": 8.8,
+    "ps_change": -54.1,
+    "sales_growth": 115.8,
+    "pe_change": -22.4,
+    "eps_growth": 40.3,
+    "share_effect": 9.8
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.6459,
+  "score": 0.6435,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -2664,8 +3048,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.5124487088596335,
-    "detail": "LTM P/E 28.5 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.5020960905532823,
+    "detail": "LTM P/E 28.9 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -2746,11 +3130,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/LHX?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/LHX?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/LHX?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -2768,10 +3154,10 @@
   "currency": "USD",
   "pe_ltm": null,
   "pe_fwd": null,
-  "ev_ebitda": 28.36382220920729,
-  "ps_ratio": 1.3337038424786922,
+  "ev_ebitda": 28.376395385429007,
+  "ps_ratio": 1.3344157841553592,
   "revenue": 4040647000.0,
-  "pe_mean_2y": 118.04,
+  "pe_mean_2y": 118.82,
   "ps_mean_2y": 1.39,
   "invested_capital": 2474626940.0,
   "excess_cash": 49541060.0,
@@ -2780,29 +3166,57 @@
   "roic_trend": null,
   "debt_equity": 0.9517522460281315,
   "fcf_margin": 4.394494248074627,
-  "market_cap": 5389026430.0,
+  "market_cap": 5391903135.0,
   "beta": 1.5382335778306409,
   "vol30": 38.06637425843894,
   "downdev": 21.632379942961943,
   "ret1y": 37.72699197035205,
   "earnings_date": "2026-10-29",
-  "earnings_days": 45,
+  "earnings_days": 44,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
   "insider": "buy",
-  "insider_detail": "2 Form 4 filing(s) in 90d \u2014 latest 2026-08-11",
+  "insider_detail": "3 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-14",
   "politician": null,
   "politician_detail": "No disclosures",
   "superinv": "trim",
   "superinv_detail": "Norbert Lou - Punch Card Management (Q2 2026): Crocs Inc. \u00b7 Reduce -2.93% \u00b7 Change to portfolio: 0.82%",
   "weight_pct": 1.3514,
   "analyst_target": 140.1,
-  "analyst_upside": 24.55547652916073,
+  "analyst_upside": 25.66149430442192,
   "analyst_detail": "Consensus $140.10 (range $95.0\u2013$163.0) \u00b7 6 buy / 6 hold / 1 sell",
   "analyst_low": 95.0,
   "analyst_high": 163.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": 44.0,
+    "ps_change": 28.5,
+    "sales_growth": -0.3,
+    "share_effect": 12.4
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": 26.7,
+    "ps_change": -7.6,
+    "sales_growth": 8.7,
+    "share_effect": 26.1
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": -27.5,
+    "ps_change": -75.4,
+    "sales_growth": 126.6,
+    "share_effect": 30.1
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -2847,7 +3261,7 @@
     "key": "insider_activity",
     "label": "Insider activity",
     "score": 0.85,
-    "detail": "2 Form 4 filing(s) in 90d \u2014 latest 2026-08-11",
+    "detail": "3 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-14",
     "weight": 0.1,
     "raw": {}
    },
@@ -2912,11 +3326,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/CROX?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/CROX?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/CROX?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -2932,13 +3348,13 @@
   "pct_from_low": 13.40090831303889,
   "pos52": 18.442028985507235,
   "currency": "USD",
-  "pe_ltm": 30.06958567923671,
+  "pe_ltm": 30.654964004240497,
   "pe_fwd": null,
-  "ev_ebitda": 13.592803591460402,
-  "ps_ratio": 3.2685731210799243,
+  "ev_ebitda": 13.804935366884365,
+  "ps_ratio": 3.332203923285867,
   "revenue": 6074500000.0,
-  "pe_mean_2y": 46.46,
-  "ps_mean_2y": 4.89,
+  "pe_mean_2y": 46.33,
+  "ps_mean_2y": 4.88,
   "invested_capital": 9638290000.0,
   "excess_cash": 59310000.0,
   "roic_detail": "NOPAT $0.87B (op income $1.10B \u00d7 79% after tax) \u00f7 invested capital $9.64B (debt $5.09B + equity $4.60B \u2212 excess cash $0.06B; operating cash held back at 2% of revenue = $0.12B)",
@@ -2946,13 +3362,13 @@
   "roic_trend": null,
   "debt_equity": 1.1062050691744674,
   "fcf_margin": 22.070952341756524,
-  "market_cap": 19854947424.0,
+  "market_cap": 20241472732.0,
   "beta": 1.0976657475343472,
   "vol30": 36.698199237755446,
   "downdev": 30.521367015308225,
   "ret1y": -33.7931829535411,
   "earnings_date": "2026-10-20",
-  "earnings_days": 36,
+  "earnings_days": 35,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -2964,16 +3380,50 @@
   "superinv_detail": "John Armitage - Egerton Capital (Q2 2026): Equifax Inc. \u00b7 Buy \u00b7 Change to portfolio: 2.27%",
   "weight_pct": 1.3514,
   "analyst_target": 212.11,
-  "analyst_upside": 25.508875739644978,
+  "analyst_upside": 23.112194555690998,
   "analyst_detail": "Consensus $212.11 (range $179.0\u2013$245.0) \u00b7 15 buy / 5 hold / 0 sell",
   "analyst_low": 179.0,
   "analyst_high": 245.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": -32.8,
+    "ps_change": -41.7,
+    "sales_growth": 9.9,
+    "pe_change": -42.9,
+    "eps_growth": 17.7,
+    "share_effect": 4.9
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": -12.5,
+    "ps_change": -32.1,
+    "sales_growth": 24.1,
+    "pe_change": -26.5,
+    "eps_growth": 19.0,
+    "share_effect": 3.8
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": -36.9,
+    "ps_change": -56.1,
+    "sales_growth": 38.8,
+    "pe_change": -38.0,
+    "eps_growth": 1.8,
+    "share_effect": 3.6
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.668,
+  "score": 0.6648,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -2996,8 +3446,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.4745336743038878,
-    "detail": "LTM P/E 30.1 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.46059609513713107,
+    "detail": "LTM P/E 30.7 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -3078,11 +3528,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/EFX?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/EFX?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/EFX?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -3098,13 +3550,13 @@
   "pct_from_low": 44.04149180457676,
   "pos52": 45.42633126429271,
   "currency": "USD",
-  "pe_ltm": 36.41339327617483,
+  "pe_ltm": 36.701022015174324,
   "pe_fwd": null,
-  "ev_ebitda": 21.553936370916524,
-  "ps_ratio": 6.781998133137956,
+  "ev_ebitda": 21.724557139678375,
+  "ps_ratio": 6.83556901449297,
   "revenue": 5496389000.0,
   "pe_mean_2y": 33.42,
-  "ps_mean_2y": 6.71,
+  "ps_mean_2y": 6.7,
   "invested_capital": 4340888780.0,
   "excess_cash": 10163220.0,
   "roic_detail": "NOPAT $1.08B (op income $1.36B \u00d7 79% after tax) \u00f7 invested capital $4.34B (debt $0.04B + equity $4.31B \u2212 excess cash $0.01B; operating cash held back at 2% of revenue = $0.11B)",
@@ -3112,13 +3564,13 @@
   "roic_trend": null,
   "debt_equity": 0.009277307166200772,
   "fcf_margin": 23.846601832584994,
-  "market_cap": 37276499937.0,
+  "market_cap": 37570946340.0,
   "beta": 1.1813890364746253,
   "vol30": 29.299412776711925,
   "downdev": 24.746126521053025,
   "ret1y": 21.760374832663977,
   "earnings_date": "2026-11-04",
-  "earnings_days": 51,
+  "earnings_days": 50,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -3130,16 +3582,50 @@
   "superinv_detail": "Wallace Weitz - Weitz Investment Management (Q2 2026): Old Dominion Freight Line \u00b7 Sell -100.00% \u00b7 Change to portfolio: 1.80%",
   "weight_pct": 1.3514,
   "analyst_target": 239.0,
-  "analyst_upside": 32.9328661215863,
+  "analyst_upside": 31.383651256115662,
   "analyst_detail": "Consensus $239.00 (range $200.0\u2013$280.0) \u00b7 9 buy / 8 hold / 0 sell",
   "analyst_low": 200.0,
   "analyst_high": 280.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": 25.6,
+    "ps_change": 24.6,
+    "sales_growth": -0.8,
+    "pe_change": 26.3,
+    "eps_growth": -0.6,
+    "share_effect": 1.6
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": -11.2,
+    "ps_change": -9.6,
+    "sales_growth": -6.9,
+    "pe_change": -0.8,
+    "eps_growth": -10.5,
+    "share_effect": 5.5
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": 25.1,
+    "ps_change": -13.6,
+    "sales_growth": 29.6,
+    "pe_change": -18.7,
+    "eps_growth": 54.0,
+    "share_effect": 11.7
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.5369,
+  "score": 0.5353,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -3162,8 +3648,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.3234906362815517,
-    "detail": "LTM P/E 36.4 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.3166423329720399,
+    "detail": "LTM P/E 36.7 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -3244,11 +3730,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ODFL?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ODFL?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/ODFL?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -3264,13 +3752,13 @@
   "pct_from_low": 25.652813534387636,
   "pos52": 33.54978354978355,
   "currency": "USD",
-  "pe_ltm": 21.267123164136624,
+  "pe_ltm": 21.734244302656545,
   "pe_fwd": null,
-  "ev_ebitda": 15.64876168872267,
-  "ps_ratio": 3.797957949000339,
+  "ev_ebitda": 15.932044588607594,
+  "ps_ratio": 3.8813780913249745,
   "revenue": 5902000000.0,
-  "pe_mean_2y": 26.41,
-  "ps_mean_2y": 5.32,
+  "pe_mean_2y": 26.37,
+  "ps_mean_2y": 5.31,
   "invested_capital": 17447040000.0,
   "excess_cash": 3431960000.0,
   "roic_detail": "NOPAT $1.08B (op income $1.37B \u00d7 79% after tax) \u00f7 invested capital $17.45B (debt $8.33B + equity $12.55B \u2212 excess cash $3.43B; operating cash held back at 2% of revenue = $0.12B)",
@@ -3278,13 +3766,13 @@
   "roic_trend": null,
   "debt_equity": 0.6640631226588029,
   "fcf_margin": 28.295493053202303,
-  "market_cap": 22415547815.0,
+  "market_cap": 22907893495.0,
   "beta": 0.6027803455087387,
   "vol30": 27.156618624850903,
   "downdev": 21.86806443337851,
   "ret1y": -27.493633276740237,
   "earnings_date": "2026-10-26",
-  "earnings_days": 42,
+  "earnings_days": 41,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -3296,16 +3784,50 @@
   "superinv_detail": "No Dataroma change",
   "weight_pct": 1.3514,
   "analyst_target": 74.62,
-  "analyst_upside": 12.736062849373027,
+  "analyst_upside": 9.205327089126309,
   "analyst_detail": "Consensus $74.62 (range $60.0\u2013$86.0) \u00b7 4 buy / 11 hold / 1 sell",
   "analyst_low": 60.0,
   "analyst_high": 86.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": -27.0,
+    "ps_change": -35.0,
+    "sales_growth": 28.0,
+    "pe_change": -25.2,
+    "eps_growth": -2.4,
+    "share_effect": -12.3
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": -5.9,
+    "ps_change": -31.8,
+    "sales_growth": 64.6,
+    "pe_change": -29.9,
+    "eps_growth": 34.2,
+    "share_effect": -16.2
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": 18.9,
+    "ps_change": -36.6,
+    "sales_growth": 126.3,
+    "pe_change": -30.2,
+    "eps_growth": 70.4,
+    "share_effect": -17.1
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.5393,
+  "score": 0.5367,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -3328,8 +3850,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.6841161151396042,
-    "detail": "LTM P/E 21.3 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.6729941832700823,
+    "detail": "LTM P/E 21.7 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -3410,11 +3932,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/BRO?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/BRO?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/BRO?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -3432,11 +3956,11 @@
   "currency": "USD",
   "pe_ltm": null,
   "pe_fwd": null,
-  "ev_ebitda": 96.63382587745927,
-  "ps_ratio": 5.8276911022574325,
+  "ev_ebitda": 97.63903467207503,
+  "ps_ratio": 5.887334029040338,
   "revenue": 1304668000.0,
   "pe_mean_2y": null,
-  "ps_mean_2y": 3.97,
+  "ps_mean_2y": 3.96,
   "invested_capital": 708001360.0,
   "excess_cash": 293670640.0,
   "roic_detail": "NOPAT $0.00B (op income $0.01B \u00d7 79% after tax) \u00f7 invested capital $0.71B (debt $0.20B + equity $0.80B \u2212 excess cash $0.29B; operating cash held back at 2% of revenue = $0.03B)",
@@ -3444,13 +3968,13 @@
   "roic_trend": null,
   "debt_equity": 0.2449486632305438,
   "fcf_margin": 4.874496806850479,
-  "market_cap": 7603202095.0,
+  "market_cap": 7681016313.0,
   "beta": 1.864725145431519,
   "vol30": 63.48343354045897,
   "downdev": 35.65860372657325,
   "ret1y": 49.37379576107899,
   "earnings_date": "2026-11-03",
-  "earnings_days": 50,
+  "earnings_days": 49,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -3462,11 +3986,39 @@
   "superinv_detail": "No Dataroma change",
   "weight_pct": 1.3514,
   "analyst_target": 31.31,
-  "analyst_upside": 3.7442014579191483,
+  "analyst_upside": 0.9674298613350439,
   "analyst_detail": "Consensus $31.31 (range $25.0\u2013$44.0) \u00b7 12 buy / 3 hold / 0 sell",
   "analyst_low": 25.0,
   "analyst_high": 44.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": 52.4,
+    "ps_change": 29.6,
+    "sales_growth": 38.9,
+    "share_effect": -15.3
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": 296.5,
+    "ps_change": 174.4,
+    "sales_growth": 139.9,
+    "share_effect": -39.8
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": 363.5,
+    "ps_change": 495.4,
+    "sales_growth": 289.9,
+    "share_effect": -80.0
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -3576,11 +4128,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ZETA?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ZETA?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/ZETA?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -3596,10 +4150,10 @@
   "pct_from_low": 41.68603061782395,
   "pos52": 49.67424057333659,
   "currency": "USD",
-  "pe_ltm": 28.129007643824593,
+  "pe_ltm": 28.32766662196594,
   "pe_fwd": null,
-  "ev_ebitda": 15.15869835440356,
-  "ps_ratio": 5.051366887417219,
+  "ev_ebitda": 15.263324387315489,
+  "ps_ratio": 5.087041782059001,
   "revenue": 41525000000.0,
   "pe_mean_2y": 39.63,
   "ps_mean_2y": 6.34,
@@ -3610,7 +4164,7 @@
   "roic_trend": null,
   "debt_equity": 0.24414121943796288,
   "fcf_margin": 32.66706803130644,
-  "market_cap": 209758010000.0,
+  "market_cap": 211239410000.0,
   "beta": -0.0999658021225855,
   "vol30": 48.004079234732025,
   "downdev": 26.70657850667501,
@@ -3632,12 +4186,35 @@
   "analyst_detail": "Consensus $269.14 (range $160.0\u2013$400.0) \u00b7 28 buy / 10 hold / 1 sell",
   "analyst_low": 160.0,
   "analyst_high": 400.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-21",
+    "to": "2026-08-21",
+    "price_return": -15.7,
+    "ps_change": -31.1,
+    "sales_growth": 9.9,
+    "pe_change": -40.1,
+    "eps_growth": 40.7,
+    "share_effect": 11.3
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-22",
+    "to": "2026-08-21",
+    "price_return": 0.3,
+    "ps_change": -33.4,
+    "sales_growth": 32.8,
+    "pe_change": -94.1,
+    "eps_growth": 1611.9,
+    "share_effect": 13.4
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.489,
+  "score": 0.4879,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -3660,8 +4237,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.5207379132422716,
-    "detail": "LTM P/E 28.1 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.5160079375722395,
+    "detail": "LTM P/E 28.3 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -3741,9 +4318,12 @@
   "thin": false,
   "alias": null,
   "stale": false,
-  "errors": [],
+  "errors": [
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/CRM?modules=defaultKeyStatistics,financialData,summaryProfile,"
+  ],
   "sources": {
    "quote": "yahoo",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -3760,13 +4340,13 @@
   "pct_from_low": 8.075455701568467,
   "pos52": 4.372274500803308,
   "currency": "USD",
-  "pe_ltm": 7.868008179310345,
+  "pe_ltm": 7.718257781034483,
   "pe_fwd": null,
-  "ev_ebitda": 6.158412018171745,
-  "ps_ratio": 1.2919675583447365,
+  "ev_ebitda": 6.100668928310249,
+  "ps_ratio": 1.2673777699240316,
   "revenue": 21193000000.0,
-  "pe_mean_2y": 22.84,
-  "ps_mean_2y": 3.57,
+  "pe_mean_2y": 22.76,
+  "ps_mean_2y": 3.56,
   "invested_capital": 54414860000.0,
   "excess_cash": 374140000.0,
   "roic_detail": "NOPAT $4.60B (op income $5.82B \u00d7 79% after tax) \u00f7 invested capital $54.41B (debt $29.00B + equity $25.79B \u2212 excess cash $0.37B; operating cash held back at 2% of revenue = $0.42B)",
@@ -3774,29 +4354,63 @@
   "roic_trend": null,
   "debt_equity": 1.1242633374689825,
   "fcf_margin": 34.26603123672911,
-  "market_cap": 27380668464.0,
+  "market_cap": 26859537078.0,
   "beta": 0.8032145007039668,
   "vol30": 40.97023377536492,
   "downdev": 65.71532144802823,
   "ret1y": -62.42446573323508,
   "earnings_date": "2026-11-04",
-  "earnings_days": 51,
+  "earnings_days": 50,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
   "insider": "buy",
-  "insider_detail": "20 Form 4 filings in 90d (cluster) \u2014 latest 2026-08-11",
+  "insider_detail": "14 Form 4 filings in 90d (cluster) \u2014 latest 2026-08-11",
   "politician": null,
   "politician_detail": "No disclosures",
   "superinv": null,
   "superinv_detail": "No Dataroma change",
   "weight_pct": 1.3514,
   "analyst_target": 61.0,
-  "analyst_upside": 18.2628925940287,
+  "analyst_upside": 19.63130025495195,
   "analyst_detail": "Consensus $61.00 (range $50.0\u2013$85.0) \u00b7 4 buy / 20 hold / 0 sell",
   "analyst_low": 50.0,
   "analyst_high": 85.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": -62.0,
+    "ps_change": -63.6,
+    "sales_growth": 0.6,
+    "pe_change": -59.5,
+    "eps_growth": -6.3,
+    "share_effect": 3.8
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": -57.9,
+    "ps_change": -68.6,
+    "sales_growth": 15.5,
+    "pe_change": -72.0,
+    "eps_growth": 50.5,
+    "share_effect": 16.1
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": -52.9,
+    "ps_change": -72.7,
+    "sales_growth": 36.8,
+    "pe_change": -85.9,
+    "eps_growth": 234.3,
+    "share_effect": 26.1
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -3825,7 +4439,7 @@
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
     "score": 1.0,
-    "detail": "LTM P/E 7.9 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "detail": "LTM P/E 7.7 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -3841,7 +4455,7 @@
     "key": "insider_activity",
     "label": "Insider activity",
     "score": 0.85,
-    "detail": "20 Form 4 filings in 90d (cluster) \u2014 latest 2026-08-11",
+    "detail": "14 Form 4 filings in 90d (cluster) \u2014 latest 2026-08-11",
     "weight": 0.1,
     "raw": {}
    },
@@ -3906,11 +4520,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/FISV?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/FISV?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/FISV?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -3926,12 +4542,12 @@
   "pct_from_low": 60.11004808407279,
   "pos52": 97.31161223015812,
   "currency": "USD",
-  "pe_ltm": 43.58545427317418,
+  "pe_ltm": 43.6084067789674,
   "pe_fwd": null,
-  "ev_ebitda": 16.546418354574172,
-  "ps_ratio": 2.825607689115126,
+  "ev_ebitda": 16.55428999290364,
+  "ps_ratio": 2.8270956804171625,
   "revenue": 6030837000.0,
-  "pe_mean_2y": 33.73,
+  "pe_mean_2y": 33.77,
   "ps_mean_2y": 2.28,
   "invested_capital": 4688761740.0,
   "excess_cash": 833061260.0,
@@ -3940,13 +4556,13 @@
   "roic_trend": null,
   "debt_equity": 1.0111095328627726,
   "fcf_margin": 11.857442010122309,
-  "market_cap": 17040779399.0,
+  "market_cap": 17049753232.0,
   "beta": 0.8398124067530164,
   "vol30": 16.42930412405223,
   "downdev": 23.18940662893753,
   "ret1y": 35.425576519916135,
   "earnings_date": "2026-11-04",
-  "earnings_days": 51,
+  "earnings_days": 50,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -3958,16 +4574,50 @@
   "superinv_detail": "Stephen Mandel - Lone Pine Capital (Q2 2026): Clean Harbors Inc. \u00b7 Sell -100.00% \u00b7 Change to portfolio: 4.01%",
   "weight_pct": 1.3514,
   "analyst_target": 363.09,
-  "analyst_upside": 12.47444396257976,
+  "analyst_upside": 12.415245054026428,
   "analyst_detail": "Consensus $363.09 (range $325.0\u2013$390.0) \u00b7 8 buy / 3 hold / 0 sell",
   "analyst_low": 325.0,
   "analyst_high": 390.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": 36.8,
+    "ps_change": 36.4,
+    "sales_growth": -1.2,
+    "pe_change": 59.2,
+    "eps_growth": -14.0,
+    "share_effect": 1.5
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": 92.1,
+    "ps_change": 69.3,
+    "sales_growth": 10.4,
+    "pe_change": 140.1,
+    "eps_growth": -20.0,
+    "share_effect": 2.8
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": 220.5,
+    "ps_change": 66.6,
+    "sales_growth": 85.8,
+    "pe_change": 45.5,
+    "eps_growth": 120.3,
+    "share_effect": 3.5
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.2641,
+  "score": 0.264,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -3990,7 +4640,7 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.15272727921013862,
+    "score": 0.15218079097696668,
     "detail": "LTM P/E 43.6 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
@@ -4072,11 +4722,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/CLH?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/CLH?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/CLH?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -4092,12 +4744,12 @@
   "pct_from_low": 10.145586897179252,
   "pos52": 19.584309133489455,
   "currency": "USD",
-  "pe_ltm": 14.612645369740376,
+  "pe_ltm": 14.647185827414702,
   "pe_fwd": null,
-  "ev_ebitda": 24.237556695157622,
-  "ps_ratio": 2.824094505680835,
+  "ev_ebitda": 24.2939810079623,
+  "ps_ratio": 2.830769923736471,
   "revenue": 52017000000.0,
-  "pe_mean_2y": 31.77,
+  "pe_mean_2y": 31.0,
   "ps_mean_2y": 3.64,
   "invested_capital": 30338340000.0,
   "excess_cash": 7223660000.0,
@@ -4106,13 +4758,13 @@
   "roic_trend": null,
   "debt_equity": 0.3890758477866943,
   "fcf_margin": 11.184804967606745,
-  "market_cap": 146900923902.0,
+  "market_cap": 147248159123.0,
   "beta": 1.3223619254636878,
   "vol30": 41.43771537723478,
   "downdev": 22.051171949687458,
   "ret1y": -23.28897338403043,
   "earnings_date": "2026-11-03",
-  "earnings_days": 50,
+  "earnings_days": 49,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -4124,16 +4776,46 @@
   "superinv_detail": "Bill Ackman - Pershing Square Capital Management (Q2 2026): Uber Technologies Inc. \u00b7 Add 14.58% \u00b7 Change to portfolio: 1.62%",
   "weight_pct": 1.3514,
   "analyst_target": 103.43,
-  "analyst_upside": 44.31421794335148,
+  "analyst_upside": 42.406718986644655,
   "analyst_detail": "Consensus $103.43 (range $72.0\u2013$125.0) \u00b7 28 buy / 3 hold / 0 sell",
   "analyst_low": 72.0,
   "analyst_high": 125.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": -24.3,
+    "ps_change": -35.4,
+    "sales_growth": 13.1,
+    "pe_change": -13.3,
+    "eps_growth": -12.6,
+    "share_effect": 3.6
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": 52.8,
+    "ps_change": -2.9,
+    "sales_growth": 55.2,
+    "share_effect": 1.4
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": 88.7,
+    "ps_change": -57.3,
+    "sales_growth": 363.0,
+    "share_effect": -4.6
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.7643,
+  "score": 0.7642,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -4156,7 +4838,7 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.8425560626252291,
+    "score": 0.8417336707758404,
     "detail": "LTM P/E 14.6 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
@@ -4238,11 +4920,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/UBER?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/UBER?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/UBER?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -4258,10 +4942,10 @@
   "pct_from_low": 23.668921607640254,
   "pos52": 54.951958610495154,
   "currency": "USD",
-  "pe_ltm": 20.275157892202547,
+  "pe_ltm": 20.524799902143524,
   "pe_fwd": null,
-  "ev_ebitda": 14.784976982975722,
-  "ps_ratio": 3.2092903525680425,
+  "ev_ebitda": 14.946878389241462,
+  "ps_ratio": 3.2488053935042904,
   "revenue": 4067300000.0,
   "pe_mean_2y": 20.47,
   "ps_mean_2y": 3.32,
@@ -4272,13 +4956,13 @@
   "roic_trend": null,
   "debt_equity": 0.9576804023989166,
   "fcf_margin": 21.994935215007498,
-  "market_cap": 13053146651.0,
+  "market_cap": 13213866177.0,
   "beta": 0.8598769595686006,
   "vol30": 23.077100995227983,
   "downdev": 19.483180819098532,
   "ret1y": -12.29822779094707,
   "earnings_date": "2026-10-22",
-  "earnings_days": 38,
+  "earnings_days": 37,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -4290,16 +4974,50 @@
   "superinv_detail": "No Dataroma change",
   "weight_pct": 1.3514,
   "analyst_target": 169.2,
-  "analyst_upside": 10.335833061623735,
+  "analyst_upside": 8.887315786086623,
   "analyst_detail": "Consensus $169.20 (range $160.0\u2013$182.0) \u00b7 1 buy / 4 hold / 0 sell",
   "analyst_low": 160.0,
   "analyst_high": 182.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": -11.2,
+    "ps_change": -19.5,
+    "sales_growth": 9.8,
+    "pe_change": -16.0,
+    "eps_growth": 5.7,
+    "share_effect": 0.5
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": 47.0,
+    "ps_change": 17.9,
+    "sales_growth": 21.4,
+    "pe_change": 5.7,
+    "eps_growth": 39.1,
+    "share_effect": 2.7
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": 10.0,
+    "ps_change": -32.6,
+    "sales_growth": 55.0,
+    "pe_change": -30.3,
+    "eps_growth": 58.0,
+    "share_effect": 5.3
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.5975,
+  "score": 0.5961,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -4322,8 +5040,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.7077343358999394,
-    "detail": "LTM P/E 20.3 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.7017904785203923,
+    "detail": "LTM P/E 20.5 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -4404,11 +5122,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ALLE?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ALLE?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/ALLE?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -4424,12 +5144,12 @@
   "pct_from_low": 17.457627118644055,
   "pos52": 76.01476014760145,
   "currency": "USD",
-  "pe_ltm": 20.373195779569894,
+  "pe_ltm": 20.151687727598567,
   "pe_fwd": null,
-  "ev_ebitda": 10.268065148301018,
-  "ps_ratio": 2.5432717913357514,
+  "ev_ebitda": 10.185015575350356,
+  "ps_ratio": 2.5156200087569314,
   "revenue": 62579000000.0,
-  "pe_mean_2y": 19.78,
+  "pe_mean_2y": 19.57,
   "ps_mean_2y": 2.46,
   "invested_capital": 142517580000.0,
   "excess_cash": 12344420000.0,
@@ -4438,18 +5158,18 @@
   "roic_trend": null,
   "debt_equity": 0.7908090105925344,
   "fcf_margin": 29.09442464724588,
-  "market_cap": 159155405430.0,
+  "market_cap": 157424984528.0,
   "beta": 0.3940253839551602,
   "vol30": 21.62736463165094,
   "downdev": 13.634408658785397,
   "ret1y": 11.504424778761058,
   "earnings_date": "2026-11-03",
-  "earnings_days": 50,
+  "earnings_days": 49,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
   "insider": "buy",
-  "insider_detail": "17 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-01",
+  "insider_detail": "16 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-01",
   "politician": null,
   "politician_detail": "No disclosures",
   "superinv": "new",
@@ -4460,12 +5180,46 @@
   "analyst_detail": "Consensus $28.57 (range $25.0\u2013$35.75) \u00b7 7 buy / 13 hold / 1 sell",
   "analyst_low": 25.0,
   "analyst_high": 35.75,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": 16.1,
+    "ps_change": 13.2,
+    "sales_growth": 2.4,
+    "pe_change": 35.4,
+    "eps_growth": -14.3,
+    "share_effect": 0.2
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": -18.6,
+    "ps_change": 9.3,
+    "sales_growth": -25.7,
+    "pe_change": 140.8,
+    "eps_growth": -66.2,
+    "share_effect": 0.2
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": -38.1,
+    "ps_change": -45.2,
+    "sales_growth": 13.5,
+    "pe_change": 7.6,
+    "eps_growth": -42.5,
+    "share_effect": -0.5
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.5382,
+  "score": 0.5394,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -4488,8 +5242,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.7054001004864311,
-    "detail": "LTM P/E 20.4 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.7106741017238436,
+    "detail": "LTM P/E 20.2 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -4505,7 +5259,7 @@
     "key": "insider_activity",
     "label": "Insider activity",
     "score": 0.85,
-    "detail": "17 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-01",
+    "detail": "16 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-01",
     "weight": 0.1,
     "raw": {}
    },
@@ -4570,11 +5324,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/PFE?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/PFE?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/PFE?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -4590,12 +5346,12 @@
   "pct_from_low": 8.107058823529407,
   "pos52": 28.20481335952848,
   "currency": "USD",
-  "pe_ltm": 49.80170048623287,
+  "pe_ltm": 50.10686252784294,
   "pe_fwd": null,
-  "ev_ebitda": 30.741898059021,
-  "ps_ratio": 1.4654530573437246,
+  "ev_ebitda": 30.934848904129908,
+  "ps_ratio": 1.4744326833905572,
   "revenue": 275235000000.0,
-  "pe_mean_2y": 59.6,
+  "pe_mean_2y": 59.55,
   "ps_mean_2y": 1.72,
   "invested_capital": 25097700000.0,
   "excess_cash": 9779300000.0,
@@ -4604,34 +5360,68 @@
   "roic_trend": null,
   "debt_equity": 0.19589219585790701,
   "fcf_margin": 2.6562755463513,
-  "market_cap": 403343972238.0,
+  "market_cap": 405815479613.0,
   "beta": 0.6819753875944439,
   "vol30": 17.04652337533522,
   "downdev": 13.216689906660445,
   "ret1y": -4.709017753442845,
   "earnings_date": "2026-09-24",
-  "earnings_days": 10,
+  "earnings_days": 9,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
   "insider": "buy",
-  "insider_detail": "2 Form 4 filing(s) in 90d \u2014 latest 2026-07-14",
+  "insider_detail": "9 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-14",
   "politician": null,
   "politician_detail": "No disclosures",
   "superinv": null,
   "superinv_detail": "No Dataroma change",
   "weight_pct": 1.3514,
   "analyst_target": 1086.94,
-  "analyst_upside": 20.13439879748445,
+  "analyst_upside": 18.285795126835065,
   "analyst_detail": "Consensus $1,086.94 (range $781.0\u2013$1275.0) \u00b7 13 buy / 5 hold / 1 sell",
   "analyst_low": 781.0,
   "analyst_high": 1275.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": -5.1,
+    "ps_change": -13.2,
+    "sales_growth": 9.3,
+    "pe_change": -16.3,
+    "eps_growth": 13.5,
+    "share_effect": 0.0
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": 65.2,
+    "ps_change": 31.8,
+    "sales_growth": 25.3,
+    "pe_change": 11.4,
+    "eps_growth": 48.2,
+    "share_effect": 0.0
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": 99.4,
+    "ps_change": 25.8,
+    "sales_growth": 58.7,
+    "pe_change": 2.5,
+    "eps_growth": 94.6,
+    "share_effect": -0.1
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.5835,
+  "score": 0.5824,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -4654,8 +5444,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.004721416994455496,
-    "detail": "LTM P/E 49.8 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.0,
+    "detail": "LTM P/E 50.1 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -4671,7 +5461,7 @@
     "key": "insider_activity",
     "label": "Insider activity",
     "score": 0.85,
-    "detail": "2 Form 4 filing(s) in 90d \u2014 latest 2026-07-14",
+    "detail": "9 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-14",
     "weight": 0.1,
     "raw": {}
    },
@@ -4736,11 +5526,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/COST?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/COST?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/COST?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "approaching"
   }
  },
  {
@@ -4756,13 +5548,13 @@
   "pct_from_low": 42.29931217157261,
   "pos52": 93.39684935383454,
   "currency": "USD",
-  "pe_ltm": 43.22423215873583,
+  "pe_ltm": 43.08922198717972,
   "pe_fwd": null,
-  "ev_ebitda": 33.75180482010114,
-  "ps_ratio": 11.633829801687328,
+  "ev_ebitda": 33.64733022068699,
+  "ps_ratio": 11.597491727442023,
   "revenue": 416161000000.0,
-  "pe_mean_2y": 34.04,
-  "ps_mean_2y": 9.12,
+  "pe_mean_2y": 34.05,
+  "ps_mean_2y": 9.13,
   "invested_capital": 126016220000.0,
   "excess_cash": 46373780000.0,
   "roic_detail": "NOPAT $105.11B (op income $133.05B \u00d7 79% after tax) \u00f7 invested capital $126.02B (debt $98.66B + equity $73.73B \u2212 excess cash $46.37B; operating cash held back at 2% of revenue = $8.32B)",
@@ -4770,13 +5562,13 @@
   "roic_trend": null,
   "debt_equity": 1.3380304612588665,
   "fcf_margin": 31.726423187179964,
-  "market_cap": 4841546244100.0,
+  "market_cap": 4826423754784.0,
   "beta": 1.164673714251381,
   "vol30": 22.052624081444847,
   "downdev": 18.26487065467837,
   "ret1y": 44.798504542885695,
   "earnings_date": "2026-10-29",
-  "earnings_days": 45,
+  "earnings_days": 44,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -4788,16 +5580,50 @@
   "superinv_detail": "Duan Yongping - H&H International Investment (Q2 2026): Apple Inc. \u00b7 Reduce -6.38% \u00b7 Change to portfolio: 2.80%",
   "weight_pct": 1.3514,
   "analyst_target": 335.87,
-  "analyst_upside": 1.083456225358902,
+  "analyst_upside": 0.8376366038189085,
   "analyst_detail": "Consensus $335.87 (range $245.0\u2013$400.0) \u00b7 16 buy / 10 hold / 4 sell",
   "analyst_low": 245.0,
   "analyst_high": 400.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": 42.3,
+    "ps_change": 22.1,
+    "sales_growth": 14.7,
+    "pe_change": 18.9,
+    "eps_growth": 19.7,
+    "share_effect": 1.6
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": 90.3,
+    "ps_change": 45.9,
+    "sales_growth": 21.7,
+    "pe_change": 32.9,
+    "eps_growth": 43.2,
+    "share_effect": 7.2
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": 123.5,
+    "ps_change": 48.4,
+    "sales_growth": 32.0,
+    "pe_change": 36.2,
+    "eps_growth": 64.1,
+    "share_effect": 14.1
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.3806,
+  "score": 0.3814,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -4820,8 +5646,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.161327805744385,
-    "detail": "LTM P/E 43.2 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.16454233363857806,
+    "detail": "LTM P/E 43.1 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -4902,11 +5728,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/AAPL?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/AAPL?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/AAPL?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -4922,12 +5750,12 @@
   "pct_from_low": 28.998363620704502,
   "pos52": 69.82579842389049,
   "currency": "USD",
-  "pe_ltm": 25.783829214581573,
+  "pe_ltm": 25.904896296018748,
   "pe_fwd": null,
-  "ev_ebitda": 16.72135661663382,
-  "ps_ratio": 6.680316550422864,
+  "ev_ebitda": 16.785589483072236,
+  "ps_ratio": 6.711683746548208,
   "revenue": 2266214000.0,
-  "pe_mean_2y": 24.9,
+  "pe_mean_2y": 24.89,
   "ps_mean_2y": 6.07,
   "invested_capital": 4422957280.0,
   "excess_cash": 19487720.0,
@@ -4936,13 +5764,13 @@
   "roic_trend": null,
   "debt_equity": 3.39156433560765,
   "fcf_margin": 40.85549731843506,
-  "market_cap": 15139026891.0,
+  "market_cap": 15210111670.0,
   "beta": 0.9568470114514386,
   "vol30": 17.856141815777082,
   "downdev": 13.322837438065221,
   "ret1y": 16.270765409097976,
   "earnings_date": "2026-11-05",
-  "earnings_days": 52,
+  "earnings_days": 51,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -4954,16 +5782,50 @@
   "superinv_detail": "Tom Bancroft - Makaira Partners (Q1 2026): Lamar Advertising Co. \u00b7 Sell -100.00% \u00b7 Change to portfolio: 11.88%",
   "weight_pct": 1.3514,
   "analyst_target": 162.2,
-  "analyst_upside": 8.80064394955727,
+  "analyst_upside": 8.292161837361455,
   "analyst_detail": "Consensus $162.20 (range $151.0\u2013$170.0) \u00b7 1 buy / 4 hold / 0 sell",
   "analyst_low": 151.0,
   "analyst_high": 170.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": 17.4,
+    "ps_change": 12.5,
+    "sales_growth": 4.3,
+    "pe_change": 21.5,
+    "eps_growth": -3.4,
+    "share_effect": 0.1
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": 75.2,
+    "ps_change": 55.3,
+    "sales_growth": 12.2,
+    "pe_change": 52.1,
+    "eps_growth": 15.2,
+    "share_effect": 0.5
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": 35.0,
+    "ps_change": -4.4,
+    "sales_growth": 41.6,
+    "pe_change": -20.1,
+    "eps_growth": 69.1,
+    "share_effect": -0.3
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.4601,
+  "score": 0.4594,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -4986,8 +5848,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.576575494890915,
-    "detail": "LTM P/E 25.8 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.573692945332887,
+    "detail": "LTM P/E 25.9 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -5068,11 +5930,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/LAMR?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/LAMR?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/LAMR?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -5088,10 +5952,10 @@
   "pct_from_low": 23.122697648058953,
   "pos52": 28.441965841756723,
   "currency": "USD",
-  "pe_ltm": 11.928224080399826,
+  "pe_ltm": 11.851250060036008,
   "pe_fwd": null,
-  "ev_ebitda": 8.784441362643435,
-  "ps_ratio": 3.9534117713280383,
+  "ev_ebitda": 8.731750306714833,
+  "ps_ratio": 3.927900010638298,
   "revenue": 48598000000.0,
   "pe_mean_2y": null,
   "ps_mean_2y": null,
@@ -5102,13 +5966,13 @@
   "roic_trend": null,
   "debt_equity": 0.6853696906135291,
   "fcf_margin": 28.95798180995103,
-  "market_cap": 192127905263.0,
+  "market_cap": 190888084717.0,
   "beta": 0.6784858175756532,
   "vol30": 34.50933105873407,
   "downdev": 35.20014931227063,
   "ret1y": -19.981583793738476,
   "earnings_date": "2026-11-04",
-  "earnings_days": 51,
+  "earnings_days": 50,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -5120,7 +5984,7 @@
   "superinv_detail": "No Dataroma change",
   "weight_pct": 1.3514,
   "analyst_target": 44.0,
-  "analyst_upside": 2.159275597863942,
+  "analyst_upside": 1.26582278481012,
   "analyst_detail": "Consensus $44.00 (range $40.0\u2013$47.0) \u00b7 0 buy / 5 hold / 1 sell",
   "analyst_low": 40.0,
   "analyst_high": 47.0,
@@ -5129,7 +5993,7 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.7371,
+  "score": 0.7375,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -5152,7 +6016,7 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.9064708552285756,
+    "score": 0.9083035699991426,
     "detail": "LTM P/E 11.9 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
@@ -5234,11 +6098,14 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/NVO?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/NVO?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/NVO?modules=defaultKeyStatistics,financialData,summaryProfile,",
+   "history: no us-gaap facts"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -5254,12 +6121,12 @@
   "pct_from_low": 16.38376949308402,
   "pos52": 37.61435608726248,
   "currency": "USD",
-  "pe_ltm": 63.96914762053057,
+  "pe_ltm": 60.97312425096142,
   "pe_fwd": null,
-  "ev_ebitda": 37.95118978761787,
-  "ps_ratio": 9.846801944417937,
+  "ev_ebitda": 36.248898738677646,
+  "ps_ratio": 9.385622612843932,
   "revenue": 4485044000.0,
-  "pe_mean_2y": 70.16,
+  "pe_mean_2y": 70.06,
   "ps_mean_2y": 10.16,
   "invested_capital": 6345183880.0,
   "excess_cash": 128080120.0,
@@ -5268,7 +6135,7 @@
   "roic_trend": null,
   "debt_equity": 0.5035503757096744,
   "fcf_margin": 25.46659519951198,
-  "market_cap": 44163339980.0,
+  "market_cap": 42094930386.0,
   "beta": 0.8549259548773112,
   "vol30": 23.345324527594144,
   "downdev": 20.53058589287666,
@@ -5286,11 +6153,45 @@
   "superinv_detail": "No Dataroma change",
   "weight_pct": 1.3514,
   "analyst_target": 411.0,
-  "analyst_upside": 30.063291139240505,
+  "analyst_upside": 35.30864197530864,
   "analyst_detail": "Consensus $411.00 (range $365.0\u2013$491.0) \u00b7 9 buy / 4 hold / 0 sell",
   "analyst_low": 365.0,
   "analyst_high": 491.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": -4.7,
+    "ps_change": -23.7,
+    "sales_growth": 25.5,
+    "pe_change": -33.2,
+    "eps_growth": 42.5,
+    "share_effect": -0.5
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": 84.6,
+    "ps_change": -4.4,
+    "sales_growth": 96.6,
+    "pe_change": -14.0,
+    "eps_growth": 114.6,
+    "share_effect": -1.8
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": 137.5,
+    "ps_change": -15.2,
+    "sales_growth": 187.0,
+    "pe_change": -18.5,
+    "eps_growth": 191.3,
+    "share_effect": -2.4
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -5319,7 +6220,7 @@
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
     "score": 0.0,
-    "detail": "LTM P/E 64.0 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "detail": "LTM P/E 61.0 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -5400,10 +6301,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/HEI?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/HEI?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/HEI?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -5420,12 +6323,12 @@
   "pct_from_low": 59.54938127480737,
   "pos52": 98.68446508028632,
   "currency": "USD",
-  "pe_ltm": 21.027917665748625,
+  "pe_ltm": 20.78428137180771,
   "pe_fwd": null,
-  "ev_ebitda": 8.083538144898316,
-  "ps_ratio": 2.849670981168567,
+  "ev_ebitda": 7.99823981407784,
+  "ps_ratio": 2.8166537662527142,
   "revenue": 58944000000.0,
-  "pe_mean_2y": 13.7,
+  "pe_mean_2y": 13.71,
   "ps_mean_2y": 2.46,
   "invested_capital": 82128880000.0,
   "excess_cash": 5802120000.0,
@@ -5434,34 +6337,68 @@
   "roic_trend": null,
   "debt_equity": 0.36354614108269884,
   "fcf_margin": 17.411441368078176,
-  "market_cap": 167971006314.0,
+  "market_cap": 166024839598.0,
   "beta": 0.5977477732650737,
   "vol30": 25.25040181899602,
   "downdev": 18.249041304300405,
   "ret1y": 45.19281844257941,
   "earnings_date": "2026-11-05",
-  "earnings_days": 52,
+  "earnings_days": 51,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
   "insider": "buy",
-  "insider_detail": "6 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-02",
+  "insider_detail": "5 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-02",
   "politician": null,
   "politician_detail": "No disclosures",
   "superinv": "trim",
   "superinv_detail": "Arnold Van Den Berg - Century Management (Q2 2026): ConocoPhillips \u00b7 Reduce -40.71% \u00b7 Change to portfolio: 0.37%",
   "weight_pct": 1.3514,
   "analyst_target": 147.11,
-  "analyst_upside": 7.105933745904637,
+  "analyst_upside": 7.63883807712009,
   "analyst_detail": "Consensus $147.11 (range $126.0\u2013$189.0) \u00b7 16 buy / 2 hold / 0 sell",
   "analyst_low": 126.0,
   "analyst_high": 189.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": 47.9,
+    "ps_change": 27.6,
+    "sales_growth": 11.8,
+    "pe_change": 33.8,
+    "eps_growth": 10.5,
+    "share_effect": 3.7
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": 10.6,
+    "ps_change": 7.4,
+    "sales_growth": 3.4,
+    "pe_change": 67.6,
+    "eps_growth": -34.0,
+    "share_effect": -0.4
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": 130.4,
+    "ps_change": -20.8,
+    "sales_growth": 161.0,
+    "pe_change": -39.3,
+    "eps_growth": 279.2,
+    "share_effect": 11.5
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.3793,
+  "score": 0.3806,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -5484,8 +6421,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.6898114841488423,
-    "detail": "LTM P/E 21.0 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.6956123482902925,
+    "detail": "LTM P/E 20.8 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -5501,7 +6438,7 @@
     "key": "insider_activity",
     "label": "Insider activity",
     "score": 0.85,
-    "detail": "6 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-02",
+    "detail": "5 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-02",
     "weight": 0.1,
     "raw": {}
    },
@@ -5566,11 +6503,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/COP?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/COP?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/COP?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -5586,10 +6525,10 @@
   "pct_from_low": 53.01820208023774,
   "pos52": 83.06416412047143,
   "currency": "USD",
-  "pe_ltm": 24.020841951879074,
+  "pe_ltm": 23.670151915060323,
   "pe_fwd": null,
-  "ev_ebitda": 12.199613063109977,
-  "ps_ratio": 2.139075238912644,
+  "ev_ebitda": 12.029696491542222,
+  "ps_ratio": 2.1078460099041387,
   "revenue": 323905000000.0,
   "pe_mean_2y": null,
   "ps_mean_2y": null,
@@ -5600,13 +6539,13 @@
   "roic_trend": null,
   "debt_equity": 0.16993592560893803,
   "fcf_margin": 9.624118182800514,
-  "market_cap": 692857165260.0,
+  "market_cap": 682741861838.0,
   "beta": 0.054745746847480216,
   "vol30": 25.322071131326553,
   "downdev": 17.04184706630919,
   "ret1y": 54.39467989857596,
   "earnings_date": "2026-10-30",
-  "earnings_days": 46,
+  "earnings_days": 45,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -5627,7 +6566,7 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.3864,
+  "score": 0.3883,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -5650,8 +6589,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.6185513820981172,
-    "detail": "LTM P/E 24.0 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.6269011448795161,
+    "detail": "LTM P/E 23.7 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -5731,10 +6670,14 @@
   "thin": false,
   "alias": null,
   "stale": false,
-  "errors": [],
+  "errors": [
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/XOM?modules=defaultKeyStatistics,financialData,summaryProfile,",
+   "history: could not build TTM series"
+  ],
   "sources": {
    "quote": "yahoo",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -5750,13 +6693,13 @@
   "pct_from_low": 6.805555555555558,
   "pos52": 6.3843648208469075,
   "currency": "USD",
-  "pe_ltm": 137.23012006944444,
+  "pe_ltm": 132.90654979166666,
   "pe_fwd": null,
-  "ev_ebitda": 24.57319286525555,
-  "ps_ratio": 4.270831486924573,
+  "ev_ebitda": 23.93034916881776,
+  "ps_ratio": 4.136274728765939,
   "revenue": 925400000.0,
-  "pe_mean_2y": 453.41,
-  "ps_mean_2y": 5.29,
+  "pe_mean_2y": 451.24,
+  "ps_mean_2y": 5.3,
   "invested_capital": 2692508000.0,
   "excess_cash": 393792000.0,
   "roic_detail": "NOPAT $0.04B (op income $0.05B \u00d7 79% after tax) \u00f7 invested capital $2.69B (debt $1.22B + equity $1.87B \u2212 excess cash $0.39B; operating cash held back at 2% of revenue = $0.02B)",
@@ -5764,13 +6707,13 @@
   "roic_trend": null,
   "debt_equity": 0.6536112301757394,
   "fcf_margin": 16.998054895180463,
-  "market_cap": 3952227458.0,
+  "market_cap": 3827708634.0,
   "beta": 1.4104570828873342,
   "vol30": 48.02539270621038,
   "downdev": 38.44333580982728,
   "ret1y": -30.249433106575964,
   "earnings_date": "2026-10-27",
-  "earnings_days": 43,
+  "earnings_days": 42,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -5782,11 +6725,30 @@
   "superinv_detail": "No Dataroma change",
   "weight_pct": 1.3514,
   "analyst_target": 23.88,
-  "analyst_upside": 49.43679599499373,
+  "analyst_upside": 55.26657997399218,
   "analyst_detail": "Consensus $23.88 (range $20.0\u2013$29.0) \u00b7 7 buy / 1 hold / 0 sell",
   "analyst_low": 20.0,
   "analyst_high": 29.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": -32.3,
+    "ps_change": -33.8,
+    "sales_growth": 15.7,
+    "share_effect": -11.6
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": 99.0,
+    "ps_change": 102.8,
+    "sales_growth": 35.5,
+    "share_effect": -27.6
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -5815,7 +6777,7 @@
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
     "score": 0.0,
-    "detail": "LTM P/E 137.2 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "detail": "LTM P/E 132.9 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -5896,11 +6858,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/MIR?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/MIR?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/MIR?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -5916,10 +6880,10 @@
   "pct_from_low": 50.907187718073956,
   "pos52": 51.30098452883263,
   "currency": "USD",
-  "pe_ltm": 93.84260132941176,
+  "pe_ltm": 92.93429763208556,
   "pe_fwd": null,
-  "ev_ebitda": 54.74326583257918,
-  "ps_ratio": 6.396648847634323,
+  "ev_ebitda": 54.19429107045895,
+  "ps_ratio": 6.334735604432456,
   "revenue": 13717000000.0,
   "pe_mean_2y": 215.92,
   "ps_mean_2y": 7.49,
@@ -5930,13 +6894,13 @@
   "roic_trend": null,
   "debt_equity": 0.27150403667895945,
   "fcf_margin": 9.404388714733543,
-  "market_cap": 87742832243.0,
+  "market_cap": 86893568286.0,
   "beta": -0.03026092860809985,
   "vol30": 42.22615501197565,
   "downdev": 34.10083205867736,
   "ret1y": -12.605076840310826,
   "earnings_date": "2026-11-04",
-  "earnings_days": 51,
+  "earnings_days": 50,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -5952,7 +6916,28 @@
   "analyst_detail": "Consensus $259.03 (range $220.0\u2013$336.0) \u00b7 23 buy / 6 hold / 0 sell",
   "analyst_low": 220.0,
   "analyst_high": 336.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-08-15",
+    "to": "2026-08-17",
+    "price_return": -12.8,
+    "ps_change": -33.1,
+    "sales_growth": 30.6,
+    "pe_change": -53.8,
+    "eps_growth": 88.6,
+    "share_effect": -0.2
+   },
+   {
+    "period": "3y",
+    "from": "2023-08-18",
+    "to": "2026-08-17",
+    "price_return": 177.9,
+    "ps_change": 54.3,
+    "sales_growth": 103.6,
+    "share_effect": -11.5
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -5981,7 +6966,7 @@
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
     "score": 0.0,
-    "detail": "LTM P/E 93.8 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "detail": "LTM P/E 92.9 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -6061,10 +7046,13 @@
   "thin": false,
   "alias": null,
   "stale": false,
-  "errors": [],
+  "errors": [
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/DASH?modules=defaultKeyStatistics,financialData,summaryProfile"
+  ],
   "sources": {
    "quote": "yahoo",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -6072,21 +7060,21 @@
   "name": "Zoom Communications, Inc.",
   "type": "equity",
   "sector": "Technology",
-  "price": 95.57,
-  "change_pct": 0.1152315105803472,
+  "price": 95.36,
+  "change_pct": -0.21973422622161115,
   "high52": 111.88,
   "low52": 72.72,
-  "pct_from_high": -14.578119413657491,
-  "pct_from_low": 31.421892189218916,
-  "pos52": 58.35035750766087,
+  "pct_from_high": -14.765820521987841,
+  "pct_from_low": 31.133113311331133,
+  "pos52": 57.81409601634322,
   "currency": "USD",
-  "pe_ltm": 14.822993589446718,
+  "pe_ltm": 14.545052862198103,
   "pe_fwd": null,
-  "ev_ebitda": 13.467793224200099,
-  "ps_ratio": 5.785010877082072,
+  "ev_ebitda": 13.118255906272669,
+  "ps_ratio": 5.676538177514686,
   "revenue": 4868769000.0,
-  "pe_mean_2y": 25.28,
-  "ps_mean_2y": 5.46,
+  "pe_mean_2y": 25.17,
+  "ps_mean_2y": 5.47,
   "invested_capital": 2088725380.0,
   "excess_cash": 7719532620.0,
   "roic_detail": "NOPAT $0.89B (op income $1.12B \u00d7 79% after tax) \u00f7 invested capital $2.09B (debt $0.00B + equity $9.81B \u2212 excess cash $7.72B; operating cash held back at 2% of revenue = $0.10B)",
@@ -6094,34 +7082,68 @@
   "roic_trend": null,
   "debt_equity": 0.0,
   "fcf_margin": 29.698985513586702,
-  "market_cap": 28165881623.0,
-  "beta": -0.02794355687021551,
-  "vol30": 47.39503206409024,
-  "downdev": 26.770437447535045,
-  "ret1y": 14.086188372925857,
+  "market_cap": 27637753106.0,
+  "beta": 1.2665461226866173,
+  "vol30": 45.9834167216141,
+  "downdev": 26.77131426599476,
+  "ret1y": 12.519174041297942,
   "earnings_date": null,
   "earnings_days": null,
   "earnings_confirmed": false,
   "catalyst_date": null,
   "catalyst_note": null,
   "insider": "buy",
-  "insider_detail": "15 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-11",
+  "insider_detail": "14 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-11",
   "politician": null,
   "politician_detail": "No disclosures",
   "superinv": null,
   "superinv_detail": "No Dataroma change",
   "weight_pct": 1.3514,
   "analyst_target": 118.71,
-  "analyst_upside": 24.212619022705873,
+  "analyst_upside": 24.4861577181208,
   "analyst_detail": "Consensus $118.71 (range $104.0\u2013$135.0) \u00b7 10 buy / 8 hold / 0 sell",
   "analyst_low": 104.0,
   "analyst_high": 135.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": 13.6,
+    "ps_change": 2.1,
+    "sales_growth": 6.6,
+    "pe_change": -66.8,
+    "eps_growth": 242.0,
+    "share_effect": 4.4
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": 34.1,
+    "ps_change": 17.7,
+    "sales_growth": 11.6,
+    "pe_change": -87.0,
+    "eps_growth": 929.2,
+    "share_effect": 2.1
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": -65.8,
+    "ps_change": -75.5,
+    "sales_growth": 36.5,
+    "pe_change": -88.6,
+    "eps_growth": 198.9,
+    "share_effect": 2.3
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.683,
+  "score": 0.6861,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -6136,16 +7158,16 @@
    {
     "key": "position_52wk",
     "label": "52-week position",
-    "score": 0.41649642492339134,
-    "detail": "+31.4% above 52-wk low, -14.6% from high \u2014 58th percentile of range",
+    "score": 0.4218590398365678,
+    "detail": "+31.1% above 52-wk low, -14.8% from high \u2014 58th percentile of range",
     "weight": 0.2,
     "raw": {}
    },
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.8375477716798401,
-    "detail": "LTM P/E 14.8 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.8441654080429023,
+    "detail": "LTM P/E 14.5 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -6161,7 +7183,7 @@
     "key": "insider_activity",
     "label": "Insider activity",
     "score": 0.85,
-    "detail": "15 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-11",
+    "detail": "14 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-11",
     "weight": 0.1,
     "raw": {}
    },
@@ -6226,10 +7248,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ZM?range=3y&interval=1d failed after 4 tries: HTTP 429 rate "
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ZM?range=3y&interval=1d failed after 4 tries: HTTP 429 rate ",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/ZM?modules=defaultKeyStatistics,financialData,summaryProfile,c"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -6246,12 +7270,12 @@
   "pct_from_low": 44.57921635434411,
   "pos52": 97.19209627098498,
   "currency": "USD",
-  "pe_ltm": 34.94025954101959,
+  "pe_ltm": 34.39345652760387,
   "pe_fwd": null,
-  "ev_ebitda": 12.720117614199983,
-  "ps_ratio": 2.3300200187331916,
+  "ev_ebitda": 12.535832127613515,
+  "ps_ratio": 2.293556008897588,
   "revenue": 184432000000.0,
-  "pe_mean_2y": 19.12,
+  "pe_mean_2y": 19.17,
   "ps_mean_2y": 1.59,
   "invested_capital": 224603640000.0,
   "excess_cash": 2604360000.0,
@@ -6260,13 +7284,13 @@
   "roic_trend": null,
   "debt_equity": 0.21860016090104586,
   "fcf_margin": 10.381061854775744,
-  "market_cap": 429730252095.0,
+  "market_cap": 423005121833.0,
   "beta": 0.47059765725814817,
   "vol30": 22.62343738146587,
   "downdev": 15.71432155138552,
   "ret1y": 34.07266982622432,
   "earnings_date": "2026-10-30",
-  "earnings_days": 46,
+  "earnings_days": 45,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -6278,16 +7302,48 @@
   "superinv_detail": "No Dataroma change",
   "weight_pct": 1.3514,
   "analyst_target": 220.47,
-  "analyst_upside": 2.9944875268616262,
+  "analyst_upside": 3.9119573926568374,
   "analyst_detail": "Consensus $220.47 (range $205.0\u2013$243.0) \u00b7 13 buy / 3 hold / 0 sell",
   "analyst_low": 205.0,
   "analyst_high": 243.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": 35.0,
+    "ps_change": 40.9,
+    "sales_growth": 9.7,
+    "pe_change": 13.5,
+    "eps_growth": 18.9,
+    "share_effect": -12.7
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": 27.4,
+    "ps_change": 45.6,
+    "sales_growth": -7.8,
+    "pe_change": 134.2,
+    "eps_growth": -45.6,
+    "share_effect": -5.1
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": 116.0,
+    "ps_change": 14.6,
+    "sales_growth": 93.5,
+    "share_effect": -2.6
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.3197,
+  "score": 0.3227,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -6310,8 +7366,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.3585652490233431,
-    "detail": "LTM P/E 34.9 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.3715843683903841,
+    "detail": "LTM P/E 34.4 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -6392,11 +7448,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/CVX?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/CVX?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/CVX?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -6412,12 +7470,12 @@
   "pct_from_low": 13.701350277998408,
   "pos52": 26.91107644305772,
   "currency": "USD",
-  "pe_ltm": 29.399368762444865,
+  "pe_ltm": 29.60713815311909,
   "pe_fwd": null,
-  "ev_ebitda": 16.521996002901915,
-  "ps_ratio": 2.145436070538465,
+  "ev_ebitda": 16.61768086157864,
+  "ps_ratio": 2.1605981629190234,
   "revenue": 21747000000.0,
-  "pe_mean_2y": 23.28,
+  "pe_mean_2y": 23.3,
   "ps_mean_2y": 2.62,
   "invested_capital": 24516940000.0,
   "excess_cash": 1120060000.0,
@@ -6426,13 +7484,13 @@
   "roic_trend": null,
   "debt_equity": 0.8572152999130687,
   "fcf_margin": 14.043316319492344,
-  "market_cap": 46656798226.0,
+  "market_cap": 46986528249.0,
   "beta": 1.1397195942246028,
   "vol30": 23.193215027082804,
   "downdev": 24.865418874973944,
   "ret1y": -8.089887640449433,
   "earnings_date": "2026-10-27",
-  "earnings_days": 43,
+  "earnings_days": 42,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -6444,16 +7502,50 @@
   "superinv_detail": "No Dataroma change",
   "weight_pct": 1.3514,
   "analyst_target": 79.67,
-  "analyst_upside": 38.65297598329273,
+  "analyst_upside": 39.137268599371296,
   "analyst_detail": "Consensus $79.67 (range $60.0\u2013$90.0) \u00b7 4 buy / 3 hold / 0 sell",
   "analyst_low": 60.0,
   "analyst_high": 90.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": -7.2,
+    "ps_change": -8.8,
+    "sales_growth": -0.9,
+    "pe_change": 104.9,
+    "eps_growth": -54.7,
+    "share_effect": 2.7
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": 5.1,
+    "ps_change": -4.7,
+    "sales_growth": 9.3,
+    "pe_change": 58.4,
+    "eps_growth": -33.6,
+    "share_effect": 0.9
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": 2.7,
+    "ps_change": -13.8,
+    "sales_growth": 12.7,
+    "pe_change": 46.3,
+    "eps_growth": -29.8,
+    "share_effect": 5.7
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.5732,
+  "score": 0.5721,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -6476,8 +7568,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.4904912199417889,
-    "detail": "LTM P/E 29.4 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.4855443296876407,
+    "detail": "LTM P/E 29.6 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -6558,11 +7650,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/CARR?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/CARR?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/CARR?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -6578,10 +7672,10 @@
   "pct_from_low": 15.209366100622299,
   "pos52": 15.254416587326777,
   "currency": "USD",
-  "pe_ltm": 17.414243314217124,
+  "pe_ltm": 17.69912288830355,
   "pe_fwd": null,
-  "ev_ebitda": 17.417186984375,
-  "ps_ratio": 1.7623192610438514,
+  "ev_ebitda": 17.720599917116477,
+  "ps_ratio": 1.7911490385674373,
   "revenue": 148182000000.0,
   "pe_mean_2y": null,
   "ps_mean_2y": null,
@@ -6592,7 +7686,7 @@
   "roic_trend": null,
   "debt_equity": 0.2347283631462079,
   "fcf_margin": 9.501828832111862,
-  "market_cap": 261143992740.0,
+  "market_cap": 265416046833.0,
   "beta": 1.0448052530754661,
   "vol30": 38.889004260988614,
   "downdev": 23.94277553941162,
@@ -6610,7 +7704,7 @@
   "superinv_detail": "Dennis Hong - ShawSpring Partners (Q2 2026): Alibaba Group Holdings \u00b7 Add 40.96% \u00b7 Change to portfolio: 4.92%",
   "weight_pct": 1.3514,
   "analyst_target": 188.1,
-  "analyst_upside": 72.09515096065874,
+  "analyst_upside": 72.20543806646525,
   "analyst_detail": "Consensus $188.10 (range $160.0\u2013$220.1) \u00b7 12 buy / 0 hold / 0 sell",
   "analyst_low": 160.0,
   "analyst_high": 220.1,
@@ -6619,7 +7713,7 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.7051,
+  "score": 0.7035,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -6642,8 +7736,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.775851349661497,
-    "detail": "LTM P/E 17.4 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.7690685026594393,
+    "detail": "LTM P/E 17.7 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -6724,10 +7818,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/BABA?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/BABA?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/BABA?modules=defaultKeyStatistics,financialData,summaryProfile",
+   "history: missing quarterly revenue or net income"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -6744,12 +7841,12 @@
   "pct_from_low": 51.11491059343164,
   "pos52": 98.2540225950017,
   "currency": "USD",
-  "pe_ltm": 16.12462622818792,
+  "pe_ltm": 16.089387841222184,
   "pe_fwd": null,
-  "ev_ebitda": 13.808458539728683,
-  "ps_ratio": 0.4584940801205273,
+  "ev_ebitda": 13.784291903706395,
+  "ps_ratio": 0.45749209771249216,
   "revenue": 199125000000.0,
-  "pe_mean_2y": 12.4,
+  "pe_mean_2y": 12.38,
   "ps_mean_2y": 0.46,
   "invested_capital": 70569500000.0,
   "excess_cash": 5508500000.0,
@@ -6758,13 +7855,13 @@
   "roic_trend": null,
   "debt_equity": 0.7336949090743358,
   "fcf_margin": 3.585687382297552,
-  "market_cap": 91297633704.0,
+  "market_cap": 91098113957.0,
   "beta": 0.41955575647911286,
   "vol30": 26.547095090659045,
   "downdev": 28.601204542465897,
   "ret1y": 34.72641239798027,
   "earnings_date": "2026-10-20",
-  "earnings_days": 36,
+  "earnings_days": 35,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -6776,16 +7873,50 @@
   "superinv_detail": "Harry Burn - Sound Shore (Q2 2026): Elevance Health Inc. \u00b7 Buy \u00b7 Change to portfolio: 2.90%",
   "weight_pct": 1.3514,
   "analyst_target": 444.93,
-  "analyst_upside": 6.259552923194492,
+  "analyst_upside": 4.876956439751083,
   "analyst_detail": "Consensus $444.93 (range $393.0\u2013$488.0) \u00b7 10 buy / 7 hold / 0 sell",
   "analyst_low": 393.0,
   "analyst_high": 488.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": 36.1,
+    "ps_change": 22.7,
+    "sales_growth": 7.2,
+    "pe_change": 54.4,
+    "eps_growth": -11.9,
+    "share_effect": 3.5
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": -4.0,
+    "ps_change": -28.0,
+    "sales_growth": 22.3,
+    "pe_change": 1.1,
+    "eps_growth": -5.1,
+    "share_effect": 9.0
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": 13.3,
+    "ps_change": -35.8,
+    "sales_growth": 55.7,
+    "pe_change": -31.5,
+    "eps_growth": 65.3,
+    "share_effect": 13.3
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.491,
+  "score": 0.4912,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -6808,7 +7939,7 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.806556518376478,
+    "score": 0.807395527589948,
     "detail": "LTM P/E 16.1 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
@@ -6890,11 +8021,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ELV?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ELV?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/ELV?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -6910,13 +8043,13 @@
   "pct_from_low": 66.905311778291,
   "pos52": 99.28032899246057,
   "currency": "USD",
-  "pe_ltm": 61.70565104859729,
+  "pe_ltm": 62.31787872122818,
   "pe_fwd": null,
-  "ev_ebitda": 31.946265017222668,
-  "ps_ratio": 9.235846018934371,
+  "ev_ebitda": 32.2650660703395,
+  "ps_ratio": 9.327481718693804,
   "revenue": 1215039000.0,
-  "pe_mean_2y": 66.3,
-  "ps_mean_2y": 8.28,
+  "pe_mean_2y": 66.36,
+  "ps_mean_2y": 8.27,
   "invested_capital": 2067809780.0,
   "excess_cash": 240411220.0,
   "roic_detail": "NOPAT $0.20B (op income $0.25B \u00d7 79% after tax) \u00f7 invested capital $2.07B (debt $0.20B + equity $2.11B \u2212 excess cash $0.24B; operating cash held back at 2% of revenue = $0.02B)",
@@ -6924,13 +8057,13 @@
   "roic_trend": null,
   "debt_equity": 0.09486671463760203,
   "fcf_margin": 26.369441639321867,
-  "market_cap": 11221913111.0,
+  "market_cap": 11333254060.0,
   "beta": 1.1291607753852424,
   "vol30": 3.0192813952175497,
   "downdev": 33.34198498751713,
   "ret1y": 35.82033452358577,
   "earnings_date": "2026-11-04",
-  "earnings_days": 51,
+  "earnings_days": 50,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -6942,11 +8075,45 @@
   "superinv_detail": "Henry Ellenbogen - Durable Capital Partners (Q2 2026): Bio-Techne Corp. \u00b7 Reduce -88.74% \u00b7 Change to portfolio: 2.68%",
   "weight_pct": 1.3514,
   "analyst_target": 73.0,
-  "analyst_upside": 1.220188574597886,
+  "analyst_upside": 1.0101010101010157,
   "analyst_detail": "Consensus $73.00 (range $73.0\u2013$73.0) \u00b7 0 buy / 10 hold / 0 sell",
   "analyst_low": 73.0,
   "analyst_high": 73.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": 41.0,
+    "ps_change": 39.2,
+    "sales_growth": 0.3,
+    "pe_change": 30.6,
+    "eps_growth": 8.0,
+    "share_effect": 1.0
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": -1.9,
+    "ps_change": -11.1,
+    "sales_growth": 7.5,
+    "pe_change": 72.5,
+    "eps_growth": -43.1,
+    "share_effect": 2.6
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": -45.4,
+    "ps_change": -63.0,
+    "sales_growth": 42.7,
+    "pe_change": -35.1,
+    "eps_growth": -16.0,
+    "share_effect": 3.4
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -6975,7 +8142,7 @@
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
     "score": 0.0,
-    "detail": "LTM P/E 61.7 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "detail": "LTM P/E 62.3 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -7056,11 +8223,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/TECH?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/TECH?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/TECH?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -7081,8 +8250,8 @@
   "ev_ebitda": null,
   "ps_ratio": null,
   "revenue": null,
-  "pe_mean_2y": 22.62,
-  "ps_mean_2y": 12.52,
+  "pe_mean_2y": 22.63,
+  "ps_mean_2y": 12.51,
   "invested_capital": null,
   "excess_cash": null,
   "roic_detail": null,
@@ -7112,7 +8281,41 @@
   "analyst_detail": null,
   "analyst_low": null,
   "analyst_high": null,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": 41.0,
+    "ps_change": 42.1,
+    "sales_growth": -0.3,
+    "pe_change": 50.8,
+    "eps_growth": -6.5,
+    "share_effect": -0.5
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": -1.9,
+    "ps_change": -0.9,
+    "sales_growth": -0.5,
+    "pe_change": 7.4,
+    "eps_growth": -8.6,
+    "share_effect": -0.5
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": -45.4,
+    "ps_change": -47.5,
+    "sales_growth": 3.9,
+    "pe_change": -21.5,
+    "eps_growth": -30.5,
+    "share_effect": 0.1
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -7226,7 +8429,10 @@
    "quote: stockanalysis: https://stockanalysis.com/api/symbol/s/fnma/history?range=5Y failed after 4 tries: HTTP 400 (curl)",
    "quote: stockanalysis_alt: https://stockanalysis.com/api/symbol/e/fnma/history?range=5Y failed after 4 tries: HTTP 400 (curl)",
    "quote: nasdaq: nasdaq: no data",
-   "quote: finnhub: finnhub: no API key configured"
+   "quote: finnhub: finnhub: no API key configured",
+   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/FNMA?modules=defaultKeyStatistics,financialData,summaryProfile",
+   "analysts: no consensus target"
   ],
   "sources": {
    "earnings_bucket": "na"
@@ -7250,8 +8456,8 @@
   "ev_ebitda": null,
   "ps_ratio": null,
   "revenue": null,
-  "pe_mean_2y": 17.84,
-  "ps_mean_2y": 8.56,
+  "pe_mean_2y": 17.83,
+  "ps_mean_2y": 8.55,
   "invested_capital": null,
   "excess_cash": null,
   "roic_detail": null,
@@ -7281,7 +8487,41 @@
   "analyst_detail": null,
   "analyst_low": null,
   "analyst_high": null,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": 41.0,
+    "ps_change": 42.5,
+    "sales_growth": -1.1,
+    "pe_change": 40.9,
+    "eps_growth": 0.1,
+    "share_effect": 0.0
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": -1.9,
+    "ps_change": -12.8,
+    "sales_growth": 12.5,
+    "pe_change": -22.8,
+    "eps_growth": 27.0,
+    "share_effect": 0.0
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": -45.4,
+    "ps_change": -52.4,
+    "sales_growth": 14.7,
+    "pe_change": -47.3,
+    "eps_growth": 3.5,
+    "share_effect": 0.0
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -7395,7 +8635,10 @@
    "quote: stockanalysis: https://stockanalysis.com/api/symbol/s/fmcc/history?range=5Y failed after 4 tries: HTTP 400 (curl)",
    "quote: stockanalysis_alt: https://stockanalysis.com/api/symbol/e/fmcc/history?range=5Y failed after 4 tries: HTTP 400 (curl)",
    "quote: nasdaq: nasdaq: no data",
-   "quote: finnhub: finnhub: no API key configured"
+   "quote: finnhub: finnhub: no API key configured",
+   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/FMCC?modules=defaultKeyStatistics,financialData,summaryProfile",
+   "analysts: no consensus target"
   ],
   "sources": {
    "earnings_bucket": "na"
@@ -7414,12 +8657,12 @@
   "pct_from_low": 48.077368542969666,
   "pos52": 70.22500422940281,
   "currency": "USD",
-  "pe_ltm": 28.32300382390511,
+  "pe_ltm": 28.440712637193098,
   "pe_fwd": null,
-  "ev_ebitda": 17.05462525620579,
-  "ps_ratio": 0.7629296487475619,
+  "ev_ebitda": 17.115465447116826,
+  "ps_ratio": 0.7661003415220514,
   "revenue": 447567000000.0,
-  "pe_mean_2y": 22.82,
+  "pe_mean_2y": 22.71,
   "ps_mean_2y": 0.9,
   "invested_capital": 159398340000.0,
   "excess_cash": 19169660000.0,
@@ -7428,13 +8671,13 @@
   "roic_trend": null,
   "debt_equity": 0.8974391669323133,
   "fcf_margin": 4.402245920722484,
-  "market_cap": 341462134101.0,
+  "market_cap": 342881231554.0,
   "beta": 0.4088479704297115,
   "vol30": 20.451248329722585,
   "downdev": 28.845104094140684,
   "ret1y": 8.466955120047515,
   "earnings_date": "2026-10-27",
-  "earnings_days": 43,
+  "earnings_days": 42,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -7446,16 +8689,50 @@
   "superinv_detail": "Duan Yongping - H&H International Investment (Q2 2026): United Health Group Inc. \u00b7 Reduce -33.56% \u00b7 Change to portfolio: 0.44%",
   "weight_pct": 1.3514,
   "analyst_target": 481.67,
-  "analyst_upside": 27.059537313039133,
+  "analyst_upside": 25.58206231260592,
   "analyst_detail": "Consensus $481.67 (range $380.0\u2013$529.0) \u00b7 16 buy / 5 hold / 0 sell",
   "analyst_low": 380.0,
   "analyst_high": 529.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": 8.8,
+    "ps_change": 1.7,
+    "sales_growth": 6.6,
+    "pe_change": 23.5,
+    "eps_growth": -11.9,
+    "share_effect": 0.4
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": -21.2,
+    "ps_change": -41.4,
+    "sales_growth": 29.6,
+    "pe_change": -7.1,
+    "eps_growth": -15.1,
+    "share_effect": 3.8
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": -8.1,
+    "ps_change": -47.8,
+    "sales_growth": 66.9,
+    "pe_change": -5.9,
+    "eps_growth": -2.4,
+    "share_effect": 5.5
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.4206,
+  "score": 0.42,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -7478,8 +8755,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.5161189565736879,
-    "detail": "LTM P/E 28.3 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.5133163657811167,
+    "detail": "LTM P/E 28.4 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -7560,11 +8837,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/UNH?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/UNH?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/UNH?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -7580,13 +8859,13 @@
   "pct_from_low": 21.815290001060323,
   "pos52": 80.17301847089077,
   "currency": "USD",
-  "pe_ltm": 33.59364681721005,
+  "pe_ltm": 33.469572720938004,
   "pe_fwd": null,
-  "ev_ebitda": 22.95824851206071,
-  "ps_ratio": 15.334381554694886,
+  "ev_ebitda": 22.874359223371577,
+  "ps_ratio": 15.277745859748102,
   "revenue": 32791000000.0,
-  "pe_mean_2y": 36.56,
-  "ps_mean_2y": 16.82,
+  "pe_mean_2y": 36.55,
+  "ps_mean_2y": 16.81,
   "invested_capital": 13812820000.0,
   "excess_cash": 12924180000.0,
   "roic_detail": "NOPAT $14.93B (op income $18.90B \u00d7 79% after tax) \u00f7 invested capital $13.81B (debt $19.00B + equity $7.74B \u2212 excess cash $12.92B; operating cash held back at 2% of revenue = $0.66B)",
@@ -7594,13 +8873,13 @@
   "roic_trend": null,
   "debt_equity": 2.455732195941579,
   "fcf_margin": 66.02116434387484,
-  "market_cap": 502829705560.0,
+  "market_cap": 500972564487.0,
   "beta": 0.8725103845064461,
   "vol30": 17.8771302660068,
   "downdev": 14.633768568079436,
   "ret1y": -2.430655818456684,
   "earnings_date": "2026-10-29",
-  "earnings_days": 45,
+  "earnings_days": 44,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -7612,16 +8891,50 @@
   "superinv_detail": "AltaRock Partners (Q2 2026): Mastercard Inc. \u00b7 Add 46.22% \u00b7 Change to portfolio: 2.93%",
   "weight_pct": 1.3514,
   "analyst_target": 665.23,
-  "analyst_upside": 16.87310037070222,
+  "analyst_upside": 15.808989937676277,
   "analyst_detail": "Consensus $665.23 (range $550.0\u2013$740.0) \u00b7 22 buy / 2 hold / 0 sell",
   "analyst_low": 550.0,
   "analyst_high": 740.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": -1.0,
+    "ps_change": -17.0,
+    "sales_growth": 15.8,
+    "pe_change": -18.4,
+    "eps_growth": 21.2,
+    "share_effect": 3.0
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": 38.6,
+    "ps_change": 12.0,
+    "sales_growth": 15.1,
+    "pe_change": -19.0,
+    "eps_growth": 71.2,
+    "share_effect": 7.5
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": 66.6,
+    "ps_change": 6.1,
+    "sales_growth": 39.5,
+    "pe_change": -36.5,
+    "eps_growth": 162.1,
+    "share_effect": 12.6
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.5588,
+  "score": 0.5595,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -7644,8 +8957,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.39062745673309407,
-    "detail": "LTM P/E 33.6 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.3935816018824285,
+    "detail": "LTM P/E 33.5 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -7726,11 +9039,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/MA?range=3y&interval=1d failed after 4 tries: HTTP 429 rate "
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/MA?range=3y&interval=1d failed after 4 tries: HTTP 429 rate ",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/MA?modules=defaultKeyStatistics,financialData,summaryProfile,c"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -7738,13 +9053,13 @@
   "name": "U.S. Global Jets ETF",
   "type": "etf",
   "sector": null,
-  "price": 28.17,
-  "change_pct": 1.1853448275862135,
+  "price": 28.18,
+  "change_pct": 0.035498757543478913,
   "high52": 33.53,
   "low52": 23.64,
-  "pct_from_high": -15.985684461676108,
-  "pct_from_low": 19.162436548223354,
-  "pos52": 45.80384226491406,
+  "pct_from_high": -15.955860423501345,
+  "pct_from_low": 19.20473773265651,
+  "pos52": 45.90495449949443,
   "currency": "USD",
   "pe_ltm": null,
   "pe_fwd": null,
@@ -7761,10 +9076,10 @@
   "debt_equity": null,
   "fcf_margin": null,
   "market_cap": null,
-  "beta": -0.03312572942343261,
-  "vol30": 26.66166425092502,
+  "beta": 1.2628608834296815,
+  "vol30": 26.55568808616509,
   "downdev": 16.958322737379994,
-  "ret1y": 8.596761757902849,
+  "ret1y": 7.066869300911849,
   "earnings_date": null,
   "earnings_days": null,
   "earnings_confirmed": false,
@@ -7818,12 +9133,12 @@
   "pct_from_low": 101.97368421052629,
   "pos52": 32.710280373831765,
   "currency": "USD",
-  "pe_ltm": 20.50052046345329,
+  "pe_ltm": 21.632149197065942,
   "pe_fwd": null,
-  "ev_ebitda": 8.31431126432273,
-  "ps_ratio": 1.322811880371763,
+  "ev_ebitda": 8.661685578830646,
+  "ps_ratio": 1.3958310964283251,
   "revenue": 1261341000.0,
-  "pe_mean_2y": 21.73,
+  "pe_mean_2y": 21.7,
   "ps_mean_2y": 1.36,
   "invested_capital": 1041166820.0,
   "excess_cash": 263122180.0,
@@ -7832,7 +9147,7 @@
   "roic_trend": null,
   "debt_equity": 1.7171725168066965,
   "fcf_margin": 19.91816645934763,
-  "market_cap": 1668516860.0,
+  "market_cap": 1760618991.0,
   "beta": 1.8796369493333533,
   "vol30": 70.07798743601455,
   "downdev": 48.38839138053318,
@@ -7843,23 +9158,33 @@
   "catalyst_date": null,
   "catalyst_note": null,
   "insider": "buy",
-  "insider_detail": "13 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-04",
+  "insider_detail": "10 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-04",
   "politician": null,
   "politician_detail": "No disclosures",
   "superinv": null,
   "superinv_detail": "No Dataroma change",
   "weight_pct": 1.3514,
   "analyst_target": 28.67,
-  "analyst_upside": 43.56534802203307,
+  "analyst_upside": 33.41088878548163,
   "analyst_detail": "Consensus $28.67 (range $25.0\u2013$36.0) \u00b7 6 buy / 0 hold / 0 sell",
   "analyst_low": 25.0,
   "analyst_high": 36.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": -45.8,
+    "ps_change": -45.4,
+    "sales_growth": 21.1,
+    "share_effect": -18.0
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.6591,
+  "score": 0.6529,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -7882,8 +9207,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.7023685603939692,
-    "detail": "LTM P/E 20.5 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.6754250191174775,
+    "detail": "LTM P/E 21.6 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -7899,7 +9224,7 @@
     "key": "insider_activity",
     "label": "Insider activity",
     "score": 0.85,
-    "detail": "13 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-04",
+    "detail": "10 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-04",
     "weight": 0.1,
     "raw": {}
    },
@@ -7964,10 +9289,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/PGY?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/PGY?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/PGY?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -8016,7 +9343,7 @@
   "superinv_detail": "No Dataroma change",
   "weight_pct": 1.3514,
   "analyst_target": 32.67,
-  "analyst_upside": 103.1716417910448,
+  "analyst_upside": 100.92250922509226,
   "analyst_detail": "Consensus $32.67 (range $20.0\u2013$45.0) \u00b7 6 buy / 1 hold / 0 sell",
   "analyst_low": 20.0,
   "analyst_high": 45.0,
@@ -8130,7 +9457,10 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/AVEX?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/AVEX?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/AVEX?modules=defaultKeyStatistics,financialData,summaryProfile",
+   "history: could not build TTM series"
   ],
   "sources": {
    "quote": "stockanalysis",
@@ -8300,7 +9630,11 @@
    "quote: stockanalysis: https://stockanalysis.com/api/symbol/s/smegf/history?range=5Y failed after 4 tries: HTTP 400 (curl)",
    "quote: stockanalysis_alt: https://stockanalysis.com/api/symbol/e/smegf/history?range=5Y failed after 4 tries: HTTP 400 (curl)",
    "quote: nasdaq: nasdaq: no data",
-   "quote: finnhub: finnhub: no API key configured"
+   "quote: finnhub: finnhub: no API key configured",
+   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/SMEGF?modules=defaultKeyStatistics,financialData,summaryProfil",
+   "analysts: no consensus target",
+   "history: https://data.sec.gov/api/xbrl/companyfacts/CIK0001830056.json failed after 4 tries: HTTP 404 (curl)"
   ],
   "sources": {
    "earnings_bucket": "na"
@@ -8319,10 +9653,10 @@
   "pct_from_low": 93.53828006929855,
   "pos52": 64.75837253417491,
   "currency": "USD",
-  "pe_ltm": 55.05532441439685,
+  "pe_ltm": 55.129431374825,
   "pe_fwd": null,
-  "ev_ebitda": 42.19219501971971,
-  "ps_ratio": 16.19507223222524,
+  "ev_ebitda": 42.24996281297702,
+  "ps_ratio": 16.21687153301604,
   "revenue": 38366200000.0,
   "pe_mean_2y": null,
   "ps_mean_2y": null,
@@ -8333,13 +9667,13 @@
   "roic_trend": null,
   "debt_equity": 0.2238859752709086,
   "fcf_margin": 32.919079815045535,
-  "market_cap": 621343380276.0,
+  "market_cap": 622179736610.0,
   "beta": 1.7543058461611143,
   "vol30": 39.41724753141682,
   "downdev": 27.483026801404808,
   "ret1y": 95.87519896538004,
   "earnings_date": "2026-10-14",
-  "earnings_days": 30,
+  "earnings_days": 29,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -8351,7 +9685,7 @@
   "superinv_detail": "Lee Ainslie - Maverick Capital (Q2 2026): ASML Holding NV \u00b7 Reduce -99.62% \u00b7 Change to portfolio: 5.25%",
   "weight_pct": 1.3514,
   "analyst_target": 2391.8,
-  "analyst_upside": 40.8349525996585,
+  "analyst_upside": 51.84585595022696,
   "analyst_detail": "Consensus $2,391.80 (range $2100.0\u2013$2859.0) \u00b7 6 buy / 0 hold / 0 sell",
   "analyst_low": 2100.0,
   "analyst_high": 2859.0,
@@ -8465,11 +9799,14 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ASML?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ASML?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/ASML?modules=defaultKeyStatistics,financialData,summaryProfile",
+   "history: missing quarterly revenue or net income"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -8485,10 +9822,10 @@
   "pct_from_low": 83.69897619997342,
   "pos52": 74.53526463275053,
   "currency": "USD",
-  "pe_ltm": 40.40781613659786,
+  "pe_ltm": 40.35794072057995,
   "pe_fwd": null,
-  "ev_ebitda": 25.508511517152527,
-  "ps_ratio": 17.982480307345728,
+  "ev_ebitda": 25.476293922397847,
+  "ps_ratio": 17.96028451029174,
   "revenue": 121228300000.0,
   "pe_mean_2y": null,
   "ps_mean_2y": null,
@@ -8499,18 +9836,18 @@
   "roic_trend": null,
   "debt_equity": 0.22608979331273463,
   "fcf_margin": 35.48849567304004,
-  "market_cap": 2179985517443.0,
+  "market_cap": 2177294758699.0,
   "beta": -0.019835148889876298,
   "vol30": 38.79374970823392,
   "downdev": 24.997442193040825,
   "ret1y": 78.11775523079099,
   "earnings_date": "2026-10-15",
-  "earnings_days": 31,
+  "earnings_days": 30,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
   "insider": "buy",
-  "insider_detail": "127 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-09",
+  "insider_detail": "126 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-09",
   "politician": null,
   "politician_detail": "No disclosures",
   "superinv": "add",
@@ -8526,7 +9863,7 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.5387,
+  "score": 0.539,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -8549,7 +9886,7 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.22838533008100337,
+    "score": 0.2295728399861917,
     "detail": "LTM P/E 40.4 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
@@ -8566,7 +9903,7 @@
     "key": "insider_activity",
     "label": "Insider activity",
     "score": 0.85,
-    "detail": "127 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-09",
+    "detail": "126 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-09",
     "weight": 0.1,
     "raw": {}
    },
@@ -8630,10 +9967,14 @@
   "thin": false,
   "alias": null,
   "stale": false,
-  "errors": [],
+  "errors": [
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/TSM?modules=defaultKeyStatistics,financialData,summaryProfile,",
+   "history: no us-gaap facts"
+  ],
   "sources": {
    "quote": "yahoo",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -8651,11 +9992,11 @@
   "currency": "USD",
   "pe_ltm": null,
   "pe_fwd": null,
-  "ev_ebitda": 55.04088498925411,
-  "ps_ratio": 9.711446470739599,
+  "ev_ebitda": 55.67635168046776,
+  "ps_ratio": 9.825571493595444,
   "revenue": 52853000000.0,
   "pe_mean_2y": null,
-  "ps_mean_2y": 3.96,
+  "ps_mean_2y": 3.99,
   "invested_capital": 124507060000.0,
   "excess_cash": 36358940000.0,
   "roic_detail": "NOPAT $-1.75B (op income $-2.21B \u00d7 79% after tax) \u00f7 invested capital $124.51B (debt $46.59B + equity $114.28B \u2212 excess cash $36.36B; operating cash held back at 2% of revenue = $1.06B)",
@@ -8663,13 +10004,13 @@
   "roic_trend": null,
   "debt_equity": 0.4076355649670549,
   "fcf_margin": -9.751575123455622,
-  "market_cap": 513279080318.0,
+  "market_cap": 519310930151.0,
   "beta": 1.5564247051730595,
   "vol30": 61.27557275359193,
   "downdev": 42.26375885816303,
   "ret1y": 294.9207639171069,
   "earnings_date": "2026-10-22",
-  "earnings_days": 38,
+  "earnings_days": 37,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -8681,11 +10022,39 @@
   "superinv_detail": "Chase Coleman - Tiger Global Management (Q2 2026): Intel Corp. \u00b7 Add 159.52% \u00b7 Change to portfolio: 1.52%",
   "weight_pct": 1.3514,
   "analyst_target": 116.12,
-  "analyst_upside": 12.80357489799884,
+  "analyst_upside": 19.477312480707898,
   "analyst_detail": "Consensus $116.12 (range $80.0\u2013$200.0) \u00b7 6 buy / 22 hold / 2 sell",
   "analyst_low": 80.0,
   "analyst_high": 200.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": 303.6,
+    "ps_change": 333.2,
+    "sales_growth": 8.9,
+    "share_effect": -14.4
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": 156.6,
+    "ps_change": 207.1,
+    "sales_growth": 1.6,
+    "share_effect": -17.8
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": 76.3,
+    "ps_change": 203.2,
+    "sales_growth": -27.3,
+    "share_effect": -20.0
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -8795,11 +10164,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/INTC?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/INTC?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/INTC?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -8815,13 +10186,13 @@
   "pct_from_low": 213.49513946248177,
   "pos52": 79.33981866263696,
   "currency": "USD",
-  "pe_ltm": 184.48662585374856,
+  "pe_ltm": 186.1021547880046,
   "pe_fwd": null,
-  "ev_ebitda": 118.3068860967453,
-  "ps_ratio": 23.088123879904153,
+  "ev_ebitda": 119.352469544043,
+  "ps_ratio": 23.290304021651895,
   "revenue": 34639000000.0,
-  "pe_mean_2y": 150.19,
-  "ps_mean_2y": 12.41,
+  "pe_mean_2y": 149.0,
+  "ps_mean_2y": 12.44,
   "invested_capital": 56361780000.0,
   "excess_cash": 9859220000.0,
   "roic_detail": "NOPAT $2.92B (op income $3.69B \u00d7 79% after tax) \u00f7 invested capital $56.36B (debt $3.22B + equity $63.00B \u2212 excess cash $9.86B; operating cash held back at 2% of revenue = $0.69B)",
@@ -8829,29 +10200,63 @@
   "roic_trend": null,
   "debt_equity": 0.051143668947126145,
   "fcf_margin": 16.52472646438985,
-  "market_cap": 799749523076.0,
+  "market_cap": 806752841006.0,
   "beta": 2.139514519635534,
   "vol30": 54.04203750930237,
   "downdev": 40.485414881756256,
   "ret1y": 216.95895162844482,
   "earnings_date": "2026-11-03",
-  "earnings_days": 50,
+  "earnings_days": 49,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
   "insider": "buy",
-  "insider_detail": "28 Form 4 filings in 90d (cluster) \u2014 latest 2026-08-27",
+  "insider_detail": "29 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-14",
   "politician": null,
   "politician_detail": "No disclosures",
   "superinv": "new",
   "superinv_detail": "Chase Coleman - Tiger Global Management (Q2 2026): Advanced Micro Devices \u00b7 Buy \u00b7 Change to portfolio: 1.63%",
   "weight_pct": 1.3514,
   "analyst_target": 645.5,
-  "analyst_upside": 25.06539050239281,
+  "analyst_upside": 30.824263796842377,
   "analyst_detail": "Consensus $645.50 (range $465.0\u2013$1250.0) \u00b7 28 buy / 6 hold / 0 sell",
   "analyst_low": 465.0,
   "analyst_high": 1250.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": 211.2,
+    "ps_change": 127.2,
+    "sales_growth": 39.4,
+    "pe_change": 43.0,
+    "eps_growth": 117.6,
+    "share_effect": -1.7
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": 386.2,
+    "ps_change": 192.2,
+    "sales_growth": 69.6,
+    "pe_change": -65.7,
+    "eps_growth": 1317.1,
+    "share_effect": -1.9
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": 367.2,
+    "ps_change": 116.8,
+    "sales_growth": 190.3,
+    "pe_change": 273.1,
+    "eps_growth": 25.2,
+    "share_effect": -25.8
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -8880,7 +10285,7 @@
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
     "score": 0.0,
-    "detail": "LTM P/E 184.5 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "detail": "LTM P/E 186.1 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -8896,7 +10301,7 @@
     "key": "insider_activity",
     "label": "Insider activity",
     "score": 0.85,
-    "detail": "28 Form 4 filings in 90d (cluster) \u2014 latest 2026-08-27",
+    "detail": "29 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-14",
     "weight": 0.1,
     "raw": {}
    },
@@ -8961,11 +10366,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/AMD?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/AMD?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/AMD?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -8981,13 +10388,13 @@
   "pct_from_low": 43.24462205594764,
   "pos52": 80.62777425491439,
   "currency": "USD",
-  "pe_ltm": 27.389502818936965,
+  "pe_ltm": 27.779797959850168,
   "pe_fwd": null,
-  "ev_ebitda": 18.71678224569208,
-  "ps_ratio": 11.039445672539998,
+  "ev_ebitda": 18.98618058085059,
+  "ps_ratio": 11.19675564756403,
   "revenue": 331839000000.0,
-  "pe_mean_2y": 33.1,
-  "ps_mean_2y": 12.22,
+  "pe_mean_2y": 33.06,
+  "ps_mean_2y": 12.21,
   "invested_capital": 412474780000.0,
   "excess_cash": 70206220000.0,
   "roic_detail": "NOPAT $122.64B (op income $155.24B \u00d7 79% after tax) \u00f7 invested capital $412.47B (debt $40.29B + equity $442.39B \u2212 excess cash $70.21B; operating cash held back at 2% of revenue = $6.64B)",
@@ -8995,34 +10402,68 @@
   "roic_trend": null,
   "debt_equity": 0.09108314665666034,
   "fcf_margin": 23.45203547503458,
-  "market_cap": 3663318612530.0,
+  "market_cap": 3715520197332.0,
   "beta": 1.1266327165202301,
   "vol30": 25.542502267952166,
   "downdev": 20.558845413898048,
   "ret1y": 0.8782259835133033,
   "earnings_date": "2026-11-04",
-  "earnings_days": 51,
+  "earnings_days": 50,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
   "insider": "buy",
-  "insider_detail": "37 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-11",
+  "insider_detail": "36 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-11",
   "politician": null,
   "politician_detail": "No disclosures",
   "superinv": "add",
   "superinv_detail": "AltaRock Partners (Q2 2026): Microsoft Corp. \u00b7 Add 25.00% \u00b7 Change to portfolio: 4.11%",
   "weight_pct": 1.3514,
   "analyst_target": 571.41,
-  "analyst_upside": 15.289631378245863,
+  "analyst_upside": 13.058704813913444,
   "analyst_detail": "Consensus $571.41 (range $510.0\u2013$700.0) \u00b7 31 buy / 1 hold / 0 sell",
   "analyst_low": 510.0,
   "analyst_high": 700.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": -0.9,
+    "ps_change": -15.3,
+    "sales_growth": 16.8,
+    "pe_change": -22.9,
+    "eps_growth": 28.5,
+    "share_effect": 0.2
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": 53.1,
+    "ps_change": 0.4,
+    "sales_growth": 52.1,
+    "pe_change": -14.9,
+    "eps_growth": 79.9,
+    "share_effect": 0.3
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": 65.8,
+    "ps_change": -16.7,
+    "sales_growth": 95.0,
+    "pe_change": -26.5,
+    "eps_growth": 125.5,
+    "share_effect": 2.1
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.5901,
+  "score": 0.5879,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -9045,8 +10486,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.5383451709776913,
-    "detail": "LTM P/E 27.4 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.529052429527377,
+    "detail": "LTM P/E 27.8 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -9062,7 +10503,7 @@
     "key": "insider_activity",
     "label": "Insider activity",
     "score": 0.85,
-    "detail": "37 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-11",
+    "detail": "36 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-11",
     "weight": 0.1,
     "raw": {}
    },
@@ -9127,11 +10568,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/MSFT?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/MSFT?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/MSFT?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -9297,7 +10740,10 @@
    "quote: stockanalysis: https://stockanalysis.com/api/symbol/s/mraay/history?range=5Y failed after 4 tries: HTTP 400 (curl)",
    "quote: stockanalysis_alt: https://stockanalysis.com/api/symbol/e/mraay/history?range=5Y failed after 4 tries: HTTP 400 (curl)",
    "quote: nasdaq: nasdaq: no data",
-   "quote: finnhub: finnhub: no API key configured"
+   "quote: finnhub: finnhub: no API key configured",
+   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/MRAAY?modules=defaultKeyStatistics,financialData,summaryProfil",
+   "analysts: no consensus target"
   ],
   "sources": {
    "earnings_bucket": "na"
@@ -9316,12 +10762,12 @@
   "pct_from_low": 24.488632765499347,
   "pos52": 53.65616761481895,
   "currency": "USD",
-  "pe_ltm": 38.954011741682976,
+  "pe_ltm": 37.35784735812133,
   "pe_fwd": null,
-  "ev_ebitda": 27.08543845534996,
-  "ps_ratio": 5.801661323229379,
+  "ev_ebitda": 26.03553982300885,
+  "ps_ratio": 5.563934712911688,
   "revenue": 27448000000.0,
-  "pe_mean_2y": 36.83,
+  "pe_mean_2y": 36.85,
   "ps_mean_2y": 5.4,
   "invested_capital": 29065960000.0,
   "excess_cash": 254040000.0,
@@ -9330,13 +10776,13 @@
   "roic_trend": null,
   "debt_equity": 0.5093951093951093,
   "fcf_margin": 19.294666278053047,
-  "market_cap": 159244000000.0,
+  "market_cap": 152718880000.0,
   "beta": 1.2083866813880466,
   "vol30": 42.39736910542004,
   "downdev": 27.0244114864578,
   "ret1y": 9.186847367251726,
   "earnings_date": "2026-11-03",
-  "earnings_days": 50,
+  "earnings_days": 49,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -9348,16 +10794,50 @@
   "superinv_detail": "No Dataroma change",
   "weight_pct": 1.3514,
   "analyst_target": 510.0,
-  "analyst_upside": 19.89562028351788,
+  "analyst_upside": 29.718180893274994,
   "analyst_detail": "Consensus $510.00 (range $487.0\u2013$534.0) \u00b7 10 buy / 0 hold / 0 sell",
   "analyst_low": 487.0,
   "analyst_high": 534.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": 7.5,
+    "ps_change": -7.0,
+    "sales_growth": 14.9,
+    "pe_change": 14.8,
+    "eps_growth": -6.4,
+    "share_effect": 0.6
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": 80.6,
+    "ps_change": 28.0,
+    "sales_growth": 37.1,
+    "pe_change": 23.6,
+    "eps_growth": 46.1,
+    "share_effect": 2.9
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": 144.9,
+    "ps_change": 44.9,
+    "sales_growth": 64.0,
+    "pe_change": -5.6,
+    "eps_growth": 159.5,
+    "share_effect": 3.1
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.4778,
+  "score": 0.4866,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -9380,8 +10860,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.26299972043611963,
-    "detail": "LTM P/E 39.0 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.3010036343304444,
+    "detail": "LTM P/E 37.4 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -9462,11 +10942,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ETN?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ETN?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/ETN?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -9485,7 +10967,7 @@
   "pe_ltm": null,
   "pe_fwd": null,
   "ev_ebitda": null,
-  "ps_ratio": 0.022776067430501215,
+  "ps_ratio": 0.023623245905928656,
   "revenue": 244970328000.0,
   "pe_mean_2y": null,
   "ps_mean_2y": null,
@@ -9496,7 +10978,7 @@
   "roic_trend": null,
   "debt_equity": 0.192218611666548,
   "fcf_margin": -0.006292598832622701,
-  "market_cap": 5579460709.0,
+  "market_cap": 5786994298.0,
   "beta": 2.684133225621342,
   "vol30": 74.25043714972179,
   "downdev": 41.15968316822196,
@@ -9507,14 +10989,14 @@
   "catalyst_date": null,
   "catalyst_note": null,
   "insider": "buy",
-  "insider_detail": "4 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-10",
+  "insider_detail": "5 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-14",
   "politician": null,
   "politician_detail": "No disclosures",
   "superinv": null,
   "superinv_detail": "No Dataroma change",
   "weight_pct": 1.3514,
   "analyst_target": 39.43,
-  "analyst_upside": 12.272209567198185,
+  "analyst_upside": 4.811270600744291,
   "analyst_detail": "Consensus $39.43 (range $25.0\u2013$50.0) \u00b7 4 buy / 3 hold / 0 sell",
   "analyst_low": 25.0,
   "analyst_high": 50.0,
@@ -9563,7 +11045,7 @@
     "key": "insider_activity",
     "label": "Insider activity",
     "score": 0.85,
-    "detail": "4 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-10",
+    "detail": "5 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-14",
     "weight": 0.1,
     "raw": {}
    },
@@ -9628,10 +11110,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/BLSH?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/BLSH?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/BLSH?modules=defaultKeyStatistics,financialData,summaryProfile",
+   "history: no us-gaap facts"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -9723,10 +11208,10 @@
   "pe_ltm": null,
   "pe_fwd": null,
   "ev_ebitda": null,
-  "ps_ratio": 16.54407960312743,
+  "ps_ratio": 16.892608211787298,
   "revenue": 218710000.0,
   "pe_mean_2y": null,
-  "ps_mean_2y": 292.04,
+  "ps_mean_2y": 292.54,
   "invested_capital": 387920200.0,
   "excess_cash": 635013800.0,
   "roic_detail": "NOPAT $-0.13B (op income $-0.16B \u00d7 79% after tax) \u00f7 invested capital $0.39B (debt $0.00B + equity $1.02B \u2212 excess cash $0.64B; operating cash held back at 2% of revenue = $0.00B)",
@@ -9734,13 +11219,13 @@
   "roic_trend": null,
   "debt_equity": 0.0,
   "fcf_margin": -76.38608202642769,
-  "market_cap": 3618355650.0,
+  "market_cap": 3694582342.0,
   "beta": 1.0501131358855278,
   "vol30": 30.056196853282852,
   "downdev": 25.087274906905417,
   "ret1y": 52.54713196951464,
   "earnings_date": "2026-11-03",
-  "earnings_days": 50,
+  "earnings_days": 49,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -9752,11 +11237,30 @@
   "superinv_detail": "No Dataroma change",
   "weight_pct": 1.3514,
   "analyst_target": 54.44,
-  "analyst_upside": 44.82575152966212,
+  "analyst_upside": 43.1501446226663,
   "analyst_detail": "Consensus $54.44 (range $42.0\u2013$65.0) \u00b7 10 buy / 0 hold / 0 sell",
   "analyst_low": 42.0,
   "analyst_high": 65.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": 54.5,
+    "ps_change": 54.5,
+    "sales_growth": 0.0,
+    "share_effect": 0.0
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": 30.4,
+    "ps_change": 1067.4,
+    "sales_growth": -82.9,
+    "share_effect": -34.7
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
@@ -9866,11 +11370,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/IDYA?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/IDYA?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/IDYA?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -10036,7 +11542,10 @@
    "quote: stockanalysis: https://stockanalysis.com/api/symbol/s/evvty/history?range=5Y failed after 4 tries: HTTP 400 (curl)",
    "quote: stockanalysis_alt: https://stockanalysis.com/api/symbol/e/evvty/history?range=5Y failed after 4 tries: HTTP 400 (curl)",
    "quote: nasdaq: nasdaq: no data",
-   "quote: finnhub: finnhub: no API key configured"
+   "quote: finnhub: finnhub: no API key configured",
+   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/EVVTY?modules=defaultKeyStatistics,financialData,summaryProfil",
+   "analysts: no consensus target"
   ],
   "sources": {
    "earnings_bucket": "na"
@@ -10119,13 +11628,13 @@
   "name": "Fidelity Wise Origin Bitcoin Fund",
   "type": "etf",
   "sector": null,
-  "price": 68.71,
-  "change_pct": 2.1710037174721095,
+  "price": 68.69,
+  "change_pct": 2.1412639405204428,
   "high52": 109.44,
   "low52": 51.05,
-  "pct_from_high": -37.21673976608187,
-  "pct_from_low": 34.59353574926542,
-  "pos52": 30.244904949477647,
+  "pct_from_high": -37.23501461988304,
+  "pct_from_low": 34.55435847208619,
+  "pos52": 30.210652508991267,
   "currency": "USD",
   "pe_ltm": null,
   "pe_fwd": null,
@@ -10142,10 +11651,10 @@
   "debt_equity": null,
   "fcf_margin": null,
   "market_cap": null,
-  "beta": 1.2605511375044394,
-  "vol30": 38.82854479874024,
+  "beta": 1.2605748959771585,
+  "vol30": 38.81976185308818,
   "downdev": 27.938472550167546,
-  "ret1y": -31.228105294765296,
+  "ret1y": -31.24812331097988,
   "earnings_date": null,
   "earnings_days": null,
   "earnings_confirmed": false,
@@ -10271,13 +11780,13 @@
   "pct_from_low": 43.11521477318345,
   "pos52": 21.918367346938773,
   "currency": "USD",
-  "pe_ltm": 58.16478960540274,
+  "pe_ltm": 59.925510047961275,
   "pe_fwd": null,
   "ev_ebitda": null,
-  "ps_ratio": 34.22881162293814,
+  "ps_ratio": 35.264960275032536,
   "revenue": 227464000.0,
-  "pe_mean_2y": 60.52,
-  "ps_mean_2y": 19.83,
+  "pe_mean_2y": 60.39,
+  "ps_mean_2y": 19.79,
   "invested_capital": 503277280.0,
   "excess_cash": 1666565720.0,
   "roic_detail": "NOPAT $-0.09B (op income $-0.11B \u00d7 79% after tax) \u00f7 invested capital $0.50B (debt $0.94B + equity $1.23B \u2212 excess cash $1.67B; operating cash held back at 2% of revenue = $0.00B)",
@@ -10285,7 +11794,7 @@
   "roic_trend": null,
   "debt_equity": 0.7657738962300847,
   "fcf_margin": -42.085780607041116,
-  "market_cap": 7785822407.0,
+  "market_cap": 8021508924.0,
   "beta": 2.8711764226331793,
   "vol30": 84.92014838269884,
   "downdev": 55.86307027287949,
@@ -10296,14 +11805,14 @@
   "catalyst_date": null,
   "catalyst_note": null,
   "insider": "buy",
-  "insider_detail": "17 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-04",
+  "insider_detail": "19 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-14",
   "politician": null,
   "politician_detail": "No disclosures",
   "superinv": null,
   "superinv_detail": "No Dataroma change",
   "weight_pct": 1.3514,
   "analyst_target": 55.33,
-  "analyst_upside": 58.67507886435332,
+  "analyst_upside": 55.203366058906035,
   "analyst_detail": "Consensus $55.33 (range $45.0\u2013$70.0) \u00b7 5 buy / 1 hold / 0 sell",
   "analyst_low": 45.0,
   "analyst_high": 70.0,
@@ -10336,7 +11845,7 @@
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
     "score": 0.0,
-    "detail": "LTM P/E 58.2 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "detail": "LTM P/E 59.9 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -10352,7 +11861,7 @@
     "key": "insider_activity",
     "label": "Insider activity",
     "score": 0.85,
-    "detail": "17 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-04",
+    "detail": "19 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-14",
     "weight": 0.1,
     "raw": {}
    },
@@ -10417,10 +11926,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/FIGR?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/FIGR?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/FIGR?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -10437,13 +11948,13 @@
   "pct_from_low": 22.84896011792011,
   "pos52": 36.65677895784933,
   "currency": "USD",
-  "pe_ltm": 47.99314180320481,
+  "pe_ltm": 47.97308902203305,
   "pe_fwd": null,
-  "ev_ebitda": 23.050585762876338,
-  "ps_ratio": 3.317146166234036,
+  "ev_ebitda": 23.04062174098034,
+  "ps_ratio": 3.315760176409511,
   "revenue": 28893000000.0,
-  "pe_mean_2y": 61.58,
-  "ps_mean_2y": 6.28,
+  "pe_mean_2y": 61.47,
+  "ps_mean_2y": 6.27,
   "invested_capital": 4123860000.0,
   "excess_cash": 15588140000.0,
   "roic_detail": "NOPAT $2.53B (op income $3.20B \u00d7 79% after tax) \u00f7 invested capital $4.12B (debt $12.96B + equity $6.75B \u2212 excess cash $15.59B; operating cash held back at 2% of revenue = $0.58B)",
@@ -10451,13 +11962,13 @@
   "roic_trend": null,
   "debt_equity": 1.9211618257261411,
   "fcf_margin": 9.261758903540649,
-  "market_cap": 95842304181.0,
+  "market_cap": 95802258777.0,
   "beta": 1.5711650828191308,
   "vol30": 41.99791582201415,
   "downdev": 32.92357186968152,
   "ret1y": -18.730647506629026,
   "earnings_date": "2026-11-04",
-  "earnings_days": 51,
+  "earnings_days": 50,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -10469,16 +11980,48 @@
   "superinv_detail": "Thomas Gayner - Markel Group (Q2 2026): Mercadolibre Inc. \u00b7 Add 340.37% \u00b7 Change to portfolio: 0.24%",
   "weight_pct": 1.3514,
   "analyst_target": 2248.0,
-  "analyst_upside": 18.479790446776335,
+  "analyst_upside": 18.30084620889993,
   "analyst_detail": "Consensus $2,248.00 (range $1750.0\u2013$2600.0) \u00b7 8 buy / 3 hold / 0 sell",
   "analyst_low": 1750.0,
   "analyst_high": 2600.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": -18.8,
+    "ps_change": -41.5,
+    "sales_growth": 38.9,
+    "pe_change": -13.5,
+    "eps_growth": -6.1,
+    "share_effect": -0.1
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": 36.1,
+    "ps_change": -39.7,
+    "sales_growth": 123.8,
+    "pe_change": -44.1,
+    "eps_growth": 143.5,
+    "share_effect": 0.9
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": 0.6,
+    "ps_change": -75.6,
+    "sales_growth": 318.6,
+    "share_effect": -1.5
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.5598,
+  "score": 0.5599,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -10501,7 +12044,7 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.04778233801893317,
+    "score": 0.04825978518968932,
     "detail": "LTM P/E 48.0 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
@@ -10583,11 +12126,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/MELI?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/MELI?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/MELI?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -10603,12 +12148,12 @@
   "pct_from_low": 21.052631578947363,
   "pos52": 35.08828770451968,
   "currency": "USD",
-  "pe_ltm": 21.9066479374115,
+  "pe_ltm": 21.85684190909091,
   "pe_fwd": null,
-  "ev_ebitda": 16.555608953333728,
-  "ps_ratio": 3.436101600666321,
+  "ev_ebitda": 16.524284648993646,
+  "ps_ratio": 3.428289425379433,
   "revenue": 67535000000.0,
-  "pe_mean_2y": 48.36,
+  "pe_mean_2y": 48.44,
   "ps_mean_2y": 3.9,
   "invested_capital": 80787700000.0,
   "excess_cash": 13120300000.0,
@@ -10617,13 +12162,13 @@
   "roic_trend": null,
   "debt_equity": 1.8763783386424895,
   "fcf_margin": 23.324202265491966,
-  "market_cap": 232057121601.0,
+  "market_cap": 231529526343.0,
   "beta": 0.6304270391679011,
   "vol30": 29.629971312239405,
   "downdev": 44.76195296121663,
   "ret1y": -3.0815921559472326,
   "earnings_date": "2026-10-21",
-  "earnings_days": 37,
+  "earnings_days": 36,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -10635,16 +12180,50 @@
   "superinv_detail": "No Dataroma change",
   "weight_pct": 1.3514,
   "analyst_target": 254.95,
-  "analyst_upside": 4.792634304739199,
+  "analyst_upside": 2.352563330523098,
   "analyst_detail": "Consensus $254.95 (range $190.0\u2013$350.0) \u00b7 12 buy / 6 hold / 1 sell",
   "analyst_low": 190.0,
   "analyst_high": 350.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": -1.7,
+    "ps_change": -7.3,
+    "sales_growth": 6.6,
+    "pe_change": -35.8,
+    "eps_growth": 53.1,
+    "share_effect": -0.5
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": 70.6,
+    "ps_change": 58.2,
+    "sales_growth": 11.8,
+    "pe_change": -82.9,
+    "eps_growth": 900.0,
+    "share_effect": -3.5
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": 81.6,
+    "ps_change": 81.9,
+    "sales_growth": 5.2,
+    "pe_change": 39.6,
+    "eps_growth": 30.0,
+    "share_effect": -5.1
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.6143,
+  "score": 0.6146,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -10667,7 +12246,7 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.6688893348235357,
+    "score": 0.6700751926406926,
     "detail": "LTM P/E 21.9 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
@@ -10749,11 +12328,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/IBM?range=3y&interval=1d failed after 4 tries: HTTP 429 rate"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/IBM?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/IBM?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -10769,10 +12350,10 @@
   "pct_from_low": 8.217546645494245,
   "pos52": 18.852459016393443,
   "currency": "USD",
-  "pe_ltm": 9.161475492673068,
+  "pe_ltm": 9.22599292572006,
   "pe_fwd": null,
-  "ev_ebitda": 8.147388392857144,
-  "ps_ratio": 0.19356917508767996,
+  "ev_ebitda": 8.289888392857144,
+  "ps_ratio": 0.1949323382925228,
   "revenue": 187329000000.0,
   "pe_mean_2y": null,
   "ps_mean_2y": null,
@@ -10783,7 +12364,7 @@
   "roic_trend": null,
   "debt_equity": 0.32882029624569137,
   "fcf_margin": -0.09662145209764639,
-  "market_cap": 36261120000.0,
+  "market_cap": 36516480000.0,
   "beta": 1.018774496484349,
   "vol30": 29.519440138075954,
   "downdev": 18.349474962675803,
@@ -10801,7 +12382,7 @@
   "superinv_detail": "No Dataroma change",
   "weight_pct": 1.3514,
   "analyst_target": 36.83,
-  "analyst_upside": 36.10495195861049,
+  "analyst_upside": 35.10638297872339,
   "analyst_detail": "Consensus $36.83 (range $27.0\u2013$48.3) \u00b7 7 buy / 3 hold / 0 sell",
   "analyst_low": 27.0,
   "analyst_high": 48.3,
@@ -10810,7 +12391,7 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.6828,
+  "score": 0.6825,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -10833,7 +12414,7 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.9723458216030222,
+    "score": 0.9708096922447604,
     "detail": "LTM P/E 9.2 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
@@ -10915,10 +12496,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/JD?range=3y&interval=1d failed after 4 tries: HTTP 429 rate "
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/JD?range=3y&interval=1d failed after 4 tries: HTTP 429 rate ",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/JD?modules=defaultKeyStatistics,financialData,summaryProfile,c",
+   "history: missing quarterly revenue or net income"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -10935,10 +12519,10 @@
   "pct_from_low": 26.989713048186246,
   "pos52": 90.00225682690136,
   "currency": "USD",
-  "pe_ltm": 33.31299023412105,
+  "pe_ltm": 33.375390375461166,
   "pe_fwd": null,
-  "ev_ebitda": 26.808279452526374,
-  "ps_ratio": 16.7047989529,
+  "ev_ebitda": 26.857919415840406,
+  "ps_ratio": 16.736089503775,
   "revenue": 40000000000.0,
   "pe_mean_2y": null,
   "ps_mean_2y": null,
@@ -10949,13 +12533,13 @@
   "roic_trend": null,
   "debt_equity": 0.7844838956448337,
   "fcf_margin": 59.330000000000005,
-  "market_cap": 668191958116.0,
+  "market_cap": 669443580151.0,
   "beta": 0.7976172231501635,
   "vol30": 18.338452594022588,
   "downdev": 13.269870858379889,
   "ret1y": 9.25500014556464,
   "earnings_date": "2026-10-27",
-  "earnings_days": 43,
+  "earnings_days": 42,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -10967,7 +12551,7 @@
   "superinv_detail": "AltaRock Partners (Q2 2026): Visa Inc. \u00b7 Add 67.74% \u00b7 Change to portfolio: 2.73%",
   "weight_pct": 1.3514,
   "analyst_target": 425.54,
-  "analyst_upside": 14.87110271291673,
+  "analyst_upside": 13.392666808782788,
   "analyst_detail": "Consensus $425.54 (range $350.0\u2013$466.0) \u00b7 26 buy / 2 hold / 0 sell",
   "analyst_low": 350.0,
   "analyst_high": 466.0,
@@ -10976,7 +12560,7 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.5301,
+  "score": 0.5298,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -10999,8 +12583,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.3973097563304512,
-    "detail": "LTM P/E 33.3 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.395824038679496,
+    "detail": "LTM P/E 33.4 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -11081,11 +12665,14 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/V?range=3y&interval=1d failed after 4 tries: HTTP 429 rate l"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/V?range=3y&interval=1d failed after 4 tries: HTTP 429 rate l",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/V?modules=defaultKeyStatistics,financialData,summaryProfile,ca",
+   "history: no overlapping price/fundamental data"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  },
  {
@@ -11101,13 +12688,13 @@
   "pct_from_low": 7.10922305251306,
   "pos52": 17.85461790603511,
   "currency": "USD",
-  "pe_ltm": 27.16564526951465,
+  "pe_ltm": 27.495325430552448,
   "pe_fwd": null,
-  "ev_ebitda": 18.045758564437193,
-  "ps_ratio": 7.919770474700052,
+  "ev_ebitda": 18.246139206090266,
+  "ps_ratio": 8.015884194053209,
   "revenue": 15336000000.0,
-  "pe_mean_2y": 37.12,
-  "ps_mean_2y": 10.34,
+  "pe_mean_2y": 37.02,
+  "ps_mean_2y": 10.32,
   "invested_capital": 42720720000.0,
   "excess_cash": 1494280000.0,
   "roic_detail": "NOPAT $4.88B (op income $6.18B \u00d7 79% after tax) \u00f7 invested capital $42.72B (debt $13.09B + equity $31.13B \u2212 excess cash $1.49B; operating cash held back at 2% of revenue = $0.31B)",
@@ -11115,13 +12702,13 @@
   "roic_trend": null,
   "debt_equity": 0.4204709737526906,
   "fcf_margin": 46.69405320813772,
-  "market_cap": 121457600000.0,
+  "market_cap": 122931600000.0,
   "beta": 0.8579264104107702,
   "vol30": 26.88940699813011,
   "downdev": 25.94450390803497,
   "ret1y": -24.023380772582048,
   "earnings_date": "2026-10-29",
-  "earnings_days": 45,
+  "earnings_days": 44,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -11133,16 +12720,50 @@
   "superinv_detail": "Bill Ackman - Pershing Square Capital Management (Q2 2026): S&P Global Inc. \u00b7 Buy \u00b7 Change to portfolio: 5.43%",
   "weight_pct": 1.3478,
   "analyst_target": 522.69,
-  "analyst_upside": 27.264980156314696,
+  "analyst_upside": 24.884120992019888,
   "analyst_detail": "Consensus $522.69 (range $500.0\u2013$553.0) \u00b7 17 buy / 0 hold / 0 sell",
   "analyst_low": 500.0,
   "analyst_high": 553.0,
-  "decomposition": [],
+  "decomposition": [
+   {
+    "period": "1y",
+    "from": "2025-09-12",
+    "to": "2026-09-14",
+    "price_return": -23.1,
+    "ps_change": -29.7,
+    "sales_growth": 6.4,
+    "pe_change": -34.5,
+    "eps_growth": 17.5,
+    "share_effect": 2.8
+   },
+   {
+    "period": "3y",
+    "from": "2023-09-15",
+    "to": "2026-09-14",
+    "price_return": 7.8,
+    "ps_change": -22.1,
+    "sales_growth": 28.7,
+    "pe_change": -38.8,
+    "eps_growth": 76.2,
+    "share_effect": 7.5
+   },
+   {
+    "period": "5y",
+    "from": "2021-09-15",
+    "to": "2026-09-14",
+    "price_return": -7.4,
+    "ps_change": -42.7,
+    "sales_growth": 99.0,
+    "pe_change": -40.7,
+    "eps_growth": 56.2,
+    "share_effect": -18.8
+   }
+  ],
   "has_history": true,
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.6992,
+  "score": 0.6974,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -11165,8 +12786,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.5436751126306036,
-    "detail": "LTM P/E 27.2 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.5358255849868465,
+    "detail": "LTM P/E 27.5 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -11247,11 +12868,13 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/SPGI?range=3y&interval=1d failed after 4 tries: HTTP 429 rat"
+   "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/SPGI?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
+   "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/SPGI?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "na"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "distant"
   }
  }
 ]
