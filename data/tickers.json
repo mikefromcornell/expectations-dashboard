@@ -3,7 +3,7 @@
   "symbol": "AMZN",
   "name": "AMAZON COM INC",
   "type": "equity",
-  "sector": null,
+  "sector": "Consumer Discretionary",
   "price": 240.35,
   "change_pct": -1.4110504942778612,
   "high52": 284.02,
@@ -12,21 +12,21 @@
   "pct_from_low": 20.906484229589015,
   "pos52": 48.76217294379914,
   "currency": "USD",
-  "pe_ltm": null,
+  "pe_ltm": 33.450487319273854,
   "pe_fwd": null,
-  "ev_ebitda": null,
-  "ps_ratio": null,
-  "revenue": null,
+  "ev_ebitda": 17.434302585503428,
+  "ps_ratio": 3.6239536549034486,
+  "revenue": 716924000000.0,
   "pe_mean_2y": 37.28,
   "ps_mean_2y": 3.84,
-  "invested_capital": null,
-  "excess_cash": null,
-  "roic_detail": null,
-  "roic": null,
+  "invested_capital": 368022480000.0,
+  "excess_cash": 108690520000.0,
+  "roic_detail": "NOPAT $63.18B (op income $79.97B \u00d7 79% after tax) \u00f7 invested capital $368.02B (debt $65.65B + equity $411.06B \u2212 excess cash $108.69B; operating cash held back at 2% of revenue = $14.34B)",
+  "roic": 17.16749748547969,
   "roic_trend": null,
-  "debt_equity": null,
-  "fcf_margin": null,
-  "market_cap": null,
+  "debt_equity": 0.1597022368725141,
+  "fcf_margin": 1.9405125229452493,
+  "market_cap": 2598099350088.0,
   "beta": 1.4949556254785634,
   "vol30": 30.93318258369117,
   "downdev": 18.25144016703967,
@@ -76,9 +76,9 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.6687,
+  "score": 0.5858,
   "score_partial": true,
-  "score_n": "3 of 6",
+  "score_n": "5 of 6",
   "score_parts": [
    {
     "key": "expectations_gap",
@@ -99,16 +99,16 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": null,
-    "detail": "No positive LTM P/E available",
+    "score": 0.3940360162077654,
+    "detail": "LTM P/E 33.5 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
    {
     "key": "roic_trend",
     "label": "ROIC trend",
-    "score": null,
-    "detail": "ROIC not computable from available data",
+    "score": 0.5416963387671317,
+    "detail": "ROIC 17.2% (computed in-repo: NOPAT \u00f7 invested capital)",
     "weight": 0.1,
     "raw": {}
    },
@@ -130,25 +130,25 @@
    }
   ],
   "buffett": {
-   "moat": "Unknown",
-   "de": null,
-   "fcf_margin": null,
+   "moat": "Narrow",
+   "de": 0.1597022368725141,
+   "fcf_margin": 1.9405125229452493,
    "tests": {
     "moat": {
-     "pass": false,
-     "why": "ROIC unavailable \u2014 cannot assess"
+     "pass": true,
+     "why": "ROIC 17.2% \u2192 narrow moat"
     },
     "returns": {
-     "pass": false,
-     "why": "ROIC unavailable"
+     "pass": true,
+     "why": "ROIC 17.2% vs ~10% cost of capital"
     },
     "leverage": {
-     "pass": false,
-     "why": "Debt/equity unavailable"
+     "pass": true,
+     "why": "Debt/equity 0.16"
     },
     "cashgen": {
      "pass": false,
-     "why": "FCF margin unavailable"
+     "why": "FCF margin 1.9%"
     },
     "stability": {
      "pass": true,
@@ -163,7 +163,7 @@
      "why": "No fair value set \u2014 price test cannot run"
     }
    },
-   "passed": 2,
+   "passed": 5,
    "total": 7,
    "labels": {
     "moat": "Durable moat",
@@ -182,11 +182,11 @@
   "stale": false,
   "errors": [
    "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/AMZN?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
-   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
    "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/AMZN?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -203,10 +203,10 @@
   "pct_from_low": 46.97088906372934,
   "pos52": 39.93311036789297,
   "currency": "USD",
-  "pe_ltm": 15.496439591240875,
+  "pe_ltm": 15.488143854014599,
   "pe_fwd": null,
-  "ev_ebitda": 16.28480711111111,
-  "ps_ratio": 0.6111146298215314,
+  "ev_ebitda": 16.27691463888889,
+  "ps_ratio": 0.6107874807138745,
   "revenue": 3474000000.0,
   "pe_mean_2y": 10.55,
   "ps_mean_2y": 0.6,
@@ -217,7 +217,7 @@
   "roic_trend": null,
   "debt_equity": 4.4625,
   "fcf_margin": 2.33160621761658,
-  "market_cap": 2123012224.0,
+  "market_cap": 2121875708.0,
   "beta": 1.5053152157033023,
   "vol30": 61.614955575513875,
   "downdev": 29.822483084128155,
@@ -234,9 +234,9 @@
   "superinv": null,
   "superinv_detail": "No Dataroma change",
   "weight_pct": 1.3514,
-  "analyst_target": 20.08,
-  "analyst_upside": 7.494646680942177,
-  "analyst_detail": "Consensus $20.08 (range $16.0\u2013$27.0) \u00b7 5 buy / 7 hold / 0 sell",
+  "analyst_target": 20.46,
+  "analyst_upside": 9.528907922912213,
+  "analyst_detail": "Consensus $20.46 (range $16.0\u2013$27.0) \u00b7 5 buy / 7 hold / 0 sell",
   "analyst_low": 16.0,
   "analyst_high": 27.0,
   "decomposition": [
@@ -265,7 +265,7 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.5441,
+  "score": 0.5442,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -288,7 +288,7 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.8215133430656935,
+    "score": 0.8217108606187,
     "detail": "LTM P/E 15.5 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
@@ -383,7 +383,7 @@
   "symbol": "GEMI",
   "name": "Gemini Space Station, Inc.",
   "type": "equity",
-  "sector": null,
+  "sector": "Finance",
   "price": 2.87,
   "change_pct": -6.818181818181817,
   "high52": 18.35,
@@ -395,24 +395,24 @@
   "pe_ltm": null,
   "pe_fwd": null,
   "ev_ebitda": null,
-  "ps_ratio": null,
-  "revenue": null,
+  "ps_ratio": 3.4305814917885717,
+  "revenue": 109238000.0,
   "pe_mean_2y": null,
   "ps_mean_2y": 4.86,
-  "invested_capital": null,
-  "excess_cash": null,
-  "roic_detail": null,
-  "roic": null,
+  "invested_capital": 634613760.0,
+  "excess_cash": 365309240.0,
+  "roic_detail": "NOPAT $-0.33B (op income $-0.42B \u00d7 79% after tax) \u00f7 invested capital $0.63B (debt $0.46B + equity $0.54B \u2212 excess cash $0.37B; operating cash held back at 2% of revenue = $0.00B)",
+  "roic": -51.784584689748925,
   "roic_trend": null,
-  "debt_equity": null,
-  "fcf_margin": null,
-  "market_cap": null,
+  "debt_equity": 0.8487204944598824,
+  "fcf_margin": -352.6858785404346,
+  "market_cap": 374749861.0,
   "beta": 3.223137501592219,
   "vol30": 60.03732579082662,
   "downdev": 53.110828555160175,
   "ret1y": -85.02087682672233,
   "earnings_date": "2026-11-12",
-  "earnings_days": 11,
+  "earnings_days": 10,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -433,9 +433,9 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.8375,
+  "score": 0.67,
   "score_partial": true,
-  "score_n": "3 of 6",
+  "score_n": "4 of 6",
   "score_parts": [
    {
     "key": "expectations_gap",
@@ -464,8 +464,8 @@
    {
     "key": "roic_trend",
     "label": "ROIC trend",
-    "score": null,
-    "detail": "ROIC not computable from available data",
+    "score": 0.0,
+    "detail": "ROIC -51.8% (computed in-repo: NOPAT \u00f7 invested capital)",
     "weight": 0.1,
     "raw": {}
    },
@@ -487,25 +487,25 @@
    }
   ],
   "buffett": {
-   "moat": "Unknown",
-   "de": null,
-   "fcf_margin": null,
+   "moat": "None",
+   "de": 0.8487204944598824,
+   "fcf_margin": -352.6858785404346,
    "tests": {
     "moat": {
      "pass": false,
-     "why": "ROIC unavailable \u2014 cannot assess"
+     "why": "ROIC -51.8% \u2192 none moat"
     },
     "returns": {
      "pass": false,
-     "why": "ROIC unavailable"
+     "why": "ROIC -51.8% vs ~10% cost of capital"
     },
     "leverage": {
-     "pass": false,
-     "why": "Debt/equity unavailable"
+     "pass": true,
+     "why": "Debt/equity 0.85"
     },
     "cashgen": {
      "pass": false,
-     "why": "FCF margin unavailable"
+     "why": "FCF margin -352.7%"
     },
     "stability": {
      "pass": true,
@@ -520,7 +520,7 @@
      "why": "No fair value set \u2014 price test cannot run"
     }
    },
-   "passed": 2,
+   "passed": 3,
    "total": 7,
    "labels": {
     "moat": "Durable moat",
@@ -539,19 +539,19 @@
   "stale": false,
   "errors": [
    "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/GEMI?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
-   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
    "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/GEMI?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "distant"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "approaching"
   }
  },
  {
   "symbol": "SRRK",
   "name": "Scholar Rock Holding Corp",
   "type": "equity",
-  "sector": null,
+  "sector": "Health Care",
   "price": 43.9,
   "change_pct": -0.6337709370756024,
   "high52": 60.04,
@@ -572,15 +572,15 @@
   "roic_detail": null,
   "roic": null,
   "roic_trend": null,
-  "debt_equity": null,
+  "debt_equity": 0.40616649286319495,
   "fcf_margin": null,
-  "market_cap": null,
+  "market_cap": 5067485584.0,
   "beta": 1.046067411860454,
   "vol30": 43.31113066525464,
   "downdev": 25.272176307032783,
   "ret1y": 49.98291766313632,
   "earnings_date": "2026-11-10",
-  "earnings_days": 9,
+  "earnings_days": 8,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -675,7 +675,7 @@
   ],
   "buffett": {
    "moat": "Unknown",
-   "de": null,
+   "de": 0.40616649286319495,
    "fcf_margin": null,
    "tests": {
     "moat": {
@@ -687,8 +687,8 @@
      "why": "ROIC unavailable"
     },
     "leverage": {
-     "pass": false,
-     "why": "Debt/equity unavailable"
+     "pass": true,
+     "why": "Debt/equity 0.41"
     },
     "cashgen": {
      "pass": false,
@@ -707,7 +707,7 @@
      "why": "No fair value set \u2014 price test cannot run"
     }
    },
-   "passed": 2,
+   "passed": 3,
    "total": 7,
    "labels": {
     "moat": "Durable moat",
@@ -726,11 +726,11 @@
   "stale": false,
   "errors": [
    "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/SRRK?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
-   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
    "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/SRRK?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "approaching"
   }
  },
@@ -747,10 +747,10 @@
   "pct_from_low": 29.37800527377074,
   "pos52": 34.62100901779186,
   "currency": "USD",
-  "pe_ltm": 13.659118653576437,
+  "pe_ltm": 13.63809202805049,
   "pe_fwd": null,
-  "ev_ebitda": 10.185270474590508,
-  "ps_ratio": 4.097333333333333,
+  "ev_ebitda": 10.169529206215875,
+  "ps_ratio": 4.091025964912281,
   "revenue": 23769000000.0,
   "pe_mean_2y": 23.45,
   "ps_mean_2y": 6.49,
@@ -761,13 +761,13 @@
   "roic_trend": null,
   "debt_equity": 0.5342854684676933,
   "fcf_margin": 39.31591568850183,
-  "market_cap": 97389516000.0,
+  "market_cap": 97239596160.0,
   "beta": 1.1819464660442467,
   "vol30": 38.075448556849935,
   "downdev": 26.822336553851645,
   "ret1y": -25.9367785473273,
   "earnings_date": "2026-12-09",
-  "earnings_days": 38,
+  "earnings_days": 37,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -811,7 +811,7 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.8085,
+  "score": 0.8086,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -834,8 +834,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.8652590796767515,
-    "detail": "LTM P/E 13.7 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.8657597136178454,
+    "detail": "LTM P/E 13.6 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -1001,7 +1001,7 @@
   "symbol": "AVGO",
   "name": "Broadcom Inc.",
   "type": "equity",
-  "sector": null,
+  "sector": "Technology",
   "price": 326.08,
   "change_pct": -5.484057971014497,
   "high52": 481.57,
@@ -1010,27 +1010,27 @@
   "pct_from_low": 11.134589823114398,
   "pos52": 17.362882653061206,
   "currency": "USD",
-  "pe_ltm": null,
+  "pe_ltm": 67.52975051176165,
   "pe_fwd": null,
-  "ev_ebitda": null,
-  "ps_ratio": null,
-  "revenue": null,
+  "ev_ebitda": 47.01395283969176,
+  "ps_ratio": 24.44461330685429,
+  "revenue": 63887000000.0,
   "pe_mean_2y": 126.68,
   "ps_mean_2y": 24.63,
-  "invested_capital": null,
-  "excess_cash": null,
-  "roic_detail": null,
-  "roic": null,
+  "invested_capital": 131527740000.0,
+  "excess_cash": 14900260000.0,
+  "roic_detail": "NOPAT $20.13B (op income $25.48B \u00d7 79% after tax) \u00f7 invested capital $131.53B (debt $65.14B + equity $81.29B \u2212 excess cash $14.90B; operating cash held back at 2% of revenue = $1.28B)",
+  "roic": 15.306550542113778,
   "roic_trend": null,
-  "debt_equity": null,
-  "fcf_margin": null,
-  "market_cap": null,
+  "debt_equity": 0.8012596565467697,
+  "fcf_margin": 52.64920875921549,
+  "market_cap": 1561693010335.0,
   "beta": 1.6553859390572614,
   "vol30": 39.59378756521689,
   "downdev": 32.166901845055115,
   "ret1y": -15.518938805119442,
   "earnings_date": "2026-12-10",
-  "earnings_days": 39,
+  "earnings_days": 38,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -1074,9 +1074,9 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.8257,
+  "score": 0.5812,
   "score_partial": true,
-  "score_n": "3 of 6",
+  "score_n": "5 of 6",
   "score_parts": [
    {
     "key": "expectations_gap",
@@ -1097,16 +1097,16 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": null,
-    "detail": "No positive LTM P/E available",
+    "score": 0.0,
+    "detail": "LTM P/E 67.5 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
    {
     "key": "roic_trend",
     "label": "ROIC trend",
-    "score": null,
-    "detail": "ROIC not computable from available data",
+    "score": 0.4752339479326349,
+    "detail": "ROIC 15.3% (computed in-repo: NOPAT \u00f7 invested capital)",
     "weight": 0.1,
     "raw": {}
    },
@@ -1128,25 +1128,25 @@
    }
   ],
   "buffett": {
-   "moat": "Unknown",
-   "de": null,
-   "fcf_margin": null,
+   "moat": "Narrow",
+   "de": 0.8012596565467697,
+   "fcf_margin": 52.64920875921549,
    "tests": {
     "moat": {
-     "pass": false,
-     "why": "ROIC unavailable \u2014 cannot assess"
+     "pass": true,
+     "why": "ROIC 15.3% \u2192 narrow moat"
     },
     "returns": {
-     "pass": false,
-     "why": "ROIC unavailable"
+     "pass": true,
+     "why": "ROIC 15.3% vs ~10% cost of capital"
     },
     "leverage": {
-     "pass": false,
-     "why": "Debt/equity unavailable"
+     "pass": true,
+     "why": "Debt/equity 0.80"
     },
     "cashgen": {
-     "pass": false,
-     "why": "FCF margin unavailable"
+     "pass": true,
+     "why": "FCF margin 52.6%"
     },
     "stability": {
      "pass": true,
@@ -1161,7 +1161,7 @@
      "why": "No fair value set \u2014 price test cannot run"
     }
    },
-   "passed": 2,
+   "passed": 6,
    "total": 7,
    "labels": {
     "moat": "Durable moat",
@@ -1180,11 +1180,11 @@
   "stale": false,
   "errors": [
    "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/AVGO?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
-   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
    "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/AVGO?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "distant"
   }
  },
@@ -1192,7 +1192,7 @@
   "symbol": "GOOGL",
   "name": "Alphabet Inc.",
   "type": "equity",
-  "sector": null,
+  "sector": "Technology",
   "price": 279.84,
   "change_pct": -1.402297230639144,
   "high52": 402.62,
@@ -1201,21 +1201,21 @@
   "pct_from_low": 2.3180987202924954,
   "pos52": 4.910161090458469,
   "currency": "USD",
-  "pe_ltm": null,
+  "pe_ltm": 26.239044109858515,
   "pe_fwd": null,
-  "ev_ebitda": null,
-  "ps_ratio": null,
-  "revenue": null,
+  "ev_ebitda": 22.55847151656401,
+  "ps_ratio": 8.608998351686543,
+  "revenue": 402836000000.0,
   "pe_mean_2y": 25.39,
   "ps_mean_2y": 8.64,
-  "invested_capital": null,
-  "excess_cash": null,
-  "roic_detail": null,
-  "roic": null,
+  "invested_capital": 343025720000.0,
+  "excess_cash": 118786280000.0,
+  "roic_detail": "NOPAT $101.94B (op income $129.04B \u00d7 79% after tax) \u00f7 invested capital $343.03B (debt $46.55B + equity $415.26B \u2212 excess cash $118.79B; operating cash held back at 2% of revenue = $8.06B)",
+  "roic": 29.71812434356234,
   "roic_trend": null,
-  "debt_equity": null,
-  "fcf_margin": null,
-  "market_cap": null,
+  "debt_equity": 0.11208987032376916,
+  "fcf_margin": 14.578637460405725,
+  "market_cap": 3468014460000.0,
   "beta": 1.250941518251049,
   "vol30": 41.67182345018049,
   "downdev": 24.343614766276843,
@@ -1265,9 +1265,9 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.8879,
+  "score": 0.8293,
   "score_partial": true,
-  "score_n": "3 of 6",
+  "score_n": "5 of 6",
   "score_parts": [
    {
     "key": "expectations_gap",
@@ -1288,16 +1288,16 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": null,
-    "detail": "No positive LTM P/E available",
+    "score": 0.5657370450033687,
+    "detail": "LTM P/E 26.2 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
    {
     "key": "roic_trend",
     "label": "ROIC trend",
-    "score": null,
-    "detail": "ROIC not computable from available data",
+    "score": 0.9899330122700836,
+    "detail": "ROIC 29.7% (computed in-repo: NOPAT \u00f7 invested capital)",
     "weight": 0.1,
     "raw": {}
    },
@@ -1319,25 +1319,25 @@
    }
   ],
   "buffett": {
-   "moat": "Unknown",
-   "de": null,
-   "fcf_margin": null,
+   "moat": "Wide",
+   "de": 0.11208987032376916,
+   "fcf_margin": 14.578637460405725,
    "tests": {
     "moat": {
-     "pass": false,
-     "why": "ROIC unavailable \u2014 cannot assess"
+     "pass": true,
+     "why": "ROIC 29.7% \u2192 wide moat"
     },
     "returns": {
-     "pass": false,
-     "why": "ROIC unavailable"
+     "pass": true,
+     "why": "ROIC 29.7% vs ~10% cost of capital"
     },
     "leverage": {
-     "pass": false,
-     "why": "Debt/equity unavailable"
+     "pass": true,
+     "why": "Debt/equity 0.11"
     },
     "cashgen": {
-     "pass": false,
-     "why": "FCF margin unavailable"
+     "pass": true,
+     "why": "FCF margin 14.6%"
     },
     "stability": {
      "pass": true,
@@ -1352,7 +1352,7 @@
      "why": "No fair value set \u2014 price test cannot run"
     }
    },
-   "passed": 2,
+   "passed": 6,
    "total": 7,
    "labels": {
     "moat": "Durable moat",
@@ -1371,11 +1371,11 @@
   "stale": false,
   "errors": [
    "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/GOOGL?range=3y&interval=1d failed after 4 tries: HTTP 429 ra",
-   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
    "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/GOOGL?modules=defaultKeyStatistics,financialData,summaryProfil"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -1412,12 +1412,12 @@
   "downdev": 21.788920048126055,
   "ret1y": 56.324512939808066,
   "earnings_date": "2026-11-05",
-  "earnings_days": 4,
+  "earnings_days": 3,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
   "insider": "buy",
-  "insider_detail": "8 Form 4 filings in 90d (cluster) \u2014 latest 2026-08-31",
+  "insider_detail": "7 Form 4 filings in 90d (cluster) \u2014 latest 2026-08-31",
   "politician": null,
   "politician_detail": "No disclosures",
   "superinv": null,
@@ -1496,7 +1496,7 @@
     "key": "insider_activity",
     "label": "Insider activity",
     "score": 0.85,
-    "detail": "8 Form 4 filings in 90d (cluster) \u2014 latest 2026-08-31",
+    "detail": "7 Form 4 filings in 90d (cluster) \u2014 latest 2026-08-31",
     "weight": 0.1,
     "raw": {}
    },
@@ -1567,7 +1567,7 @@
   "sources": {
    "quote": "stockanalysis",
    "fundamentals": "nasdaq",
-   "earnings_bucket": "approaching"
+   "earnings_bucket": "imminent"
   }
  },
  {
@@ -1583,10 +1583,10 @@
   "pct_from_low": 14.693566806242861,
   "pos52": 23.058542413381122,
   "currency": "USD",
-  "pe_ltm": 18.80504869194958,
+  "pe_ltm": 18.786324780531842,
   "pe_fwd": null,
-  "ev_ebitda": 12.385655222267347,
-  "ps_ratio": 5.981680122343427,
+  "ev_ebitda": 12.370959020779924,
+  "ps_ratio": 5.975724251099769,
   "revenue": 4666209000.0,
   "pe_mean_2y": 28.35,
   "ps_mean_2y": 9.35,
@@ -1597,13 +1597,13 @@
   "roic_trend": null,
   "debt_equity": 0.0,
   "fcf_margin": 33.29668688222066,
-  "market_cap": 27911769622.0,
+  "market_cap": 27883978282.0,
   "beta": 0.8552287295829412,
   "vol30": 31.944678413230854,
   "downdev": 21.74026897817891,
   "ret1y": -29.10588235294118,
   "earnings_date": "2026-11-19",
-  "earnings_days": 18,
+  "earnings_days": 17,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -1647,7 +1647,7 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.7574,
+  "score": 0.7575,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -1670,7 +1670,7 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.7427369359059623,
+    "score": 0.7431827433206704,
     "detail": "LTM P/E 18.8 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
@@ -1774,10 +1774,10 @@
   "pct_from_low": 30.745106521033854,
   "pos52": 50.061630568762126,
   "currency": "USD",
-  "pe_ltm": 252.75365917052088,
+  "pe_ltm": 252.62822311016757,
   "pe_fwd": null,
-  "ev_ebitda": 14.003320304482497,
-  "ps_ratio": 0.6859153637832801,
+  "ev_ebitda": 13.997800837940739,
+  "ps_ratio": 0.6855749591329532,
   "revenue": 24300141000.0,
   "pe_mean_2y": 17.77,
   "ps_mean_2y": 0.71,
@@ -1788,7 +1788,7 @@
   "roic_trend": null,
   "debt_equity": 1.0842778111011304,
   "fcf_margin": 4.233868437224294,
-  "market_cap": 16667840054.0,
+  "market_cap": 16659568173.0,
   "beta": 0.6781332441452858,
   "vol30": 27.644593160066073,
   "downdev": 23.893889475739304,
@@ -1862,7 +1862,7 @@
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
     "score": 0.0,
-    "detail": "LTM P/E 252.8 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "detail": "LTM P/E 252.6 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -1965,10 +1965,10 @@
   "pct_from_low": 87.03292264189052,
   "pos52": 94.57857769973661,
   "currency": "USD",
-  "pe_ltm": 13.922003282097755,
+  "pe_ltm": 13.962175627083987,
   "pe_fwd": null,
-  "ev_ebitda": 8.554781260943772,
-  "ps_ratio": 5.108848816165044,
+  "ev_ebitda": 8.580274061554228,
+  "ps_ratio": 5.12359054786607,
   "revenue": 938222000.0,
   "pe_mean_2y": null,
   "ps_mean_2y": null,
@@ -1979,7 +1979,7 @@
   "roic_trend": null,
   "debt_equity": 0.18758467495134415,
   "fcf_margin": 57.82703880318304,
-  "market_cap": 4793234354.0,
+  "market_cap": 4807065371.0,
   "beta": 0.45709167780042204,
   "vol30": 41.951785030568104,
   "downdev": 20.257117791237253,
@@ -1990,7 +1990,7 @@
   "catalyst_date": null,
   "catalyst_note": null,
   "insider": "buy",
-  "insider_detail": "12 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-28",
+  "insider_detail": "13 Form 4 filings in 90d (cluster) \u2014 latest 2026-11-02",
   "politician": null,
   "politician_detail": "No disclosures",
   "superinv": null,
@@ -2006,7 +2006,7 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.4619,
+  "score": 0.4617,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -2029,8 +2029,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.8589999218548153,
-    "detail": "LTM P/E 13.9 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.8580434374503813,
+    "detail": "LTM P/E 14.0 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -2046,7 +2046,7 @@
     "key": "insider_activity",
     "label": "Insider activity",
     "score": 0.85,
-    "detail": "12 Form 4 filings in 90d (cluster) \u2014 latest 2026-09-28",
+    "detail": "13 Form 4 filings in 90d (cluster) \u2014 latest 2026-11-02",
     "weight": 0.1,
     "raw": {}
    },
@@ -2662,10 +2662,10 @@
   "pct_from_low": 20.04489678802302,
   "pos52": 9.481760624665672,
   "currency": "USD",
-  "pe_ltm": 23.561592434035948,
+  "pe_ltm": 23.587100956214165,
   "pe_fwd": null,
-  "ev_ebitda": 19.45350290912341,
-  "ps_ratio": 7.715668856665104,
+  "ev_ebitda": 19.47119831624108,
+  "ps_ratio": 7.72402208281911,
   "revenue": 1990869000.0,
   "pe_mean_2y": 62.94,
   "ps_mean_2y": 20.05,
@@ -2676,13 +2676,13 @@
   "roic_trend": null,
   "debt_equity": null,
   "fcf_margin": 46.757471234923045,
-  "market_cap": 15360885941.0,
+  "market_cap": 15377516120.0,
   "beta": 1.048743616730938,
   "vol30": 105.39198717305463,
   "downdev": 59.43550138378762,
   "ret1y": -54.60910077222542,
   "earnings_date": "2026-11-04",
-  "earnings_days": 3,
+  "earnings_days": 2,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -2726,7 +2726,7 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.7469,
+  "score": 0.7467,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -2749,7 +2749,7 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.6294858944277155,
+    "score": 0.6288785486615676,
     "detail": "LTM P/E 23.6 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
@@ -2853,10 +2853,10 @@
   "pct_from_low": 18.824637246928912,
   "pos52": 30.362443907490515,
   "currency": "USD",
-  "pe_ltm": 32.18869212204234,
+  "pe_ltm": 32.063395212328764,
   "pe_fwd": null,
-  "ev_ebitda": 18.31704845470906,
-  "ps_ratio": 2.3642826228218614,
+  "ev_ebitda": 18.25669247480504,
+  "ps_ratio": 2.355079474548365,
   "revenue": 21865000000.0,
   "pe_mean_2y": 31.04,
   "ps_mean_2y": 1.53,
@@ -2867,7 +2867,7 @@
   "roic_trend": null,
   "debt_equity": 0.5318563789152024,
   "fcf_margin": 13.308941230276696,
-  "market_cap": 51695039548.0,
+  "market_cap": 51493812711.0,
   "beta": 0.3885999513118625,
   "vol30": 28.299568827684606,
   "downdev": 19.11653812257216,
@@ -2878,17 +2878,17 @@
   "catalyst_date": null,
   "catalyst_note": null,
   "insider": "buy",
-  "insider_detail": "12 Form 4 filings in 90d (cluster) \u2014 latest 2026-10-02",
+  "insider_detail": "7 Form 4 filings in 90d (cluster) \u2014 latest 2026-10-02",
   "politician": null,
   "politician_detail": "No disclosures",
   "superinv": null,
   "superinv_detail": "No Dataroma change",
   "weight_pct": 1.3514,
-  "analyst_target": 313.6,
-  "analyst_upside": 12.96423039515868,
-  "analyst_detail": "Consensus $313.60 (range $269.0\u2013$365.0) \u00b7 6 buy / 6 hold / 0 sell",
+  "analyst_target": 321.64,
+  "analyst_upside": 15.86037966932026,
+  "analyst_detail": "Consensus $321.64 (range $269.0\u2013$402.0) \u00b7 7 buy / 6 hold / 0 sell",
   "analyst_low": 269.0,
-  "analyst_high": 365.0,
+  "analyst_high": 402.0,
   "decomposition": [
    {
     "period": "1y",
@@ -2917,7 +2917,7 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.5399,
+  "score": 0.5406,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -2940,8 +2940,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.42407875899899194,
-    "detail": "LTM P/E 32.2 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.427062018754077,
+    "detail": "LTM P/E 32.1 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -2957,7 +2957,7 @@
     "key": "insider_activity",
     "label": "Insider activity",
     "score": 0.85,
-    "detail": "12 Form 4 filings in 90d (cluster) \u2014 latest 2026-10-02",
+    "detail": "7 Form 4 filings in 90d (cluster) \u2014 latest 2026-10-02",
     "weight": 0.1,
     "raw": {}
    },
@@ -3046,8 +3046,8 @@
   "currency": "USD",
   "pe_ltm": null,
   "pe_fwd": null,
-  "ev_ebitda": 36.35197878031617,
-  "ps_ratio": 1.7860240424367682,
+  "ev_ebitda": 36.53428980275091,
+  "ps_ratio": 1.796347194892303,
   "revenue": 4040647000.0,
   "pe_mean_2y": 127.79,
   "ps_mean_2y": 1.35,
@@ -3058,7 +3058,7 @@
   "roic_trend": null,
   "debt_equity": 0.9517522460281315,
   "fcf_margin": 4.394494248074627,
-  "market_cap": 7216692689.0,
+  "market_cap": 7258404904.0,
   "beta": 1.5157349636545423,
   "vol30": 79.83922724336414,
   "downdev": 20.988390504209686,
@@ -3413,7 +3413,7 @@
   "symbol": "ODFL",
   "name": "OLD DOMINION FREIGHT LINE, INC.",
   "type": "equity",
-  "sector": null,
+  "sector": "Industrials",
   "price": 172.56,
   "change_pct": 0.12184508268059645,
   "high52": 248.73,
@@ -3422,21 +3422,21 @@
   "pct_from_low": 36.637896903951216,
   "pos52": 37.78993792878145,
   "currency": "USD",
-  "pe_ltm": null,
+  "pe_ltm": 34.952968480115814,
   "pe_fwd": null,
-  "ev_ebitda": null,
-  "ps_ratio": null,
-  "revenue": null,
+  "ev_ebitda": 20.687615424375455,
+  "ps_ratio": 6.5099938690656725,
+  "revenue": 5496389000.0,
   "pe_mean_2y": 33.35,
   "ps_mean_2y": 6.66,
-  "invested_capital": null,
-  "excess_cash": null,
-  "roic_detail": null,
-  "roic": null,
+  "invested_capital": 4340888780.0,
+  "excess_cash": 10163220.0,
+  "roic_detail": "NOPAT $1.08B (op income $1.36B \u00d7 79% after tax) \u00f7 invested capital $4.34B (debt $0.04B + equity $4.31B \u2212 excess cash $0.01B; operating cash held back at 2% of revenue = $0.11B)",
+  "roic": 24.76970971829414,
   "roic_trend": null,
-  "debt_equity": null,
-  "fcf_margin": null,
-  "market_cap": null,
+  "debt_equity": 0.009277307166200772,
+  "fcf_margin": 23.846601832584994,
+  "market_cap": 35781458692.0,
   "beta": 1.173015321990507,
   "vol30": 31.818341995838868,
   "downdev": 25.722604349369078,
@@ -3486,9 +3486,9 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.5861,
+  "score": 0.5684,
   "score_partial": true,
-  "score_n": "3 of 6",
+  "score_n": "5 of 6",
   "score_parts": [
    {
     "key": "expectations_gap",
@@ -3509,16 +3509,16 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": null,
-    "detail": "No positive LTM P/E available",
+    "score": 0.35826265523533773,
+    "detail": "LTM P/E 35.0 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
    {
     "key": "roic_trend",
     "label": "ROIC trend",
-    "score": null,
-    "detail": "ROIC not computable from available data",
+    "score": 0.813203918510505,
+    "detail": "ROIC 24.8% (computed in-repo: NOPAT \u00f7 invested capital)",
     "weight": 0.1,
     "raw": {}
    },
@@ -3540,25 +3540,25 @@
    }
   ],
   "buffett": {
-   "moat": "Unknown",
-   "de": null,
-   "fcf_margin": null,
+   "moat": "Wide",
+   "de": 0.009277307166200772,
+   "fcf_margin": 23.846601832584994,
    "tests": {
     "moat": {
-     "pass": false,
-     "why": "ROIC unavailable \u2014 cannot assess"
+     "pass": true,
+     "why": "ROIC 24.8% \u2192 wide moat"
     },
     "returns": {
-     "pass": false,
-     "why": "ROIC unavailable"
+     "pass": true,
+     "why": "ROIC 24.8% vs ~10% cost of capital"
     },
     "leverage": {
-     "pass": false,
-     "why": "Debt/equity unavailable"
+     "pass": true,
+     "why": "Debt/equity 0.01"
     },
     "cashgen": {
-     "pass": false,
-     "why": "FCF margin unavailable"
+     "pass": true,
+     "why": "FCF margin 23.8%"
     },
     "stability": {
      "pass": true,
@@ -3573,7 +3573,7 @@
      "why": "No fair value set \u2014 price test cannot run"
     }
    },
-   "passed": 2,
+   "passed": 6,
    "total": 7,
    "labels": {
     "moat": "Durable moat",
@@ -3592,11 +3592,11 @@
   "stale": false,
   "errors": [
    "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ODFL?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
-   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
    "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/ODFL?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -3613,10 +3613,10 @@
   "pct_from_low": 28.282456785582937,
   "pos52": 55.02683363148482,
   "currency": "USD",
-  "pe_ltm": 21.95334154743833,
+  "pe_ltm": 22.041457023719165,
   "pe_fwd": null,
-  "ev_ebitda": 16.064914839470656,
-  "ps_ratio": 3.9205052509318876,
+  "ev_ebitda": 16.1183519579977,
+  "ps_ratio": 3.936241223822433,
   "revenue": 5902000000.0,
   "pe_mean_2y": 25.46,
   "ps_mean_2y": 5.11,
@@ -3627,7 +3627,7 @@
   "roic_trend": null,
   "debt_equity": 0.6640631226588029,
   "fcf_margin": 28.295493053202303,
-  "market_cap": 23138821991.0,
+  "market_cap": 23231695703.0,
   "beta": 0.5716061851375838,
   "vol30": 38.03236474545438,
   "downdev": 20.139977944866136,
@@ -3677,7 +3677,7 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.5233,
+  "score": 0.5228,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -3700,7 +3700,7 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.6677775822038492,
+    "score": 0.6656795946733532,
     "detail": "LTM P/E 22.0 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
@@ -3806,8 +3806,8 @@
   "currency": "USD",
   "pe_ltm": null,
   "pe_fwd": null,
-  "ev_ebitda": 99.4873218018111,
-  "ps_ratio": 5.9970000551864535,
+  "ev_ebitda": 99.03335653847644,
+  "ps_ratio": 5.970064539790966,
   "revenue": 1304668000.0,
   "pe_mean_2y": null,
   "ps_mean_2y": 3.9,
@@ -3818,13 +3818,13 @@
   "roic_trend": null,
   "debt_equity": 0.2449486632305438,
   "fcf_margin": 4.874496806850479,
-  "market_cap": 7824094068.0,
+  "market_cap": 7788952163.0,
   "beta": 1.8555435074940927,
   "vol30": 44.98679486598242,
   "downdev": 34.829247524926,
   "ret1y": 75.60563380281691,
   "earnings_date": "2026-11-09",
-  "earnings_days": 8,
+  "earnings_days": 7,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -3982,7 +3982,7 @@
   "symbol": "CRM",
   "name": "Salesforce, Inc.",
   "type": "equity",
-  "sector": null,
+  "sector": "Technology",
   "price": 207.315,
   "change_pct": -0.8204563938190708,
   "high52": 269.11,
@@ -3991,27 +3991,27 @@
   "pct_from_low": 41.68603061782395,
   "pos52": 49.67424057333659,
   "currency": "USD",
-  "pe_ltm": null,
+  "pe_ltm": 25.27273300254794,
   "pe_fwd": null,
-  "ev_ebitda": null,
-  "ps_ratio": null,
-  "revenue": null,
+  "ev_ebitda": 13.654408503425383,
+  "ps_ratio": 4.5384411800120406,
+  "revenue": 41525000000.0,
   "pe_mean_2y": 39.63,
   "ps_mean_2y": 6.34,
-  "invested_capital": null,
-  "excess_cash": null,
-  "roic_detail": null,
-  "roic": null,
+  "invested_capital": 64846500000.0,
+  "excess_cash": 8734500000.0,
+  "roic_detail": "NOPAT $6.58B (op income $8.33B \u00d7 79% after tax) \u00f7 invested capital $64.85B (debt $14.44B + equity $59.14B \u2212 excess cash $8.73B; operating cash held back at 2% of revenue = $0.83B)",
+  "roic": 10.149337281117717,
   "roic_trend": null,
-  "debt_equity": null,
-  "fcf_margin": null,
-  "market_cap": null,
+  "debt_equity": 0.24414121943796288,
+  "fcf_margin": 32.66706803130644,
+  "market_cap": 188458770000.0,
   "beta": -0.04274805252017632,
   "vol30": 48.004079234732025,
   "downdev": 26.70657850667501,
   "ret1y": -15.879486707826906,
   "earnings_date": "2026-12-02",
-  "earnings_days": 31,
+  "earnings_days": 30,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -4055,9 +4055,9 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.5266,
+  "score": 0.5047,
   "score_partial": true,
-  "score_n": "3 of 6",
+  "score_n": "5 of 6",
   "score_parts": [
    {
     "key": "expectations_gap",
@@ -4078,16 +4078,16 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": null,
-    "detail": "No positive LTM P/E available",
+    "score": 0.5887444523202872,
+    "detail": "LTM P/E 25.3 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
    {
     "key": "roic_trend",
     "label": "ROIC trend",
-    "score": null,
-    "detail": "ROIC not computable from available data",
+    "score": 0.29104776003991845,
+    "detail": "ROIC 10.1% (computed in-repo: NOPAT \u00f7 invested capital)",
     "weight": 0.1,
     "raw": {}
    },
@@ -4109,25 +4109,25 @@
    }
   ],
   "buffett": {
-   "moat": "Unknown",
-   "de": null,
-   "fcf_margin": null,
+   "moat": "Narrow",
+   "de": 0.24414121943796288,
+   "fcf_margin": 32.66706803130644,
    "tests": {
     "moat": {
-     "pass": false,
-     "why": "ROIC unavailable \u2014 cannot assess"
+     "pass": true,
+     "why": "ROIC 10.1% \u2192 narrow moat"
     },
     "returns": {
      "pass": false,
-     "why": "ROIC unavailable"
+     "why": "ROIC 10.1% vs ~10% cost of capital"
     },
     "leverage": {
-     "pass": false,
-     "why": "Debt/equity unavailable"
+     "pass": true,
+     "why": "Debt/equity 0.24"
     },
     "cashgen": {
-     "pass": false,
-     "why": "FCF margin unavailable"
+     "pass": true,
+     "why": "FCF margin 32.7%"
     },
     "stability": {
      "pass": true,
@@ -4142,7 +4142,7 @@
      "why": "No fair value set \u2014 price test cannot run"
     }
    },
-   "passed": 2,
+   "passed": 5,
    "total": 7,
    "labels": {
     "moat": "Durable moat",
@@ -4160,11 +4160,11 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
    "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/CRM?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "yahoo",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "distant"
   }
  },
@@ -4181,10 +4181,10 @@
   "pct_from_low": 12.759242560865653,
   "pos52": 22.20478619066302,
   "currency": "USD",
-  "pe_ltm": 7.643382581609195,
+  "pe_ltm": 7.640326451149425,
   "pe_fwd": null,
-  "ev_ebitda": 6.071797383268698,
-  "ps_ratio": 1.2550828756664936,
+  "ev_ebitda": 6.070618952908587,
+  "ps_ratio": 1.2545810432690039,
   "revenue": 21193000000.0,
   "pe_mean_2y": 21.09,
   "ps_mean_2y": 3.27,
@@ -4195,18 +4195,18 @@
   "roic_trend": null,
   "debt_equity": 1.1242633374689825,
   "fcf_margin": 34.26603123672911,
-  "market_cap": 26598971384.0,
+  "market_cap": 26588336050.0,
   "beta": 0.7798907695710602,
   "vol30": 29.42210563459226,
   "downdev": 27.497412524425158,
   "ret1y": -29.15014164305948,
   "earnings_date": "2026-11-03",
-  "earnings_days": 2,
+  "earnings_days": 1,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
   "insider": "buy",
-  "insider_detail": "13 Form 4 filings in 90d (cluster) \u2014 latest 2026-10-01",
+  "insider_detail": "12 Form 4 filings in 90d (cluster) \u2014 latest 2026-10-01",
   "politician": null,
   "politician_detail": "No disclosures",
   "superinv": null,
@@ -4285,7 +4285,7 @@
     "key": "insider_activity",
     "label": "Insider activity",
     "score": 0.85,
-    "detail": "13 Form 4 filings in 90d (cluster) \u2014 latest 2026-10-01",
+    "detail": "12 Form 4 filings in 90d (cluster) \u2014 latest 2026-10-01",
     "weight": 0.1,
     "raw": {}
    },
@@ -4363,7 +4363,7 @@
   "symbol": "CLH",
   "name": "CLEAN HARBORS INC",
   "type": "equity",
-  "sector": null,
+  "sector": "Industrials",
   "price": 302.12,
   "change_pct": -2.330844082371571,
   "high52": 326.34,
@@ -4372,21 +4372,21 @@
   "pct_from_low": 49.764536757051516,
   "pos52": 80.56335767594898,
   "currency": "USD",
-  "pe_ltm": null,
+  "pe_ltm": 41.567634407914596,
   "pe_fwd": null,
-  "ev_ebitda": null,
-  "ps_ratio": null,
-  "revenue": null,
+  "ev_ebitda": 15.854400309292549,
+  "ps_ratio": 2.6947941546090535,
+  "revenue": 6030837000.0,
   "pe_mean_2y": 33.44,
   "ps_mean_2y": 2.3,
-  "invested_capital": null,
-  "excess_cash": null,
-  "roic_detail": null,
-  "roic": null,
+  "invested_capital": 4688761740.0,
+  "excess_cash": 833061260.0,
+  "roic_detail": "NOPAT $0.53B (op income $0.67B \u00d7 79% after tax) \u00f7 invested capital $4.69B (debt $2.78B + equity $2.75B \u2212 excess cash $0.83B; operating cash held back at 2% of revenue = $0.12B)",
+  "roic": 11.345508889091047,
   "roic_trend": null,
-  "debt_equity": null,
-  "fcf_margin": null,
-  "market_cap": null,
+  "debt_equity": 1.0111095328627726,
+  "fcf_margin": 11.857442010122309,
+  "market_cap": 16251864295.0,
   "beta": 0.8286427667144489,
   "vol30": 14.536609879660523,
   "downdev": 17.13171062825062,
@@ -4397,7 +4397,7 @@
   "catalyst_date": null,
   "catalyst_note": null,
   "insider": "buy",
-  "insider_detail": "4 Form 4 filings in 90d (cluster) \u2014 latest 2026-08-18",
+  "insider_detail": "4 Form 4 filings in 90d (cluster) \u2014 latest 2026-11-02",
   "politician": null,
   "politician_detail": "No disclosures",
   "superinv": "trim",
@@ -4436,9 +4436,9 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.3722,
+  "score": 0.3267,
   "score_partial": true,
-  "score_n": "3 of 6",
+  "score_n": "5 of 6",
   "score_parts": [
    {
     "key": "expectations_gap",
@@ -4459,16 +4459,16 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": null,
-    "detail": "No positive LTM P/E available",
+    "score": 0.20077060933536672,
+    "detail": "LTM P/E 41.6 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
    {
     "key": "roic_trend",
     "label": "ROIC trend",
-    "score": null,
-    "detail": "ROIC not computable from available data",
+    "score": 0.33376817461039454,
+    "detail": "ROIC 11.3% (computed in-repo: NOPAT \u00f7 invested capital)",
     "weight": 0.1,
     "raw": {}
    },
@@ -4476,7 +4476,7 @@
     "key": "insider_activity",
     "label": "Insider activity",
     "score": 0.85,
-    "detail": "4 Form 4 filings in 90d (cluster) \u2014 latest 2026-08-18",
+    "detail": "4 Form 4 filings in 90d (cluster) \u2014 latest 2026-11-02",
     "weight": 0.1,
     "raw": {}
    },
@@ -4490,25 +4490,25 @@
    }
   ],
   "buffett": {
-   "moat": "Unknown",
-   "de": null,
-   "fcf_margin": null,
+   "moat": "Narrow",
+   "de": 1.0111095328627726,
+   "fcf_margin": 11.857442010122309,
    "tests": {
     "moat": {
-     "pass": false,
-     "why": "ROIC unavailable \u2014 cannot assess"
+     "pass": true,
+     "why": "ROIC 11.3% \u2192 narrow moat"
     },
     "returns": {
      "pass": false,
-     "why": "ROIC unavailable"
+     "why": "ROIC 11.3% vs ~10% cost of capital"
     },
     "leverage": {
      "pass": false,
-     "why": "Debt/equity unavailable"
+     "why": "Debt/equity 1.01"
     },
     "cashgen": {
-     "pass": false,
-     "why": "FCF margin unavailable"
+     "pass": true,
+     "why": "FCF margin 11.9%"
     },
     "stability": {
      "pass": true,
@@ -4523,7 +4523,7 @@
      "why": "No fair value set \u2014 price test cannot run"
     }
    },
-   "passed": 2,
+   "passed": 4,
    "total": 7,
    "labels": {
     "moat": "Durable moat",
@@ -4542,11 +4542,11 @@
   "stale": false,
   "errors": [
    "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/CLH?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
-   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
    "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/CLH?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -4563,10 +4563,10 @@
   "pct_from_low": 0.0,
   "pos52": 0.0,
   "currency": "USD",
-  "pe_ltm": 13.25744035561524,
+  "pe_ltm": 13.379896436884511,
   "pe_fwd": null,
-  "ev_ebitda": 22.02373218963276,
-  "ps_ratio": 2.5621825152354036,
+  "ev_ebitda": 22.223772973675658,
+  "ps_ratio": 2.585848835572986,
   "revenue": 52017000000.0,
   "pe_mean_2y": 20.92,
   "ps_mean_2y": 3.54,
@@ -4577,13 +4577,13 @@
   "roic_trend": null,
   "debt_equity": 0.3890758477866943,
   "fcf_margin": 11.184804967606745,
-  "market_cap": 133277047895.0,
+  "market_cap": 134508098880.0,
   "beta": 1.3209889817991074,
   "vol30": 24.164448620642023,
   "downdev": 21.330404406150194,
   "ret1y": -31.8609022556391,
   "earnings_date": "2026-11-04",
-  "earnings_days": 3,
+  "earnings_days": 2,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -4625,7 +4625,7 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.8321,
+  "score": 0.8314,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -4648,8 +4648,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.8748228486758276,
-    "detail": "LTM P/E 13.3 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.8719072276932259,
+    "detail": "LTM P/E 13.4 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -4752,10 +4752,10 @@
   "pct_from_low": 48.380421806605646,
   "pos52": 98.99039244422731,
   "currency": "USD",
-  "pe_ltm": 24.418899940975457,
+  "pe_ltm": 24.49224570363467,
   "pe_fwd": null,
-  "ev_ebitda": 17.472335833585174,
-  "ps_ratio": 3.8651901217023577,
+  "ev_ebitda": 17.519903076458146,
+  "ps_ratio": 3.876799789540973,
   "revenue": 4067300000.0,
   "pe_mean_2y": 20.36,
   "ps_mean_2y": 3.3,
@@ -4766,7 +4766,7 @@
   "roic_trend": null,
   "debt_equity": 0.9576804023989166,
   "fcf_margin": 21.994935215007498,
-  "market_cap": 15720887782.0,
+  "market_cap": 15768107784.0,
   "beta": 0.8400593975976192,
   "vol30": 37.62720657985765,
   "downdev": 20.055047637730024,
@@ -4816,7 +4816,7 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.4393,
+  "score": 0.4388,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -4839,8 +4839,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.6090738109291558,
-    "detail": "LTM P/E 24.4 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.6073274832467936,
+    "detail": "LTM P/E 24.5 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -4943,10 +4943,10 @@
   "pct_from_low": 28.939585973806498,
   "pos52": 100.0,
   "currency": "USD",
-  "pe_ltm": 22.267541978494624,
+  "pe_ltm": 22.249666658090117,
   "pe_fwd": null,
-  "ev_ebitda": 10.97830859742753,
-  "ps_ratio": 2.7797510017098386,
+  "ev_ebitda": 10.97160663913419,
+  "ps_ratio": 2.7775195502165264,
   "revenue": 62579000000.0,
   "pe_mean_2y": 17.32,
   "ps_mean_2y": 2.44,
@@ -4957,18 +4957,18 @@
   "roic_trend": null,
   "debt_equity": 0.7908090105925344,
   "fcf_margin": 29.09442464724588,
-  "market_cap": 173954037936.0,
+  "market_cap": 173814395933.0,
   "beta": 0.38068573892297836,
   "vol30": 18.683439352516192,
   "downdev": 12.406616508087282,
   "ret1y": 25.648414985590783,
   "earnings_date": "2026-11-03",
-  "earnings_days": 2,
+  "earnings_days": 1,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
   "insider": "buy",
-  "insider_detail": "17 Form 4 filings in 90d (cluster) \u2014 latest 2026-10-16",
+  "insider_detail": "16 Form 4 filings in 90d (cluster) \u2014 latest 2026-10-16",
   "politician": null,
   "politician_detail": "No disclosures",
   "superinv": "new",
@@ -5007,7 +5007,7 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.454,
+  "score": 0.4541,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -5030,8 +5030,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.6602966195596518,
-    "detail": "LTM P/E 22.3 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.6607222224264258,
+    "detail": "LTM P/E 22.2 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -5047,7 +5047,7 @@
     "key": "insider_activity",
     "label": "Insider activity",
     "score": 0.85,
-    "detail": "17 Form 4 filings in 90d (cluster) \u2014 latest 2026-10-16",
+    "detail": "16 Form 4 filings in 90d (cluster) \u2014 latest 2026-10-16",
     "weight": 0.1,
     "raw": {}
    },
@@ -5125,7 +5125,7 @@
   "symbol": "COST",
   "name": "COSTCO WHOLESALE CORP /NEW",
   "type": "equity",
-  "sector": null,
+  "sector": "Consumer Discretionary",
   "price": 1012.28,
   "change_pct": 1.6263753915348094,
   "high52": 1094.32,
@@ -5134,27 +5134,27 @@
   "pct_from_low": 19.09176470588235,
   "pos52": 66.42108709888672,
   "currency": "USD",
-  "pe_ltm": null,
+  "pe_ltm": 48.67170234218513,
   "pe_fwd": null,
-  "ev_ebitda": null,
-  "ps_ratio": null,
-  "revenue": null,
+  "ev_ebitda": 30.218408371683264,
+  "ps_ratio": 1.4812442712581724,
+  "revenue": 303154000000.0,
   "pe_mean_2y": 58.82,
   "ps_mean_2y": 1.71,
-  "invested_capital": null,
-  "excess_cash": null,
-  "roic_detail": null,
-  "roic": null,
+  "invested_capital": 26727080000.0,
+  "excess_cash": 15237920000.0,
+  "roic_detail": "NOPAT $9.23B (op income $11.69B \u00d7 79% after tax) \u00f7 invested capital $26.73B (debt $6.16B + equity $35.80B \u2212 excess cash $15.24B; operating cash held back at 2% of revenue = $6.06B)",
+  "roic": 34.53856538013132,
   "roic_trend": null,
-  "debt_equity": null,
-  "fcf_margin": null,
-  "market_cap": null,
+  "debt_equity": 0.17210848252939698,
+  "fcf_margin": 2.6138530251951155,
+  "market_cap": 449045125809.0,
   "beta": 0.6668548814717081,
   "vol30": 17.369391479378876,
   "downdev": 12.896814713390917,
   "ret1y": 10.944521163499266,
   "earnings_date": "2026-12-10",
-  "earnings_days": 39,
+  "earnings_days": 38,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -5198,9 +5198,9 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.4429,
+  "score": 0.4337,
   "score_partial": true,
-  "score_n": "3 of 6",
+  "score_n": "5 of 6",
   "score_parts": [
    {
     "key": "expectations_gap",
@@ -5221,16 +5221,16 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": null,
-    "detail": "No positive LTM P/E available",
+    "score": 0.03162613470987785,
+    "detail": "LTM P/E 48.7 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
    {
     "key": "roic_trend",
     "label": "ROIC trend",
-    "score": null,
-    "detail": "ROIC not computable from available data",
+    "score": 1.0,
+    "detail": "ROIC 34.5% (computed in-repo: NOPAT \u00f7 invested capital)",
     "weight": 0.1,
     "raw": {}
    },
@@ -5252,25 +5252,25 @@
    }
   ],
   "buffett": {
-   "moat": "Unknown",
-   "de": null,
-   "fcf_margin": null,
+   "moat": "Wide",
+   "de": 0.17210848252939698,
+   "fcf_margin": 2.6138530251951155,
    "tests": {
     "moat": {
-     "pass": false,
-     "why": "ROIC unavailable \u2014 cannot assess"
+     "pass": true,
+     "why": "ROIC 34.5% \u2192 wide moat"
     },
     "returns": {
-     "pass": false,
-     "why": "ROIC unavailable"
+     "pass": true,
+     "why": "ROIC 34.5% vs ~10% cost of capital"
     },
     "leverage": {
-     "pass": false,
-     "why": "Debt/equity unavailable"
+     "pass": true,
+     "why": "Debt/equity 0.17"
     },
     "cashgen": {
      "pass": false,
-     "why": "FCF margin unavailable"
+     "why": "FCF margin 2.6%"
     },
     "stability": {
      "pass": true,
@@ -5285,7 +5285,7 @@
      "why": "No fair value set \u2014 price test cannot run"
     }
    },
-   "passed": 2,
+   "passed": 5,
    "total": 7,
    "labels": {
     "moat": "Durable moat",
@@ -5304,11 +5304,11 @@
   "stale": false,
   "errors": [
    "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/COST?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
-   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
    "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/COST?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "distant"
   }
  },
@@ -5316,7 +5316,7 @@
   "symbol": "AAPL",
   "name": "Apple Inc.",
   "type": "equity",
-  "sector": null,
+  "sector": "Technology",
   "price": 344.63,
   "change_pct": -1.2266773666561661,
   "high52": 348.91,
@@ -5325,27 +5325,27 @@
   "pct_from_low": 39.735636378380576,
   "pos52": 95.81540868204925,
   "currency": "USD",
-  "pe_ltm": null,
+  "pe_ltm": 44.94866722971163,
   "pe_fwd": null,
-  "ev_ebitda": null,
-  "ps_ratio": null,
-  "revenue": null,
+  "ev_ebitda": 35.0862203028712,
+  "ps_ratio": 12.097962606779587,
+  "revenue": 416161000000.0,
   "pe_mean_2y": 34.36,
   "ps_mean_2y": 9.24,
-  "invested_capital": null,
-  "excess_cash": null,
-  "roic_detail": null,
-  "roic": null,
+  "invested_capital": 126016220000.0,
+  "excess_cash": 46373780000.0,
+  "roic_detail": "NOPAT $105.11B (op income $133.05B \u00d7 79% after tax) \u00f7 invested capital $126.02B (debt $98.66B + equity $73.73B \u2212 excess cash $46.37B; operating cash held back at 2% of revenue = $8.32B)",
+  "roic": 83.40950077696347,
   "roic_trend": null,
-  "debt_equity": null,
-  "fcf_margin": null,
-  "market_cap": null,
+  "debt_equity": 1.3380304612588665,
+  "fcf_margin": 31.726423187179964,
+  "market_cap": 5034700216400.0,
   "beta": 1.1531501559048596,
   "vol30": 16.074133001311576,
   "downdev": 17.77369465203859,
   "ret1y": 27.78272154245458,
   "earnings_date": "2026-11-02",
-  "earnings_days": 1,
+  "earnings_days": 0,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -5389,9 +5389,9 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.2959,
+  "score": 0.3637,
   "score_partial": true,
-  "score_n": "3 of 6",
+  "score_n": "5 of 6",
   "score_parts": [
    {
     "key": "expectations_gap",
@@ -5412,16 +5412,16 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": null,
-    "detail": "No positive LTM P/E available",
+    "score": 0.12026982786400875,
+    "detail": "LTM P/E 44.9 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
    {
     "key": "roic_trend",
     "label": "ROIC trend",
-    "score": null,
-    "detail": "ROIC not computable from available data",
+    "score": 1.0,
+    "detail": "ROIC 83.4% (computed in-repo: NOPAT \u00f7 invested capital)",
     "weight": 0.1,
     "raw": {}
    },
@@ -5443,25 +5443,25 @@
    }
   ],
   "buffett": {
-   "moat": "Unknown",
-   "de": null,
-   "fcf_margin": null,
+   "moat": "Wide",
+   "de": 1.3380304612588665,
+   "fcf_margin": 31.726423187179964,
    "tests": {
     "moat": {
-     "pass": false,
-     "why": "ROIC unavailable \u2014 cannot assess"
+     "pass": true,
+     "why": "ROIC 83.4% \u2192 wide moat"
     },
     "returns": {
-     "pass": false,
-     "why": "ROIC unavailable"
+     "pass": true,
+     "why": "ROIC 83.4% vs ~10% cost of capital"
     },
     "leverage": {
      "pass": false,
-     "why": "Debt/equity unavailable"
+     "why": "Debt/equity 1.34"
     },
     "cashgen": {
-     "pass": false,
-     "why": "FCF margin unavailable"
+     "pass": true,
+     "why": "FCF margin 31.7%"
     },
     "stability": {
      "pass": true,
@@ -5476,7 +5476,7 @@
      "why": "No fair value set \u2014 price test cannot run"
     }
    },
-   "passed": 2,
+   "passed": 5,
    "total": 7,
    "labels": {
     "moat": "Durable moat",
@@ -5495,11 +5495,11 @@
   "stale": false,
   "errors": [
    "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/AAPL?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
-   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
    "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/AAPL?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "imminent"
   }
  },
@@ -5516,10 +5516,10 @@
   "pct_from_low": 35.67306864180519,
   "pos52": 85.89796764827871,
   "currency": "USD",
-  "pe_ltm": 27.245281836730523,
+  "pe_ltm": 27.14669864191896,
   "pe_fwd": null,
-  "ev_ebitda": 17.496739073782408,
-  "ps_ratio": 7.058963416958857,
+  "ev_ebitda": 17.44443516829271,
+  "ps_ratio": 7.033421557275703,
   "revenue": 2266214000.0,
   "pe_mean_2y": 24.83,
   "ps_mean_2y": 6.08,
@@ -5530,13 +5530,13 @@
   "roic_trend": null,
   "debt_equity": 3.39156433560765,
   "fcf_margin": 40.85549731843506,
-  "market_cap": 15997121721.0,
+  "market_cap": 15939238401.0,
   "beta": 0.9554940147106261,
   "vol30": 16.561315422071765,
   "downdev": 13.038843919372406,
   "ret1y": 35.311802095859825,
   "earnings_date": "2026-11-05",
-  "earnings_days": 4,
+  "earnings_days": 3,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -5580,7 +5580,7 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.4026,
+  "score": 0.4032,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -5603,8 +5603,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.5417790038873684,
-    "detail": "LTM P/E 27.2 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.5441262228114534,
+    "detail": "LTM P/E 27.1 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -5691,7 +5691,7 @@
   "sources": {
    "quote": "stockanalysis",
    "fundamentals": "nasdaq",
-   "earnings_bucket": "approaching"
+   "earnings_bucket": "imminent"
   }
  },
  {
@@ -5707,10 +5707,10 @@
   "pct_from_low": 13.346557098328141,
   "pos52": 16.416869989543397,
   "currency": "USD",
-  "pe_ltm": 10.996288619854722,
+  "pe_ltm": 10.971546970447632,
   "pe_fwd": null,
-  "ev_ebitda": 8.146503221419465,
-  "ps_ratio": 3.6445372402156466,
+  "ev_ebitda": 8.129566810582235,
+  "ps_ratio": 3.636337031421046,
   "revenue": 48598000000.0,
   "pe_mean_2y": null,
   "ps_mean_2y": null,
@@ -5721,13 +5721,13 @@
   "roic_trend": null,
   "debt_equity": 0.6853696906135291,
   "fcf_margin": 28.95798180995103,
-  "market_cap": 177117220800.0,
+  "market_cap": 176718707053.0,
   "beta": 0.6639940945796539,
   "vol30": 31.255698727147095,
   "downdev": 36.26013700752696,
   "ret1y": -22.133540977224055,
   "earnings_date": "2026-11-04",
-  "earnings_days": 3,
+  "earnings_days": 2,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -5748,7 +5748,7 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.7792,
+  "score": 0.7793,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -5771,7 +5771,7 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.9286597947653638,
+    "score": 0.9292488816560087,
     "detail": "LTM P/E 11.0 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
@@ -5896,7 +5896,7 @@
   "downdev": 20.573879219353984,
   "ret1y": 3.4542703537971287,
   "earnings_date": "2026-12-17",
-  "earnings_days": 46,
+  "earnings_days": 45,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -6067,10 +6067,10 @@
   "pct_from_low": 79.81554984823723,
   "pos52": 100.0,
   "currency": "USD",
-  "pe_ltm": 23.16499898472709,
+  "pe_ltm": 22.841684599148724,
   "pe_fwd": null,
-  "ev_ebitda": 8.831741404715988,
-  "ps_ratio": 3.1392849465594463,
+  "ev_ebitda": 8.718547360536466,
+  "ps_ratio": 3.0954698795127578,
   "revenue": 58944000000.0,
   "pe_mean_2y": 14.0,
   "ps_mean_2y": 2.48,
@@ -6081,13 +6081,13 @@
   "roic_trend": null,
   "debt_equity": 0.36354614108269884,
   "fcf_margin": 17.411441368078176,
-  "market_cap": 185042011890.0,
+  "market_cap": 182459376578.0,
   "beta": 0.5755412044650188,
   "vol30": 26.418357064717114,
   "downdev": 19.471849356935103,
   "ret1y": 74.87511353315168,
   "earnings_date": "2026-11-05",
-  "earnings_days": 4,
+  "earnings_days": 3,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -6131,7 +6131,7 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.3635,
+  "score": 0.3653,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -6154,8 +6154,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.6389285956017359,
-    "detail": "LTM P/E 23.2 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.6466265571631256,
+    "detail": "LTM P/E 22.8 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -6242,7 +6242,7 @@
   "sources": {
    "quote": "stockanalysis",
    "fundamentals": "nasdaq",
-   "earnings_bucket": "approaching"
+   "earnings_bucket": "imminent"
   }
  },
  {
@@ -6258,10 +6258,10 @@
   "pct_from_low": 53.01820208023774,
   "pos52": 83.06416412047143,
   "currency": "USD",
-  "pe_ltm": 26.693784305574816,
+  "pe_ltm": 26.373031223131328,
   "pe_fwd": null,
-  "ev_ebitda": 13.494708882934942,
-  "ps_ratio": 2.3771028990290364,
+  "ev_ebitda": 13.339297384555946,
+  "ps_ratio": 2.3485395798150694,
   "revenue": 323905000000.0,
   "pe_mean_2y": null,
   "ps_mean_2y": null,
@@ -6272,7 +6272,7 @@
   "roic_trend": null,
   "debt_equity": 0.16993592560893803,
   "fcf_margin": 9.624118182800514,
-  "market_cap": 769955514510.0,
+  "market_cap": 760703712600.0,
   "beta": 0.09969716328564403,
   "vol30": 25.322071131326553,
   "downdev": 17.04184706630919,
@@ -6299,7 +6299,7 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.3717,
+  "score": 0.3734,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -6322,8 +6322,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.5549098974863139,
-    "detail": "LTM P/E 26.7 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.5625468756397303,
+    "detail": "LTM P/E 26.4 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -6426,10 +6426,10 @@
   "pct_from_low": 30.099150141643072,
   "pos52": 27.79594506213212,
   "currency": "USD",
-  "pe_ltm": 156.58647128472222,
+  "pe_ltm": 155.13738579861112,
   "pe_fwd": null,
-  "ev_ebitda": 27.451163515746,
-  "ps_ratio": 4.8732335995245295,
+  "ev_ebitda": 27.235708368611256,
+  "ps_ratio": 4.828135628917225,
   "revenue": 925400000.0,
   "pe_mean_2y": 401.22,
   "ps_mean_2y": 5.38,
@@ -6440,7 +6440,7 @@
   "roic_trend": null,
   "debt_equity": 0.6536112301757394,
   "fcf_margin": 16.998054895180463,
-  "market_cap": 4509690373.0,
+  "market_cap": 4467956711.0,
   "beta": 1.4441205661134262,
   "vol30": 61.547721370402186,
   "downdev": 36.98996397051517,
@@ -6510,7 +6510,7 @@
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
     "score": 0.0,
-    "detail": "LTM P/E 156.6 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "detail": "LTM P/E 155.1 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -6613,10 +6613,10 @@
   "pct_from_low": 50.907187718073956,
   "pos52": 51.30098452883263,
   "currency": "USD",
-  "pe_ltm": 82.94759117005347,
+  "pe_ltm": 83.41564562566845,
   "pe_fwd": null,
-  "ev_ebitda": 48.158369582417585,
-  "ps_ratio": 5.654005813516075,
+  "ev_ebitda": 48.44125963800905,
+  "ps_ratio": 5.685910086753664,
   "revenue": 13717000000.0,
   "pe_mean_2y": 215.92,
   "ps_mean_2y": 7.49,
@@ -6627,7 +6627,7 @@
   "roic_trend": null,
   "debt_equity": 0.27150403667895945,
   "fcf_margin": 9.404388714733543,
-  "market_cap": 77555997744.0,
+  "market_cap": 77993628660.0,
   "beta": 0.12155096276525952,
   "vol30": 42.22615501197565,
   "downdev": 34.10083205867736,
@@ -6699,7 +6699,7 @@
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
     "score": 0.0,
-    "detail": "LTM P/E 82.9 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "detail": "LTM P/E 83.4 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -6792,7 +6792,7 @@
   "symbol": "ZM",
   "name": "Zoom Communications, Inc.",
   "type": "equity",
-  "sector": null,
+  "sector": "Technology",
   "price": 95.5,
   "change_pct": -2.211755068605362,
   "high52": 111.88,
@@ -6801,27 +6801,27 @@
   "pct_from_low": 31.325632563256328,
   "pos52": 58.17160367722166,
   "currency": "USD",
-  "pe_ltm": null,
+  "pe_ltm": 14.741607630563514,
   "pe_fwd": null,
-  "ev_ebitda": null,
-  "ps_ratio": null,
-  "revenue": null,
+  "ev_ebitda": 13.365442517750587,
+  "ps_ratio": 5.753248152869853,
+  "revenue": 4868769000.0,
   "pe_mean_2y": 23.89,
   "ps_mean_2y": 5.53,
-  "invested_capital": null,
-  "excess_cash": null,
-  "roic_detail": null,
-  "roic": null,
+  "invested_capital": 2088725380.0,
+  "excess_cash": 7719532620.0,
+  "roic_detail": "NOPAT $0.89B (op income $1.12B \u00d7 79% after tax) \u00f7 invested capital $2.09B (debt $0.00B + equity $9.81B \u2212 excess cash $7.72B; operating cash held back at 2% of revenue = $0.10B)",
+  "roic": 42.498170343484794,
   "roic_trend": null,
-  "debt_equity": null,
-  "fcf_margin": null,
-  "market_cap": null,
+  "debt_equity": 0.0,
+  "fcf_margin": 29.698985513586702,
+  "market_cap": 28011236256.0,
   "beta": 1.2849495202012058,
   "vol30": 35.99000785692047,
   "downdev": 27.26725228113429,
   "ret1y": 14.618338934229481,
   "earnings_date": "2026-11-23",
-  "earnings_days": 22,
+  "earnings_days": 21,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -6865,9 +6865,9 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.5466,
+  "score": 0.684,
   "score_partial": true,
-  "score_n": "3 of 6",
+  "score_n": "5 of 6",
   "score_parts": [
    {
     "key": "expectations_gap",
@@ -6888,16 +6888,16 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": null,
-    "detail": "No positive LTM P/E available",
+    "score": 0.8394855326056306,
+    "detail": "LTM P/E 14.7 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
    {
     "key": "roic_trend",
     "label": "ROIC trend",
-    "score": null,
-    "detail": "ROIC not computable from available data",
+    "score": 1.0,
+    "detail": "ROIC 42.5% (computed in-repo: NOPAT \u00f7 invested capital)",
     "weight": 0.1,
     "raw": {}
    },
@@ -6919,25 +6919,25 @@
    }
   ],
   "buffett": {
-   "moat": "Unknown",
-   "de": null,
-   "fcf_margin": null,
+   "moat": "Wide",
+   "de": 0.0,
+   "fcf_margin": 29.698985513586702,
    "tests": {
     "moat": {
-     "pass": false,
-     "why": "ROIC unavailable \u2014 cannot assess"
+     "pass": true,
+     "why": "ROIC 42.5% \u2192 wide moat"
     },
     "returns": {
-     "pass": false,
-     "why": "ROIC unavailable"
+     "pass": true,
+     "why": "ROIC 42.5% vs ~10% cost of capital"
     },
     "leverage": {
-     "pass": false,
-     "why": "Debt/equity unavailable"
+     "pass": true,
+     "why": "Debt/equity 0.00"
     },
     "cashgen": {
-     "pass": false,
-     "why": "FCF margin unavailable"
+     "pass": true,
+     "why": "FCF margin 29.7%"
     },
     "stability": {
      "pass": true,
@@ -6952,7 +6952,7 @@
      "why": "No fair value set \u2014 price test cannot run"
     }
    },
-   "passed": 2,
+   "passed": 6,
    "total": 7,
    "labels": {
     "moat": "Durable moat",
@@ -6971,11 +6971,11 @@
   "stale": false,
   "errors": [
    "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ZM?range=3y&interval=1d failed after 4 tries: HTTP 429 rate ",
-   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
    "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/ZM?modules=defaultKeyStatistics,financialData,summaryProfile,c"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "distant"
   }
  },
@@ -6992,10 +6992,10 @@
   "pct_from_low": 60.49063032367974,
   "pos52": 100.0,
   "currency": "USD",
-  "pe_ltm": 37.83508012456297,
+  "pe_ltm": 37.39170027937231,
   "pe_fwd": null,
-  "ev_ebitda": 13.695740291343546,
-  "ps_ratio": 2.5230635163745987,
+  "ev_ebitda": 13.546310846902145,
+  "ps_ratio": 2.4934963657933547,
   "revenue": 184432000000.0,
   "pe_mean_2y": 19.74,
   "ps_mean_2y": 1.64,
@@ -7006,7 +7006,7 @@
   "roic_trend": null,
   "debt_equity": 0.21860016090104586,
   "fcf_margin": 10.381061854775744,
-  "market_cap": 465333650452.0,
+  "market_cap": 459880521736.0,
   "beta": 0.44539456191434984,
   "vol30": 21.141056263363197,
   "downdev": 16.11606762763593,
@@ -7023,9 +7023,9 @@
   "superinv": "trim",
   "superinv_detail": "Torray Funds (Q3 2026): Chevron Corp. \u00b7 Reduce -11.35% \u00b7 Change to portfolio: 0.46%",
   "weight_pct": 1.3514,
-  "analyst_target": 237.94,
-  "analyst_upside": 1.0275135869565164,
-  "analyst_detail": "Consensus $237.94 (range $208.0\u2013$326.0) \u00b7 13 buy / 3 hold / 0 sell",
+  "analyst_target": 240.31,
+  "analyst_upside": 2.0337975543478226,
+  "analyst_detail": "Consensus $240.31 (range $208.0\u2013$326.0) \u00b7 13 buy / 3 hold / 0 sell",
   "analyst_low": 208.0,
   "analyst_high": 326.0,
   "decomposition": [
@@ -7056,7 +7056,7 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.2567,
+  "score": 0.2591,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -7079,8 +7079,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.2896409494151674,
-    "detail": "LTM P/E 37.8 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.3001976123958974,
+    "detail": "LTM P/E 37.4 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -7183,10 +7183,10 @@
   "pct_from_low": 6.493248610007949,
   "pos52": 12.753510140405627,
   "currency": "USD",
-  "pe_ltm": 27.856681037807185,
+  "pe_ltm": 27.996925376181476,
   "pe_fwd": null,
-  "ev_ebitda": 15.81153592774231,
-  "ps_ratio": 2.0328575346944406,
+  "ev_ebitda": 15.87612320719675,
+  "ps_ratio": 2.0430919470271762,
   "revenue": 21747000000.0,
   "pe_mean_2y": 23.49,
   "ps_mean_2y": 2.5,
@@ -7197,7 +7197,7 @@
   "roic_trend": null,
   "debt_equity": 0.8572152999130687,
   "fcf_margin": 14.043316319492344,
-  "market_cap": 44208552807.0,
+  "market_cap": 44431120572.0,
   "beta": 1.1384551443812172,
   "vol30": 21.86470278145407,
   "downdev": 24.547842980669767,
@@ -7247,7 +7247,7 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.6253,
+  "score": 0.6245,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -7270,8 +7270,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.5272218800522099,
-    "detail": "LTM P/E 27.9 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.5238827291385363,
+    "detail": "LTM P/E 28.0 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -7374,10 +7374,10 @@
   "pct_from_low": 3.4068136272545133,
   "pos52": 3.9213305815224038,
   "currency": "USD",
-  "pe_ltm": 15.83759197152574,
+  "pe_ltm": 16.367450209655907,
   "pe_fwd": null,
-  "ev_ebitda": 15.737963721946024,
-  "ps_ratio": 1.6027623409388454,
+  "ev_ebitda": 16.302292851136365,
+  "ps_ratio": 1.656383928844259,
   "revenue": 148182000000.0,
   "pe_mean_2y": null,
   "ps_mean_2y": null,
@@ -7388,13 +7388,13 @@
   "roic_trend": null,
   "debt_equity": 0.2347283631462079,
   "fcf_margin": 9.501828832111862,
-  "market_cap": 237500529205.0,
+  "market_cap": 245446283344.0,
   "beta": 1.0561860705910964,
   "vol30": 31.608535099067154,
   "downdev": 22.145246756900747,
   "ret1y": -45.52425404234038,
   "earnings_date": "2026-11-24",
-  "earnings_days": 23,
+  "earnings_days": 22,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -7415,7 +7415,7 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.7486,
+  "score": 0.7457,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -7438,8 +7438,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.8133906673446253,
-    "detail": "LTM P/E 15.8 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.8007749950081927,
+    "detail": "LTM P/E 16.4 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -7543,10 +7543,10 @@
   "pct_from_low": 49.62955047374795,
   "pos52": 84.67849762975568,
   "currency": "USD",
-  "pe_ltm": 16.029423901801483,
+  "pe_ltm": 16.484659998587073,
   "pe_fwd": null,
-  "ev_ebitda": 13.743168378391474,
-  "ps_ratio": 0.4557870590433145,
+  "ev_ebitda": 14.055371234496125,
+  "ps_ratio": 0.4687314245423729,
   "revenue": 199125000000.0,
   "pe_mean_2y": 12.38,
   "ps_mean_2y": 0.45,
@@ -7557,7 +7557,7 @@
   "roic_trend": null,
   "debt_equity": 0.7336949090743358,
   "fcf_margin": 3.585687382297552,
-  "market_cap": 90758598132.0,
+  "market_cap": 93336144912.0,
   "beta": 0.40504464539042045,
   "vol30": 23.221523167597972,
   "downdev": 28.244426923838805,
@@ -7607,7 +7607,7 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.5333,
+  "score": 0.5308,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -7630,8 +7630,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.808823240433298,
-    "detail": "LTM P/E 16.0 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.7979842857479268,
+    "detail": "LTM P/E 16.5 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -7725,7 +7725,7 @@
   "symbol": "TECH",
   "name": "BIO-TECHNE Corp",
   "type": "equity",
-  "sector": null,
+  "sector": "Health Care",
   "price": 72.66,
   "change_pct": -0.06876633200384702,
   "high52": 72.71,
@@ -7734,27 +7734,27 @@
   "pct_from_low": 67.80600461893765,
   "pos52": 99.82998979938797,
   "currency": "USD",
-  "pe_ltm": null,
+  "pe_ltm": 62.6541727958562,
   "pe_fwd": null,
-  "ev_ebitda": null,
-  "ps_ratio": null,
-  "revenue": null,
+  "ev_ebitda": 32.44018214225381,
+  "ps_ratio": 9.377816821517664,
+  "revenue": 1215039000.0,
   "pe_mean_2y": 67.42,
   "ps_mean_2y": 8.22,
-  "invested_capital": null,
-  "excess_cash": null,
-  "roic_detail": null,
-  "roic": null,
+  "invested_capital": 2067809780.0,
+  "excess_cash": 240411220.0,
+  "roic_detail": "NOPAT $0.20B (op income $0.25B \u00d7 79% after tax) \u00f7 invested capital $2.07B (debt $0.20B + equity $2.11B \u2212 excess cash $0.24B; operating cash held back at 2% of revenue = $0.02B)",
+  "roic": 9.623375511842292,
   "roic_trend": null,
-  "debt_equity": null,
-  "fcf_margin": null,
-  "market_cap": null,
+  "debt_equity": 0.09486671463760203,
+  "fcf_margin": 26.369441639321867,
+  "market_cap": 11394413173.0,
   "beta": 1.113466947922245,
   "vol30": 1.8389506734661523,
   "downdev": 33.60819433697072,
   "ret1y": 17.155756207674933,
   "earnings_date": "2026-11-04",
-  "earnings_days": 3,
+  "earnings_days": 2,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -7798,9 +7798,9 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.2759,
+  "score": 0.2116,
   "score_partial": true,
-  "score_n": "3 of 6",
+  "score_n": "5 of 6",
   "score_parts": [
    {
     "key": "expectations_gap",
@@ -7821,16 +7821,16 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": null,
-    "detail": "No positive LTM P/E available",
+    "score": 0.0,
+    "detail": "LTM P/E 62.7 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
    {
     "key": "roic_trend",
     "label": "ROIC trend",
-    "score": null,
-    "detail": "ROIC not computable from available data",
+    "score": 0.27226341113722474,
+    "detail": "ROIC 9.6% (computed in-repo: NOPAT \u00f7 invested capital)",
     "weight": 0.1,
     "raw": {}
    },
@@ -7852,25 +7852,25 @@
    }
   ],
   "buffett": {
-   "moat": "Unknown",
-   "de": null,
-   "fcf_margin": null,
+   "moat": "None",
+   "de": 0.09486671463760203,
+   "fcf_margin": 26.369441639321867,
    "tests": {
     "moat": {
      "pass": false,
-     "why": "ROIC unavailable \u2014 cannot assess"
+     "why": "ROIC 9.6% \u2192 none moat"
     },
     "returns": {
      "pass": false,
-     "why": "ROIC unavailable"
+     "why": "ROIC 9.6% vs ~10% cost of capital"
     },
     "leverage": {
-     "pass": false,
-     "why": "Debt/equity unavailable"
+     "pass": true,
+     "why": "Debt/equity 0.09"
     },
     "cashgen": {
-     "pass": false,
-     "why": "FCF margin unavailable"
+     "pass": true,
+     "why": "FCF margin 26.4%"
     },
     "stability": {
      "pass": true,
@@ -7885,7 +7885,7 @@
      "why": "No fair value set \u2014 price test cannot run"
     }
    },
-   "passed": 2,
+   "passed": 4,
    "total": 7,
    "labels": {
     "moat": "Durable moat",
@@ -7904,11 +7904,11 @@
   "stale": false,
   "errors": [
    "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/TECH?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
-   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
    "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/TECH?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "imminent"
   }
  },
@@ -8315,10 +8315,10 @@
   "pct_from_low": 57.119141379044116,
   "pos52": 83.43201939886089,
   "currency": "USD",
-  "pe_ltm": 30.299782256469808,
+  "pe_ltm": 30.288785677256136,
   "pe_fwd": null,
-  "ev_ebitda": 18.07636333907824,
-  "ps_ratio": 0.8161776334805738,
+  "ev_ebitda": 18.070679533762057,
+  "ps_ratio": 0.8158814213849547,
   "revenue": 447567000000.0,
   "pe_mean_2y": 21.56,
   "ps_mean_2y": 0.86,
@@ -8329,7 +8329,7 @@
   "roic_trend": null,
   "debt_equity": 0.8974391669323133,
   "fcf_margin": 4.402245920722484,
-  "market_cap": 365294174884.0,
+  "market_cap": 365161600125.0,
   "beta": 0.39598448376301765,
   "vol30": 25.107830656214308,
   "downdev": 28.074638957620383,
@@ -8379,7 +8379,7 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.3691,
+  "score": 0.3692,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -8402,7 +8402,7 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.46905280341738553,
+    "score": 0.46931462673199675,
     "detail": "LTM P/E 30.3 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
@@ -8506,10 +8506,10 @@
   "pct_from_low": 35.300604389778385,
   "pos52": 100.0,
   "currency": "USD",
-  "pe_ltm": 37.33986516695617,
+  "pe_ltm": 37.339279911811865,
   "pe_fwd": null,
-  "ev_ebitda": 25.491151044312947,
-  "ps_ratio": 17.04440553258516,
+  "ev_ebitda": 25.490755340139128,
+  "ps_ratio": 17.04413838309292,
   "revenue": 32791000000.0,
   "pe_mean_2y": 36.2,
   "ps_mean_2y": 16.63,
@@ -8520,7 +8520,7 @@
   "roic_trend": null,
   "debt_equity": 2.455732195941579,
   "fcf_margin": 66.02116434387484,
-  "market_cap": 558903101819.0,
+  "market_cap": 558894341720.0,
   "beta": 0.8547337238079055,
   "vol30": 21.26056584041615,
   "downdev": 14.555692274658288,
@@ -8593,7 +8593,7 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.30143178173913876,
+    "score": 0.30144571638543183,
     "detail": "LTM P/E 37.3 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
@@ -8769,10 +8769,10 @@
   "pct_from_low": 80.73308270676691,
   "pos52": 50.145942790426155,
   "currency": "USD",
-  "pe_ltm": 19.711250426961875,
+  "pe_ltm": 19.834253547776726,
   "pe_fwd": null,
-  "ev_ebitda": 8.072030267257052,
-  "ps_ratio": 1.2718836230646589,
+  "ev_ebitda": 8.109788344183029,
+  "ps_ratio": 1.2798204942200404,
   "revenue": 1261341000.0,
   "pe_mean_2y": 20.25,
   "ps_mean_2y": 1.39,
@@ -8783,7 +8783,7 @@
   "roic_trend": null,
   "debt_equity": 1.7171725168066965,
   "fcf_margin": 19.91816645934763,
-  "market_cap": 1604278961.0,
+  "market_cap": 1614290062.0,
   "beta": 1.9151449324891656,
   "vol30": 60.145687618891344,
   "downdev": 47.637058770478255,
@@ -8820,7 +8820,7 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.6098,
+  "score": 0.6092,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -8843,8 +8843,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.7211607041199554,
-    "detail": "LTM P/E 19.7 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.7182320583862685,
+    "detail": "LTM P/E 19.8 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -8967,7 +8967,7 @@
   "downdev": 79.94487430829089,
   "ret1y": -84.70215827961161,
   "earnings_date": "2026-11-11",
-  "earnings_days": 10,
+  "earnings_days": 9,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -9280,7 +9280,7 @@
   "symbol": "ASML",
   "name": "ASML Holding NV",
   "type": "adr",
-  "sector": null,
+  "sector": "Technology",
   "price": 1565.9,
   "change_pct": -6.552485528435875,
   "high52": 1989.44,
@@ -9289,21 +9289,21 @@
   "pct_from_low": 62.00585575798959,
   "pos52": 58.592978579878185,
   "currency": "USD",
-  "pe_ltm": null,
+  "pe_ltm": 54.06563791180067,
   "pe_fwd": null,
-  "ev_ebitda": null,
-  "ps_ratio": null,
-  "revenue": null,
+  "ev_ebitda": 41.42071545907901,
+  "ps_ratio": 15.903946086529288,
+  "revenue": 38366200000.0,
   "pe_mean_2y": null,
   "ps_mean_2y": null,
-  "invested_capital": null,
-  "excess_cash": null,
-  "roic_detail": null,
-  "roic": null,
+  "invested_capital": 13311924000.0,
+  "excess_cash": 14878576000.0,
+  "roic_detail": "NOPAT $10.49B (op income $13.27B \u00d7 79% after tax) \u00f7 invested capital $13.31B (debt $5.16B + equity $23.03B \u2212 excess cash $14.88B; operating cash held back at 2% of revenue = $0.77B)",
+  "roic": 78.76900439034958,
   "roic_trend": null,
-  "debt_equity": null,
-  "fcf_margin": null,
-  "market_cap": null,
+  "debt_equity": 0.2238859752709086,
+  "fcf_margin": 32.919079815045535,
+  "market_cap": 610173976345.0,
   "beta": 1.7568631934842818,
   "vol30": 39.121879621539954,
   "downdev": 28.436563727168323,
@@ -9330,9 +9330,9 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.3945,
+  "score": 0.3966,
   "score_partial": true,
-  "score_n": "3 of 6",
+  "score_n": "5 of 6",
   "score_parts": [
    {
     "key": "expectations_gap",
@@ -9353,16 +9353,16 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": null,
-    "detail": "No positive LTM P/E available",
+    "score": 0.0,
+    "detail": "LTM P/E 54.1 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
    {
     "key": "roic_trend",
     "label": "ROIC trend",
-    "score": null,
-    "detail": "ROIC not computable from available data",
+    "score": 1.0,
+    "detail": "ROIC 78.8% (computed in-repo: NOPAT \u00f7 invested capital)",
     "weight": 0.1,
     "raw": {}
    },
@@ -9384,25 +9384,25 @@
    }
   ],
   "buffett": {
-   "moat": "Unknown",
-   "de": null,
-   "fcf_margin": null,
+   "moat": "Wide",
+   "de": 0.2238859752709086,
+   "fcf_margin": 32.919079815045535,
    "tests": {
     "moat": {
-     "pass": false,
-     "why": "ROIC unavailable \u2014 cannot assess"
+     "pass": true,
+     "why": "ROIC 78.8% \u2192 wide moat"
     },
     "returns": {
-     "pass": false,
-     "why": "ROIC unavailable"
+     "pass": true,
+     "why": "ROIC 78.8% vs ~10% cost of capital"
     },
     "leverage": {
-     "pass": false,
-     "why": "Debt/equity unavailable"
+     "pass": true,
+     "why": "Debt/equity 0.22"
     },
     "cashgen": {
-     "pass": false,
-     "why": "FCF margin unavailable"
+     "pass": true,
+     "why": "FCF margin 32.9%"
     },
     "stability": {
      "pass": true,
@@ -9417,7 +9417,7 @@
      "why": "No fair value set \u2014 price test cannot run"
     }
    },
-   "passed": 2,
+   "passed": 6,
    "total": 7,
    "labels": {
     "moat": "Durable moat",
@@ -9436,12 +9436,12 @@
   "stale": false,
   "errors": [
    "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ASML?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
-   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
    "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/ASML?modules=defaultKeyStatistics,financialData,summaryProfile",
    "history: missing quarterly revenue or net income"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -9449,7 +9449,7 @@
   "symbol": "TSM",
   "name": "Taiwan Semiconductor Manufacturing Co Ltd ADR",
   "type": "adr",
-  "sector": null,
+  "sector": "Technology",
   "price": 414.48,
   "change_pct": 354.97255762897913,
   "high52": 479.0,
@@ -9458,21 +9458,21 @@
   "pct_from_low": 83.69897619997342,
   "pos52": 74.53526463275053,
   "currency": "USD",
-  "pe_ltm": null,
+  "pe_ltm": 39.60807903020597,
   "pe_fwd": null,
-  "ev_ebitda": null,
-  "ps_ratio": null,
-  "revenue": null,
+  "ev_ebitda": 24.9919121970634,
+  "ps_ratio": 17.626577461269356,
+  "revenue": 121228300000.0,
   "pe_mean_2y": null,
   "ps_mean_2y": null,
-  "invested_capital": null,
-  "excess_cash": null,
-  "roic_detail": null,
-  "roic": null,
+  "invested_capital": 123297966000.0,
+  "excess_cash": 85666234000.0,
+  "roic_detail": "NOPAT $48.68B (op income $61.62B \u00d7 79% after tax) \u00f7 invested capital $123.30B (debt $38.53B + equity $170.43B \u2212 excess cash $85.67B; operating cash held back at 2% of revenue = $2.42B)",
+  "roic": 39.48059694674931,
   "roic_trend": null,
-  "debt_equity": null,
-  "fcf_margin": null,
-  "market_cap": null,
+  "debt_equity": 0.22608979331273463,
+  "fcf_margin": 35.48849567304004,
+  "market_cap": 2136840020448.0,
   "beta": 0.11337034163034629,
   "vol30": 38.79374970823392,
   "downdev": 24.997442193040825,
@@ -9499,9 +9499,9 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.5398,
+  "score": 0.5431,
   "score_partial": true,
-  "score_n": "3 of 6",
+  "score_n": "5 of 6",
   "score_parts": [
    {
     "key": "expectations_gap",
@@ -9522,16 +9522,16 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": null,
-    "detail": "No positive LTM P/E available",
+    "score": 0.24742668975700066,
+    "detail": "LTM P/E 39.6 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
    {
     "key": "roic_trend",
     "label": "ROIC trend",
-    "score": null,
-    "detail": "ROIC not computable from available data",
+    "score": 1.0,
+    "detail": "ROIC 39.5% (computed in-repo: NOPAT \u00f7 invested capital)",
     "weight": 0.1,
     "raw": {}
    },
@@ -9553,25 +9553,25 @@
    }
   ],
   "buffett": {
-   "moat": "Unknown",
-   "de": null,
-   "fcf_margin": null,
+   "moat": "Wide",
+   "de": 0.22608979331273463,
+   "fcf_margin": 35.48849567304004,
    "tests": {
     "moat": {
-     "pass": false,
-     "why": "ROIC unavailable \u2014 cannot assess"
+     "pass": true,
+     "why": "ROIC 39.5% \u2192 wide moat"
     },
     "returns": {
-     "pass": false,
-     "why": "ROIC unavailable"
+     "pass": true,
+     "why": "ROIC 39.5% vs ~10% cost of capital"
     },
     "leverage": {
-     "pass": false,
-     "why": "Debt/equity unavailable"
+     "pass": true,
+     "why": "Debt/equity 0.23"
     },
     "cashgen": {
-     "pass": false,
-     "why": "FCF margin unavailable"
+     "pass": true,
+     "why": "FCF margin 35.5%"
     },
     "stability": {
      "pass": true,
@@ -9586,7 +9586,7 @@
      "why": "No fair value set \u2014 price test cannot run"
     }
    },
-   "passed": 2,
+   "passed": 6,
    "total": 7,
    "labels": {
     "moat": "Durable moat",
@@ -9604,12 +9604,12 @@
   "alias": null,
   "stale": false,
   "errors": [
-   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
    "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/TSM?modules=defaultKeyStatistics,financialData,summaryProfile,",
    "history: no us-gaap facts"
   ],
   "sources": {
    "quote": "yahoo",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -9628,8 +9628,8 @@
   "currency": "USD",
   "pe_ltm": null,
   "pe_fwd": null,
-  "ev_ebitda": 37.58061220427729,
-  "ps_ratio": 6.575713224282444,
+  "ev_ebitda": 37.146314456911085,
+  "ps_ratio": 6.497716625830132,
   "revenue": 52853000000.0,
   "pe_mean_2y": null,
   "ps_mean_2y": 4.5,
@@ -9640,7 +9640,7 @@
   "roic_trend": null,
   "debt_equity": 0.4076355649670549,
   "fcf_margin": -9.751575123455622,
-  "market_cap": 347546171043.0,
+  "market_cap": 343423816825.0,
   "beta": 1.6185378811720226,
   "vol30": 101.52748886045421,
   "downdev": 55.72289282150529,
@@ -9651,7 +9651,7 @@
   "catalyst_date": null,
   "catalyst_note": null,
   "insider": "buy",
-  "insider_detail": "3 Form 4 filings in 90d (cluster) \u2014 latest 2026-08-14",
+  "insider_detail": "1 Form 4 filing(s) in 90d \u2014 latest 2026-08-14",
   "politician": null,
   "politician_detail": "No disclosures",
   "superinv": "add",
@@ -9726,7 +9726,7 @@
     "key": "insider_activity",
     "label": "Insider activity",
     "score": 0.85,
-    "detail": "3 Form 4 filings in 90d (cluster) \u2014 latest 2026-08-14",
+    "detail": "1 Form 4 filing(s) in 90d \u2014 latest 2026-08-14",
     "weight": 0.1,
     "raw": {}
    },
@@ -9804,7 +9804,7 @@
   "symbol": "AMD",
   "name": "ADVANCED MICRO DEVICES INC",
   "type": "equity",
-  "sector": null,
+  "sector": "Technology",
   "price": 504.8,
   "change_pct": -10.878853147840816,
   "high52": 649.42,
@@ -9813,27 +9813,27 @@
   "pct_from_low": 164.3623985336476,
   "pos52": 68.45595131633478,
   "currency": "USD",
-  "pe_ltm": null,
+  "pe_ltm": 192.26677219008073,
   "pe_fwd": null,
-  "ev_ebitda": null,
-  "ps_ratio": null,
-  "revenue": null,
+  "ev_ebitda": 123.34225999462527,
+  "ps_ratio": 24.061793280521954,
+  "revenue": 34639000000.0,
   "pe_mean_2y": 136.23,
   "ps_mean_2y": 13.32,
-  "invested_capital": null,
-  "excess_cash": null,
-  "roic_detail": null,
-  "roic": null,
+  "invested_capital": 56361780000.0,
+  "excess_cash": 9859220000.0,
+  "roic_detail": "NOPAT $2.92B (op income $3.69B \u00d7 79% after tax) \u00f7 invested capital $56.36B (debt $3.22B + equity $63.00B \u2212 excess cash $9.86B; operating cash held back at 2% of revenue = $0.69B)",
+  "roic": 5.177728595512774,
   "roic_trend": null,
-  "debt_equity": null,
-  "fcf_margin": null,
-  "market_cap": null,
+  "debt_equity": 0.051143668947126145,
+  "fcf_margin": 16.52472646438985,
+  "market_cap": 833476457444.0,
   "beta": 2.1820960255445714,
   "vol30": 64.18921355107764,
   "downdev": 41.909642359896445,
   "ret1y": 90.97340445655053,
   "earnings_date": "2026-11-03",
-  "earnings_days": 2,
+  "earnings_days": 1,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -9877,9 +9877,9 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.5952,
+  "score": 0.3837,
   "score_partial": true,
-  "score_n": "3 of 6",
+  "score_n": "5 of 6",
   "score_parts": [
    {
     "key": "expectations_gap",
@@ -9900,16 +9900,16 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": null,
-    "detail": "No positive LTM P/E available",
+    "score": 0.0,
+    "detail": "LTM P/E 192.3 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
    {
     "key": "roic_trend",
     "label": "ROIC trend",
-    "score": null,
-    "detail": "ROIC not computable from available data",
+    "score": 0.11349030698259908,
+    "detail": "ROIC 5.2% (computed in-repo: NOPAT \u00f7 invested capital)",
     "weight": 0.1,
     "raw": {}
    },
@@ -9931,25 +9931,25 @@
    }
   ],
   "buffett": {
-   "moat": "Unknown",
-   "de": null,
-   "fcf_margin": null,
+   "moat": "None",
+   "de": 0.051143668947126145,
+   "fcf_margin": 16.52472646438985,
    "tests": {
     "moat": {
      "pass": false,
-     "why": "ROIC unavailable \u2014 cannot assess"
+     "why": "ROIC 5.2% \u2192 none moat"
     },
     "returns": {
      "pass": false,
-     "why": "ROIC unavailable"
+     "why": "ROIC 5.2% vs ~10% cost of capital"
     },
     "leverage": {
-     "pass": false,
-     "why": "Debt/equity unavailable"
+     "pass": true,
+     "why": "Debt/equity 0.05"
     },
     "cashgen": {
-     "pass": false,
-     "why": "FCF margin unavailable"
+     "pass": true,
+     "why": "FCF margin 16.5%"
     },
     "stability": {
      "pass": true,
@@ -9964,7 +9964,7 @@
      "why": "No fair value set \u2014 price test cannot run"
     }
    },
-   "passed": 2,
+   "passed": 4,
    "total": 7,
    "labels": {
     "moat": "Durable moat",
@@ -9983,11 +9983,11 @@
   "stale": false,
   "errors": [
    "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/AMD?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
-   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
    "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/AMD?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "imminent"
   }
  },
@@ -9995,7 +9995,7 @@
   "symbol": "MSFT",
   "name": "MICROSOFT CORP",
   "type": "equity",
-  "sector": null,
+  "sector": "Technology",
   "price": 521.91,
   "change_pct": -1.5524201154412076,
   "high52": 543.45,
@@ -10004,21 +10004,21 @@
   "pct_from_low": 47.921095144970664,
   "pos52": 88.70003147623541,
   "currency": "USD",
-  "pe_ltm": null,
+  "pe_ltm": 29.13588580970325,
   "pe_fwd": null,
-  "ev_ebitda": null,
-  "ps_ratio": null,
-  "revenue": null,
+  "ev_ebitda": 19.92221019224755,
+  "ps_ratio": 11.743332131431206,
+  "revenue": 331839000000.0,
   "pe_mean_2y": 32.66,
   "ps_mean_2y": 12.14,
-  "invested_capital": null,
-  "excess_cash": null,
-  "roic_detail": null,
-  "roic": null,
+  "invested_capital": 412474780000.0,
+  "excess_cash": 70206220000.0,
+  "roic_detail": "NOPAT $122.64B (op income $155.24B \u00d7 79% after tax) \u00f7 invested capital $412.47B (debt $40.29B + equity $442.39B \u2212 excess cash $70.21B; operating cash held back at 2% of revenue = $6.64B)",
+  "roic": 29.73205537560381,
   "roic_trend": null,
-  "debt_equity": null,
-  "fcf_margin": null,
-  "market_cap": null,
+  "debt_equity": 0.09108314665666034,
+  "fcf_margin": 23.45203547503458,
+  "market_cap": 3896895591162.0,
   "beta": 1.1282962891634816,
   "vol30": 20.525255182655332,
   "downdev": 20.303896744941962,
@@ -10068,9 +10068,9 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.469,
+  "score": 0.5556,
   "score_partial": true,
-  "score_n": "3 of 6",
+  "score_n": "5 of 6",
   "score_parts": [
    {
     "key": "expectations_gap",
@@ -10091,16 +10091,16 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": null,
-    "detail": "No positive LTM P/E available",
+    "score": 0.49676462357849405,
+    "detail": "LTM P/E 29.1 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
    {
     "key": "roic_trend",
     "label": "ROIC trend",
-    "score": null,
-    "detail": "ROIC not computable from available data",
+    "score": 0.9904305491287075,
+    "detail": "ROIC 29.7% (computed in-repo: NOPAT \u00f7 invested capital)",
     "weight": 0.1,
     "raw": {}
    },
@@ -10122,25 +10122,25 @@
    }
   ],
   "buffett": {
-   "moat": "Unknown",
-   "de": null,
-   "fcf_margin": null,
+   "moat": "Wide",
+   "de": 0.09108314665666034,
+   "fcf_margin": 23.45203547503458,
    "tests": {
     "moat": {
-     "pass": false,
-     "why": "ROIC unavailable \u2014 cannot assess"
+     "pass": true,
+     "why": "ROIC 29.7% \u2192 wide moat"
     },
     "returns": {
-     "pass": false,
-     "why": "ROIC unavailable"
+     "pass": true,
+     "why": "ROIC 29.7% vs ~10% cost of capital"
     },
     "leverage": {
-     "pass": false,
-     "why": "Debt/equity unavailable"
+     "pass": true,
+     "why": "Debt/equity 0.09"
     },
     "cashgen": {
-     "pass": false,
-     "why": "FCF margin unavailable"
+     "pass": true,
+     "why": "FCF margin 23.5%"
     },
     "stability": {
      "pass": true,
@@ -10155,7 +10155,7 @@
      "why": "No fair value set \u2014 price test cannot run"
     }
    },
-   "passed": 2,
+   "passed": 6,
    "total": 7,
    "labels": {
     "moat": "Durable moat",
@@ -10174,11 +10174,11 @@
   "stale": false,
   "errors": [
    "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/MSFT?range=3y&interval=1d failed after 4 tries: HTTP 429 rat",
-   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
    "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/MSFT?modules=defaultKeyStatistics,financialData,summaryProfile"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
@@ -10358,7 +10358,7 @@
   "symbol": "ETN",
   "name": "Eaton Corp plc",
   "type": "equity",
-  "sector": null,
+  "sector": "Technology",
   "price": 369.97,
   "change_pct": -6.032205628365336,
   "high52": 459.96,
@@ -10367,27 +10367,27 @@
   "pct_from_low": 17.145842568551718,
   "pos52": 37.56764256972391,
   "currency": "USD",
-  "pe_ltm": null,
+  "pe_ltm": 35.54411056751468,
   "pe_fwd": null,
-  "ev_ebitda": null,
-  "ps_ratio": null,
-  "revenue": null,
+  "ev_ebitda": 24.842530008045053,
+  "ps_ratio": 5.293803701544739,
+  "revenue": 27448000000.0,
   "pe_mean_2y": 37.18,
   "ps_mean_2y": 5.38,
-  "invested_capital": null,
-  "excess_cash": null,
-  "roic_detail": null,
-  "roic": null,
+  "invested_capital": 29065960000.0,
+  "excess_cash": 254040000.0,
+  "roic_detail": "NOPAT $4.12B (op income $5.21B \u00d7 79% after tax) \u00f7 invested capital $29.07B (debt $9.89B + equity $19.43B \u2212 excess cash $0.25B; operating cash held back at 2% of revenue = $0.55B)",
+  "roic": 14.157832736300469,
   "roic_trend": null,
-  "debt_equity": null,
-  "fcf_margin": null,
-  "market_cap": null,
+  "debt_equity": 0.5093951093951093,
+  "fcf_margin": 19.294666278053047,
+  "market_cap": 145304324000.0,
   "beta": 1.2234948135586645,
   "vol30": 38.6025224536745,
   "downdev": 28.47273698476303,
   "ret1y": -4.5854287556415185,
   "earnings_date": "2026-11-03",
-  "earnings_days": 2,
+  "earnings_days": 1,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -10431,9 +10431,9 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.6497,
+  "score": 0.546,
   "score_partial": true,
-  "score_n": "3 of 6",
+  "score_n": "5 of 6",
   "score_parts": [
    {
     "key": "expectations_gap",
@@ -10454,16 +10454,16 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": null,
-    "detail": "No positive LTM P/E available",
+    "score": 0.34418784363060284,
+    "detail": "LTM P/E 35.5 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
    {
     "key": "roic_trend",
     "label": "ROIC trend",
-    "score": null,
-    "detail": "ROIC not computable from available data",
+    "score": 0.434208312010731,
+    "detail": "ROIC 14.2% (computed in-repo: NOPAT \u00f7 invested capital)",
     "weight": 0.1,
     "raw": {}
    },
@@ -10485,25 +10485,25 @@
    }
   ],
   "buffett": {
-   "moat": "Unknown",
-   "de": null,
-   "fcf_margin": null,
+   "moat": "Narrow",
+   "de": 0.5093951093951093,
+   "fcf_margin": 19.294666278053047,
    "tests": {
     "moat": {
-     "pass": false,
-     "why": "ROIC unavailable \u2014 cannot assess"
+     "pass": true,
+     "why": "ROIC 14.2% \u2192 narrow moat"
     },
     "returns": {
      "pass": false,
-     "why": "ROIC unavailable"
+     "why": "ROIC 14.2% vs ~10% cost of capital"
     },
     "leverage": {
-     "pass": false,
-     "why": "Debt/equity unavailable"
+     "pass": true,
+     "why": "Debt/equity 0.51"
     },
     "cashgen": {
-     "pass": false,
-     "why": "FCF margin unavailable"
+     "pass": true,
+     "why": "FCF margin 19.3%"
     },
     "stability": {
      "pass": true,
@@ -10518,7 +10518,7 @@
      "why": "No fair value set \u2014 price test cannot run"
     }
    },
-   "passed": 2,
+   "passed": 5,
    "total": 7,
    "labels": {
     "moat": "Durable moat",
@@ -10537,11 +10537,11 @@
   "stale": false,
   "errors": [
    "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/ETN?range=3y&interval=1d failed after 4 tries: HTTP 429 rate",
-   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
    "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/ETN?modules=defaultKeyStatistics,financialData,summaryProfile,"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "imminent"
   }
  },
@@ -10578,7 +10578,7 @@
   "downdev": 43.71050309204072,
   "ret1y": -54.536808065436574,
   "earnings_date": "2026-11-18",
-  "earnings_days": 17,
+  "earnings_days": 16,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -10819,7 +10819,7 @@
   "downdev": 26.21452599073913,
   "ret1y": -0.6836544437538783,
   "earnings_date": "2026-11-03",
-  "earnings_days": 2,
+  "earnings_days": 1,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -11372,10 +11372,10 @@
   "pct_from_low": 0.0,
   "pos52": 0.0,
   "currency": "USD",
-  "pe_ltm": 36.17321697619866,
+  "pe_ltm": 36.47493982429141,
   "pe_fwd": null,
   "ev_ebitda": null,
-  "ps_ratio": 21.287212385256566,
+  "ps_ratio": 21.46477022737664,
   "revenue": 227464000.0,
   "pe_mean_2y": 55.79,
   "ps_mean_2y": 18.51,
@@ -11386,13 +11386,13 @@
   "roic_trend": null,
   "debt_equity": 0.7657738962300847,
   "fcf_margin": -42.085780607041116,
-  "market_cap": 4842074478.0,
+  "market_cap": 4882462495.0,
   "beta": 2.873549002176337,
   "vol30": 66.06059477112134,
   "downdev": 54.810952796475355,
   "ret1y": -49.2951127819549,
   "earnings_date": "2026-11-12",
-  "earnings_days": 11,
+  "earnings_days": 10,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -11413,7 +11413,7 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.5914,
+  "score": 0.5897,
   "score_partial": true,
   "score_n": "5 of 6",
   "score_parts": [
@@ -11436,8 +11436,8 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.32920911961431765,
-    "detail": "LTM P/E 36.2 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
+    "score": 0.32202524227877594,
+    "detail": "LTM P/E 36.5 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
@@ -11524,7 +11524,7 @@
   "sources": {
    "quote": "stockanalysis",
    "fundamentals": "nasdaq",
-   "earnings_bucket": "distant"
+   "earnings_bucket": "approaching"
   }
  },
  {
@@ -11560,7 +11560,7 @@
   "downdev": 31.13045440077472,
   "ret1y": -29.24274364960452,
   "earnings_date": "2026-11-04",
-  "earnings_days": 3,
+  "earnings_days": 2,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -11731,10 +11731,10 @@
   "pct_from_low": 25.2903727462701,
   "pos52": 42.151304066094276,
   "currency": "USD",
-  "pe_ltm": 23.00213298753894,
+  "pe_ltm": 23.001240774945718,
   "pe_fwd": null,
-  "ev_ebitda": 17.244587943774864,
-  "ps_ratio": 3.60793062466869,
+  "ev_ebitda": 17.244026808110196,
+  "ps_ratio": 3.6077906793366403,
   "revenue": 67535000000.0,
   "pe_mean_2y": 48.34,
   "ps_mean_2y": 3.89,
@@ -11745,7 +11745,7 @@
   "roic_trend": null,
   "debt_equity": 1.8763783386424895,
   "fcf_margin": 23.324202265491966,
-  "market_cap": 243661594737.0,
+  "market_cap": 243652143529.0,
   "beta": 0.6313761526823218,
   "vol30": 24.025331411206814,
   "downdev": 44.267194628034844,
@@ -11818,7 +11818,7 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": 0.6428063574395491,
+    "score": 0.6428276005965305,
     "detail": "LTM P/E 23.0 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
@@ -11913,7 +11913,7 @@
   "symbol": "JD",
   "name": "JD.com Inc ADR",
   "type": "adr",
-  "sector": null,
+  "sector": "Consumer Discretionary",
   "price": 25.68,
   "change_pct": 0.19508388607101332,
   "high52": 33.77,
@@ -11922,27 +11922,27 @@
   "pct_from_low": 1.9452163556966988,
   "pos52": 5.710955710955692,
   "currency": "USD",
-  "pe_ltm": null,
+  "pe_ltm": 8.835492673067206,
   "pe_fwd": null,
-  "ev_ebitda": null,
-  "ps_ratio": null,
-  "revenue": null,
+  "ev_ebitda": 7.427388392857143,
+  "ps_ratio": 0.18668161363163205,
+  "revenue": 187329000000.0,
   "pe_mean_2y": null,
   "ps_mean_2y": null,
-  "invested_capital": null,
-  "excess_cash": null,
-  "roic_detail": null,
-  "roic": null,
+  "invested_capital": 14288580000.0,
+  "excess_cash": 28503420000.0,
+  "roic_detail": "NOPAT $0.31B (op income $0.40B \u00d7 79% after tax) \u00f7 invested capital $14.29B (debt $10.59B + equity $32.20B \u2212 excess cash $28.50B; operating cash held back at 2% of revenue = $3.75B)",
+  "roic": 2.1949696890803705,
   "roic_trend": null,
-  "debt_equity": null,
-  "fcf_margin": null,
-  "market_cap": null,
+  "debt_equity": 0.32882029624569137,
+  "fcf_margin": -0.09662145209764639,
+  "market_cap": 34970880000.0,
   "beta": 1.012653224099079,
   "vol30": 21.07861444594179,
   "downdev": 16.752048086443335,
   "ret1y": -25.26193247962747,
   "earnings_date": "2026-11-12",
-  "earnings_days": 11,
+  "earnings_days": 10,
   "earnings_confirmed": true,
   "catalyst_date": null,
   "catalyst_note": null,
@@ -11963,9 +11963,9 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.8089,
+  "score": 0.7251,
   "score_partial": true,
-  "score_n": "3 of 6",
+  "score_n": "5 of 6",
   "score_parts": [
    {
     "key": "expectations_gap",
@@ -11986,16 +11986,16 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": null,
-    "detail": "No positive LTM P/E available",
+    "score": 0.9801073173079237,
+    "detail": "LTM P/E 8.8 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
    {
     "key": "roic_trend",
     "label": "ROIC trend",
-    "score": null,
-    "detail": "ROIC not computable from available data",
+    "score": 0.006963203181441803,
+    "detail": "ROIC 2.2% (computed in-repo: NOPAT \u00f7 invested capital)",
     "weight": 0.1,
     "raw": {}
    },
@@ -12017,25 +12017,25 @@
    }
   ],
   "buffett": {
-   "moat": "Unknown",
-   "de": null,
-   "fcf_margin": null,
+   "moat": "None",
+   "de": 0.32882029624569137,
+   "fcf_margin": -0.09662145209764639,
    "tests": {
     "moat": {
      "pass": false,
-     "why": "ROIC unavailable \u2014 cannot assess"
+     "why": "ROIC 2.2% \u2192 none moat"
     },
     "returns": {
      "pass": false,
-     "why": "ROIC unavailable"
+     "why": "ROIC 2.2% vs ~10% cost of capital"
     },
     "leverage": {
-     "pass": false,
-     "why": "Debt/equity unavailable"
+     "pass": true,
+     "why": "Debt/equity 0.33"
     },
     "cashgen": {
      "pass": false,
-     "why": "FCF margin unavailable"
+     "why": "FCF margin -0.1%"
     },
     "stability": {
      "pass": true,
@@ -12050,7 +12050,7 @@
      "why": "No fair value set \u2014 price test cannot run"
     }
    },
-   "passed": 2,
+   "passed": 3,
    "total": 7,
    "labels": {
     "moat": "Durable moat",
@@ -12069,20 +12069,20 @@
   "stale": false,
   "errors": [
    "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/JD?range=3y&interval=1d failed after 4 tries: HTTP 429 rate ",
-   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
    "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/JD?modules=defaultKeyStatistics,financialData,summaryProfile,c",
    "history: missing quarterly revenue or net income"
   ],
   "sources": {
    "quote": "stockanalysis",
-   "earnings_bucket": "distant"
+   "fundamentals": "nasdaq",
+   "earnings_bucket": "approaching"
   }
  },
  {
   "symbol": "V",
   "name": "VISA INC.",
   "type": "equity",
-  "sector": null,
+  "sector": "Consumer Discretionary",
   "price": 413.59,
   "change_pct": 0.742923953816913,
   "high52": 414.34,
@@ -12091,21 +12091,21 @@
   "pct_from_low": 39.953302652950725,
   "pos52": 99.36879313246928,
   "currency": "USD",
-  "pe_ltm": null,
+  "pe_ltm": 36.88938685766278,
   "pe_fwd": null,
-  "ev_ebitda": null,
-  "ps_ratio": null,
-  "revenue": null,
+  "ev_ebitda": 29.653340270920918,
+  "ps_ratio": 18.498183039775,
+  "revenue": 40000000000.0,
   "pe_mean_2y": null,
   "ps_mean_2y": null,
-  "invested_capital": null,
-  "excess_cash": null,
-  "roic_detail": null,
-  "roic": null,
+  "invested_capital": 46461000000.0,
+  "excess_cash": 21187000000.0,
+  "roic_detail": "NOPAT $18.96B (op income $23.99B \u00d7 79% after tax) \u00f7 invested capital $46.46B (debt $29.74B + equity $37.91B \u2212 excess cash $21.19B; operating cash held back at 2% of revenue = $0.80B)",
+  "roic": 40.79821786014076,
   "roic_trend": null,
-  "debt_equity": null,
-  "fcf_margin": null,
-  "market_cap": null,
+  "debt_equity": 0.7844838956448337,
+  "fcf_margin": 59.330000000000005,
+  "market_cap": 739927321591.0,
   "beta": 0.7826846265662305,
   "vol30": 19.63858798284186,
   "downdev": 13.029114784211323,
@@ -12132,9 +12132,9 @@
   "fair_value": null,
   "fair_value_source": null,
   "gap_pct": null,
-  "score": 0.4157,
+  "score": 0.4817,
   "score_partial": true,
-  "score_n": "3 of 6",
+  "score_n": "5 of 6",
   "score_parts": [
    {
     "key": "expectations_gap",
@@ -12155,16 +12155,16 @@
    {
     "key": "valuation_vs_history",
     "label": "Valuation vs own history",
-    "score": null,
-    "detail": "No positive LTM P/E available",
+    "score": 0.3121574557699338,
+    "detail": "LTM P/E 36.9 (band 8\u201350; own-history percentile arrives once the data archive has 5 quarters)",
     "weight": 0.15,
     "raw": {}
    },
    {
     "key": "roic_trend",
     "label": "ROIC trend",
-    "score": null,
-    "detail": "ROIC not computable from available data",
+    "score": 1.0,
+    "detail": "ROIC 40.8% (computed in-repo: NOPAT \u00f7 invested capital)",
     "weight": 0.1,
     "raw": {}
    },
@@ -12186,25 +12186,25 @@
    }
   ],
   "buffett": {
-   "moat": "Unknown",
-   "de": null,
-   "fcf_margin": null,
+   "moat": "Wide",
+   "de": 0.7844838956448337,
+   "fcf_margin": 59.330000000000005,
    "tests": {
     "moat": {
-     "pass": false,
-     "why": "ROIC unavailable \u2014 cannot assess"
+     "pass": true,
+     "why": "ROIC 40.8% \u2192 wide moat"
     },
     "returns": {
-     "pass": false,
-     "why": "ROIC unavailable"
+     "pass": true,
+     "why": "ROIC 40.8% vs ~10% cost of capital"
     },
     "leverage": {
-     "pass": false,
-     "why": "Debt/equity unavailable"
+     "pass": true,
+     "why": "Debt/equity 0.78"
     },
     "cashgen": {
-     "pass": false,
-     "why": "FCF margin unavailable"
+     "pass": true,
+     "why": "FCF margin 59.3%"
     },
     "stability": {
      "pass": true,
@@ -12219,7 +12219,7 @@
      "why": "No fair value set \u2014 price test cannot run"
     }
    },
-   "passed": 2,
+   "passed": 6,
    "total": 7,
    "labels": {
     "moat": "Durable moat",
@@ -12238,12 +12238,12 @@
   "stale": false,
   "errors": [
    "quote: yahoo: https://query1.finance.yahoo.com/v8/finance/chart/V?range=3y&interval=1d failed after 4 tries: HTTP 429 rate l",
-   "fundamentals: fundamentals/nasdaq: nasdaq financials: no data",
    "fundamentals: fundamentals/yahoo: https://query2.finance.yahoo.com/v10/finance/quoteSummary/V?modules=defaultKeyStatistics,financialData,summaryProfile,ca",
    "history: no overlapping price/fundamental data"
   ],
   "sources": {
    "quote": "stockanalysis",
+   "fundamentals": "nasdaq",
    "earnings_bucket": "na"
   }
  },
